@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{ title }} | STK Danışmanlık</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <title>İletişim | STK Danışmanlık</title>
+    <meta name="description" content="Dernek ve vakıf kurulumu, genel kurul yönetimi ve mali danışmanlık süreçleriniz için STK Danışmanlık ile iletişime geçin. Uzman ekibimizle yanınızdayız.">
+    <link rel="canonical" href="https://stkdanismanlik.com/iletisim.html">
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <!-- Preconnect -->
@@ -16,18 +16,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- JSON-LD Article Schema -->
+    <!-- JSON-LD Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "author": {"@type": "Organization", "name": "STK Danışmanlık"},
-      "publisher": {"@type": "Organization", "name": "STK Danışmanlık",
-        "logo": {"@type": "ImageObject", "url": "https://stkdanismanlik.com/logo.webp"}
+      "@type": "Service",
+      "serviceType": "İletişim",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "STK Danışmanlık",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        },
+        "telephone": "+905347054234"
       },
-      "datePublished": "{{ date }}",
-      "description": "{{ description }}"
+      "areaServed": [
+        {"@type": "City", "name": "İstanbul"},
+        {"@type": "AdministrativeArea", "name": "Ümraniye"}
+      ],
+      "description": "Dernek ve vakıf kurulumu, genel kurul yönetimi ve mali danışmanlık süreçleriniz için STK Danışmanlık ile iletişime geçin. Uzman ekibimizle yanınızdayız."
     }
     </script>
 
@@ -99,37 +111,37 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+        <li><a href="/">Ana Sayfa</a></li>
+        <li class="dropdown">
           <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
-            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+            <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
-            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
-            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html">Blog & Makaleler</a></li>
           </ul>
         </li>
-        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+        <li><a href="/referanslar.html">Referanslar</a></li>
+        <li><a href="/iletisim.html" class="active">İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
@@ -140,47 +152,221 @@
 
 <main>
     <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+    <section class="page-header" style="background-image: url('/img/banner2.webp');">
         <div class="container">
-            <h1>{{ title }}</h1>
-            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+            <h1>İletişim</h1>
+            <p>Sivil toplum hedeflerinizi birlikte gerçekleştirelim. Uzmanlarımız size bir adım uzaklıkta.</p>
         </div>
     </section>
 
-    <!-- CONTENT AREA -->
-    <section class="page-content">
-        <div class="container">
-            <div class="content-grid">
-                <article class="main-content article-content">
-                    {% if image %}
-                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
-                    {% endif %}
-                    <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
-                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
-                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
-                    </div>
-                    {{ content | safe }}
-                </article>
+    <!-- CONTENT (Full Width - No Sidebar) -->
+    
+<style>
+    .contact-grid-wrapper { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 50px; 
+        margin-top: 40px; 
+    }
 
-                <aside class="sidebar">
-                    <div class="widget">
-                        <h4>Bilgi Bankası</h4>
-                        <ul>
-                            <li><a href="/mevzuat.html">Önemli Mevzuatlar</a></li>
-                            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
-                            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
-                            <li><a href="/blog.html">Blog & Makaleler</a></li>
-                        </ul>
+    .contact-info-box { 
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 40px; 
+        border-radius: 15px; 
+        border-left: 5px solid #1a237e; 
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .info-item { 
+        display: flex; 
+        align-items: flex-start; 
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .info-item:hover { transform: translateX(5px); }
+
+    .info-item i { 
+        font-size: 24px; 
+        color: #1a237e; 
+        margin-right: 20px; 
+        margin-top: 5px;
+        min-width: 30px;
+    }
+
+    .info-item h4 { 
+        margin: 0 0 8px 0; 
+        font-size: 18px; 
+        color: #1a237e;
+        font-weight: 600;
+    }
+
+    .info-item p { 
+        margin: 0; 
+        color: #555; 
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .info-item a {
+        color: #1a237e;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .info-item a:hover {
+        color: #0d47a1;
+        text-decoration: underline;
+    }
+
+    .contact-form-side h2 { color: #1a237e; margin-bottom: 10px; }
+
+    .contact-form {
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s ease;
+        background-color: #f8f9fa;
+        box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #1a237e;
+        background-color: #fff;
+        box-shadow: 0 0 0 3px rgba(26,35,126,0.1);
+    }
+
+    .form-group textarea { resize: vertical; }
+
+    .map-section { margin-top: 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+    @media (max-width: 768px) {
+        .contact-grid-wrapper { grid-template-columns: 1fr; gap: 30px; }
+    }
+</style>
+
+<section class="page-content">
+    <div class="container">
+        <div class="contact-grid-wrapper">
+
+            <!-- SOL SÜTUN: İLETİŞİM BİLGİLERİ -->
+            <div class="contact-info">
+                <h2>Bizimle İletişime Geçin</h2>
+                <p style="margin-bottom: 30px;">Dernek ve vakıf süreçlerindeki her türlü sorunuz için bize aşağıdaki kanallardan ulaşabilir veya ofisimizde bizi ziyaret edebilirsiniz.</p>
+
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresimiz</h4>
+                            <p>İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5, Ümraniye, İstanbul</p>
+                        </div>
                     </div>
-                    <div class="widget">
-                        <h4>Yasal Güvence Alın</h4>
-                        <p>Mevzuat karmaşasında kaybolmayın. Kurumunuzun tüm süreçlerini profesyonel ekibimiz yönetsin.</p>
-                        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Ücretsiz Ön Görüşme</a>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+905347054234">+90 534 705 42 34</a></p>
+                        </div>
                     </div>
-                </aside>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-Posta</h4>
+                            <p><a href="mailto:info@stkdanismanlik.com">info@stkdanismanlik.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Hafta içi: 09:00 - 18:00 | Cumartesi: Randevu ile</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+           <!-- SAĞ SÜTUN: İLETİŞİM FORMU -->
+            <div class="contact-form-side">
+                <h2>Danışmanlık Talep Formu</h2>
+                <p style="margin-bottom: 25px; color: #666;">Hizmetlerimiz hakkında detaylı bilgi ve teklif almak için formu doldurun.</p>
+
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms -->
+                    <input type="hidden" name="access_key" value="4fe328a0-e03e-4479-85cf-b2b076f4335b">
+                    <input type="hidden" name="subject" value="Yeni Danışmanlık Talebi - STK Danışmanlık">
+                    <input type="hidden" name="redirect" value="https://stkdanismanlik.com/tesekkurler/">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Adınız Soyadınız *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="E-posta Adresiniz *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Telefon Numaranız">
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="" disabled selected>İlgilendiğiniz Hizmet *</option>
+                            <option value="dernek">Dernek Kuruluşu</option>
+                            <option value="derbis">DERBİS İşlemleri</option>
+                            <option value="vakif">Vakıf Kuruluşu</option>
+                            <option value="genelkurul">Genel Kurul Yönetimi</option>
+                            <option value="mali">Mali Danışmanlık</option>
+                            <option value="proje">Proje ve Fon Geliştirme</option>
+                            <option value="yasal">Yasal Danışmanlık</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Mesajınız... *" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
+                        Mesajı Gönder
+                    </button>
+                </form>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- HARİTA BÖLÜMÜ -->
+<section style="padding: 0 0 60px 0;">
+    <div class="container">
+        <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.12); line-height: 0; height: 480px;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8251!2d29.1219!3d41.0232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac6d4f7b8f7a5%3A0x1234567890abcdef!2zxLBzdGlrbGFsIE1haCwgU8O8dMOnw7xpbWFtIENkLiBObzoxNDQsIMOcbXJhbml5ZS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1234567890123!5m2!1str!2str"
+                style="border:0; display:block; width:100% !important; height:480px !important; max-width:100% !important;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
 </main>
 
 <footer class="main-footer">

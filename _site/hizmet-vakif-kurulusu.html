@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{ title }} | STK Danışmanlık</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <title>Vakıf Kuruluş Danışmanlığı | Resmi Senet ve Tescil İşlemleri | STK Danışmanlık</title>
+    <meta name="description" content="Vakfınızı yasalara uygun ve sağlam temellerle kurun. Resmi senet hazırlama, mal varlığı tahsisi ve mahkeme tescil sürecinde profesyonel kurumsal danışmanlık.">
+    <link rel="canonical" href="https://stkdanismanlik.com/hizmet-vakif-kurulusu.html">
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <!-- Preconnect -->
@@ -16,18 +16,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- JSON-LD Article Schema -->
+    <!-- JSON-LD Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "author": {"@type": "Organization", "name": "STK Danışmanlık"},
-      "publisher": {"@type": "Organization", "name": "STK Danışmanlık",
-        "logo": {"@type": "ImageObject", "url": "https://stkdanismanlik.com/logo.webp"}
+      "@type": "Service",
+      "serviceType": "Vakıf Kuruluş Danışmanlığı | Resmi Senet ve Tescil İşlemleri",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "STK Danışmanlık",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        },
+        "telephone": "+905347054234"
       },
-      "datePublished": "{{ date }}",
-      "description": "{{ description }}"
+      "areaServed": [
+        {"@type": "City", "name": "İstanbul"},
+        {"@type": "AdministrativeArea", "name": "Ümraniye"}
+      ],
+      "description": "Vakfınızı yasalara uygun ve sağlam temellerle kurun. Resmi senet hazırlama, mal varlığı tahsisi ve mahkeme tescil sürecinde profesyonel kurumsal danışmanlık."
     }
     </script>
 
@@ -99,37 +111,37 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+        <li><a href="/">Ana Sayfa</a></li>
+        <li class="dropdown">
           <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
-            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+            <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+        <li class="dropdown active-parent">
           <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html" class="active">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
-            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
-            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html">Blog & Makaleler</a></li>
           </ul>
         </li>
-        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+        <li><a href="/referanslar.html">Referanslar</a></li>
+        <li><a href="/iletisim.html">İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
@@ -140,10 +152,10 @@
 
 <main>
     <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+    <section class="page-header" style="background-image: url('/img/banner1.webp');">
         <div class="container">
-            <h1>{{ title }}</h1>
-            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+            <h1>Vakıf Kuruluş Danışmanlığı | Resmi Senet ve Tescil İşlemleri</h1>
+            <p>Toplumsal fayda mirasınızı hukuki güvenceyle geleceğe taşıyoruz.</p>
         </div>
     </section>
 
@@ -151,33 +163,90 @@
     <section class="page-content">
         <div class="container">
             <div class="content-grid">
-                <article class="main-content article-content">
-                    {% if image %}
-                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
-                    {% endif %}
-                    <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
-                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
-                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
-                    </div>
-                    {{ content | safe }}
-                </article>
+                
+<div class="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Vakıf Kuruluş Danışmanlığı",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "STK Danışmanlık"
+  },
+  "areaServed": "TR",
+  "description": "Vakıf kurulumu için resmi senet hazırlığı, mal varlığı tespiti ve mahkeme tescil süreçlerinin profesyonel yönetimi."
+}
+</script>
 
-                <aside class="sidebar">
-                    <div class="widget">
-                        <h4>Bilgi Bankası</h4>
-                        <ul>
-                            <li><a href="/mevzuat.html">Önemli Mevzuatlar</a></li>
-                            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
-                            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
-                            <li><a href="/blog.html">Blog & Makaleler</a></li>
-                        </ul>
-                    </div>
-                    <div class="widget">
-                        <h4>Yasal Güvence Alın</h4>
-                        <p>Mevzuat karmaşasında kaybolmayın. Kurumunuzun tüm süreçlerini profesyonel ekibimiz yönetsin.</p>
-                        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Ücretsiz Ön Görüşme</a>
-                    </div>
-                </aside>
+<h2>Vakıf Kurmak: Kalıcı Bir Eser Bırakmanın Yolu</h2>
+<p>Vakıflar, bir amaca hizmet etmek üzere belirli bir mal varlığının tahsis edilmesiyle oluşturulan, toplumsal fayda sağlamanın en köklü ve saygın yoludur. STK Danışmanlık olarak, vakıf kurma niyetinizin nesiller boyu yaşayacak profesyonel bir kuruma dönüşmesi için gerekli tüm hukuki ve idari süreçlerde uzman desteği sağlıyoruz.</p>
+
+<h3 style="margin-top: 40px;">Vakıf Kuruluş Süreç Yönetimi</h3>
+
+<div class="feature-box">
+    <div class="icon-wrapper"><strong>1</strong></div>
+    <div>
+        <h4>Stratejik Amaç ve Mal Varlığı Tespiti</h4>
+        <p>Vakfın kuruluş amacını netleştirir ve bu amaca hizmet edecek asgari mal varlığının (nakit, taşınmaz vb.) belirlenmesinde profesyonel danışmanlık sağlarız.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <div class="icon-wrapper"><strong>2</strong></div>
+    <div>
+        <h4>Resmi Senet (Anayasa) Hazırlığı</h4>
+        <p>Türk Medeni Kanunu'na tam uyumlu, tüm zorunlu unsurları içeren ve gelecekte hukuki risk yaratmayacak kapsamlı resmi senedi hazırlarız.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <div class="icon-wrapper"><strong>3</strong></div>
+    <div>
+        <h4>Noter Tasdiki ve Mahkeme Süreçleri</h4>
+        <p>Resmi senedin noter onayının alınması ve vakfın tescili için Asliye Hukuk Mahkemesi nezdindeki başvuru süreçlerini titizlikle yönetiriz.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <div class="icon-wrapper"><strong>4</strong></div>
+    <div>
+        <h4>Merkezi Sicil Kaydı ve İlan</h4>
+        <p>Mahkemenin tescil kararının ardından, Vakıflar Genel Müdürlüğü sicil kaydı ve Resmi Gazete ilan işlemlerini takip ederiz.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <div class="icon-wrapper"><strong>5</strong></div>
+    <div>
+        <h4>Kurumsal Yapılanma Desteği</h4>
+        <p>Vakfınız tüzel kişilik kazandıktan sonra, yönetim organlarının oluşturulması ve idari işleyişin kurulması süreçlerinde rehberlik ederiz.</p>
+    </div>
+</div>
+</div>
+
+<aside class="sidebar">
+    <div class="widget">
+        <h4>Hizmetlerimiz</h4>
+        <ul>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html" class="current">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
+        </ul>
+    </div>
+
+    <div class="widget">
+        <h4>Kurumsal Teklif Alın</h4>
+        <p>Vakıf kurma süreciniz için kurumsal hizmet teklifimizi hemen edinin.</p>
+        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Teklif İsteyin</a>
+    </div>
+</aside>
+</div>
+
             </div>
         </div>
     </section>

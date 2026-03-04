@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{ title }} | STK Danışmanlık</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <title>Dernek Yöneticilerinin Göz Ardı Etmemesi Gereken Yasal Sorumluluklar | STK Danışmanlık</title>
+    <meta name="description" content="Dernek başkanı ve yönetim kurulu üyelerinin yasal ve cezai sorumluluklarını detaylı inceleyen kapsamlı rehber.">
+    <link rel="canonical" href="https://stkdanismanlik.com/content/blog/dernek-yonetici-sorumluluklari/">
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <!-- Preconnect -->
@@ -21,13 +21,13 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "{{ title }}",
+      "headline": "Dernek Yöneticilerinin Göz Ardı Etmemesi Gereken Yasal Sorumluluklar",
       "author": {"@type": "Organization", "name": "STK Danışmanlık"},
       "publisher": {"@type": "Organization", "name": "STK Danışmanlık",
         "logo": {"@type": "ImageObject", "url": "https://stkdanismanlik.com/logo.webp"}
       },
-      "datePublished": "{{ date }}",
-      "description": "{{ description }}"
+      "datePublished": "Sun Jan 04 2026 03:00:00 GMT+0300 (Türkiye Standart Saati)",
+      "description": "Dernek başkanı ve yönetim kurulu üyelerinin yasal ve cezai sorumluluklarını detaylı inceleyen kapsamlı rehber."
     }
     </script>
 
@@ -99,37 +99,37 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+        <li><a href="/">Ana Sayfa</a></li>
+        <li class="dropdown">
           <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
-            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+            <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+        <li class="dropdown active-parent">
           <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
-            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
-            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html">Blog & Makaleler</a></li>
           </ul>
         </li>
-        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+        <li><a href="/referanslar.html">Referanslar</a></li>
+        <li><a href="/iletisim.html">İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
@@ -140,10 +140,10 @@
 
 <main>
     <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+    <section class="page-header" style="background-image: url('/img/banner1.webp');">
         <div class="container">
-            <h1>{{ title }}</h1>
-            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+            <h1>Dernek Yöneticilerinin Göz Ardı Etmemesi Gereken Yasal Sorumluluklar</h1>
+            <p>Dernek başkanı ve yönetim kurulu üyelerinin yasal ve cezai sorumluluklarını detaylı inceleyen kapsamlı rehber. Mali yükümlülükler, beyanname süreçleri, resmi bildirimler ve hata durumlarında karşılaşılabilecek yaptırımlar hakkında her şey.</p>
         </div>
     </section>
 
@@ -152,14 +152,50 @@
         <div class="container">
             <div class="content-grid">
                 <article class="main-content article-content">
-                    {% if image %}
-                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
-                    {% endif %}
+                    
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800" alt="Dernek Yöneticilerinin Göz Ardı Etmemesi Gereken Yasal Sorumluluklar" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
+                    
                     <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
-                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
-                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
+                        <span><i class="fas fa-calendar-alt"></i> 4 Ocak 2026</span>
+                        <span style="margin-left:15px;"><i class="fas fa-tag"></i> Uzman Rehberi</span>
                     </div>
-                    {{ content | safe }}
+                    <p>Dernek yönetim kurulu üyeleri, derneklerinin yasal temsilcileri olarak çok önemli sorumluluklar taşırlar. Bu sorumlulukların gereği gibi yerine getirilmemesi durumunda hem dernekler hem de yöneticiler ciddi hukuki ve mali yaptırımlarla karşılaşabilir.</p>
+<h2>1. Mali Beyan Yükümlülükleri</h2>
+<p>Dernekler, yıllık gelir-gider hesaplarını ve bilançolarını hazırlayıp beyan etmekle yükümlüdür. Bu belgeler:</p>
+<ul>
+<li>Her mali yıl sonundan itibaren <strong>4 ay içinde</strong> hazırlanmalı</li>
+<li>Yönetim kurulu tarafından onaylanmalı</li>
+<li>Denetim kurulunun incelemesinden geçmeli</li>
+<li>Genel kurul onayına sunulmalı</li>
+</ul>
+<p><strong>Dikkat:</strong> Beyanname süresini kaçırmak hem dernekler hem yöneticiler için idari para cezası getirir.</p>
+<h2>2. Genel Kurul Toplantı Zorunluluğu</h2>
+<p>Dernekler, olağan genel kurul toplantılarını <strong>her yıl</strong> yapmak zorundadır. Bu toplantı:</p>
+<ul>
+<li>Mali yıl sonundan itibaren <strong>6 ay içinde</strong> yapılmalı</li>
+<li>Tüzüğe uygun şekilde duyurulmalı</li>
+<li>Nisap kurallarına uyulmalı</li>
+<li>Tutanak düzenlenmeli</li>
+</ul>
+<p>Genel kurul yapılmaması, derneğin faaliyetten men edilmesine kadar varab</p>
+<p>ilen yaptırımlara neden olabilir.</p>
+<h2>3. Bildirim ve Kayıt Yükümlülükleri</h2>
+<p>Yönetim kurulu değişiklikleri, dernek tüzüğü değişiklikleri ve adres değişiklikleri <strong>15 gün içinde</strong> mülki idare amirliğine bildirilmelidir.</p>
+<p>Bildirimin zamanında yapılmaması idari para cezasına tabidir.</p>
+<h2>4. Vergi ve Muhasebe Sorumlulukları</h2>
+<p>Dernekler, iktisadi işletme kurmuşsa veya ticari faaliyette bulunuyorsa:</p>
+<ul>
+<li>SGK primleri zamanında yatırılmalı</li>
+<li>KDV ve stopaj yükümlülükleri yerine getirilmeli</li>
+<li>Fatura düzeni kurallara uygun olmalı</li>
+</ul>
+<p>Bu yükümlülüklerin ihlali doğrudan yönetim kurulu üyelerinin <strong>şahsi sorumluluğuna</strong> yol açar.</p>
+<h2>5. Cezai Sorumluluk</h2>
+<p>Yönetim kurulu üyeleri, görevlerini kötüye kullanma, dernekler yasasına aykırı davranma veya dernek malvarlığını zimmetine geçirme gibi suçlardan <strong>şahsen cezai sorumluluk</strong> taşırlar.</p>
+<blockquote>
+<p><strong>Önemli Not:</strong> Yönetim kurulu üyesi olmak gönüllü bir sorumluluktur, ancak bu sorumluluğun yasal boyutlarını bilmek ve gereğini yerine getirmek zorunludur. Profesyonel danışmanlık almak, hem dernek hem de yöneticiler için en güvenli yoldur.</p>
+</blockquote>
+
                 </article>
 
                 <aside class="sidebar">

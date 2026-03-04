@@ -1,9 +1,10 @@
 {
-  "site_name": "SH Danışmanlık",
+  "site_name": "STK Danışmanlık",
+  "site_url": "https://stkdanismanlik.com",
   "phone": "+90 534 705 42 34",
   "phone_raw": "905347054234",
-  "email": "info@shdanismanlik.com",
-  "address": "Ümraniye, İstanbul",
+  "email": "info@stkdanismanlik.com",
+  "address": "İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5, Ümraniye, İstanbul",
   "whatsapp": "905347054234",
   "footer_slogan": "Bize Uğrayın, Bürokrasiye Takılmayın",
   "copyright_year": "2026",

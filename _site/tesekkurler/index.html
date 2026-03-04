@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{ title }} | STK Danışmanlık</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <title>Teşekkürler | STK Danışmanlık</title>
+    <meta name="description" content="Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.">
+    <link rel="canonical" href="https://stkdanismanlik.com/tesekkurler/">
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <!-- Preconnect -->
@@ -16,18 +16,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- JSON-LD Article Schema -->
+    <!-- JSON-LD Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "author": {"@type": "Organization", "name": "STK Danışmanlık"},
-      "publisher": {"@type": "Organization", "name": "STK Danışmanlık",
-        "logo": {"@type": "ImageObject", "url": "https://stkdanismanlik.com/logo.webp"}
+      "@type": "Service",
+      "serviceType": "Teşekkürler",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "STK Danışmanlık",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        },
+        "telephone": "+905347054234"
       },
-      "datePublished": "{{ date }}",
-      "description": "{{ description }}"
+      "areaServed": [
+        {"@type": "City", "name": "İstanbul"},
+        {"@type": "AdministrativeArea", "name": "Ümraniye"}
+      ],
+      "description": "Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz."
     }
     </script>
 
@@ -99,37 +111,37 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+        <li><a href="/">Ana Sayfa</a></li>
+        <li class="dropdown">
           <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
-            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+            <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
-            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
-            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html">Blog & Makaleler</a></li>
           </ul>
         </li>
-        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+        <li><a href="/referanslar.html">Referanslar</a></li>
+        <li><a href="/iletisim.html">İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
@@ -140,47 +152,157 @@
 
 <main>
     <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+    <section class="page-header" style="background-image: url('/img/banner1.webp');">
         <div class="container">
-            <h1>{{ title }}</h1>
-            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+            <h1>Teşekkürler</h1>
+            
         </div>
     </section>
 
-    <!-- CONTENT AREA -->
-    <section class="page-content">
-        <div class="container">
-            <div class="content-grid">
-                <article class="main-content article-content">
-                    {% if image %}
-                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
-                    {% endif %}
-                    <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
-                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
-                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
-                    </div>
-                    {{ content | safe }}
-                </article>
+    <!-- CONTENT (Full Width - No Sidebar) -->
+    
+<style>
+    .tesekkur-wrapper {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-                <aside class="sidebar">
-                    <div class="widget">
-                        <h4>Bilgi Bankası</h4>
-                        <ul>
-                            <li><a href="/mevzuat.html">Önemli Mevzuatlar</a></li>
-                            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
-                            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
-                            <li><a href="/blog.html">Blog & Makaleler</a></li>
-                        </ul>
-                    </div>
-                    <div class="widget">
-                        <h4>Yasal Güvence Alın</h4>
-                        <p>Mevzuat karmaşasında kaybolmayın. Kurumunuzun tüm süreçlerini profesyonel ekibimiz yönetsin.</p>
-                        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Ücretsiz Ön Görüşme</a>
-                    </div>
-                </aside>
-            </div>
+    .tesekkur-box {
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 60px 50px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+
+    .tesekkur-icon {
+        width: 90px;
+        height: 90px;
+        background: linear-gradient(135deg, #1a237e, #283593);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px auto;
+    }
+
+    .tesekkur-icon i {
+        font-size: 40px;
+        color: #fff;
+    }
+
+    .tesekkur-box h1 {
+        color: #1a237e;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .tesekkur-box p {
+        color: #555;
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    .tesekkur-box .info-text {
+        background: #f0f4ff;
+        border-left: 4px solid #1a237e;
+        padding: 15px 20px;
+        border-radius: 8px;
+        color: #333;
+        font-size: 15px;
+        margin: 25px 0;
+        text-align: left;
+    }
+
+    .tesekkur-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 35px;
+        flex-wrap: wrap;
+    }
+
+    .btn-ana {
+        background: linear-gradient(135deg, #1a237e, #283593);
+        color: #fff;
+        padding: 14px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-ana:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(26,35,126,0.3);
+        color: #fff;
+    }
+
+    .btn-hizmet {
+        background: transparent;
+        color: #1a237e;
+        padding: 14px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        border: 2px solid #1a237e;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-hizmet:hover {
+        background: #1a237e;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+</style>
+
+<section class="tesekkur-wrapper">
+        <div class="tesekkur-box">
+        <div class="tesekkur-icon">
+            <i class="fas fa-check"></i>
         </div>
-    </section>
+
+        <h1>Mesajınız İletildi!</h1>
+        <p>Danışmanlık talebiniz başarıyla alındı. Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+
+        <div class="info-text">
+            <i class="fas fa-clock" style="color:#1a237e; margin-right:8px;"></i>
+            <strong>Yanıt süresi:</strong> Genellikle 1 iş günü içinde geri dönüş yapıyoruz.<br>
+            <i class="fas fa-phone-alt" style="color:#1a237e; margin-right:8px; margin-top:8px; display:inline-block;"></i>
+            <strong>Acil durumlar için:</strong> <a href="tel:+905347054234" style="color:#1a237e;">+90 534 705 42 34</a>
+        </div>
+
+        <div class="tesekkur-buttons">
+            <a href="/" class="btn-ana">
+                <i class="fas fa-home"></i> Ana Sayfaya Dön
+            </a>
+            <a href="/hakkimizda.html" class="btn-hizmet">
+                <i class="fas fa-info-circle"></i> Hakkımızda
+            </a>
+        </div>
+    </div>
+</section>
 </main>
 
 <footer class="main-footer">

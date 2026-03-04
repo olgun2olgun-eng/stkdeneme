@@ -3,7 +3,7 @@ layout: layouts/blog-post.html
 title: "Ümraniye'de Dernek veya Vakıf Kurmak İsteyenler İçin Eksiksiz Rehber (2026)"
 description: "Ümraniye'de dernek veya vakıf kurmak mı istiyorsunuz? Yasal süreçler, gerekli belgeler, DERBİS kaydı ve uzman danışmanlık hizmetleri hakkında bilmeniz gereken her şey bu rehberde."
 date: "2026-02-20"
-author: "SH Danışmanlık Uzmanları"
+author: "STK Danışmanlık Uzmanları"
 category: "Uzman Rehberi"
 image: "/img/umraniye-stk-danismanlik-rehber.webp"
 image_alt: "Ümraniye'de dernek ve vakıf kurma danışmanlık hizmeti"
@@ -161,9 +161,9 @@ Bu hataların her biri hem zaman hem para hem de itibar kaybına yol açar. Prof
 
 ---
 
-## Neden SH Danışmanlık?
+## Neden STK Danışmanlık?
 
-SH Danışmanlık olarak, İstanbul'un çeşitli ilçelerinde — özellikle Ümraniye, Kadıköy, Üsküdar, Ataşehir ve Pendik başta olmak üzere — yüzlerce STK'nın kuruluş ve yönetim süreçlerini başarıyla tamamladık.
+STK Danışmanlık olarak, İstanbul'un çeşitli ilçelerinde — özellikle Ümraniye, Kadıköy, Üsküdar, Ataşehir ve Pendik başta olmak üzere — yüzlerce STK'nın kuruluş ve yönetim süreçlerini başarıyla tamamladık.
 
 **Bizi farklı kılan nedir?**
 
@@ -208,12 +208,12 @@ Evet. Ümraniye merkezli olmakla birlikte, İstanbul'un tüm ilçelerinde ve Tü
 
 ## Bugün Başlayın
 
-Ümraniye'de dernek veya vakıf kurmak için bir sonraki adımı atmak çok daha kolay. SH Danışmanlık olarak, ilk görüşmeyi **ücretsiz** gerçekleştiriyor ve size özel bir yol haritası sunuyoruz.
+Ümraniye'de dernek veya vakıf kurmak için bir sonraki adımı atmak çok daha kolay. STK Danışmanlık olarak, ilk görüşmeyi **ücretsiz** gerçekleştiriyor ve size özel bir yol haritası sunuyoruz.
 
 **Bize ulaşın:**
 
 - 📞 +90 534 705 42 34
-- 📧 info@shdanismanlik.com
+- 📧 info@stkdanismanlik.com
 - 📍 Ümraniye, İstanbul
 - 💬 WhatsApp için tıklayın: [wa.me/905347054234](https://wa.me/905347054234)
 
@@ -221,4 +221,4 @@ Evet. Ümraniye merkezli olmakla birlikte, İstanbul'un tüm ilçelerinde ve Tü
 
 ---
 
-*Bu makale, SH Danışmanlık uzmanları tarafından 2026 yılı mevzuat güncellemeleri dikkate alınarak hazırlanmıştır. İçerik genel bilgilendirme amaçlıdır; spesifik hukuki danışmanlık için ekibimizle iletişime geçiniz.*
+*Bu makale, STK Danışmanlık uzmanları tarafından 2026 yılı mevzuat güncellemeleri dikkate alınarak hazırlanmıştır. İçerik genel bilgilendirme amaçlıdır; spesifik hukuki danışmanlık için ekibimizle iletişime geçiniz.*

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{ title }} | STK Danışmanlık</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <title>Sıkça Sorulan Sorular | STK Danışmanlık</title>
+    <meta name="description" content="Dernek kurulumu, vakıf yönetimi, beyanname süreçleri ve STK mevzuatı hakkında en çok merak edilen soruların profesyonel cevapları. Ümraniye İstanbul merkezli STK danışmanlık.">
+    <link rel="canonical" href="https://stkdanismanlik.com/sss.html">
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <!-- Preconnect -->
@@ -16,18 +16,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- JSON-LD Article Schema -->
+    <!-- JSON-LD Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "author": {"@type": "Organization", "name": "STK Danışmanlık"},
-      "publisher": {"@type": "Organization", "name": "STK Danışmanlık",
-        "logo": {"@type": "ImageObject", "url": "https://stkdanismanlik.com/logo.webp"}
+      "@type": "Service",
+      "serviceType": "Sıkça Sorulan Sorular",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "STK Danışmanlık",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        },
+        "telephone": "+905347054234"
       },
-      "datePublished": "{{ date }}",
-      "description": "{{ description }}"
+      "areaServed": [
+        {"@type": "City", "name": "İstanbul"},
+        {"@type": "AdministrativeArea", "name": "Ümraniye"}
+      ],
+      "description": "Dernek kurulumu, vakıf yönetimi, beyanname süreçleri ve STK mevzuatı hakkında en çok merak edilen soruların profesyonel cevapları. Ümraniye İstanbul merkezli STK danışmanlık."
     }
     </script>
 
@@ -99,37 +111,37 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+        <li><a href="/">Ana Sayfa</a></li>
+        <li class="dropdown active-parent">
           <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
-            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+            <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/sss.html" class="active">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
-            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
-            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html">Blog & Makaleler</a></li>
           </ul>
         </li>
-        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+        <li><a href="/referanslar.html">Referanslar</a></li>
+        <li><a href="/iletisim.html">İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
@@ -140,47 +152,123 @@
 
 <main>
     <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+    <section class="page-header" style="background-image: url('/img/banner3.webp');">
         <div class="container">
-            <h1>{{ title }}</h1>
-            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+            <h1>Sıkça Sorulan Sorular</h1>
+            <p>Aklınızdaki soruların cevapları burada.</p>
         </div>
     </section>
 
-    <!-- CONTENT AREA -->
-    <section class="page-content">
-        <div class="container">
-            <div class="content-grid">
-                <article class="main-content article-content">
-                    {% if image %}
-                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
-                    {% endif %}
-                    <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
-                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
-                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
-                    </div>
-                    {{ content | safe }}
-                </article>
+    <!-- CONTENT (Full Width - No Sidebar) -->
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Dernek kurmak için kaç kişi gereklidir?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bir dernek kurmak için en az 7 gerçek veya tüzel kişinin bir araya gelmesi şarttır."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Dernek beyannamesi ne zaman verilir?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dernekler, her yılın ilk dört ayı içinde (30 Nisan son gün olmak üzere) bir önceki yılın beyannamesini DERBİS üzerinden vermekle yükümlüdür."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Ümraniye'de STK danışmanlık hizmeti alabilir miyim?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Evet. STK Danışmanlık merkezi Ümraniye İstiklal Mahallesi Sütçüimam Caddesi'ndedir. İstanbul'un tüm ilçelerinde ve Türkiye genelinde hizmet sunmaktayız."
+    }
+  }]
+}
+</script>
 
-                <aside class="sidebar">
-                    <div class="widget">
-                        <h4>Bilgi Bankası</h4>
-                        <ul>
-                            <li><a href="/mevzuat.html">Önemli Mevzuatlar</a></li>
-                            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
-                            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
-                            <li><a href="/blog.html">Blog & Makaleler</a></li>
-                        </ul>
+<style>
+    .faq-accordion-full { margin-top: 30px; }
+    .faq-item { background: #fff; margin-bottom: 15px; border-radius: 8px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+    .faq-question { width: 100%; padding: 20px 25px; background: none; border: none; text-align: left; font-size: 17px; font-weight: 600; color: #1a237e; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
+    .faq-question:hover { background: #fcfcfc; }
+    .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.3s ease; background: #fff; border-top: 0 solid #eee; }
+    .faq-answer p { padding: 20px 0; color: #666; line-height: 1.7; margin: 0; }
+    .faq-item.active .faq-answer { max-height: 500px; border-top: 1px solid #eee; }
+    .faq-question i { transition: transform 0.3s; font-size: 14px; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+</style>
+
+<section class="page-content">
+    <div class="container">
+        <div class="content-grid">
+            <div class="main-content">
+                <h2>Genel Sorular</h2>
+                <div class="faq-accordion-full">
+                    <div class="faq-item">
+                        <button class="faq-question">STK Danışmanlık tam olarak ne yapar? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Biz, sivil toplum kuruluşları (dernek, vakıf vb.) için A'dan Z'ye profesyonel danışmanlık hizmeti sunan bir firmayız. Kuruluş süreçleri, yasal zorunluluklar, mali işler, proje yönetimi gibi konularda bürokrasiyle uğraşmamanız ve hedeflerinize odaklanmanız için size destek oluruz.</p></div>
                     </div>
-                    <div class="widget">
-                        <h4>Yasal Güvence Alın</h4>
-                        <p>Mevzuat karmaşasında kaybolmayın. Kurumunuzun tüm süreçlerini profesyonel ekibimiz yönetsin.</p>
-                        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Ücretsiz Ön Görüşme</a>
+                    <div class="faq-item">
+                        <button class="faq-question">Neden bir danışmanlık firmasıyla çalışmalıyım? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>STK mevzuatı karmaşık ve sürekli güncellenen bir yapıya sahiptir. Süreçleri bir uzmanla yürütmek, sizi olası yasal cezalardan, zaman kaybından ve maddi hatalardan korur. Enerjinizi derneğinizin asıl amacına yöneltmenizi sağlar.</p></div>
                     </div>
-                </aside>
+                    <div class="faq-item">
+                        <button class="faq-question">Hizmet verdiğiniz bölgeler nerelerdir? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Merkezimiz İstanbul Ümraniye'de olmakla birlikte, Türkiye'nin her yerindeki dernek ve vakıflara dijital kanallar üzerinden ve gerekli durumlarda yerinde danışmanlık hizmeti sunmaktayız.</p></div>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 50px;">Derneklerle İlgili Sorular</h2>
+                <div class="faq-accordion-full">
+                    <div class="faq-item">
+                        <button class="faq-question">Dernek kurmak için kaç kişi gereklidir? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Bir dernek kurmak için en az 7 (yedi) gerçek veya tüzel kişinin bir araya gelmesi gerekmektedir.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Dernek beyannamesi ne zaman verilir? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Dernekler, her yılın ilk dört ayı içerisinde (1 Ocak - 30 Nisan arası) bir önceki yıla ait faaliyetlerini içeren DERBİS (Dernekler Bilgi Sistemi) üzerinden beyannamelerini vermekle yükümlüdür.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Yabancılar Türkiye'de dernek kurabilir mi? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Evet, Türkiye'de yerleşme hakkına sahip olan yabancı gerçek kişiler, dernek kurabilir veya mevcut derneklere üye olabilirler.</p></div>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 50px;">Vakıflarla İlgili Sorular</h2>
+                <div class="faq-accordion-full">
+                    <div class="faq-item">
+                        <button class="faq-question">Vakıf kurmak için ne kadar mal varlığı gerekir? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Kanunda belirtilmiş net bir asgari tutar olmamakla birlikte, vakfın amacını gerçekleştirmeye yetecek düzeyde bir mal varlığının (nakit, gayrimenkul vb.) tahsis edilmesi ve bu durumun mahkeme tarafından yeterli görülmesi gerekir. Bu miktar, vakfın amaçlarına göre değişiklik gösterir.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Vakıflar nasıl ve kim tarafından denetlenir? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Vakıflar, Vakıflar Genel Müdürlüğü (VGM) tarafından düzenli olarak denetlenir. Hem mali hem de idari faaliyetleri incelenir. Bu denetimler, vakfın amacına uygun hareket edip etmediğini kontrol etmek için yapılır.</p></div>
+                    </div>
+                </div>
             </div>
+
+            <aside class="sidebar">
+                <div class="widget">
+                    <h4>Kurumsal</h4>
+                    <ul>
+                        <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="/sss.html" class="current">Sıkça Sorulan Sorular</a></li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <h4>Hızlı İletişim</h4>
+                    <p>Projeniz hakkında görüşmek için hemen bize ulaşın.</p>
+                    <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">İletişime Geç</a>
+                </div>
+            </aside>
         </div>
-    </section>
+    </div>
+</section>
+
 </main>
 
 <footer class="main-footer">

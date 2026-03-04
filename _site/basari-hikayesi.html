@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{ title }} | STK Danışmanlık</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <title>Başarı Hikayesi: Motosiklet Sürücüleri Federasyonu | STK Danışmanlık</title>
+    <meta name="description" content="Motosiklet Sürücüleri Federasyonu&#39;nun 60 derneği tek çatı altında birleştiren başarı hikayesi. STK danışmanlığında STK Danışmanlık farkını keşfedin.">
+    <link rel="canonical" href="https://stkdanismanlik.com/basari-hikayesi.html">
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <!-- Preconnect -->
@@ -16,18 +16,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- JSON-LD Article Schema -->
+    <!-- JSON-LD Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "author": {"@type": "Organization", "name": "STK Danışmanlık"},
-      "publisher": {"@type": "Organization", "name": "STK Danışmanlık",
-        "logo": {"@type": "ImageObject", "url": "https://stkdanismanlik.com/logo.webp"}
+      "@type": "Service",
+      "serviceType": "Başarı Hikayesi: Motosiklet Sürücüleri Federasyonu",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "STK Danışmanlık",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        },
+        "telephone": "+905347054234"
       },
-      "datePublished": "{{ date }}",
-      "description": "{{ description }}"
+      "areaServed": [
+        {"@type": "City", "name": "İstanbul"},
+        {"@type": "AdministrativeArea", "name": "Ümraniye"}
+      ],
+      "description": "Motosiklet Sürücüleri Federasyonu&#39;nun 60 derneği tek çatı altında birleştiren başarı hikayesi. STK danışmanlığında STK Danışmanlık farkını keşfedin."
     }
     </script>
 
@@ -99,37 +111,37 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+        <li><a href="/">Ana Sayfa</a></li>
+        <li class="dropdown">
           <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
-            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+            <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+        <li class="dropdown">
           <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+        <li class="dropdown active-parent">
           <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
-            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
-            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html">Blog & Makaleler</a></li>
           </ul>
         </li>
-        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+        <li><a href="/referanslar.html">Referanslar</a></li>
+        <li><a href="/iletisim.html">İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
@@ -140,10 +152,10 @@
 
 <main>
     <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+    <section class="page-header" style="background-image: url('/img/sizin_motor_resminiz.jpg');">
         <div class="container">
-            <h1>{{ title }}</h1>
-            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+            <h1>Başarı Hikayesi: Motosiklet Sürücüleri Federasyonu</h1>
+            <p>Motosiklet Sürücüleri Federasyonu - 60 Dernek Tek Çatı Altında</p>
         </div>
     </section>
 
@@ -151,33 +163,97 @@
     <section class="page-content">
         <div class="container">
             <div class="content-grid">
-                <article class="main-content article-content">
-                    {% if image %}
-                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;" loading="lazy">
-                    {% endif %}
-                    <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
-                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
-                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
-                    </div>
-                    {{ content | safe }}
-                </article>
+                
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Başarı Hikayesi: Motosiklet Sürücüleri Federasyonu",
+      "author": {
+        "@type": "Organization",
+        "name": "STK Danışmanlık"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "STK Danışmanlık",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://stkdanismanlik.com/logo.webp"
+        }
+      },
+      "datePublished": "2024-01-01",
+      "description": "60 derneği tek çatı altında birleştiren Motosiklet Sürücüleri Federasyonu'nun kuruluş ve başarı hikayesi."
+    }
+    </script>
 
-                <aside class="sidebar">
-                    <div class="widget">
-                        <h4>Bilgi Bankası</h4>
-                        <ul>
-                            <li><a href="/mevzuat.html">Önemli Mevzuatlar</a></li>
-                            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
-                            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
-                            <li><a href="/blog.html">Blog & Makaleler</a></li>
+<style>
+/* KURUMSAL WHATSAPP WIDGET (Sıfır JavaScript - Maksimum Hız - Ako Dijital Standardı) */
+        
+        /* Başarı Listesi Stili */
+        .values-list { list-style: none; padding: 0; margin: 20px 0; }
+        .values-list li { padding: 12px 0 12px 35px; position: relative; font-size: 16px; line-height: 1.6; border-bottom: 1px solid #f0f0f0; }
+        .values-list li:last-child { border-bottom: none; }
+        .values-list li i { position: absolute; left: 0; top: 15px; color: #1a237e; font-size: 18px; }
+        
+        /* İçerik İyileştirmeleri */
+        .main-content h2 { color: #1a237e; font-size: 28px; margin-top: 30px; margin-bottom: 20px; font-weight: 700; }
+        .main-content h3 { color: #333; font-size: 22px; margin-top: 25px; margin-bottom: 15px; font-weight: 600; }
+        .main-content p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 15px; }
+        
+        /* Widget Stili */
+        .widget { background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 20px; }
+        .widget h4 { color: #1a237e; font-size: 18px; margin-bottom: 15px; font-weight: 600; }
+        .widget ul { list-style: none; padding: 0; }
+        .widget ul li { margin-bottom: 10px; }
+        .widget ul li a { color: #555; text-decoration: none; transition: color 0.3s ease; }
+        .widget ul li a:hover, .widget ul li a.current { color: #1a237e; font-weight: 600; }
+        
+        /* CTA Button */
+        .btn-secondary { background: #1a237e; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.3s ease; text-align: center; }
+        .btn-secondary:hover { background: #0d1642; transform: translateY(-2px); }
+</style>
+
+<div class="main-content">
+<h2>2024 yılıydı…</h2>
+                        <p>Türkiye'de motosiklet tutkunları artık tek bir çatı altında birleşmeye karar verdiler. Bu vizyonun öncüsü Murat Tomris, hayalini gerçeğe dönüştürmek için yola çıktı. Amaçları sadece motosiklet sürücülerini bir araya getirmek değil, onları güvenlik, dayanışma ve eğitim odağında bir topluluk hâline getirmekti.</p>
+                        <p>O günden bu yana kısa sürede 60 dernek, federasyonun çatısı altında toplandı. Marmara'dan Doğu Anadolu'ya, her ilde şubeleri ve temsilcilikleri kuruldu. Her üye dernek federasyonun vizyonunu ve değerlerini paylaşarak güç birliği yaptı.</p>
+
+                        <h3>İlk Adımlar ve Karşılaşılan Zorluklar</h3>
+                        <p>Kuruluşun ilk günlerinde, federasyonun önünde büyük bir görev vardı: Türkiye'de motosiklet kültürünü yaygınlaştırmak, sürücü haklarını korumak ve trafikte güvenliği artırmak. STK Danışmanlık olarak bu süreçte yasal altyapının kurulması, tüzüğün hazırlanması ve resmi başvuruların sorunsuz ilerlemesi için kendilerine tam destek sağladık.</p>
+
+                        <h3>Kazanılan Başarılar</h3>
+                        <ul class="values-list">
+                            <li><i class="fas fa-check-circle"></i> Güvenli sürüş eğitimleri düzenlendi ve yüzlerce sürücü bilinçlendirildi.</li>
+                            <li><i class="fas fa-check-circle"></i> Trafik farkındalık kampanyaları ile motosiklet güvenliği toplumun gündemine taşındı.</li>
+                            <li><i class="fas fa-check-circle"></i> Sosyal sorumluluk projeleri ile topluma dokunuldu; kan bağışı ve çevre temizliği gibi etkinlikler düzenlendi.</li>
                         </ul>
-                    </div>
-                    <div class="widget">
-                        <h4>Yasal Güvence Alın</h4>
-                        <p>Mevzuat karmaşasında kaybolmayın. Kurumunuzun tüm süreçlerini profesyonel ekibimiz yönetsin.</p>
-                        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Ücretsiz Ön Görüşme</a>
-                    </div>
-                </aside>
+
+                        <h3>Gelecek Vizyonu</h3>
+                        <p>Her kilometre, her eğitim ve her etkinlik, federasyonun başarı yolculuğunun bir parçası. Motosiklet Sürücüleri Federasyonu artık Türkiye'de örnek bir STK modeli olarak öne çıkıyor ve uluslararası iş birlikleri için yeni adımlar atıyor.</p>
+                        
+                        <p style="margin-top: 30px; padding: 20px; background: #f0f7ff; border-left: 4px solid #1a237e; border-radius: 5px;">
+                            <strong>💡 Sizin de projenizi hayata geçirelim!</strong><br>
+                            STK kuruluşunuzda profesyonel destek almak ve tüm süreci sorunsuz yönetmek için <a href="/iletisim" style="color: #1a237e; font-weight: 600;">bizimle iletişime geçin</a>.
+                        </p>
+</div>
+
+<aside class="sidebar">
+                        <div class="widget">
+                            <h4>Bilgi Bankası</h4>
+                            <ul>
+                                <li><a href="/mevzuat">Mevzuatlar</a></li>
+                                <li><a href="/blog-dernek-yonetici-sorumluluklari">Yönetici Sorumlulukları</a></li>
+                                <li><a href="/blog-stk-iktisadi-isletme-avantajlari">İktisadi İşletme Avantajları</a></li>
+                                <li><a href="/blog" class="current">Blog & Makaleler</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget">
+                            <h4>Sizin Projenizi de Hayata Geçirelim</h4>
+                            <p>STK kuruluşunuzda profesyonel destek almak ve tüm süreci sorunsuz yönetmek için uzman ekibimizden yardım alın.</p>
+                            <a href="/iletisim" class="btn btn-secondary" style="width: 100%;">Danışmanlık Al</a>
+                        </div>
+                    </aside>
+
             </div>
         </div>
     </section>
