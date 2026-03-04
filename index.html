@@ -8,16 +8,27 @@ permalink: "/"
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>SH Danışmanlık | STK, Dernek ve Vakıf Kurulum Hizmetleri</title>
     <meta name="description" content="SH Danışmanlık; dernek ve vakıf kurulumu, tüzük hazırlama ve mali danışmanlık alanlarında profesyonel çözümler sunar.">
-    <link rel="canonical" href="https://shdanismanlik.com/">
+    <link rel="canonical" href="https://stkdanismanlik.com/">
 
     <!-- LCP Preload -->
     <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-    <!-- Poppins Font -->
+    <!-- DNS prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <!-- Poppins Font async -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- FontAwesome async -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/logo.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="/logo.webp">
+    <meta name="theme-color" content="#1a237e">
 
     <!-- SPECULATION RULES -->
     <script type="speculationrules">
@@ -30,7 +41,7 @@ permalink: "/"
       ]
     }
     </script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
     <!-- ============================================================
          INLINE KRİTİK CSS — tüm render-blocking CSS burada
          ============================================================ -->
@@ -82,8 +93,9 @@ permalink: "/"
     padding: 0 15px;
 }
 .logo-img { 
-    height: 100px;  /* ← Sabit boyut */
+    height: 100px;
     width: auto;
+    aspect-ratio: 247 / 214;
     object-fit: contain;
     transition: transform 0.3s ease;
     margin-right: 40px;
@@ -484,7 +496,7 @@ permalink: "/"
       .main-nav { display: none; }
       .nav-open-btn { display: block; }
       .slider { height: 70vh; min-height: 360px; }
-      .logo-img { height: 50px; }
+      .logo-img { height: 55px; margin-right: 10px; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .posts-grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -510,21 +522,66 @@ permalink: "/"
     }
     </style>
 
-    <!-- Stylesheet (non-blocking for any extra styles) -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Stylesheet (non-blocking) -->
+    <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <!-- JSON-LD SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "SH Danışmanlık",
-      "url": "https://shdanismanlik.com",
-      "logo": "https://shdanismanlik.com/logo.webp",
-      "image": "https://shdanismanlik.com/img/banner1.webp",
-      "telephone": "+905347054234",
-      "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150" }
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://stkdanismanlik.com/#organization",
+          "name": "SH Danışmanlık",
+          "url": "https://stkdanismanlik.com",
+          "logo": "https://stkdanismanlik.com/logo.webp",
+          "image": "https://stkdanismanlik.com/img/banner1.webp",
+          "telephone": "+905347054234",
+          "email": "info@stkdanismanlik.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+            "addressLocality": "Ümraniye",
+            "addressRegion": "İstanbul",
+            "postalCode": "34764",
+            "addressCountry": "TR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.0163",
+            "longitude": "29.1221"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150"
+          },
+          "priceRange": "₺₺",
+          "areaServed": { "@type": "City", "name": "İstanbul" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://stkdanismanlik.com/#website",
+          "url": "https://stkdanismanlik.com",
+          "name": "SH Danışmanlık",
+          "publisher": { "@id": "https://stkdanismanlik.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://stkdanismanlik.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -537,7 +594,7 @@ permalink: "/"
 <header class="main-header">
   <div class="container header-container">
     <a href="/index.html" class="logo-container">
-      <img src="/logo.webp" alt="SH Danışmanlık" class="logo-img" width="180" height="60" fetchpriority="high">
+      <img src="/logo.webp" alt="SH Danışmanlık" class="logo-img" width="247" height="214" fetchpriority="high" decoding="async">
     </a>
     <nav class="main-nav" id="mainNav">
       <button class="nav-close-btn" id="navCloseBtn" aria-label="Menüyü kapat">
@@ -942,141 +999,13 @@ permalink: "/"
 </a>
 
 <!-- ===== DEFERRED JS — sadece etkileşim için ===== -->
+<script src="/js/script.js" defer></script>
 <script defer>
-(function(){
-  // --- SLIDER ---
-  var slides = document.querySelectorAll('.slide');
-  var dotsContainer = document.getElementById('sliderDots');
-  var current = 0;
-  var total = slides.length;
-  var dots = [];
-
-  // Create dots
-  for(var i=0; i<total; i++){
-    var d = document.createElement('button');
-    d.className = 'dot' + (i===0?' active':'');
-    d.setAttribute('aria-label','Slayt '+(i+1));
-    d.setAttribute('type','button');
-    d.onclick = (function(idx){ return function(){ goTo(idx); }; })(i);
-    dotsContainer.appendChild(d);
-    dots.push(d);
-  }
-
-  function goTo(n){
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (n + total) % total;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
-
-  document.querySelector('.slider-btn.prev').addEventListener('click', function(){ goTo(current-1); });
-  document.querySelector('.slider-btn.next').addEventListener('click', function(){ goTo(current+1); });
-
-  var autoSlide = setInterval(function(){ goTo(current+1); }, 5000);
-  document.querySelector('.slider').addEventListener('mouseenter', function(){ clearInterval(autoSlide); });
-  document.querySelector('.slider').addEventListener('mouseleave', function(){ autoSlide = setInterval(function(){ goTo(current+1); }, 5000); });
-
-  // --- COUNTER ANIMATION (Intersection Observer) ---
-  var counters = document.querySelectorAll('.counter');
-  var counterObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(!entry.isIntersecting) return;
-      var el = entry.target;
-      var target = parseInt(el.getAttribute('data-target'));
-      var start = 0;
-      var step = target / 60;
-      var timer = setInterval(function(){
-        start += step;
-        if(start >= target){ start = target; clearInterval(timer); }
-        el.textContent = Math.floor(start).toLocaleString();
-      }, 16);
-      counterObserver.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(function(c){ counterObserver.observe(c); });
-
-  // --- FAQ ACCORDION ---
-  var faqButtons = document.querySelectorAll('.faq-question');
-  faqButtons.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = this.parentElement;
-      var wasOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-      // Open clicked if wasn't open
-      if(!wasOpen) item.classList.add('open');
-    });
-  });
-
-  // FAQ Load More
-  var loadMoreBtn = document.getElementById('loadMoreFaq');
-  if(loadMoreBtn){
-    loadMoreBtn.addEventListener('click', function(){
-      document.querySelectorAll('.faq-item.hidden').forEach(function(item){
-        item.classList.remove('hidden');
-      });
-      loadMoreBtn.style.display = 'none';
-    });
-  }
-
-  // --- MOBILE NAV (style.css sistemiyle uyumlu: active + mob-open) ---
-  var navOpenBtn = document.getElementById('navOpenBtn');
-  var navCloseBtn = document.getElementById('navCloseBtn');
-  var mainNav = document.getElementById('mainNav');
-  var navOverlay = document.getElementById('navOverlay');
-
-  function openNav(){
-    mainNav.classList.add('active');
-    navOverlay.classList.add('active');
-    navCloseBtn.classList.add('mobile-show');
-  }
-  function closeNav(){
-    mainNav.classList.remove('active');
-    navOverlay.classList.remove('active');
-    navCloseBtn.classList.remove('mobile-show');
-    document.querySelectorAll('.dropdown.mob-open').forEach(function(dropdown){
-      dropdown.classList.remove('mob-open');
-    });
-  }
-
-  navOpenBtn.addEventListener('click', openNav);
-  navCloseBtn.addEventListener('click', closeNav);
-  navOverlay.addEventListener('click', closeNav);
-
-  // Mobile dropdown toggle — mob-open sistemi
-  document.querySelectorAll('.main-nav .dropdown > a').forEach(function(link){
-    link.addEventListener('click', function(e){
-      if (window.innerWidth <= 992) {
-        e.preventDefault();
-        var parentDropdown = this.parentElement;
-        var wasOpen = parentDropdown.classList.contains('mob-open');
-        document.querySelectorAll('.dropdown.mob-open').forEach(function(dropdown){
-          dropdown.classList.remove('mob-open');
-        });
-        if(!wasOpen){
-          parentDropdown.classList.add('mob-open');
-        }
-      }
-    });
-  });
-
-  // --- CONTACT FORM (placeholder handler) ---
-  var form = document.querySelector('.contact-form');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Teşekkürler! Mesajınız alındı. En kısa sürede size ulaşacağız.');
-      form.reset();
-    });
-  }
-})();
-</script>
-<script>
+  // Netlify Identity redirect
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
+    window.netlifyIdentity.on("init", function(user) {
       if (!user) {
-        window.netlifyIdentity.on("login", () => {
+        window.netlifyIdentity.on("login", function() {
           document.location.href = "/admin/";
         });
       }
