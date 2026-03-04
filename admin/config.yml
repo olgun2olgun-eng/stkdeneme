@@ -1,0 +1,244 @@
+backend:
+  name: git-gateway
+  branch: main
+
+display_url: https://stkdanismanlik.com/
+logo_url:    https://stkdanismanlik.com/logo.webp
+locale: "tr"
+
+media_folder: "img"
+public_folder: "/img"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+
+  # ═══════════════════════════════════════
+  #  BLOG & MAKALELER
+  # ═══════════════════════════════════════
+  - name: "blog"
+    label: "Blog & Makaleler"
+    label_singular: "Makale"
+    folder: "content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    sort: "date:desc"
+    summary: "{{title}} — {{category}} — {{date | date('DD.MM.YYYY')}}"
+    view_groups:
+      - label: "Kategori"
+        field: category
+    view_filters:
+      - label: "Mevzuat"
+        field: category
+        pattern: "Mevzuat"
+      - label: "Uzman Rehberi"
+        field: category
+        pattern: "Uzman Rehberi"
+      - label: "Hibe Firsati"
+        field: category
+        pattern: "Hibe Firsati"
+      - label: "Bilgi Notu"
+        field: category
+        pattern: "Bilgi Notu"
+      - label: "Duyuru"
+        field: category
+        pattern: "Duyuru"
+    fields:
+      - label: "Baslik"
+        name: "title"
+        widget: "string"
+
+      - label: "Kapak Gorseli"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Mevzuat", value: "Mevzuat" }
+          - { label: "Uzman Rehberi", value: "Uzman Rehberi" }
+          - { label: "Hibe Firsati", value: "Hibe Firsati" }
+          - { label: "Bilgi Notu", value: "Bilgi Notu" }
+          - { label: "Duyuru", value: "Duyuru" }
+
+      - label: "Yayin Tarihi"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: "Kisa Ozet"
+        name: "excerpt"
+        widget: "text"
+        required: false
+
+      - label: "Icerik"
+        name: "body"
+        widget: "markdown"
+
+      - label: "SEO Aciklama"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Google sonuclarinda gorunecek aciklama (max 160 karakter)"
+
+  # ═══════════════════════════════════════
+  #  HİZMET SAYFALARI
+  # ═══════════════════════════════════════
+  - name: "services"
+    label: "Hizmet Sayfalari"
+    label_singular: "Hizmet"
+    files:
+      - file: "hizmet-dernek-kurulusu.html"
+        label: "Dernek Kurulusu"
+        name: "dernek-kurulusu"
+        fields: &hizmet_fields
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.html" }
+          - { label: "Baslik", name: "title", widget: "string" }
+          - { label: "SEO Aciklama", name: "description", widget: "text", required: false }
+          - { label: "Banner Alti Ozet", name: "excerpt", widget: "text", required: false }
+          - { label: "Banner Gorseli", name: "banner_image", widget: "image", required: false }
+          - { label: "Sidebar Baslik", name: "sidebar_title", widget: "string", required: false, default: "" }
+          - { label: "Sidebar CTA", name: "sidebar_cta_text", widget: "text", required: false, default: "" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - { label: "Sayfa Icerigi", name: "body", widget: "markdown" }
+
+      - file: "hizmet-derbis.html"
+        label: "DERBIS Islemleri"
+        name: "derbis"
+        fields: *hizmet_fields
+
+      - file: "hizmet-vakif-kurulusu.html"
+        label: "Vakif Kurulusu"
+        name: "vakif-kurulusu"
+        fields: *hizmet_fields
+
+      - file: "hizmet-genel-kurul.html"
+        label: "Genel Kurul Yonetimi"
+        name: "genel-kurul"
+        fields: *hizmet_fields
+
+      - file: "hizmet-mali-danismanlik.html"
+        label: "Mali Danismanlik"
+        name: "mali-danismanlik"
+        fields: *hizmet_fields
+
+      - file: "hizmet-proje-yazma.html"
+        label: "Proje ve Fon Gelistirme"
+        name: "proje-yazma"
+        fields: *hizmet_fields
+
+      - file: "hizmet-yasal-danismanlik.html"
+        label: "Yasal Danismanlik"
+        name: "yasal-danismanlik"
+        fields: *hizmet_fields
+
+  # ═══════════════════════════════════════
+  #  KURUMSAL SAYFALAR
+  # ═══════════════════════════════════════
+  - name: "kurumsal"
+    label: "Kurumsal"
+    files:
+      - file: "hakkimizda.html"
+        label: "Hakkimizda"
+        name: "hakkimizda"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/fullwidth.html" }
+          - { label: "Baslik", name: "title", widget: "string" }
+          - { label: "SEO Aciklama", name: "description", widget: "text", required: false }
+          - { label: "Banner Alti Ozet", name: "excerpt", widget: "text", required: false }
+          - { label: "Banner Gorseli", name: "banner_image", widget: "image", required: false }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - { label: "Icerik", name: "body", widget: "markdown" }
+
+      - file: "sss.html"
+        label: "Sikca Sorulan Sorular"
+        name: "sss"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/fullwidth.html" }
+          - { label: "Baslik", name: "title", widget: "string" }
+          - { label: "SEO Aciklama", name: "description", widget: "text", required: false }
+          - { label: "Banner Alti Ozet", name: "excerpt", widget: "text", required: false }
+          - { label: "Banner Gorseli", name: "banner_image", widget: "image", required: false }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - { label: "Icerik", name: "body", widget: "markdown" }
+
+  # ═══════════════════════════════════════
+  #  SITE AYARLARI
+  # ═══════════════════════════════════════
+  - name: "settings"
+    label: "Site Ayarlari"
+    editor:
+      preview: false
+    files:
+      - file: "content/settings.json"
+        label: "Genel Ayarlar"
+        name: "general_settings"
+        fields:
+          - { label: "Site Adi", name: "site_name", widget: "string" }
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Telefon (Ham)", name: "phone_raw", widget: "string" }
+          - { label: "E-Posta", name: "email", widget: "string" }
+          - { label: "Adres", name: "address", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Footer Slogani", name: "footer_slogan", widget: "string" }
+          - { label: "Telif Yili", name: "copyright_year", widget: "string" }
+          - label: "Sosyal Medya"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "LinkedIn", name: "linkedin", widget: "string", default: "#" }
+              - { label: "Twitter", name: "twitter", widget: "string", default: "#" }
+              - { label: "Instagram", name: "instagram", widget: "string", default: "#" }
+
+  # ═══════════════════════════════════════
+  #  ANA SAYFA
+  # ═══════════════════════════════════════
+  - name: "homepage"
+    label: "Ana Sayfa"
+    editor:
+      preview: false
+    files:
+      - file: "content/homepage.json"
+        label: "Ana Sayfa Icerikleri"
+        name: "homepage_content"
+        fields:
+          - label: "Slider 1"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Baslik", name: "title", widget: "string" }
+              - { label: "Alt Yazi", name: "subtitle", widget: "text" }
+              - { label: "Buton Metni", name: "cta_text", widget: "string" }
+              - { label: "Buton Linki", name: "cta_link", widget: "string" }
+          - label: "Slider 2"
+            name: "hero2"
+            widget: "object"
+            fields:
+              - { label: "Baslik", name: "title", widget: "string" }
+              - { label: "Alt Yazi", name: "subtitle", widget: "text" }
+              - { label: "Buton Metni", name: "cta_text", widget: "string" }
+              - { label: "Buton Linki", name: "cta_link", widget: "string" }
+          - label: "Slider 3"
+            name: "hero3"
+            widget: "object"
+            fields:
+              - { label: "Baslik", name: "title", widget: "string" }
+              - { label: "Alt Yazi", name: "subtitle", widget: "text" }
+              - { label: "Buton Metni", name: "cta_text", widget: "string" }
+              - { label: "Buton Linki", name: "cta_link", widget: "string" }
+          - label: "Istatistikler"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Tecrube Yili", name: "experience_years", widget: "string" }
+              - { label: "Basarili Proje", name: "successful_projects", widget: "string" }
+              - { label: "STK Partneri", name: "active_partners", widget: "string" }
+              - { label: "Katilimci", name: "trained_participants", widget: "string" }
+          - { label: "Hakkimizda Baslik", name: "about_short", widget: "string" }
+          - { label: "Hakkimizda Metin", name: "about_text", widget: "text" }

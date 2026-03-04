@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site.site_name | default("SH Danışmanlık") }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="https://shdanismanlik.netlify.app{{ page.url }}">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ title }}",
+      "author": {"@type": "Organization", "name": "{{ site.site_name | default('SH Danışmanlık') }}"},
+      "publisher": {"@type": "Organization", "name": "{{ site.site_name | default('SH Danışmanlık') }}",
+        "logo": {"@type": "ImageObject", "url": "https://shdanismanlik.netlify.app/logo.webp"}
+      },
+      "datePublished": "{{ date }}",
+      "description": "{{ description }}"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/logo.webp" type="image/webp">
+
+    <style>
+        .wa-floating-btn { position: fixed; bottom: 25px; right: 25px; left: auto; z-index: 9999; display: flex; align-items: center; flex-direction: row-reverse; text-decoration: none; transition: all 0.3s ease; }
+        .wa-icon { background-color: #25d366; color: white !important; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .wa-label { background: white; color: #333; padding: 10px 18px; border-radius: 25px; margin-right: 12px; margin-left: 0; font-size: 14px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1); white-space: nowrap; display: block; }
+        @media (max-width: 768px) { .wa-label { display: none; } }
+        .wa-floating-btn:hover { transform: translateY(-3px); }
+        .article-content { line-height: 1.8; color: #444; font-size: 16px; }
+        .article-content h2 { color: #1a237e; margin-top: 40px; border-left: 5px solid #1a237e; padding-left: 15px; }
+        .article-content h3 { color: #333; margin-top: 30px; font-size: 22px; }
+    
+        .page-header::before { pointer-events: none !important; }
+        /* Active dropdown items */
+        .dropdown-menu li a.active { color: var(--primary-color) !important; font-weight: 700 !important; background: #f0f7ff !important; }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container header-container">
+    <a href="/" class="logo-container">
+      <img src="/logo.webp" alt="{{ site.site_name | default('SH Danışmanlık') }}" class="logo-img" width="180" height="55" />
+    </a>
+    <nav class="main-nav">
+      <button class="nav-close-btn" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
+        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+          <a href="#"{% if "/hakkimizda" in page.url or "/sss" in page.url %} class="active"{% endif %}>Kurumsal <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
+            <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
+          </ul>
+        </li>
+        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+          <a href="#"{% if "/hizmet" in page.url %} class="active"{% endif %}>Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html"{% if "/hizmet-vakif-kurulusu" in page.url %} class="active"{% endif %}>Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html"{% if "/hizmet-genel-kurul" in page.url %} class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html"{% if "/hizmet-mali-danismanlik" in page.url %} class="active"{% endif %}>Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html"{% if "/hizmet-proje-yazma" in page.url %} class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
+          </ul>
+        </li>
+        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url or "/content/blog" in page.url %} active-parent{% endif %}">
+          <a href="#"{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url or "/content/blog" in page.url %} class="active"{% endif %}>Bilgi Bankası <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuatlar</a></li>
+            <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
+            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
+            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+          </ul>
+        </li>
+        <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
+        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
+      </ul>
+    </nav>
+    <button class="nav-open-btn" aria-label="Menüyü aç"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+<main>
+    <section class="page-header" style="background-image: url('/img/banner1.webp');">
+        <div class="container">
+            <h1>{{ title }}</h1>
+            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="content-grid">
+                <article class="main-content article-content">
+                    {% if image %}
+                    <img src="{{ image }}" alt="{{ title }}" width="800" height="450" style="width:100%;border-radius:12px;margin-bottom:30px;">
+                    {% endif %}
+                    <div class="post-meta" style="margin-bottom:25px;color:#999;font-size:14px;">
+                        <span><i class="fas fa-calendar-alt"></i> {{ date | turkishDate }}</span>
+                        {% if category %}<span style="margin-left:15px;"><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
+                    </div>
+                    {{ content | safe }}
+                </article>
+
+                <aside class="sidebar">
+                    <div class="widget">
+                        <h4>Bilgi Bankası</h4>
+                        <ul>
+                            <li><a href="/mevzuat.html">Önemli Mevzuatlar</a></li>
+                            <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
+                            <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
+                            <li><a href="/blog.html">Blog & Makaleler</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h4>Yasal Güvence Alın</h4>
+                        <p>Mevzuat karmaşasında kaybolmayın. Kurumunuzun tüm süreçlerini profesyonel ekibimiz yönetsin.</p>
+                        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Ücretsiz Ön Görüşme</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>"{{ site.footer_slogan | default("Bize Uğrayın, Bürokrasiye Takılmayın") }}"</p>
+                <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("SH Danışmanlık") }}. Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="footer-col">
+                <p><strong>Hızlı Menü</strong></p>
+                <ul>
+                    <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="/referanslar.html">Referanslar</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p><strong>İletişim</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> {{ site.address | default("İstanbul, Türkiye") }}</p>
+                <p><i class="fas fa-phone"></i> {{ site.phone | default("+90 534 705 42 34") }}</p>
+                <p><i class="fas fa-envelope"></i> {{ site.email | default("info@shdanismanlik.com") }}</p>
+            </div>
+            <div class="footer-col">
+                <p><strong>Takip Edin</strong></p>
+                <div class="social-icons">
+                    <a href="{{ site.social.linkedin | default('#') }}" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{ site.social.twitter | default('#') }}" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ site.social.instagram | default('#') }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+                <div class="footer-bottom" style="margin-top: 20px; text-align: center; font-size: 14px; color: #999;">
+            <p>&copy; {{ site.copyright_year | default("2026") }} Tasarım ve Yazılım. Design by <a href="https://akodijital.com" target="_blank" rel="noopener" style="color: #00a8e8; font-weight: 600; text-decoration: none;">AKODİJİTAL</a></p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/{{ site.whatsapp | default('905347054234') }}" class="wa-floating-btn" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geçin">
+    <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+    <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
+</a>
+<script src="/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+---
+layout: layouts/sidebar.html
+title: "Blog & Makaleler | Bilgi Bankası"
+description: "Dernekler mevzuatı, vakıf yönetimi, hibe programları ve sivil toplum kuruluşu yönetimi hakkında güncel makaleler ve profesyonel rehberler."
+excerpt: "Sektörden en güncel bilgiler, profesyonel rehberler ve uzman analizleri."
+banner_image: "/img/banner1.webp"
+permalink: "/blog.html"
+---
+
+<div class="main-content">
+  {% for post in collections.blog %}
+  <article class="blog-post-card">
+    <a href="{{ post.url }}" class="post-image-link">
+      {% if post.data.image %}
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}" width="800" height="450" loading="lazy">
+      {% else %}
+        <img src="/img/banner1.webp" alt="{{ post.data.title }}" width="800" height="450" loading="lazy">
+      {% endif %}
+    </a>
+    <div class="post-content">
+      <div class="post-meta">
+        <span><i class="fas fa-calendar-alt"></i> {{ post.date | turkishDate }}</span>
+        {% if post.data.category %}
+          <span><i class="fas fa-tag"></i> {{ post.data.category }}</span>
+        {% endif %}
+      </div>
+      <h2 class="post-title">
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+      {% if post.data.excerpt %}
+        <p class="post-excerpt">{{ post.data.excerpt }}</p>
+      {% endif %}
+      <a href="{{ post.url }}" class="btn-read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </article>
+  {% else %}
+  <p>Henüz makale bulunmamaktadır.</p>
+  {% endfor %}
+</div>
+
+<aside class="sidebar">
+  <div class="widget">
+    <h4>Bilgi Bankası</h4>
+    <ul>
+      <li><a href="/mevzuat">Önemli Mevzuatlar</a></li>
+      <li><a href="/blog-dernek-yonetici-sorumluluklari">Yönetici Sorumlulukları</a></li>
+      <li><a href="/blog-stk-iktisadi-isletme-avantajlari">İktisadi İşletme Avantajları</a></li>
+      <li><a href="/blog" class="current">Blog & Makaleler</a></li>
+    </ul>
+  </div>
+  <div class="widget">
+    <h4>Mevzuat Karmaşık Mı Geldi?</h4>
+    <p>Yasal süreçlerde hata yapmamak ve güncel bilgilere ulaşmak için uzman ekibimizden destek alın.</p>
+    <a href="/iletisim" class="btn btn-secondary" style="width: 100%;">Danışmanlık Al</a>
+  </div>
+</aside>

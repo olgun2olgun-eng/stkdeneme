@@ -1,0 +1,230 @@
+---
+layout: layouts/fullwidth.html
+title: "İletişim"
+description: "Dernek ve vakıf kurulumu, genel kurul yönetimi ve mali danışmanlık süreçleriniz için SH Danışmanlık ile iletişime geçin. Uzman ekibimizle yanınızdayız."
+excerpt: "Sivil toplum hedeflerinizi birlikte gerçekleştirelim. Uzmanlarımız size bir adım uzaklıkta."
+banner_image: "/img/banner2.webp"
+permalink: "/iletisim.html"
+
+# === İLETİŞİM BİLGİLERİ ===
+contact_address: "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5, Ümraniye, İstanbul"
+contact_phone: "+90 534 705 42 34"
+contact_phone_raw: "+905347054234"
+contact_email: "info@shdanismanlik.com"
+contact_hours: "Hafta içi: 09:00 - 18:00 | Cumartesi: Randevu ile"
+
+# === FORM AYARLARI ===
+form_title: "Danışmanlık Talep Formu"
+form_subtitle: "Hizmetlerimiz hakkında detaylı bilgi ve teklif almak için formu doldurun."
+form_action: "#"
+
+# === HARİTA ===
+map_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8251!2d29.1219!3d41.0232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac6d4f7b8f7a5%3A0x1234567890abcdef!2zxLBzdGlrbGFsIE1haCwgU8O8dMOnw7xpbWFtIENkLiBObzoxNDQsIMOcbXJhbml5ZS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1234567890123!5m2!1str!2str"
+---
+
+<style>
+    .contact-grid-wrapper { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 50px; 
+        margin-top: 40px; 
+    }
+
+    .contact-info-box { 
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 40px; 
+        border-radius: 15px; 
+        border-left: 5px solid #1a237e; 
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .info-item { 
+        display: flex; 
+        align-items: flex-start; 
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .info-item:hover { transform: translateX(5px); }
+
+    .info-item i { 
+        font-size: 24px; 
+        color: #1a237e; 
+        margin-right: 20px; 
+        margin-top: 5px;
+        min-width: 30px;
+    }
+
+    .info-item h4 { 
+        margin: 0 0 8px 0; 
+        font-size: 18px; 
+        color: #1a237e;
+        font-weight: 600;
+    }
+
+    .info-item p { 
+        margin: 0; 
+        color: #555; 
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .info-item a {
+        color: #1a237e;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .info-item a:hover {
+        color: #0d47a1;
+        text-decoration: underline;
+    }
+
+    .contact-form-side h2 { color: #1a237e; margin-bottom: 10px; }
+
+    .contact-form {
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s ease;
+        background-color: #f8f9fa;
+        box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #1a237e;
+        background-color: #fff;
+        box-shadow: 0 0 0 3px rgba(26,35,126,0.1);
+    }
+
+    .form-group textarea { resize: vertical; }
+
+    .map-section { margin-top: 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+    @media (max-width: 768px) {
+        .contact-grid-wrapper { grid-template-columns: 1fr; gap: 30px; }
+    }
+</style>
+
+<section class="page-content">
+    <div class="container">
+        <div class="contact-grid-wrapper">
+
+            <!-- SOL SÜTUN: İLETİŞİM BİLGİLERİ -->
+            <div class="contact-info">
+                <h2>Bizimle İletişime Geçin</h2>
+                <p style="margin-bottom: 30px;">Dernek ve vakıf süreçlerindeki her türlü sorunuz için bize aşağıdaki kanallardan ulaşabilir veya ofisimizde bizi ziyaret edebilirsiniz.</p>
+
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresimiz</h4>
+                            <p>{{ contact_address | safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:{{ contact_phone_raw }}">{{ contact_phone }}</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-Posta</h4>
+                            <p><a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Çalışma Saatleri</h4>
+                            <p>{{ contact_hours | safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <!-- SAĞ SÜTUN: İLETİŞİM FORMU -->
+            <div class="contact-form-side">
+                <h2>{{ form_title }}</h2>
+                <p style="margin-bottom: 25px; color: #666;">{{ form_subtitle }}</p>
+
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms -->
+                    <input type="hidden" name="access_key" value="4fe328a0-e03e-4479-85cf-b2b076f4335b">
+                    <input type="hidden" name="subject" value="Yeni Danışmanlık Talebi - SH Danışmanlık">
+                    <input type="hidden" name="redirect" value="https://stkdanismanlik.com/tesekkurler/">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Adınız Soyadınız *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="E-posta Adresiniz *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Telefon Numaranız">
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="" disabled selected>İlgilendiğiniz Hizmet *</option>
+                            <option value="dernek">Dernek Kuruluşu</option>
+                            <option value="derbis">DERBİS İşlemleri</option>
+                            <option value="vakif">Vakıf Kuruluşu</option>
+                            <option value="genelkurul">Genel Kurul Yönetimi</option>
+                            <option value="mali">Mali Danışmanlık</option>
+                            <option value="proje">Proje ve Fon Geliştirme</option>
+                            <option value="yasal">Yasal Danışmanlık</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Mesajınız... *" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
+                        Mesajı Gönder
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- HARİTA BÖLÜMÜ -->
+<section style="padding: 0 0 60px 0;">
+    <div class="container">
+        <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.12); line-height: 0; height: 480px;">
+            <iframe
+                src="{{ map_embed_url }}"
+                style="border:0; display:block; width:100% !important; height:480px !important; max-width:100% !important;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STK Danışmanlık | Yönetim Paneli</title>
+  <link rel="icon" type="image/webp" href="/logo.webp" />
+  <style>
+    /* Alttaki Decap logosu */
+    [class*="AuthenticationPage"] [class*="footer"],
+    [class*="AuthenticationPage"] footer,
+    [class*="cms-logo"],
+    [class*="CmsLogo"],
+    [class*="DecapLogo"],
+    [class*="NetlifyCmsLogo"] {
+      display: none !important;
+    }
+
+    /* "Netlify Identity ile Giriş" buton yazısını değiştir */
+    [class*="AuthenticationPage"] button {
+      font-size: 0 !important;
+      position: relative;
+    }
+    [class*="AuthenticationPage"] button::after {
+      content: "Giriş Yap";
+      font-size: 14px;
+    }
+
+    /* Header rengi */
+    [class*="AppHeader"] {
+      background: linear-gradient(135deg, #1a3a5c 0%, #0d2137 100%) !important;
+    }
+    [class*="AppHeader"] a { color: #fff !important; }
+  </style>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <div id="nc-root"></div>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Decap render ettikten sonra DOM'daki Decap logosunu da sil -->
+  <script>
+    function removeDecapBranding() {
+      // Footer/logo elementlerini bul ve sil
+      var selectors = [
+        'a[href*="decapcms.org"]',
+        'a[href*="netlifycms.org"]',
+        'img[alt="Decap CMS"]',
+        'img[alt="Netlify CMS"]',
+        '[class*="footer"]'
+      ];
+      selectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          // Sadece giriş sayfasındaki footer
+          var parent = el.closest('[class*="AuthenticationPage"]') || el.closest('[class*="login"]');
+          if (parent || sel.includes('decapcms') || sel.includes('netlifycms') || sel.includes('alt')) {
+            el.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // CMS yüklendikten sonra çalıştır
+    var observer = new MutationObserver(function() {
+      removeDecapBranding();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
+</body>
+</html>
