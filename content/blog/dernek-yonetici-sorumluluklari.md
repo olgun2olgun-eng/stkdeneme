@@ -4,6 +4,7 @@ title: "Dernek Yöneticilerinin Göz Ardı Etmemesi Gereken Yasal Sorumluluklar"
 description: "Dernek başkanı ve yönetim kurulu üyelerinin yasal ve cezai sorumluluklarını detaylı inceleyen kapsamlı rehber."
 date: 2026-01-04
 category: "Uzman Rehberi"
+tags: ["dernek yönetimi", "yasal sorumluluk", "STK danışmanlık", "dernek başkanı", "yönetim kurulu"]
 image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800"
 excerpt: "Dernek başkanı ve yönetim kurulu üyelerinin yasal ve cezai sorumluluklarını detaylı inceleyen kapsamlı rehber. Mali yükümlülükler, beyanname süreçleri, resmi bildirimler ve hata durumlarında karşılaşılabilecek yaptırımlar hakkında her şey."
 ---

@@ -352,12 +352,15 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
 <footer class="main-footer" itemscope itemtype="https://schema.org/LocalBusiness">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
         <img src="/logo.webp" alt="SH Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
+        <p itemprop="description">"{{ site.footer_slogan | default('Bize Uğrayın, Bürokrasiye Takılmayın') }}"</p>
+        <!-- NAP: Google Lokal SEO için zorunlu -->
+        <p itemprop="name" style="display:none">SH Danışmanlık</p>
         <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
           <i class="fas fa-map-marker-alt" style="color:#0d6efd;margin-right:6px"></i>
           <span itemprop="streetAddress">İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5</span>,
@@ -366,45 +369,60 @@
           <meta itemprop="postalCode" content="34764">
           <meta itemprop="addressCountry" content="TR">
         </address>
-        <p style="font-size:.85rem;margin-top:6px"><a href="tel:+905347054234" itemprop="telephone" style="color:#ccc"><i class="fas fa-phone" style="color:#0d6efd;margin-right:6px"></i>+90 534 705 42 34</a></p>
-        <p style="font-size:.85rem;margin-top:4px"><a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc"><i class="fas fa-envelope" style="color:#0d6efd;margin-right:6px"></i>info@stkdanismanlik.com</a></p>
+        <p style="font-size:.85rem;margin-top:6px">
+          <i class="fas fa-phone" style="color:#0d6efd;margin-right:6px"></i>
+          <a href="tel:+905347054234" itemprop="telephone" style="color:#ccc">+90 534 705 42 34</a>
+        </p>
+        <p style="font-size:.85rem;margin-top:4px">
+          <i class="fas fa-envelope" style="color:#0d6efd;margin-right:6px"></i>
+          <a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a>
+        </p>
       </div>
       <div class="footer-col">
         <h4>Hizmetlerimiz</h4>
         <ul>
-          <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
-          <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
-          <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
-          <li><a href="/hizmet-genel-kurul.html">Genel Kurul</a></li>
-          <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
-          <li><a href="/hizmet-proje-yazma.html">Proje Yazma</a></li>
+          <li><a href="/hizmet-dernek-kurulusu.html"><i class="fas fa-chevron-right footer-icon"></i>Dernek Kuruluşu</a></li>
+          <li><a href="/hizmet-vakif-kurulusu.html"><i class="fas fa-chevron-right footer-icon"></i>Vakıf Kuruluşu</a></li>
+          <li><a href="/hizmet-derbis.html"><i class="fas fa-chevron-right footer-icon"></i>DERBİS İşlemleri</a></li>
+          <li><a href="/hizmet-genel-kurul.html"><i class="fas fa-chevron-right footer-icon"></i>Genel Kurul</a></li>
+          <li><a href="/hizmet-mali-danismanlik.html"><i class="fas fa-chevron-right footer-icon"></i>Mali Danışmanlık</a></li>
+          <li><a href="/hizmet-proje-yazma.html"><i class="fas fa-chevron-right footer-icon"></i>Proje Yazma</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Blog & Kaynaklar</h4>
+        <h4>Bilgi Bankası</h4>
         <ul>
-          <li><a href="/mevzuat.html">Mevzuatlar</a></li>
-          <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
-          <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme</a></li>
-          <li><a href="/umraniye-dernek-vakif-kurma-rehberi-2026.html">Ümraniye Rehberi</a></li>
-          <li><a href="/blog.html">Tüm Makaleler</a></li>
+          <li><a href="/mevzuat.html"><i class="fas fa-chevron-right footer-icon"></i>Mevzuatlar</a></li>
+          <li><a href="/blog-dernek-yonetici-sorumluluklari.html"><i class="fas fa-chevron-right footer-icon"></i>Yönetici Sorumlulukları</a></li>
+          <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"><i class="fas fa-chevron-right footer-icon"></i>İktisadi İşletme</a></li>
+          <li><a href="/blog.html"><i class="fas fa-chevron-right footer-icon"></i>Blog & Makaleler</a></li>
+          <li><a href="/sss.html"><i class="fas fa-chevron-right footer-icon"></i>Sıkça Sorulan Sorular</a></li>
+          <li><a href="/hakkimizda.html"><i class="fas fa-chevron-right footer-icon"></i>Hakkımızda</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Bizi Takip Edin</h4>
         <div class="social-icons">
-          <a href="{{ site.social.linkedin | default('#') }}" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-          <a href="{{ site.social.twitter | default('#') }}" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-          <a href="{{ site.social.instagram | default('#') }}" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="{{ site.social.linkedin | default('#') }}" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="{{ site.social.twitter | default('#') }}" aria-label="Twitter" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="{{ site.social.instagram | default('#') }}" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
+        <div style="margin-top:20px;padding:15px;background:#1a1a1a;border-radius:8px;border-left:3px solid #0d6efd">
+          <p style="font-size:.8rem;color:#aaa;margin-bottom:8px">📞 Hızlı Danışmanlık</p>
+          <a href="https://wa.me/905347054234" style="color:#25d366;font-weight:700;font-size:.9rem" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
+          </a>
+        </div>
+        <p style="font-size:.75rem;color:#666;margin-top:15px">Hafta içi 09:00 – 18:00</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("SH Danışmanlık") }}. Tüm Hakları Saklıdır. | Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a></p>
+      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("SH Danışmanlık") }}. Tüm Hakları Saklıdır. |
+        Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a>
+      </p>
     </div>
   </div>
 </footer>
-
 <!-- WA FLOAT -->
 <a href="https://wa.me/{{ site.whatsapp | default('905347054234') }}"
    class="wa-floating-btn" target="_blank" rel="noopener noreferrer"

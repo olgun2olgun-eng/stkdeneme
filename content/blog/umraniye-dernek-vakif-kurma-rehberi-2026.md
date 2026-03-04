@@ -7,6 +7,7 @@ category: "Uzman Rehberi"
 image: "/img/banner2.webp"
 excerpt: "Ümraniye'de dernek veya vakıf kurmak istiyorsanız doğru yerdesiniz. Yasal süreçten DERBİS kaydına tüm adımları uzman gözüyle anlattık."
 permalink: "/umraniye-dernek-vakif-kurma-rehberi-2026.html"
+tags: ["STK danışmanlık", "dernek kurma", "vakıf kurma", "Ümraniye", "İstanbul STK"]
 ---
 
 <script type="application/ld+json">
@@ -95,7 +96,7 @@ Bu rehberi, Ümraniye ve çevresinde **STK danışmanlık İstanbul** hizmeti ar
 </ol>
 </div>
 
-## Dernek mi Vakıf mı? Önce Doğru Yapıyı Seçin {#dernek-mi-vakif-mi}
+## Dernek mi Vakıf mı? Önce Doğru Yapıyı Seçin
 
 ### Dernek Size Göre Eğer:
 - Üyelik sistemiyle büyüyen bir yapı istiyorsanız
@@ -112,7 +113,7 @@ Bu rehberi, Ümraniye ve çevresinde **STK danışmanlık İstanbul** hizmeti ar
 <p>Dernek kurmak için belirlenmiş bir başlangıç sermayesi şartı <strong>yoktur</strong>. Vakıf için ise 2026 güncel asgari mal varlığı eşiğini öğrenmek için bizi arayın: <strong>+90 534 705 42 34</strong></p>
 </div>
 
-## Ümraniye'de Dernek Kurma: Adım Adım Resmi Süreç {#umraniye-dernek-kurma}
+## Ümraniye'de Dernek Kurma: Adım Adım Resmi Süreç
 
 <div class="step-mini">
 <div class="step-mini-num">1</div>
@@ -160,7 +161,7 @@ Bu rehberi, Ümraniye ve çevresinde **STK danışmanlık İstanbul** hizmeti ar
 <a href="/iletisim.html" class="btn">Ücretsiz Ön Görüşme Al</a>
 </div>
 
-## Vakıf Kuruluş Süreci {#vakif-kurma}
+## Vakıf Kuruluş Süreci
 
 Vakıf kurma süreci dernekten daha formel ve teknik bir yapıya sahiptir:
 
@@ -170,14 +171,14 @@ Vakıf kurma süreci dernekten daha formel ve teknik bir yapıya sahiptir:
 4. **Mahkeme tescili** — Asliye Hukuk Mahkemesi'nde tescil davası açılır
 5. **Vakıflar Genel Müdürlüğü kaydı** — Tescil kararı sonrası bildirim yapılır
 
-## En Sık Yapılan Hatalar {#sik-hatalar}
+## En Sık Yapılan Hatalar
 
 - **Tüzükteki muğlak amaç ifadeleri** — "Topluma faydalı olmak" gibi geniş ifadeler ilk Genel Kurul'da sorun yaratır
 - **DERBİS bildirim gecikmesi** — Süre aşımı doğrudan idari para cezasına yol açar
 - **İktisadi işletme açılmaması** — Ticari gelir elde eden dernekler ağır vergi cezasıyla karşılaşabilir
 - **Yıllık beyanname unutma** — Her yıl 30 Nisan'a kadar DERBİS üzerinden verilmesi zorunludur
 
-## Neden SH Danışmanlık? {#neden-sh}
+## Neden SH Danışmanlık?
 
 <div class="neden-box">
 <div class="neden-item">
@@ -200,7 +201,7 @@ Vakıf kurma süreci dernekten daha formel ve teknik bir yapıya sahiptir:
 
 **150+ başarılı kuruluş · 500+ yıllık beyanname takibi · %100 müşteri memnuniyeti**
 
-## Sıkça Sorulan Sorular {#sss}
+## Sıkça Sorulan Sorular
 
 **Ümraniye'de dernek kurmak ne kadar sürer?**
 Eksiksiz evrakla başvurulduğunda SH Danışmanlık uzman desteğiyle 7-15 iş günü içinde tamamlanır.
