@@ -257,11 +257,11 @@ permalink: "/"
     .stats-section { background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%); padding: 70px 0; color: #fff; }
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
     .stat-item { padding: 30px 20px; position: relative; }
-    .stat-item:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:linear-gradient(to bottom, transparent, rgba(13,110,253,0.5), transparent); }
+    .stat-item:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:linear-gradient(to bottom, transparent, rgba(77,163,255,0.5), transparent); }
     .stat-item .stat-icon { margin-bottom: 16px; }
     .stat-item .stat-icon svg { stroke: #4da3ff; }
-    .stat-item .counter { font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 6px; background: linear-gradient(135deg, #4da3ff, #0d6efd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .stat-item p { color: rgba(255,255,255,0.7); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.5px; }
+    .stat-item .counter { font-size: 3rem; font-weight: 800; margin-bottom: 6px; background:linear-gradient(135deg, #4da3ff, #0d6efd); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .stat-item p { color: rgba(255,255,255,0.75); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.5px; }
 
     /* ========== ABOUT ========== */
     .about-section { padding: 80px 0; }
@@ -326,7 +326,7 @@ permalink: "/"
       box-shadow: 0 4px 18px rgba(0,0,0,0.06);
     }
     .testimonial-content .quote-icon { font-size: 2rem; color: var(--primary-color); margin-bottom: 12px; }
-    .testimonial-content p { font-size: 0.92rem; color: var(--text-color); font-style: italic; line-height: 1.7; }
+    .testimonial-content p { font-size: 0.92rem; color: #333; font-style: italic; line-height: 1.7; }
     .testimonial-author-main { display: flex; align-items: center; gap: 14px; margin-top: 20px; }
     .testimonial-author-main .avatar {
       width: 52px; height: 52px;
@@ -337,7 +337,7 @@ permalink: "/"
     }
     .testimonial-author-main .avatar svg { width: 28px; height: 28px; }
     .person-name { font-weight: 700; color: var(--dark-color); font-size: 0.95rem; margin-bottom: 2px; }
-    .author-info span { font-size: 0.8rem; color: #888; }
+    .author-info span { font-size: 0.8rem; color: #555; }
 
     /* ========== FAQ ========== */
     .faq-section { padding: 80px 0; }
@@ -466,7 +466,7 @@ permalink: "/"
       background: #fff;
       z-index: 9999;
       box-shadow: -4px 0 20px rgba(0,0,0,0.15);
-      padding: 60px 0 24px;
+      padding: 64px 0 24px;
       overflow-y: auto;
     }
     .main-nav.active ul { flex-direction: column; gap: 0; padding: 0 20px; }
@@ -505,8 +505,8 @@ permalink: "/"
       height: 40px;
       padding: 0;
       font-size: 1.3rem;
-      color: var(--dark-color);
-      background: #f5f5f5;
+      color: #333;
+      background: #f0f0f0;
       border-radius: 50%;
       z-index: 10;
     }
@@ -985,39 +985,26 @@ permalink: "/"
           <span itemprop="addressRegion">İstanbul</span>
           <meta itemprop="postalCode" content="34760"><meta itemprop="addressCountry" content="TR">
         </address>
-        <p style="font-size:.85rem;margin-top:6px">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <a href="tel:+905347054234" itemprop="telephone" style="color:#ccc">+90 534 705 42 34</a>
-        </p>
-        <p style="font-size:.85rem;margin-top:4px">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a>
-        </p>
+        <p style="font-size:.85rem;margin-top:6px"><svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:+905347054234" itemprop="telephone" style="color:#ccc">+90 534 705 42 34</a></p>
+        <p style="font-size:.85rem;margin-top:4px"><svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a></p>
       </div>
-      <div class="footer-col">
-        <p><strong>Hizmetlerimiz</strong></p>
-        <ul>
-          <li><a href="/hizmet-dernek-kurulusu.html">› Dernek Kuruluşu</a></li>
-          <li><a href="/hizmet-vakif-kurulusu.html">› Vakıf Kuruluşu</a></li>
-          <li><a href="/hizmet-derbis.html">› DERBİS İşlemleri</a></li>
-          <li><a href="/hizmet-genel-kurul.html">› Genel Kurul</a></li>
-          <li><a href="/hizmet-mali-danismanlik.html">› Mali Danışmanlık</a></li>
-          <li><a href="/hizmet-proje-yazma.html">› Proje Yazma</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p><strong>Bilgi Bankası</strong></p>
-        <ul>
-          <li><a href="/mevzuat.html">› Mevzuatlar</a></li>
-          <li><a href="/blog-dernek-yonetici-sorumluluklari.html">› Yönetici Sorumlulukları</a></li>
-          <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">› İktisadi İşletme</a></li>
-          <li><a href="/blog.html">› Blog & Makaleler</a></li>
-          <li><a href="/sss.html">› Sıkça Sorulan Sorular</a></li>
-          <li><a href="/hakkimizda.html">› Hakkımızda</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p><strong>Bizi Takip Edin</strong></p>
+      <div class="footer-col"><p><strong>Hizmetlerimiz</strong></p><ul>
+        <li><a href="/hizmet-dernek-kurulusu.html">› Dernek Kuruluşu</a></li>
+        <li><a href="/hizmet-vakif-kurulusu.html">› Vakıf Kuruluşu</a></li>
+        <li><a href="/hizmet-derbis.html">› DERBİS İşlemleri</a></li>
+        <li><a href="/hizmet-genel-kurul.html">› Genel Kurul</a></li>
+        <li><a href="/hizmet-mali-danismanlik.html">› Mali Danışmanlık</a></li>
+        <li><a href="/hizmet-proje-yazma.html">› Proje Yazma</a></li>
+      </ul></div>
+      <div class="footer-col"><p><strong>Bilgi Bankası</strong></p><ul>
+        <li><a href="/mevzuat.html">› Mevzuatlar</a></li>
+        <li><a href="/blog-dernek-yonetici-sorumluluklari.html">› Yönetici Sorumlulukları</a></li>
+        <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">› İktisadi İşletme</a></li>
+        <li><a href="/blog.html">› Blog & Makaleler</a></li>
+        <li><a href="/sss.html">› Sıkça Sorulan Sorular</a></li>
+        <li><a href="/hakkimizda.html">› Hakkımızda</a></li>
+      </ul></div>
+      <div class="footer-col"><p><strong>Bizi Takip Edin</strong></p>
         <div class="social-icons">
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
           <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
@@ -1027,15 +1014,12 @@ permalink: "/"
           <p style="font-size:.8rem;color:#aaa;margin-bottom:8px">Hızlı Danışmanlık</p>
           <a href="https://wa.me/905347054234" style="color:#25d366;font-weight:700;font-size:.9rem" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="#25d366" style="vertical-align:middle;margin-right:4px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            WhatsApp'tan Yaz
-          </a>
+            WhatsApp'tan Yaz</a>
         </div>
         <p style="font-size:.75rem;color:#666;margin-top:15px">Hafta içi 09:00 – 18:00</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 STK Danışmanlık. Tüm Hakları Saklıdır. | Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a></p>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2026 STK Danışmanlık. Tüm Hakları Saklıdır. | Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a></p></div>
   </div>
 </footer>
 
