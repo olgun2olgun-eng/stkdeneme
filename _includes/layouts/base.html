@@ -1,242 +1,126 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- ═══ PRIMARY SEO ════════════════════════════════ -->
-  <title>{{ title }} | {{ site.site_name | default("STK Danışmanlık") }}</title>
-  <meta name="description" content="{{ description }}">
-  <meta name="keywords" content="{{ keywords | default('STK danışmanlık İstanbul, dernek kuruluşu Ümraniye, vakıf danışmanlık, DERBİS işlemleri') }}">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="author" content="{{ site.site_name | default('STK Danışmanlık') }}">
-  
-  <!-- ═══ CANONICAL ══════════════════════════════════ -->
-  <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
-  
-  <!-- ═══ OG / SOCIAL ═══════════════════════════════ -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ title }} | {{ site.site_name | default('STK Danışmanlık') }}">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:url" content="https://stkdanismanlik.com{{ page.url }}">
-  <meta property="og:image" content="{{ og_image | default('https://stkdanismanlik.com/img/banner1.webp') }}">
-  <meta property="og:locale" content="tr_TR">
-  <meta property="og:site_name" content="{{ site.site_name | default('STK Danışmanlık') }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:image" content="{{ og_image | default('https://stkdanismanlik.com/img/banner1.webp') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{{ title }} | STK Danışmanlık</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <link rel="icon" href="/logo.webp" type="image/webp">
 
-  <!-- ═══ SCHEMA: LocalBusiness + Service ═══════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Non-blocking fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- JSON-LD Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "{{ title }}",
+      "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://stkdanismanlik.com/#organization",
         "name": "STK Danışmanlık",
-        "alternateName": "SH STK Danışmanlık",
-        "url": "https://stkdanismanlik.com",
-        "logo": "https://stkdanismanlik.com/logo.webp",
-        "image": "https://stkdanismanlik.com/img/banner1.webp",
-        "description": "İstanbul Ümraniye'de STK, dernek ve vakıf kuruluş danışmanlığı. DERBİS, tüzük hazırlama, genel kurul yönetimi.",
-        "telephone": "+905347054234",
-        "email": "info@stkdanismanlik.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
           "addressLocality": "Ümraniye",
           "addressRegion": "İstanbul",
-          "postalCode": "34764",
+          "postalCode": "34760",
           "addressCountry": "TR"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "41.0163",
-          "longitude": "29.1221"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }
-        ],
-        "sameAs": [
-          "{{ site.social.linkedin | default('https://www.linkedin.com') }}",
-          "{{ site.social.instagram | default('https://www.instagram.com') }}"
-        ],
-        "priceRange": "₺₺",
-        "areaServed": {
-          "@type": "City",
-          "name": "İstanbul"
-        },
-        "hasMap": "https://maps.google.com/?q=Ümraniye+İstanbul"
+        "telephone": "+905347054234"
       },
-      {
-        "@type": "Service",
-        "@id": "https://stkdanismanlik.com{{ page.url }}#service",
-        "serviceType": "{{ title }}",
-        "provider": { "@id": "https://stkdanismanlik.com/#organization" },
-        "areaServed": "TR",
-        "description": "{{ description }}"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
-          { "@type": "ListItem", "position": 2, "name": "{{ title }}", "item": "https://stkdanismanlik.com{{ page.url }}" }
-        ]
-      }
-    ]
-  }
-  </script>
+      "areaServed": [
+        {"@type": "City", "name": "İstanbul"},
+        {"@type": "AdministrativeArea", "name": "Ümraniye"}
+      ],
+      "description": "{{ description }}"
+    }
+    </script>
 
-  <!-- ═══ RESOURCE HINTS ═════════════════════════════ -->
-  <!-- DNS prefetch: Google Fonts, FA CDN -->
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <!-- Preconnect: kritik kaynaklar -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- LCP resmi: fetchpriority=high preload -->
-  <link rel="preload" as="image" href="{{ lcp_image | default('/img/banner1.webp') }}" fetchpriority="high">
-  <!-- JS defer preload -->
-  <link rel="preload" as="script" href="/js/script.js">
-
-  <!-- ═══ CRITICAL CSS — inline (render-blocking yok) ═ -->
-  <style>
-    /* CRİTİK: İlk ekran görüntüsü için minimum stil */
-    :root{--primary-color:#0d6efd;--dark-color:#1a1a1a;--light-color:#fff;--text-color:#555;--gray-bg:#f8f9fa;--font-family:'Poppins',sans-serif}
+    <!-- Kritik CSS inline -->
+    <style>
+    :root{--primary-color:#0d6efd;--primary-hover:#0b5ed7;--dark-color:#1a1a1a;--text-color:#555;--font-family:'Poppins',sans-serif}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    html{text-size-adjust:100%;-webkit-text-size-adjust:100%}
+    html{scroll-behavior:smooth}
     body{font-family:var(--font-family);color:var(--text-color);line-height:1.7;background:#fff;overflow-x:hidden}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    ul{list-style:none}
+    a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;display:block}
+    button{border:none;background:none;cursor:pointer;font-family:inherit}
     .container{max-width:1200px;margin:0 auto;padding:0 20px;width:100%}
-    /* HEADER — sticky, CLS önlemeli */
-    .main-header{background:rgba(255,255,255,.98);height:105px;min-height:105px;position:sticky;top:0;z-index:10003;box-shadow:0 2px 15px rgba(0,0,0,.08);display:flex;align-items:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);overflow:visible}
+    .main-header{background:rgba(255,255,255,0.98);min-height:80px;overflow:visible;position:sticky;top:0;z-index:10000;box-shadow:0 2px 15px rgba(0,0,0,0.08);display:flex;align-items:center;backdrop-filter:blur(8px)}
     .header-container{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0 15px}
-    /* CLS önleme: logo aspect-ratio */
-    .logo-img{height:110px;width:auto;aspect-ratio:247/214;object-fit:contain;margin-right:40px}
-    /* NAV */
+    .logo-img{height:70px;width:auto;object-fit:contain}
     .main-nav ul{display:flex;align-items:center;gap:20px}
     .main-nav ul li{position:relative}
     .main-nav ul li a{color:var(--dark-color);font-weight:600;padding:10px 5px;font-size:.95rem}
-    
-    .nav-open-btn{display:none}
-    /* PAGE HEADER — CLS önleme: min-height */
-    .page-header{padding:80px 0;background-size:cover;background-position:center;position:relative;text-align:center;color:#fff;min-height:220px;display:flex;align-items:center}
-    .page-header::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.6);z-index:0;pointer-events:none}
-    .page-header .container{position:relative;z-index:2}
-    .page-header h1{font-size:clamp(1.8rem,5vw,3.5rem);color:#fff;margin-bottom:10px}
-    /* PAGE CONTENT */
-    .page-content{padding:80px 0}
-    .content-grid{display:grid;grid-template-columns:3fr 1fr;gap:50px}
-    /* FOOTER */
-    .main-footer{background:#111;color:#ccc;padding:60px 0 30px}
-    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
-    .footer-col h4{color:#fff;margin-bottom:20px}
-    .footer-col ul li a{color:#bbb;font-size:.88rem;display:inline-block;margin-bottom:8px}
-    .footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid #333;text-align:center;font-size:.82rem;color:#999}
-    /* WA FLOAT */
-    .wa-floating-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;flex-direction:row;text-decoration:none;transition:transform .3s ease}
-    .wa-icon{background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,.25);flex-shrink:0}
-    .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}
-    /* MOBILE NAV OVERLAY */
-    .mobile-nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:10000}
+    .main-nav ul li a:hover,.main-nav ul li a.active{color:var(--primary-color)}
+    .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:240px;box-shadow:0 8px 25px rgba(0,0,0,0.1);padding:15px 0;border-radius:8px;z-index:100}
+    .dropdown:hover .dropdown-menu{display:block}
+    .dropdown-menu li{width:100%}
+    .dropdown-menu li a{display:block;padding:10px 20px;font-weight:500;font-size:.9rem}
+    .dropdown-menu li a:hover,.dropdown-menu li a.active{background:#f0f4ff;color:var(--primary-color);font-weight:700}
+    .nav-close-btn{display:none}
+    .nav-open-btn{display:none;font-size:24px;color:var(--dark-color);padding:8px}
+    .main-nav .dropdown>a svg{width:12px;height:12px;margin-left:4px;transition:transform .3s}
+    .main-nav .dropdown:hover>a svg{transform:rotate(180deg)}
+    .btn{display:inline-block;padding:12px 28px;border-radius:6px;font-weight:600;font-size:.95rem;transition:background .3s,transform .2s}
+    .btn-primary{background:var(--primary-color);color:#fff}
+    .btn-primary:hover{background:var(--primary-hover);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;color:var(--primary-color);border:2px solid var(--primary-color)}
+    .btn-secondary:hover{background:var(--primary-color);color:#fff}
+    .mobile-nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9998}
     .mobile-nav-overlay.active{display:block}
-    /* SIDEBAR */
-    .sidebar .widget{background:var(--gray-bg);padding:25px;border-radius:8px;margin-bottom:30px}
-    .sidebar .widget h4{font-size:1.3rem;margin-bottom:20px;border-bottom:2px solid var(--primary-color);padding-bottom:10px;color:var(--dark-color)}
-    .sidebar .widget ul li a{display:block;color:var(--text-color);padding:10px 15px;border-radius:5px;margin-bottom:5px;font-weight:500}
-    .sidebar .widget ul li a:hover,.sidebar .widget ul li a.active,.sidebar .widget ul li a.current{background:var(--primary-color);color:#fff}
-    @media(max-width:992px){
-      .main-header{height:70px;min-height:70px}
-      .logo-img{height:55px;margin-right:10px}
-      .nav-open-btn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:none;background:none;cursor:pointer;color:var(--dark-color);font-size:22px}
-      .main-nav{display:none;position:fixed;top:0;right:0;width:300px;height:100vh;background:#fff;z-index:10001;box-shadow:-8px 0 40px rgba(0,0,0,.18);overflow-y:auto;flex-direction:column}
-      .main-nav.active{display:flex!important}
-      .content-grid{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:repeat(2,1fr);gap:32px}
-    }
-    @media(max-width:640px){
-      .footer-grid{grid-template-columns:1fr}
-      .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}
-    }
-  .nav-close-btn{display:none}
-    .main-nav.active .nav-close-btn{display:flex;position:absolute;top:12px;right:16px;font-size:1.5rem;color:#333;padding:8px;z-index:10}
+    .main-nav.active{display:flex!important;flex-direction:column;position:fixed;top:0;right:0;width:280px;height:100vh;background:#fff;z-index:9999;box-shadow:-4px 0 20px rgba(0,0,0,0.15);padding:24px 0;overflow-y:auto}
+    .main-nav.active ul{flex-direction:column;gap:0;padding:0 20px}
+    .main-nav.active ul li a{display:block;padding:12px 0;border-bottom:1px solid #eee;font-size:1rem}
+    .main-nav.active .dropdown-menu{position:static;box-shadow:none;border-radius:0;padding:0 0 0 16px;min-width:unset;max-height:0;overflow:hidden;transition:max-height .3s ease;display:block!important}
+    .main-nav.active .dropdown.mob-open>.dropdown-menu{max-height:500px}
+    .main-nav.active .dropdown-menu li a{border-bottom:none;padding:8px 0;font-size:.9rem}
+    .main-nav.active .dropdown>a svg{transition:transform .3s}
+    .main-nav.active .dropdown:hover>a svg{transform:none!important}
+    .main-nav.active .dropdown.mob-open>a svg{transform:rotate(180deg)!important}
+    .nav-close-btn.mobile-show{display:flex;align-items:center;justify-content:flex-end;padding:0 20px 16px;font-size:1.5rem;color:var(--dark-color)}
+    .wa-floating-btn{position:fixed;bottom:25px;left:25px;z-index:9999;display:flex;align-items:center;text-decoration:none}
+    .wa-icon{background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,0.25);transition:transform .3s}
+    .wa-floating-btn:hover .wa-icon{transform:scale(1.08)}
+    .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-left:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,0.1);white-space:nowrap}
+    @media(max-width:992px){.main-nav{display:none}.nav-open-btn{display:block}.logo-img{height:50px}}
+    @media(max-width:640px){.wa-label{display:none}}
     </style>
 
-  <!-- ═══ NON-CRITICAL CSS — async yükle ════════════ -->
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-
-  <!-- ═══ FONTS — async (render-blocking yok) ════════ -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-
-  <!-- ═══ FONT AWESOME — async ════════════════════════ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
-  <!-- ═══ PWA / FAVICON ══════════════════════════════ -->
-  <link rel="icon" href="/logo.webp" type="image/webp">
-  <link rel="apple-touch-icon" href="/logo.webp">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#1a237e">
-
-  <!-- ═══ SPECULATION RULES — prefetch/prerender ══════ -->
-  <script type="speculationrules">
-  {
-    "prerender": [
-      { "urls": ["/iletisim.html", "/hakkimizda.html"] }
-    ],
-    "prefetch": [
-      { "urls": ["/hizmet-dernek-kurulusu.html", "/hizmet-vakif-kurulusu.html", "/sss.html"] }
-    ]
-  }
-  </script>
-
-  {% block head %}{% endblock %}
+    <!-- Non-blocking stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
 </head>
 <body>
 
-<!-- ═══ HEADER ═════════════════════════════════════════════ -->
+<!-- Mobile nav overlay -->
+<div class="mobile-nav-overlay" id="navOverlay"></div>
+
 <header class="main-header">
   <div class="container header-container">
-    <a href="/" class="logo-container" aria-label="{{ site.site_name | default('STK Danışmanlık') }} - Ana Sayfa">
-      <!-- CLS önleme: width/height zorunlu -->
-      <img src="/logo.webp"
-           alt="{{ site.site_name | default('STK Danışmanlık') }} Logo"
-           class="logo-img"
-           width="247" height="214"
-           fetchpriority="high"
-           decoding="async">
+    <a href="/" class="logo-container">
+      <img src="/logo.webp" alt="STK Danışmanlık - İstanbul Ümraniye Dernek ve Vakıf Danışmanlık" class="logo-img" width="180" height="60">
     </a>
-    <nav class="main-nav" role="navigation" aria-label="Ana navigasyon">
-      <button class="nav-close-btn" aria-label="Menüyü kapat">
-        <i class="fas fa-times"></i>
+    <nav class="main-nav" id="mainNav">
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Menüyü kapat">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
-        <li><a href="/"{% if page.url == "/" %} class="active" aria-current="page"{% endif %}>Ana Sayfa</a></li>
-        <li class="dropdown">
-          <a href="#" {% if "/hakkimizda" in page.url or "/sss" in page.url %}class="active"{% endif %}>
-            Kurumsal <i class="fas fa-chevron-down"></i>
-          </a>
+        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Ana Sayfa</a></li>
+        <li class="dropdown{% if "/hakkimizda" in page.url or "/sss" in page.url %} active-parent{% endif %}">
+          <a href="#">Kurumsal <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="/hakkimizda.html"{% if "/hakkimizda" in page.url %} class="active"{% endif %}>Hakkımızda</a></li>
             <li><a href="/sss.html"{% if "/sss" in page.url %} class="active"{% endif %}>Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#" {% if "/hizmet" in page.url %}class="active"{% endif %}>
-            Hizmetlerimiz <i class="fas fa-chevron-down"></i>
-          </a>
+        <li class="dropdown{% if "/hizmet" in page.url %} active-parent{% endif %}">
+          <a href="#">Hizmetlerimiz <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="/hizmet-dernek-kurulusu.html"{% if "/hizmet-dernek-kurulusu" in page.url %} class="active"{% endif %}>Dernek Kuruluşu</a></li>
             <li><a href="/hizmet-derbis.html"{% if "/hizmet-derbis" in page.url %} class="active"{% endif %}>DERBİS İşlemleri</a></li>
@@ -247,126 +131,89 @@
             <li><a href="/hizmet-yasal-danismanlik.html"{% if "/hizmet-yasal-danismanlik" in page.url %} class="active"{% endif %}>Yasal Danışmanlık</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#" {% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %}class="active"{% endif %}>
-            Bilgi Bankası <i class="fas fa-chevron-down"></i>
-          </a>
+        <li class="dropdown{% if "/mevzuat" in page.url or "/blog" in page.url or "/basari" in page.url %} active-parent{% endif %}">
+          <a href="#">Bilgi Bankası <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
-            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuatlar</a></li>
+            <li><a href="/mevzuat.html"{% if "/mevzuat" in page.url %} class="active"{% endif %}>Mevzuat Rehberi</a></li>
             <li><a href="/blog-dernek-yonetici-sorumluluklari.html"{% if "/blog-dernek-yonetici" in page.url %} class="active"{% endif %}>Yönetici Sorumlulukları</a></li>
             <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"{% if "/blog-stk-iktisadi" in page.url %} class="active"{% endif %}>İktisadi İşletme Avantajları</a></li>
-            <li><a href="/blog.html"{% if page.url == "/blog.html" %} class="active"{% endif %}>Blog & Makaleler</a></li>
+            <li><a href="/blog.html"{% if page.url == "/blog.html" or page.url == "/blog/" %} class="active"{% endif %}>Blog & Makaleler</a></li>
           </ul>
         </li>
         <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
         <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
       </ul>
     </nav>
-    <button class="nav-open-btn" aria-label="Menüyü aç" aria-expanded="false">
-      <i class="fas fa-bars"></i>
+    <button class="nav-open-btn" id="navOpenBtn" aria-label="Menüyü aç">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
 </header>
-<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-<!-- ═══ PAGE HEADER ═════════════════════════════════════════ -->
-<section class="page-header" style="background-image:url('{{ banner_image | default("/img/banner1.webp") }}');">
-  <div class="container">
-    <h1>{{ title }}</h1>
-    {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
-  </div>
-</section>
-
-<!-- ═══ CONTENT ══════════════════════════════════════════════ -->
-<section class="page-content">
-  <div class="container">
-    <div class="content-grid">
-      {{ content | safe }}
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
-<footer class="main-footer" itemscope itemtype="https://schema.org/LocalBusiness">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <img src="/logo.webp" alt="STK Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
-        <p itemprop="description">"{{ site.footer_slogan | default('Bize Uğrayın, Bürokrasiye Takılmayın') }}"</p>
-        <!-- NAP: Google Lokal SEO için zorunlu -->
-        <p itemprop="name" style="display:none">STK Danışmanlık</p>
-        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
-          <i class="fas fa-map-marker-alt" style="color:#0d6efd;margin-right:6px"></i>
-          <span itemprop="streetAddress">İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5</span>,
-          <span itemprop="addressLocality">Ümraniye</span>,
-          <span itemprop="addressRegion">İstanbul</span>
-          <meta itemprop="postalCode" content="34764">
-          <meta itemprop="addressCountry" content="TR">
-        </address>
-        <p style="font-size:.85rem;margin-top:6px">
-          <i class="fas fa-phone" style="color:#0d6efd;margin-right:6px"></i>
-          <a href="tel:+905347054234" itemprop="telephone" style="color:#ccc">+90 534 705 42 34</a>
-        </p>
-        <p style="font-size:.85rem;margin-top:4px">
-          <i class="fas fa-envelope" style="color:#0d6efd;margin-right:6px"></i>
-          <a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <h4>Hizmetlerimiz</h4>
-        <ul>
-          <li><a href="/hizmet-dernek-kurulusu.html"><i class="fas fa-chevron-right footer-icon"></i>Dernek Kuruluşu</a></li>
-          <li><a href="/hizmet-vakif-kurulusu.html"><i class="fas fa-chevron-right footer-icon"></i>Vakıf Kuruluşu</a></li>
-          <li><a href="/hizmet-derbis.html"><i class="fas fa-chevron-right footer-icon"></i>DERBİS İşlemleri</a></li>
-          <li><a href="/hizmet-genel-kurul.html"><i class="fas fa-chevron-right footer-icon"></i>Genel Kurul</a></li>
-          <li><a href="/hizmet-mali-danismanlik.html"><i class="fas fa-chevron-right footer-icon"></i>Mali Danışmanlık</a></li>
-          <li><a href="/hizmet-proje-yazma.html"><i class="fas fa-chevron-right footer-icon"></i>Proje Yazma</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Bilgi Bankası</h4>
-        <ul>
-          <li><a href="/mevzuat.html"><i class="fas fa-chevron-right footer-icon"></i>Mevzuatlar</a></li>
-          <li><a href="/blog-dernek-yonetici-sorumluluklari.html"><i class="fas fa-chevron-right footer-icon"></i>Yönetici Sorumlulukları</a></li>
-          <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"><i class="fas fa-chevron-right footer-icon"></i>İktisadi İşletme</a></li>
-          <li><a href="/blog.html"><i class="fas fa-chevron-right footer-icon"></i>Blog & Makaleler</a></li>
-          <li><a href="/sss.html"><i class="fas fa-chevron-right footer-icon"></i>Sıkça Sorulan Sorular</a></li>
-          <li><a href="/hakkimizda.html"><i class="fas fa-chevron-right footer-icon"></i>Hakkımızda</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Bizi Takip Edin</h4>
-        <div class="social-icons">
-          <a href="{{ site.social.linkedin | default('#') }}" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="{{ site.social.twitter | default('#') }}" aria-label="Twitter" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="{{ site.social.instagram | default('#') }}" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+<main>
+    <!-- PAGE HEADER -->
+    <section class="page-header" style="background-image: url('{{ banner_image | default("/img/banner1.webp") }}');">
+        <div class="container">
+            <h1>{{ title }}</h1>
+            {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
         </div>
-        <div style="margin-top:20px;padding:15px;background:#1a1a1a;border-radius:8px;border-left:3px solid #0d6efd">
-          <p style="font-size:.8rem;color:#aaa;margin-bottom:8px">📞 Hızlı Danışmanlık</p>
-          <a href="https://wa.me/905347054234" style="color:#25d366;font-weight:700;font-size:.9rem" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
-          </a>
+    </section>
+
+    <!-- CONTENT AREA -->
+    <section class="page-content">
+        <div class="container">
+            <div class="content-grid">
+                {{ content | safe }}
+            </div>
         </div>
-        <p style="font-size:.75rem;color:#666;margin-top:15px">Hafta içi 09:00 – 18:00</p>
-      </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
+                <p>&copy; 2026 STK Danışmanlık. Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="footer-col">
+                <p><strong>Hızlı Menü</strong></p>
+                <ul>
+                    <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="/referanslar.html">Referanslar</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p><strong>İletişim</strong></p>
+                <p><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5, Ümraniye, İstanbul</p>
+                <p><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:+905347054234">+90 534 705 42 34</a></p>
+                <p><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>info&#64;stkdanismanlik.com</p>
+            </div>
+            <div class="footer-col">
+                <p><strong>Takip Edin</strong></p>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tasarım ve Yazılım. Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a></p>
+        </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("STK Danışmanlık") }}. Tüm Hakları Saklıdır. |
-        Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a>
-      </p>
-    </div>
-  </div>
 </footer>
 
-<!-- ═══ WHATSAPP FLOAT ════════════════════════════════════════ -->
-<a href="https://wa.me/{{ site.whatsapp | default('905347054234') }}"
-   class="wa-floating-btn"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="WhatsApp ile iletişime geçin">
+<!-- WhatsApp SOL ALT -->
+<a href="https://wa.me/905347054234" class="wa-floating-btn" target="_blank" rel="noopener" aria-label="WhatsApp üzerinden bizimle iletişime geçin">
+  <div class="wa-icon">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </div>
   <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
-  <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
 </a>
+
 <script src="/js/script.js" defer></script>
 </body>
 </html>
