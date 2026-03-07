@@ -575,14 +575,14 @@ h1, h2, h3, h4 { color: var(--dark-color); line-height: 1.3; font-weight: 600; }
 .testimonial-author-main .avatar {
   width: 52px; height: 52px;
   border-radius: 50%;
-  background: #3a5a9a;
+  background: #dde4f0;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
 }
 .testimonial-author-main .avatar img { width: 100%; height: 100%; object-fit: cover; }
 .person-name { font-weight: 700; color: var(--dark-color); font-size: 0.95rem; margin-bottom: 2px; }
-.author-info span { font-size: 0.8rem; color: #555; }
+.author-info span { font-size: 0.8rem; color: #888; }
 
 /* Referans sayfası testimonials */
 .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
