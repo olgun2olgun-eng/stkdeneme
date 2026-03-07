@@ -1,13 +1,13 @@
 {
   "hero": {
-    "title": "İstanbul'da Profesyonel STK Danışmanlık Hizmetleri",
-    "subtitle": "Ümraniye merkezli uzman ekibimizle dernek ve vakıf kurulumu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında yanınızdayız.",
+    "title": "Bürokrasiyi Sizin İçin Aşıyoruz",
+    "subtitle": "STK, dernek ve vakıf yönetimi profesyonel bir yaklaşım gerektirir. Uzman ekibimizle her adımda yanınızdayız.",
     "cta_text": "Hizmetlerimizi Keşfedin",
     "cta_link": "#services"
   },
   "hero2": {
-    "title": "Dernek ve Vakıf Kurulumunda Uzman Çözüm Ortağınız",
-    "subtitle": "Kuruluş, tüzük hazırlama ve tescil süreçlerinde İstanbul'un her noktasında A'dan Z'ye profesyonel destek sağlıyoruz.",
+    "title": "Fikirden Hayata: Kurumunuzu Oluşturun",
+    "subtitle": "Kuruluş, tüzük hazırlama ve tescil süreçlerinde A'dan Z'ye profesyonel destek sağlıyoruz.",
     "cta_text": "Ücretsiz Danışın",
     "cta_link": "#contact"
   },
@@ -23,6 +23,6 @@
     "active_partners": "75",
     "trained_participants": "1000"
   },
-  "about_short": "İstanbul Ümraniye'de STK Danışmanlık",
-  "about_text": "STK Danışmanlık, İstanbul Ümraniye merkezli olarak sivil toplum kuruluşlarının karmaşık yasal ve idari süreçlerde kaybolmasını önlemek amacıyla kurulmuştur. Dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında 10 yılı aşkın tecrübeli kadromuzla yanınızdayız."
+  "about_short": "Sivil Toplum Vizyonunuzun Mimarı",
+  "about_text": "SH Danışmanlık, sivil toplum kuruluşlarının karmaşık yasal ve idari süreçlerde kaybolmasını önlemek amacıyla kurulmuştur. Tecrübeli kadromuzla yanınızdayız."
 }

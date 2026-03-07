@@ -9,11 +9,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("logo.webp");
   eleventyConfig.addPassthroughCopy("email-templates");
-  eleventyConfig.addPassthroughCopy("sw.js");
-  eleventyConfig.addPassthroughCopy("manifest.json");
-  eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
-  eleventyConfig.addPassthroughCopy("offline.html");
 
   // Blog koleksiyonu
   eleventyConfig.addCollection("blog", function(collectionApi) {

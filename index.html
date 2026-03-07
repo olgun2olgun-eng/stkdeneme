@@ -10,14 +10,29 @@ permalink: "/"
     <meta name="description" content="Ümraniye ve İstanbul'da STK, dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık. 10+ yıl tecrübe ile profesyonel STK danışmanlık hizmetleri.">
     <link rel="canonical" href="https://stkdanismanlik.com/">
 
+    <!-- Open Graph / Sosyal Medya -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stkdanismanlik.com/">
+    <meta property="og:title" content="STK Danışmanlık | Ümraniye & İstanbul Dernek, Vakıf Kurulumu">
+    <meta property="og:description" content="Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri ve mali danışmanlık. 10+ yıl tecrübe.">
+    <meta property="og:image" content="https://stkdanismanlik.com/img/banner1.webp">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="STK Danışmanlık">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STK Danışmanlık | Dernek ve Vakıf Kurulumu">
+    <meta name="twitter:description" content="İstanbul Ümraniye merkezli profesyonel STK danışmanlık hizmetleri.">
+    <meta name="twitter:image" content="https://stkdanismanlik.com/img/banner1.webp">
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
     <!-- LCP Preload -->
     <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-    <!-- Poppins Font -->
+    <!-- Poppins Font — sadece kullanılan ağırlıklar (300 kaldırıldı) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- FontAwesome kaldırıldı: chevron ikonları inline SVG ile değiştirildi -->
 
     <!-- SPECULATION RULES -->
     <script type="speculationrules">
@@ -44,7 +59,7 @@ permalink: "/"
       --font-family: 'Poppins', sans-serif;
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: auto; } /* smooth mobilde INP düşürür — JS ile yönetilir */
     body {
       font-family: var(--font-family);
       color: var(--text-color);
@@ -161,7 +176,8 @@ permalink: "/"
       max-width: 650px;
       padding: 0 50px;
     }
-    .slide-content h1 {
+    .slide-content h1,
+    .slide-content .slide-heading {
       font-size: clamp(1.8rem, 5vw, 3.2rem);
       font-weight: 800;
       line-height: 1.15;
@@ -429,8 +445,8 @@ permalink: "/"
     }
     .mobile-nav-overlay.active { display: block; }
     /* chevron rotate – desktop hover */
-    .main-nav .dropdown > a i { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s ease; }
-    .main-nav .dropdown:hover > a i { transform: rotate(180deg); }
+    .main-nav .dropdown > a .chev { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s ease; vertical-align: middle; }
+    .main-nav .dropdown:hover > a .chev { transform: rotate(180deg); }
 
     .main-nav.active {
       display: flex !important;
@@ -467,9 +483,9 @@ permalink: "/"
       font-size: 0.9rem;
     }
     /* chevron rotate – mobile mob-open */
-    .main-nav.active .dropdown > a i { font-size: 0.9rem; transition: transform 0.3s ease; }
-    .main-nav.active .dropdown:hover > a i { transform: none !important; }
-    .main-nav.active .dropdown.mob-open > a i { transform: rotate(180deg) !important; }
+    .main-nav.active .dropdown > a .chev { font-size: 0.9rem; transition: transform 0.3s ease; }
+    .main-nav.active .dropdown:hover > a .chev { transform: none !important; }
+    .main-nav.active .dropdown.mob-open > a .chev { transform: rotate(180deg) !important; }
     .nav-close-btn.mobile-show {
       display: flex;
       align-items: center;
@@ -510,8 +526,9 @@ permalink: "/"
     }
     </style>
 
-    <!-- Stylesheet (non-blocking for any extra styles) -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Stylesheet (non-blocking) -->
+    <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <!-- JSON-LD SEO: LocalBusiness + ProfessionalService -->
     <script type="application/ld+json">
@@ -620,14 +637,14 @@ permalink: "/"
       <ul>
         <li><a href="/index.html">Ana Sayfa</a></li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Kurumsal <i class="fas fa-chevron-down"></i></a>
+          <a href="#" aria-haspopup="true">Kurumsal <svg class="chev" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="/hakkimizda.html">Hakkımızda</a></li>
             <li><a href="/sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
+          <a href="#" aria-haspopup="true">Hizmetlerimiz <svg class="chev" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
             <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
@@ -639,7 +656,7 @@ permalink: "/"
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Bilgi Bankası <i class="fas fa-chevron-down"></i></a>
+          <a href="#" aria-haspopup="true">Bilgi Bankası <svg class="chev" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="/mevzuat.html">Mevzuat Rehberi</a></li>
             <li><a href="/blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
@@ -676,7 +693,7 @@ permalink: "/"
       <img src="/img/banner2.webp" alt="Dernek ve Vakıf Kurulumu Uzman Danışmanlık" class="slide-bg-img" width="1400" height="700" loading="lazy">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-        <h1>Dernek ve Vakıf Kurulumunda Uzman Çözüm Ortağınız</h1>
+        <p class="slide-heading">Dernek ve Vakıf Kurulumunda Uzman Çözüm Ortağınız</p>
         <p>Kuruluş, tüzük hazırlama ve tescil süreçlerinde İstanbul'un her noktasında A'dan Z'ye profesyonel destek sağlıyoruz.</p>
         <a href="#contact" class="btn btn-primary">Ücretsiz Danışın</a>
       </div>
@@ -686,7 +703,7 @@ permalink: "/"
       <img src="/img/banner3.webp" alt="Dernekler Mevzuatı ve Yasal Uyum Danışmanlığı" class="slide-bg-img" width="1400" height="700" loading="lazy">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-        <h1>Mevzuata Tam Uyum, Risksiz Yönetim</h1>
+        <p class="slide-heading">Mevzuata Tam Uyum, Risksiz Yönetim</p>
         <p>Genel kurul, beyanname ve denetim süreçlerinde yasalara tam uyumlu hareket edin.</p>
         <a href="#contact" class="btn btn-primary">Teklif Alın</a>
       </div>
@@ -804,7 +821,7 @@ permalink: "/"
     <div class="posts-grid">
       <div class="post-card">
         <a href="/blog-dernek-yonetici-sorumluluklari.html" class="post-card-image">
-          <img src="/img/blog-mevzuat.webp" alt="Mevzuat" loading="lazy" width="400" height="200">
+          <img src="/img/blog-mevzuat.webp" alt="Dernek Yöneticilerinin Yasal Sorumlulukları - STK Mevzuat Rehberi" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">MEVZUAT</span>
@@ -815,7 +832,7 @@ permalink: "/"
       </div>
       <div class="post-card">
         <a href="/blog-yazi-detay.html" class="post-card-image">
-          <img src="/img/blog-hibe.webp" alt="Projeler" loading="lazy" width="400" height="200">
+          <img src="/img/blog-hibe.webp" alt="Dernek ve Vakıf Arasındaki 5 Temel Fark - Hibe Fırsatları" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">HİBE FIRSATI</span>
@@ -826,7 +843,7 @@ permalink: "/"
       </div>
       <div class="post-card">
         <a href="/blog-stk-iktisadi-isletme-avantajlari.html" class="post-card-image">
-          <img src="/img/blog-finans.webp" alt="Finans" loading="lazy" width="400" height="200">
+          <img src="/img/blog-finans.webp" alt="STK İktisadi İşletme Avantajları - Mali Danışmanlık" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">BİLGİ NOTU</span>
@@ -1132,6 +1149,14 @@ permalink: "/"
           parentDropdown.classList.add('mob-open');
         }
       }
+    });
+  });
+
+  // Smooth scroll (HTML scroll-behavior:auto yerine JS ile — mobil INP korunur)
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
 

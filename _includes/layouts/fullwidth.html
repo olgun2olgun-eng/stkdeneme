@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ title }} | {{ site.site_name | default("STK Danışmanlık") }}</title>
+    <title>{{ title }} | {{ site.site_name | default("SH Danışmanlık") }}</title>
     <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <link rel="canonical" href="https://shdanismanlik.netlify.app{{ page.url }}">
 
     <script type="application/ld+json">
     {
@@ -16,7 +16,7 @@
       "description": "{{ description }}",
       "publisher": {
         "@type": "Organization",
-        "name": "{{ site.site_name | default('STK Danışmanlık') }}"
+        "name": "{{ site.site_name | default('SH Danışmanlık') }}"
       }
     }
     </script>
@@ -28,17 +28,15 @@
     <link rel="icon" href="/logo.webp" type="image/webp">
 
     <style>
-        .wa-floating-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;flex-direction:row;text-decoration:none;transition:transform .3s ease}
-        .wa-icon{background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,.25);flex-shrink:0}
-        .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}
-        @media (max-width: 768px) { .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap} }
-        .wa-floating-btn:hover{transform:translateY(-3px)}
+        .wa-floating-btn { position: fixed; bottom: 25px; right: 25px; left: auto; z-index: 9999; display: flex; align-items: center; flex-direction: row-reverse; text-decoration: none; transition: all 0.3s ease; }
+        .wa-icon { background-color: #25d366; color: white !important; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .wa-label { background: white; color: #333; padding: 10px 18px; border-radius: 25px; margin-right: 12px; margin-left: 0; font-size: 14px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1); white-space: nowrap; display: block; }
+        @media (max-width: 768px) { .wa-label { display: none; } }
+        .wa-floating-btn:hover { transform: translateY(-3px); }
 
         .page-header::before { pointer-events: none !important; }
         /* Active dropdown items */
         .dropdown-menu li a.active { color: var(--primary-color) !important; font-weight: 700 !important; background: #f0f7ff !important; }
-    .nav-close-btn{display:none}
-    .main-nav.active .nav-close-btn{display:flex;position:absolute;top:12px;right:16px;font-size:1.5rem;color:#333;padding:8px;z-index:10}
     </style>
 </head>
 <body>
@@ -46,7 +44,7 @@
 <header class="main-header">
   <div class="container header-container">
     <a href="/" class="logo-container">
-      <img src="/logo.webp" alt="{{ site.site_name | default('STK Danışmanlık') }}" class="logo-img" width="180" height="55" />
+      <img src="/logo.webp" alt="{{ site.site_name | default('SH Danışmanlık') }}" class="logo-img" width="180" height="55" />
     </a>
     <nav class="main-nav">
       <button class="nav-close-btn" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
@@ -104,81 +102,46 @@
     {{ content | safe }}
 </main>
 
-<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
-<footer class="main-footer" itemscope itemtype="https://schema.org/LocalBusiness">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <img src="/logo.webp" alt="STK Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
-        <p itemprop="description">"{{ site.footer_slogan | default('Bize Uğrayın, Bürokrasiye Takılmayın') }}"</p>
-        <!-- NAP: Google Lokal SEO için zorunlu -->
-        <p itemprop="name" style="display:none">STK Danışmanlık</p>
-        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
-          <i class="fas fa-map-marker-alt" style="color:#0d6efd;margin-right:6px"></i>
-          <span itemprop="streetAddress">İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5</span>,
-          <span itemprop="addressLocality">Ümraniye</span>,
-          <span itemprop="addressRegion">İstanbul</span>
-          <meta itemprop="postalCode" content="34764">
-          <meta itemprop="addressCountry" content="TR">
-        </address>
-        <p style="font-size:.85rem;margin-top:6px">
-          <i class="fas fa-phone" style="color:#0d6efd;margin-right:6px"></i>
-          <a href="tel:+905347054234" itemprop="telephone" style="color:#ccc">+90 534 705 42 34</a>
-        </p>
-        <p style="font-size:.85rem;margin-top:4px">
-          <i class="fas fa-envelope" style="color:#0d6efd;margin-right:6px"></i>
-          <a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <h4>Hizmetlerimiz</h4>
-        <ul>
-          <li><a href="/hizmet-dernek-kurulusu.html"><i class="fas fa-chevron-right footer-icon"></i>Dernek Kuruluşu</a></li>
-          <li><a href="/hizmet-vakif-kurulusu.html"><i class="fas fa-chevron-right footer-icon"></i>Vakıf Kuruluşu</a></li>
-          <li><a href="/hizmet-derbis.html"><i class="fas fa-chevron-right footer-icon"></i>DERBİS İşlemleri</a></li>
-          <li><a href="/hizmet-genel-kurul.html"><i class="fas fa-chevron-right footer-icon"></i>Genel Kurul</a></li>
-          <li><a href="/hizmet-mali-danismanlik.html"><i class="fas fa-chevron-right footer-icon"></i>Mali Danışmanlık</a></li>
-          <li><a href="/hizmet-proje-yazma.html"><i class="fas fa-chevron-right footer-icon"></i>Proje Yazma</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Bilgi Bankası</h4>
-        <ul>
-          <li><a href="/mevzuat.html"><i class="fas fa-chevron-right footer-icon"></i>Mevzuatlar</a></li>
-          <li><a href="/blog-dernek-yonetici-sorumluluklari.html"><i class="fas fa-chevron-right footer-icon"></i>Yönetici Sorumlulukları</a></li>
-          <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html"><i class="fas fa-chevron-right footer-icon"></i>İktisadi İşletme</a></li>
-          <li><a href="/blog.html"><i class="fas fa-chevron-right footer-icon"></i>Blog & Makaleler</a></li>
-          <li><a href="/sss.html"><i class="fas fa-chevron-right footer-icon"></i>Sıkça Sorulan Sorular</a></li>
-          <li><a href="/hakkimizda.html"><i class="fas fa-chevron-right footer-icon"></i>Hakkımızda</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Bizi Takip Edin</h4>
-        <div class="social-icons">
-          <a href="{{ site.social.linkedin | default('#') }}" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="{{ site.social.twitter | default('#') }}" aria-label="Twitter" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="{{ site.social.instagram | default('#') }}" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>"{{ site.footer_slogan | default("Bize Uğrayın, Bürokrasiye Takılmayın") }}"</p>
+                <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("SH Danışmanlık") }}. Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="footer-col">
+                <p><strong>Hızlı Menü</strong></p>
+                <ul>
+                    <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="/referanslar.html">Referanslar</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p><strong>İletişim</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> {{ site.address | default("İstanbul, Türkiye") }}</p>
+                <p><i class="fas fa-phone"></i> {{ site.phone | default("+90 534 705 42 34") }}</p>
+                <p><i class="fas fa-envelope"></i> {{ site.email | default("info@shdanismanlik.com") }}</p>
+            </div>
+            <div class="footer-col">
+                <p><strong>Takip Edin</strong></p>
+                <div class="social-icons">
+                    <a href="{{ site.social.linkedin | default('#') }}" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{ site.social.twitter | default('#') }}" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ site.social.instagram | default('#') }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-        <div style="margin-top:20px;padding:15px;background:#1a1a1a;border-radius:8px;border-left:3px solid #0d6efd">
-          <p style="font-size:.8rem;color:#aaa;margin-bottom:8px">📞 Hızlı Danışmanlık</p>
-          <a href="https://wa.me/905347054234" style="color:#25d366;font-weight:700;font-size:.9rem" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
-          </a>
+                <div class="footer-bottom" style="margin-top: 20px; text-align: center; font-size: 14px; color: #999;">
+            <p>&copy; {{ site.copyright_year | default("2026") }} Tasarım ve Yazılım. Design by <a href="https://akodijital.com" target="_blank" rel="noopener" style="color: #00a8e8; font-weight: 600; text-decoration: none;">AKODİJİTAL</a></p>
         </div>
-        <p style="font-size:.75rem;color:#666;margin-top:15px">Hafta içi 09:00 – 18:00</p>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("STK Danışmanlık") }}. Tüm Hakları Saklıdır. |
-        Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a>
-      </p>
-    </div>
-  </div>
 </footer>
 
 <a href="https://wa.me/{{ site.whatsapp | default('905347054234') }}" class="wa-floating-btn" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geçin">
-    <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
     <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+    <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
 </a>
 <script src="/js/script.js" defer></script>
 </body>
