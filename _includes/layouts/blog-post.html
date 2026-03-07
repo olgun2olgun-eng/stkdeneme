@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- ═══ PRIMARY SEO ════════════════════════════════ -->
-  <title>{{ title }} | {{ site.site_name | default("SH Danışmanlık") }}</title>
+  <title>{{ title }} | {{ site.site_name | default("STK Danışmanlık") }}</title>
   <meta name="description" content="{{ description }}">
-  <meta name="keywords" content="{{ tags | join(', ') | default('STK danışmanlık, dernek kurma, vakıf danışmanlık İstanbul') }}">
+  <meta name="keywords" content="{{ (tags or []) | join(', ') | default('STK danışmanlık, dernek kurma, vakıf danışmanlık İstanbul') }}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="author" content="{{ author | default(site.site_name) | default('SH Danışmanlık') }}">
+  <meta name="author" content="{{ author | default(site.site_name) | default('STK Danışmanlık') }}">
   <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
   
   <!-- OG -->
@@ -20,7 +20,7 @@
   <meta property="og:image" content="{{ image | default('https://stkdanismanlik.com/img/banner1.webp') }}">
   <meta property="og:locale" content="tr_TR">
   <meta property="article:published_time" content="{{ date }}">
-  <meta property="article:author" content="{{ author | default('SH Danışmanlık') }}">
+  <meta property="article:author" content="{{ author | default('STK Danışmanlık') }}">
   <meta property="article:section" content="{{ category | default('Uzman Rehberi') }}">
   {% if tags %}{% for tag in tags %}<meta property="article:tag" content="{{ tag }}">{% endfor %}{% endif %}
   <meta name="twitter:card" content="summary_large_image">
@@ -47,13 +47,13 @@
         "dateModified": "{{ date }}",
         "author": {
           "@type": "Organization",
-          "name": "{{ author | default('SH Danışmanlık') }}",
+          "name": "{{ author | default('STK Danışmanlık') }}",
           "@id": "https://stkdanismanlik.com/#organization"
         },
         "publisher": {
           "@type": "Organization",
           "@id": "https://stkdanismanlik.com/#organization",
-          "name": "SH Danışmanlık",
+          "name": "STK Danışmanlık",
           "logo": {
             "@type": "ImageObject",
             "url": "https://stkdanismanlik.com/logo.webp"
@@ -65,12 +65,12 @@
         },
         "articleSection": "{{ category | default('Uzman Rehberi') }}",
         "inLanguage": "tr-TR",
-        "keywords": "{{ tags | join(', ') | default('STK danışmanlık, dernek kurma') }}"
+        "keywords": "{{ (tags or []) | join(', ') | default('STK danışmanlık, dernek kurma') }}"
       },
       {
         "@type": "LocalBusiness",
         "@id": "https://stkdanismanlik.com/#organization",
-        "name": "SH Danışmanlık",
+        "name": "STK Danışmanlık",
         "url": "https://stkdanismanlik.com",
         "telephone": "+905347054234",
         "address": {
@@ -141,9 +141,9 @@
     .footer-col h4{color:#fff;margin-bottom:20px}
     .footer-col ul li a{color:#bbb;font-size:.88rem;display:inline-block;margin-bottom:8px}
     .footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid #333;text-align:center;font-size:.82rem;color:#999}
-    .wa-floating-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;flex-direction:row-reverse}
-    .wa-icon{background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
-    .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;white-space:nowrap}
+    .wa-floating-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;flex-direction:row;text-decoration:none;transition:transform .3s ease}
+    .wa-icon{background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,.25);flex-shrink:0}
+    .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}
     .sidebar .widget{background:#f8f9fa;padding:25px;border-radius:8px;margin-bottom:30px}
     .sidebar .widget h4{font-size:1.1rem;margin-bottom:15px;border-bottom:2px solid #0d6efd;padding-bottom:8px;color:#1a1a1a}
     .sidebar .widget ul li a{display:block;color:#555;padding:9px 12px;border-radius:5px;margin-bottom:4px;font-weight:500;font-size:.9rem;transition:background .2s,color .2s}
@@ -161,8 +161,10 @@
       .content-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:repeat(2,1fr)}
     }
-    @media(max-width:640px){.wa-label{display:none}.footer-grid{grid-template-columns:1fr}}
-  </style>
+    @media(max-width:640px){.wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}.footer-grid{grid-template-columns:1fr}}
+  .nav-close-btn{display:none}
+    .main-nav.active .nav-close-btn{display:flex;position:absolute;top:12px;right:16px;font-size:1.5rem;color:#333;padding:8px;z-index:10}
+    </style>
 
   <!-- NON-CRITICAL CSS async -->
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
@@ -191,9 +193,9 @@
 <!-- HEADER -->
 <header class="main-header">
   <div class="container header-container">
-    <a href="/" aria-label="{{ site.site_name | default('SH Danışmanlık') }} - Ana Sayfa">
+    <a href="/" aria-label="{{ site.site_name | default('STK Danışmanlık') }} - Ana Sayfa">
       <img src="/logo.webp"
-           alt="{{ site.site_name | default('SH Danışmanlık') }}"
+           alt="{{ site.site_name | default('STK Danışmanlık') }}"
            class="logo-img"
            width="247" height="214"
            fetchpriority="high"
@@ -274,7 +276,7 @@
           <span><i class="fas fa-calendar-alt"></i> <time itemprop="datePublished" datetime="{{ date }}">{{ date }}</time></span>
           {% if category %}<span><i class="fas fa-tag"></i> {{ category }}</span>{% endif %}
           {% if read_time %}<span><i class="fas fa-clock"></i> {{ read_time }} dk okuma</span>{% endif %}
-          <span><i class="fas fa-user"></i> <span itemprop="author">{{ author | default('SH Danışmanlık') }}</span></span>
+          <span><i class="fas fa-user"></i> <span itemprop="author">{{ author | default('STK Danışmanlık') }}</span></span>
         </div>
         
         <div itemprop="articleBody">
@@ -357,10 +359,10 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <img src="/logo.webp" alt="SH Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
+        <img src="/logo.webp" alt="STK Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
         <p itemprop="description">"{{ site.footer_slogan | default('Bize Uğrayın, Bürokrasiye Takılmayın') }}"</p>
         <!-- NAP: Google Lokal SEO için zorunlu -->
-        <p itemprop="name" style="display:none">SH Danışmanlık</p>
+        <p itemprop="name" style="display:none">STK Danışmanlık</p>
         <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
           <i class="fas fa-map-marker-alt" style="color:#0d6efd;margin-right:6px"></i>
           <span itemprop="streetAddress">İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5</span>,
@@ -417,7 +419,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("SH Danışmanlık") }}. Tüm Hakları Saklıdır. |
+      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("STK Danışmanlık") }}. Tüm Hakları Saklıdır. |
         Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a>
       </p>
     </div>
@@ -427,10 +429,9 @@
 <a href="https://wa.me/{{ site.whatsapp | default('905347054234') }}"
    class="wa-floating-btn" target="_blank" rel="noopener noreferrer"
    aria-label="WhatsApp ile iletişime geçin">
-  <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
   <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
+  <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
 </a>
-
 <script src="/js/script.js" defer></script>
 </body>
 </html>

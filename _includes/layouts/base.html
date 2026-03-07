@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- ═══ PRIMARY SEO ════════════════════════════════ -->
-  <title>{{ title }} | {{ site.site_name | default("SH Danışmanlık") }}</title>
+  <title>{{ title }} | {{ site.site_name | default("STK Danışmanlık") }}</title>
   <meta name="description" content="{{ description }}">
   <meta name="keywords" content="{{ keywords | default('STK danışmanlık İstanbul, dernek kuruluşu Ümraniye, vakıf danışmanlık, DERBİS işlemleri') }}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="author" content="{{ site.site_name | default('SH Danışmanlık') }}">
+  <meta name="author" content="{{ site.site_name | default('STK Danışmanlık') }}">
   
   <!-- ═══ CANONICAL ══════════════════════════════════ -->
   <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
   
   <!-- ═══ OG / SOCIAL ═══════════════════════════════ -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ title }} | {{ site.site_name | default('SH Danışmanlık') }}">
+  <meta property="og:title" content="{{ title }} | {{ site.site_name | default('STK Danışmanlık') }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:url" content="https://stkdanismanlik.com{{ page.url }}">
   <meta property="og:image" content="{{ og_image | default('https://stkdanismanlik.com/img/banner1.webp') }}">
   <meta property="og:locale" content="tr_TR">
-  <meta property="og:site_name" content="{{ site.site_name | default('SH Danışmanlık') }}">
+  <meta property="og:site_name" content="{{ site.site_name | default('STK Danışmanlık') }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ description }}">
@@ -35,7 +35,7 @@
       {
         "@type": "LocalBusiness",
         "@id": "https://stkdanismanlik.com/#organization",
-        "name": "SH Danışmanlık",
+        "name": "STK Danışmanlık",
         "alternateName": "SH STK Danışmanlık",
         "url": "https://stkdanismanlik.com",
         "logo": "https://stkdanismanlik.com/logo.webp",
@@ -127,7 +127,7 @@
     .main-nav ul{display:flex;align-items:center;gap:20px}
     .main-nav ul li{position:relative}
     .main-nav ul li a{color:var(--dark-color);font-weight:600;padding:10px 5px;font-size:.95rem}
-    .btn-nav-final{padding:10px 25px;background-color:var(--primary-color);color:#fff;font-weight:600;font-size:.95rem;border-radius:8px;margin-left:20px;display:inline-block}
+    
     .nav-open-btn{display:none}
     /* PAGE HEADER — CLS önleme: min-height */
     .page-header{padding:80px 0;background-size:cover;background-position:center;position:relative;text-align:center;color:#fff;min-height:220px;display:flex;align-items:center}
@@ -144,9 +144,9 @@
     .footer-col ul li a{color:#bbb;font-size:.88rem;display:inline-block;margin-bottom:8px}
     .footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid #333;text-align:center;font-size:.82rem;color:#999}
     /* WA FLOAT */
-    .wa-floating-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;flex-direction:row-reverse}
-    .wa-icon{background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
-    .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.1);white-space:nowrap}
+    .wa-floating-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;flex-direction:row;text-decoration:none;transition:transform .3s ease}
+    .wa-icon{background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 16px rgba(0,0,0,.25);flex-shrink:0}
+    .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}
     /* MOBILE NAV OVERLAY */
     .mobile-nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:10000}
     .mobile-nav-overlay.active{display:block}
@@ -166,9 +166,11 @@
     }
     @media(max-width:640px){
       .footer-grid{grid-template-columns:1fr}
-      .wa-label{display:none}
+      .wa-label{background:#fff;color:#333;padding:8px 16px;border-radius:24px;margin-right:12px;font-weight:600;font-size:.85rem;box-shadow:0 3px 8px rgba(0,0,0,.12);white-space:nowrap}
     }
-  </style>
+  .nav-close-btn{display:none}
+    .main-nav.active .nav-close-btn{display:flex;position:absolute;top:12px;right:16px;font-size:1.5rem;color:#333;padding:8px;z-index:10}
+    </style>
 
   <!-- ═══ NON-CRITICAL CSS — async yükle ════════════ -->
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
@@ -207,10 +209,10 @@
 <!-- ═══ HEADER ═════════════════════════════════════════════ -->
 <header class="main-header">
   <div class="container header-container">
-    <a href="/" class="logo-container" aria-label="{{ site.site_name | default('SH Danışmanlık') }} - Ana Sayfa">
+    <a href="/" class="logo-container" aria-label="{{ site.site_name | default('STK Danışmanlık') }} - Ana Sayfa">
       <!-- CLS önleme: width/height zorunlu -->
       <img src="/logo.webp"
-           alt="{{ site.site_name | default('SH Danışmanlık') }} Logo"
+           alt="{{ site.site_name | default('STK Danışmanlık') }} Logo"
            class="logo-img"
            width="247" height="214"
            fetchpriority="high"
@@ -257,7 +259,7 @@
           </ul>
         </li>
         <li><a href="/referanslar.html"{% if "/referanslar" in page.url %} class="active"{% endif %}>Referanslar</a></li>
-        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %} class="btn-nav-final">İletişim</a></li>
+        <li><a href="/iletisim.html"{% if "/iletisim" in page.url %} class="active"{% endif %}>İletişim</a></li>
       </ul>
     </nav>
     <button class="nav-open-btn" aria-label="Menüyü aç" aria-expanded="false">
@@ -289,10 +291,10 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <img src="/logo.webp" alt="SH Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
+        <img src="/logo.webp" alt="STK Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy" decoding="async">
         <p itemprop="description">"{{ site.footer_slogan | default('Bize Uğrayın, Bürokrasiye Takılmayın') }}"</p>
         <!-- NAP: Google Lokal SEO için zorunlu -->
-        <p itemprop="name" style="display:none">SH Danışmanlık</p>
+        <p itemprop="name" style="display:none">STK Danışmanlık</p>
         <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
           <i class="fas fa-map-marker-alt" style="color:#0d6efd;margin-right:6px"></i>
           <span itemprop="streetAddress">İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5</span>,
@@ -349,7 +351,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("SH Danışmanlık") }}. Tüm Hakları Saklıdır. |
+      <p>&copy; {{ site.copyright_year | default("2026") }} {{ site.site_name | default("STK Danışmanlık") }}. Tüm Hakları Saklıdır. |
         Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a>
       </p>
     </div>
@@ -365,8 +367,6 @@
   <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
   <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
 </a>
-
-<!-- ═══ JS — defer (render blocking yok) ════════════════════ -->
 <script src="/js/script.js" defer></script>
 </body>
 </html>

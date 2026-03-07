@@ -1,64 +1,7 @@
-# %0.01 Elit Seviye – Kuantum Katman | Cloudflare Pages _headers
-# stkdanismanlik.com
-
-# ── Tüm sayfalar için temel güvenlik başlıkları ──────────────────────────────
 /*
-  X-Frame-Options: SAMEORIGIN
+  X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=(self), payment=()
-  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Cross-Origin-Opener-Policy: same-origin-allow-popups
-  Cross-Origin-Resource-Policy: same-origin
 
-# ── HTML sayfaları: No-cache + revalidate ───────────────────────────────────
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-  Content-Type: text/html; charset=utf-8
-
-# ── Kök index ───────────────────────────────────────────────────────────────
-/
-  Cache-Control: public, max-age=0, must-revalidate
-  Content-Type: text/html; charset=utf-8
-  Link: </img/banner1.webp>; rel=preload; as=image; fetchpriority=high, </css/style.css>; rel=preload; as=style, </js/rum.js>; rel=modulepreload
-
-# ── CSS: 24 saat + SWR ──────────────────────────────────────────────────────
-/css/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
-  Content-Type: text/css; charset=utf-8
-
-# ── JS: 24 saat + SWR ───────────────────────────────────────────────────────
-/js/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
-
-# ── Görseller: 1 yıl immutable ──────────────────────────────────────────────
-/img/*
-  Cache-Control: public, max-age=31536000, immutable
-  Vary: Accept
-
-/logo.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-# ── Fontlar: 1 yıl immutable ────────────────────────────────────────────────
-/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-  Access-Control-Allow-Origin: *
-
-# ── Service Worker: her zaman güncel ────────────────────────────────────────
-/sw.js
-  Cache-Control: no-cache, no-store, must-revalidate
-  Service-Worker-Allowed: /
-
-# ── Manifest ────────────────────────────────────────────────────────────────
-/manifest.json
-  Cache-Control: public, max-age=86400
-  Content-Type: application/manifest+json
-
-# ── Sitemap + Robots ────────────────────────────────────────────────────────
-/sitemap.xml
-  Cache-Control: public, max-age=86400
-  Content-Type: application/xml; charset=utf-8
-
-/robots.txt
-  Cache-Control: public, max-age=86400
+/admin/*
+  X-Robots-Tag: noindex
