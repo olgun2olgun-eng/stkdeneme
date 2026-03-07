@@ -6,18 +6,29 @@ permalink: "/"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>STK Danışmanlık | Ümraniye & İstanbul Dernek, Vakıf Kurulumu ve Danışmanlık</title>
+    <title>STK Danışmanlık | Ümraniye &amp; İstanbul Dernek, Vakıf Kurulumu ve Danışmanlık</title>
     <meta name="description" content="Ümraniye ve İstanbul'da STK, dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık. 10+ yıl tecrübe ile profesyonel STK danışmanlık hizmetleri.">
     <link rel="canonical" href="https://stkdanismanlik.com/">
 
     <!-- LCP Preload -->
     <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-    <!-- Poppins Font -->
+    <!-- DNS prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <!-- Poppins Font async -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- FontAwesome async -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/logo.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="/logo.webp">
+    <meta name="theme-color" content="#1a237e">
 
     <!-- SPECULATION RULES -->
     <script type="speculationrules">
@@ -30,7 +41,7 @@ permalink: "/"
       ]
     }
     </script>
-    <!-- Netlify Identity: Sadece /admin/ sayfasına taşındı (PageSpeed optimizasyonu) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
     <!-- ============================================================
          INLINE KRİTİK CSS — tüm render-blocking CSS burada
          ============================================================ -->
@@ -119,6 +130,7 @@ permalink: "/"
 
     /* ========== HAMBURGER (mobil) ========== */
     .nav-open-btn { display: none; font-size: 24px; color: var(--dark-color); padding: 8px; }
+
 
     /* ========== SLIDER ========== */
     .slider {
@@ -242,11 +254,14 @@ permalink: "/"
     .btn-secondary:hover { background: var(--primary-color); color: #fff; }
 
     /* ========== STATS ========== */
-    .stats-section { background: #f0f4ff; padding: 50px 0; color: #1a1a1a; }
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-    .stat-item .stat-icon { font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; }
-    .stat-item .counter { font-size: 2.4rem; font-weight: 800; color: #1a1a1a; margin-bottom: 4px; }
-    .stat-item p { color: #1a1a1a; font-size: 0.9rem; font-weight: 500; }
+    .stats-section { background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%); padding: 70px 0; color: #fff; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
+    .stat-item { padding: 30px 20px; position: relative; }
+    .stat-item:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:linear-gradient(to bottom, transparent, rgba(13,110,253,0.5), transparent); }
+    .stat-item .stat-icon { margin-bottom: 16px; }
+    .stat-item .stat-icon svg { stroke: #4da3ff; }
+    .stat-item .counter { font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 6px; background: linear-gradient(135deg, #4da3ff, #0d6efd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-item p { color: rgba(255,255,255,0.7); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.5px; }
 
     /* ========== ABOUT ========== */
     .about-section { padding: 80px 0; }
@@ -264,14 +279,21 @@ permalink: "/"
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .service-card {
       background: #fff;
-      padding: 36px 28px;
-      border-radius: 12px;
+      padding: 40px 28px;
+      border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
       text-align: center;
+      border: 1px solid #eef2f7;
+      position: relative;
+      overflow: hidden;
     }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-    .service-card .svc-icon { font-size: 2rem; color: var(--primary-color); margin-bottom: 16px; }
+    .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #0d6efd, #4da3ff); transform:scaleX(0); transition:transform 0.3s; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 35px rgba(13,110,253,0.12); border-color: rgba(13,110,253,0.2); }
+    .service-card:hover::before { transform:scaleX(1); }
+    .service-card .svc-icon { width:64px; height:64px; border-radius:16px; background:linear-gradient(135deg, #e8f0fe, #f0f4ff); display:flex; align-items:center; justify-content:center; margin:0 auto 20px; transition:background 0.3s; }
+    .service-card:hover .svc-icon { background:linear-gradient(135deg, #0d6efd, #4da3ff); }
+    .service-card:hover .svc-icon svg { stroke:#fff; }
     .service-card h3 { font-size: 1.1rem; color: var(--dark-color); margin-bottom: 10px; }
     .service-card p { font-size: 0.9rem; color: var(--text-color); }
 
@@ -382,15 +404,17 @@ permalink: "/"
     .social-icons a:hover { background: var(--primary-color); color: #fff; }
     .footer-bottom { margin-top: 40px; padding-top: 24px; border-top: 1px solid #333; text-align: center; font-size: 0.82rem; color: #999; }
     .footer-bottom a { color: #00a8e8; font-weight: 600; }
+    .footer-logo { max-height: 40px; width: auto; margin-bottom: 12px; }
 
     /* ========== WHATSAPP FLOAT ========== */
     .wa-floating-btn {
       position: fixed;
       bottom: 25px;
-      left: 25px;
+      right: 25px;
       z-index: 9999;
       display: flex;
       align-items: center;
+      flex-direction: row;
       text-decoration: none;
     }
     .wa-icon {
@@ -442,7 +466,7 @@ permalink: "/"
       background: #fff;
       z-index: 9999;
       box-shadow: -4px 0 20px rgba(0,0,0,0.15);
-      padding: 24px 0;
+      padding: 60px 0 24px;
       overflow-y: auto;
     }
     .main-nav.active ul { flex-direction: column; gap: 0; padding: 0 20px; }
@@ -473,10 +497,18 @@ permalink: "/"
     .nav-close-btn.mobile-show {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      padding: 0 20px 16px;
-      font-size: 1.5rem;
+      justify-content: center;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      font-size: 1.3rem;
       color: var(--dark-color);
+      background: #f5f5f5;
+      border-radius: 50%;
+      z-index: 10;
     }
 
     /* ========== RESPONSIVE ========== */
@@ -484,7 +516,7 @@ permalink: "/"
       .main-nav { display: none; }
       .nav-open-btn { display: block; }
       .slider { height: 70vh; min-height: 360px; }
-      .logo-img { height: 50px; }
+      .logo-img { height: 55px; margin-right: 10px; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .posts-grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -500,6 +532,7 @@ permalink: "/"
       .posts-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .stat-item .counter { font-size: 1.8rem; }
+      .stat-item:not(:last-child)::after { display: none; }
       .testimonials-grid-main { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 28px; }
       .wa-label { display: none; }
@@ -510,92 +543,63 @@ permalink: "/"
     }
     </style>
 
-    <!-- Stylesheet (non-blocking for any extra styles) -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Stylesheet (non-blocking) -->
+    <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
-    <!-- JSON-LD SEO: LocalBusiness + ProfessionalService -->
+    <!-- JSON-LD SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "STK Danışmanlık",
-      "alternateName": ["STK Danışmanlık", "STK Danışmanlık Hizmetleri"],
-      "url": "https://stkdanismanlik.com",
-      "logo": "https://stkdanismanlik.com/logo.webp",
-      "image": "https://stkdanismanlik.com/img/banner1.webp",
-      "telephone": "+905347054234",
-      "email": "info@stkdanismanlik.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
-        "addressLocality": "Ümraniye",
-        "addressRegion": "İstanbul",
-        "postalCode": "34760",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.0166,
-        "longitude": 29.1122
-      },
-      "areaServed": [
-        {"@type": "City", "name": "İstanbul"},
-        {"@type": "AdministrativeArea", "name": "Ümraniye"}
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "STK Danışmanlık Hizmetleri",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dernek Kuruluşu"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vakıf Kuruluşu"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DERBİS İşlemleri"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Genel Kurul Yönetimi"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mali Danışmanlık"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Proje ve Fon Geliştirme"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Yasal Danışmanlık"}}
-        ]
-      },
-      "knowsAbout": ["Dernek Kurulumu", "Vakıf Kurulumu", "STK Danışmanlık", "DERBİS", "Dernekler Mevzuatı", "Genel Kurul Yönetimi", "Mali Danışmanlık"],
-      "description": "Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında 10 yılı aşkın tecrübe ile profesyonel STK danışmanlık hizmetleri.",
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150"},
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "priceRange": "₺₺"
-    }
-    </script>
-
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Dernek kurmak için kaç kişi gereklidir ve süreç ne kadar sürer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Bir dernek kurmak için en az 7 gerçek veya tüzel kişinin bir araya gelmesi gerekmektedir. STK Danışmanlık olarak tüm süreci ortalama 7-15 iş günü içinde tamamlıyoruz."
-          }
+          "@type": "LocalBusiness",
+          "@id": "https://stkdanismanlik.com/#organization",
+          "name": "STK Danışmanlık",
+          "url": "https://stkdanismanlik.com",
+          "logo": "https://stkdanismanlik.com/logo.webp",
+          "image": "https://stkdanismanlik.com/img/banner1.webp",
+          "telephone": "+905347054234",
+          "email": "info@stkdanismanlik.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+            "addressLocality": "Ümraniye",
+            "addressRegion": "İstanbul",
+            "postalCode": "34764",
+            "addressCountry": "TR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.0163",
+            "longitude": "29.1221"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150"
+          },
+          "priceRange": "₺₺",
+          "areaServed": { "@type": "City", "name": "İstanbul" }
         },
         {
-          "@type": "Question",
-          "name": "Dernek ve Vakıf arasındaki en temel fark nedir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dernekler kişi topluluğu, vakıflar ise mal topluluğudur. Dernekler ortak bir amaç için bir araya gelen insanlardan oluşurken, vakıflar belirli bir amaca hizmet etmesi için tahsis edilmiş bir mal varlığı üzerine kurulur."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "İstanbul Ümraniye'de STK danışmanlık hizmeti veriyor musunuz?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet, Ümraniye İstiklal Mahallesi Sütçüimam Caddesi'ndeki ofisimizde ve tüm İstanbul genelinde STK danışmanlık, dernek kurulumu, vakıf kuruluşu ve mali danışmanlık hizmetleri sunuyoruz."
+          "@type": "WebSite",
+          "@id": "https://stkdanismanlik.com/#website",
+          "url": "https://stkdanismanlik.com",
+          "name": "STK Danışmanlık",
+          "publisher": { "@id": "https://stkdanismanlik.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://stkdanismanlik.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
           }
         }
       ]
@@ -603,7 +607,6 @@ permalink: "/"
     </script>
 </head>
 <body>
-
 <!-- Mobile nav overlay -->
 <div class="mobile-nav-overlay" id="navOverlay"></div>
 
@@ -968,51 +971,82 @@ permalink: "/"
 </main>
 
 <!-- ===== FOOTER ===== -->
-<footer class="main-footer">
+<footer class="main-footer" itemscope itemtype="https://schema.org/LocalBusiness">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <p>"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
-        <p>© 2026 STK Danışmanlık. Tüm Hakları Saklıdır.</p>
+        <img src="/logo.webp" alt="STK Danışmanlık" class="footer-logo" width="120" height="40" loading="lazy">
+        <p itemprop="description">"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
+        <p itemprop="name" style="display:none">STK Danışmanlık</p>
+        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span itemprop="streetAddress">İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5</span>,
+          <span itemprop="addressLocality">Ümraniye</span>,
+          <span itemprop="addressRegion">İstanbul</span>
+          <meta itemprop="postalCode" content="34760"><meta itemprop="addressCountry" content="TR">
+        </address>
+        <p style="font-size:.85rem;margin-top:6px">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+905347054234" itemprop="telephone" style="color:#ccc">+90 534 705 42 34</a>
+        </p>
+        <p style="font-size:.85rem;margin-top:4px">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="vertical-align:middle;margin-right:6px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a>
+        </p>
       </div>
       <div class="footer-col">
-        <p><strong>Hızlı Menü</strong></p>
+        <p><strong>Hizmetlerimiz</strong></p>
         <ul>
-          <li><a href="/hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="/referanslar.html">Referanslar</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/iletisim.html">İletişim</a></li>
+          <li><a href="/hizmet-dernek-kurulusu.html">› Dernek Kuruluşu</a></li>
+          <li><a href="/hizmet-vakif-kurulusu.html">› Vakıf Kuruluşu</a></li>
+          <li><a href="/hizmet-derbis.html">› DERBİS İşlemleri</a></li>
+          <li><a href="/hizmet-genel-kurul.html">› Genel Kurul</a></li>
+          <li><a href="/hizmet-mali-danismanlik.html">› Mali Danışmanlık</a></li>
+          <li><a href="/hizmet-proje-yazma.html">› Proje Yazma</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <p><strong>İletişim</strong></p>
-        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></span> İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5, Ümraniye, İstanbul</p>
-        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> +90 534 705 42 34</p>
-        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span> info&#64;stkdanismanlik.com</p>
+        <p><strong>Bilgi Bankası</strong></p>
+        <ul>
+          <li><a href="/mevzuat.html">› Mevzuatlar</a></li>
+          <li><a href="/blog-dernek-yonetici-sorumluluklari.html">› Yönetici Sorumlulukları</a></li>
+          <li><a href="/blog-stk-iktisadi-isletme-avantajlari.html">› İktisadi İşletme</a></li>
+          <li><a href="/blog.html">› Blog & Makaleler</a></li>
+          <li><a href="/sss.html">› Sıkça Sorulan Sorular</a></li>
+          <li><a href="/hakkimizda.html">› Hakkımızda</a></li>
+        </ul>
       </div>
       <div class="footer-col">
-        <p><strong>Takip Edin</strong></p>
+        <p><strong>Bizi Takip Edin</strong></p>
         <div class="social-icons">
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
           <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
         </div>
+        <div style="margin-top:20px;padding:15px;background:#1a1a1a;border-radius:8px;border-left:3px solid #0d6efd">
+          <p style="font-size:.8rem;color:#aaa;margin-bottom:8px">Hızlı Danışmanlık</p>
+          <a href="https://wa.me/905347054234" style="color:#25d366;font-weight:700;font-size:.9rem" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#25d366" style="vertical-align:middle;margin-right:4px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp'tan Yaz
+          </a>
+        </div>
+        <p style="font-size:.75rem;color:#666;margin-top:15px">Hafta içi 09:00 – 18:00</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Tasarım ve Yazılım. Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a></p>
+      <p>&copy; 2026 STK Danışmanlık. Tüm Hakları Saklıdır. | Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a></p>
     </div>
   </div>
 </footer>
 
 <!-- ===== WHATSAPP FLOAT ===== -->
 <a href="https://wa.me/905347054234" class="wa-floating-btn" target="_blank" rel="noopener" aria-label="WhatsApp üzerinden bizimle iletişime geçin">
+<div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
   <div class="wa-icon">
     <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
   </div>
-  <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
 </a>
 
 <!-- ===== DEFERRED JS — sadece etkileşim için ===== -->

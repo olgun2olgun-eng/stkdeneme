@@ -6,6 +6,7 @@ date: 2024-10-15
 category: "Uzman Rehberi"
 image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800"
 excerpt: "Sivil toplum yapınızı belirlerken dernek ve vakıf arasındaki yasal, mali ve idari farkları bilin."
+tags: []
 ---
 
 Bir sosyal sorumluluk projesine başlarken en sık karşılaşılan sorulardan biri, yapının dernek mi yoksa vakıf mı olması gerektiğidir. Her iki yapı da topluma hizmet amacı gütse de, Türk Medeni Kanunu ve ilgili mevzuatlara göre aralarında kritik farklar bulunur. İşte karar verme sürecinizi kolaylaştıracak 5 temel fark:

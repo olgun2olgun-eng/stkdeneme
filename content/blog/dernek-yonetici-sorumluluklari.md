@@ -6,6 +6,7 @@ date: 2026-01-04
 category: "Uzman Rehberi"
 image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800"
 excerpt: "Dernek başkanı ve yönetim kurulu üyelerinin yasal ve cezai sorumluluklarını detaylı inceleyen kapsamlı rehber. Mali yükümlülükler, beyanname süreçleri, resmi bildirimler ve hata durumlarında karşılaşılabilecek yaptırımlar hakkında her şey."
+tags: []
 ---
 
 Dernek yönetim kurulu üyeleri, derneklerinin yasal temsilcileri olarak çok önemli sorumluluklar taşırlar. Bu sorumlulukların gereği gibi yerine getirilmemesi durumunda hem dernekler hem de yöneticiler ciddi hukuki ve mali yaptırımlarla karşılaşabilir.
