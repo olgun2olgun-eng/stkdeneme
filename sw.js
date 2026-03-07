@@ -1,202 +1,99 @@
-// %0.01 Elit Seviye – Kuantum Katman | Elite Service Worker v3.0
-// stkdanismanlik.com — Offline-first · Predictive Prefetch · Delta Updates
+/**
+ * STK Danışmanlık — Service Worker
+ * Strateji: Cache-First (statik varlıklar) + Network-First (HTML sayfalar)
+ * Versiyon: 1.0.0
+ */
 
-const CACHE_VERSION = "v3.0";
-const STATIC_CACHE  = `stk-static-${CACHE_VERSION}`;
-const DYNAMIC_CACHE = `stk-dynamic-${CACHE_VERSION}`;
-const FONT_CACHE    = `stk-fonts-${CACHE_VERSION}`;
-const IMG_CACHE     = `stk-images-${CACHE_VERSION}`;
+const CACHE_VERSION = 'stk-v1';
+const STATIC_CACHE  = `${CACHE_VERSION}-static`;
+const PAGES_CACHE   = `${CACHE_VERSION}-pages`;
 
-// Kritik varlıklar — install anında önbelleğe al
+// Anında önbelleğe alınacak kritik varlıklar (install sırasında)
 const PRECACHE_ASSETS = [
-  "/",
-  "/index.html",
-  "/css/style.css",
-  "/js/rum.js",
-  "/js/prefetch.js",
-  "/logo.webp",
-  "/img/banner1.webp",
-  "/manifest.json",
-  "/offline.html",
+  '/',
+  '/index.html',
+  '/logo.webp',
+  '/img/banner1.webp',
+  '/css/style.css',
 ];
 
-// Sık ziyaret edilen sayfalar — idle anında prefetch
-const PREFETCH_PAGES = [
-  "/hizmet-dernek-kurulusu.html",
-  "/hizmet-vakif-kurulusu.html",
-  "/iletisim.html",
-  "/hakkimizda.html",
-  "/hizmet-derbis.html",
-];
-
-// ── INSTALL: Statik varlıkları önbelleğe al ───────────────────────────────────
-self.addEventListener("install", (event) => {
-  self.skipWaiting();
+// ── INSTALL: Kritik varlıkları önceden al ───────────────────────────────────
+self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(STATIC_CACHE).then((cache) =>
-      cache.addAll(PRECACHE_ASSETS.map((url) => new Request(url, { cache: "reload" })))
-    )
-  );
-});
-
-// ── ACTIVATE: Eski cache'leri temizle + prefetch başlat ──────────────────────
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    Promise.all([
-      self.clients.claim(),
-      // Eski cache versiyonlarını sil
-      caches.keys().then((keys) =>
-        Promise.all(
-          keys
-            .filter((k) => ![STATIC_CACHE, DYNAMIC_CACHE, FONT_CACHE, IMG_CACHE].includes(k))
-            .map((k) => caches.delete(k))
-        )
-      ),
-      // Idle'da sık sayfaları prefetch et
-      idlePrefetchPages(),
-    ])
-  );
-});
-
-// ── FETCH: Stale-While-Revalidate stratejisi ──────────────────────────────────
-self.addEventListener("fetch", (event) => {
-  const req = event.request;
-  const url = new URL(req.url);
-
-  // Sadece GET isteklerini yakala
-  if (req.method !== "GET") return;
-
-  // Chrome extension / non-http isteklerini atla
-  if (!req.url.startsWith("http")) return;
-
-  // Font istekleri: Cache First (font değişmez)
-  if (url.hostname === "fonts.gstatic.com" || url.pathname.match(/\.(woff2?|ttf|eot)$/i)) {
-    event.respondWith(cacheFirst(req, FONT_CACHE));
-    return;
-  }
-
-  // Görseller: Cache First + WebP dönüşümü ipucu
-  if (req.destination === "image" || url.pathname.match(/\.(webp|png|jpg|jpeg|gif|svg|ico)$/i)) {
-    event.respondWith(cacheFirst(req, IMG_CACHE));
-    return;
-  }
-
-  // CSS / JS: Stale-While-Revalidate
-  if (req.destination === "style" || req.destination === "script") {
-    event.respondWith(staleWhileRevalidate(req, STATIC_CACHE));
-    return;
-  }
-
-  // HTML sayfaları: Network First + Offline fallback
-  if (req.destination === "document") {
-    event.respondWith(networkFirstWithFallback(req));
-    return;
-  }
-
-  // Diğer: Dynamic cache
-  event.respondWith(staleWhileRevalidate(req, DYNAMIC_CACHE));
-});
-
-// ── Strateji: Cache First ─────────────────────────────────────────────────────
-async function cacheFirst(req, cacheName) {
-  const cached = await caches.match(req);
-  if (cached) return cached;
-  const fresh = await fetch(req);
-  if (fresh.ok) {
-    const cache = await caches.open(cacheName);
-    cache.put(req, fresh.clone());
-  }
-  return fresh;
-}
-
-// ── Strateji: Stale While Revalidate ─────────────────────────────────────────
-async function staleWhileRevalidate(req, cacheName) {
-  const cache = await caches.open(cacheName);
-  const cached = await cache.match(req);
-  const fetchPromise = fetch(req).then((fresh) => {
-    if (fresh.ok) cache.put(req, fresh.clone());
-    return fresh;
-  }).catch(() => null);
-  return cached || await fetchPromise || new Response("", { status: 408 });
-}
-
-// ── Strateji: Network First + Offline Fallback ────────────────────────────────
-async function networkFirstWithFallback(req) {
-  try {
-    const fresh = await fetch(req, { signal: AbortSignal.timeout(4000) });
-    if (fresh.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(req, fresh.clone());
-    }
-    return fresh;
-  } catch {
-    const cached = await caches.match(req);
-    if (cached) return cached;
-    // Offline sayfasını döndür
-    const offline = await caches.match("/offline.html");
-    return offline || new Response("<h1>Çevrimdışısınız</h1>", {
-      headers: { "Content-Type": "text/html; charset=utf-8" },
-    });
-  }
-}
-
-// ── AI Predictive Prefetch: Idle'da sık sayfaları ön yükle ───────────────────
-async function idlePrefetchPages() {
-  if ("requestIdleCallback" in self) {
-    // SW içinde requestIdleCallback yok — setTimeout ile simüle et
-  }
-  await new Promise((r) => setTimeout(r, 3000)); // 3sn sonra başlat
-  const cache = await caches.open(DYNAMIC_CACHE);
-  for (const url of PREFETCH_PAGES) {
-    try {
-      const exists = await cache.match(url);
-      if (!exists) {
-        const res = await fetch(url, { priority: "low" });
-        if (res.ok) await cache.put(url, res);
-      }
-    } catch {
-      // sessiz hata
-    }
-  }
-}
-
-// ── PUSH Notification (gelecek kullanım için) ─────────────────────────────────
-self.addEventListener("push", (event) => {
-  const data = event.data ? event.data.json() : {};
-  event.waitUntil(
-    self.registration.showNotification(data.title || "SH Danışmanlık", {
-      body: data.body || "Yeni bildirim",
-      icon: "/logo.webp",
-      badge: "/logo.webp",
+    caches.open(STATIC_CACHE).then(function(cache) {
+      return cache.addAll(PRECACHE_ASSETS.map(function(url) {
+        return new Request(url, { cache: 'reload' });
+      }));
+    }).then(function() {
+      return self.skipWaiting(); // Hemen aktif ol
     })
   );
 });
 
-// ── BACKGROUND SYNC: Form gönderimi offline iken ─────────────────────────────
-self.addEventListener("sync", (event) => {
-  if (event.tag === "sync-form") {
-    event.waitUntil(syncOfflineForms());
-  }
+// ── ACTIVATE: Eski cache'leri temizle ───────────────────────────────────────
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(keys) {
+      return Promise.all(
+        keys.filter(function(key) {
+          return key.startsWith('stk-') && key !== STATIC_CACHE && key !== PAGES_CACHE;
+        }).map(function(key) { return caches.delete(key); })
+      );
+    }).then(function() {
+      return self.clients.claim(); // Açık sayfaları hemen kontrol et
+    })
+  );
 });
 
-async function syncOfflineForms() {
-  // IndexedDB'den pending formları al ve gönder
-  // (form-handler.js ile entegre)
-}
+// ── FETCH: Akıllı cache stratejisi ─────────────────────────────────────────
+self.addEventListener('fetch', function(event) {
+  var req = event.request;
+  var url = new URL(req.url);
 
-// ── DELTA UPDATE: Sadece değişen dosyaları güncelle ──────────────────────────
-self.addEventListener("message", (event) => {
-  if (event.data === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
-  if (event.data && event.data.type === "DELTA_UPDATE") {
-    const urls = event.data.urls || [];
-    caches.open(STATIC_CACHE).then((cache) => {
-      urls.forEach((url) => {
-        fetch(url, { cache: "reload" }).then((res) => {
-          if (res.ok) cache.put(url, res);
+  // Sadece kendi domain'imizden gelen GET isteklerini handle et
+  if(req.method !== 'GET' || url.origin !== self.location.origin) return;
+
+  // Admin panelini asla cache'leme
+  if(url.pathname.startsWith('/admin')) return;
+
+  var isHTML = req.headers.get('Accept') && req.headers.get('Accept').includes('text/html');
+  var isImage = /\.(webp|jpg|jpeg|png|gif|svg|ico)$/i.test(url.pathname);
+  var isStatic = /\.(css|js|woff2?|ttf)$/i.test(url.pathname);
+
+  if(isImage || isStatic) {
+    // ── Cache-First: Görseller ve statik dosyalar
+    event.respondWith(
+      caches.open(STATIC_CACHE).then(function(cache) {
+        return cache.match(req).then(function(cached) {
+          if(cached) return cached;
+          return fetch(req).then(function(response) {
+            if(response && response.status === 200) {
+              cache.put(req, response.clone());
+            }
+            return response;
+          }).catch(function() { return new Response('', { status: 408 }); });
         });
-      });
-    });
+      })
+    );
+  } else if(isHTML) {
+    // ── Stale-While-Revalidate: HTML sayfalar (her zaman güncel)
+    event.respondWith(
+      caches.open(PAGES_CACHE).then(function(cache) {
+        return cache.match(req).then(function(cached) {
+          var networkFetch = fetch(req).then(function(response) {
+            if(response && response.status === 200) {
+              cache.put(req, response.clone());
+            }
+            return response;
+          }).catch(function() {
+            // Çevrimdışı: cache'den sun
+            return cached || caches.match('/index.html');
+          });
+          // Cached varsa önce onu göster, arka planda güncelle
+          return cached || networkFetch;
+        });
+      })
+    );
   }
+  // Diğerleri: normal network
 });

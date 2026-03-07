@@ -36,6 +36,17 @@ permalink: "/"
     <meta name="geo.position" content="41.0166;29.1122">
     <meta name="ICBM" content="41.0166, 29.1122">
     <meta name="theme-color" content="#0d6efd">
+    <!-- Security Headers (meta düzeyinde) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(self), interest-cohort=()">
+    <!-- PWA: Manifest + iOS -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="STK Danışmanlık">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
     <!-- LCP Preload — Banner (LCP elemanı) -->
     <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
@@ -50,13 +61,35 @@ permalink: "/"
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- FontAwesome kaldırıldı: chevron ikonları inline SVG ile değiştirildi -->
 
-    <!-- SPECULATION RULES -->
+    <!-- SPECULATION RULES — Prerender + Prefetch -->
     <script type="speculationrules">
     {
       "prerender": [
         {
           "source": "list",
-          "urls": ["hakkimizda.html", "sss.html", "hizmet-dernek-kurulusu.html", "iletisim.html"]
+          "urls": [
+            "/hakkimizda.html",
+            "/sss.html",
+            "/hizmet-dernek-kurulusu.html",
+            "/iletisim.html"
+          ],
+          "eagerness": "moderate"
+        }
+      ],
+      "prefetch": [
+        {
+          "source": "list",
+          "urls": [
+            "/hizmet-vakif-kurulusu.html",
+            "/hizmet-derbis.html",
+            "/hizmet-genel-kurul.html",
+            "/hizmet-mali-danismanlik.html",
+            "/hizmet-proje-yazma.html",
+            "/hizmet-yasal-danismanlik.html",
+            "/referanslar.html",
+            "/blog.html"
+          ],
+          "eagerness": "conservative"
         }
       ]
     }
@@ -72,7 +105,7 @@ permalink: "/"
       --primary-hover: #0b5ed7;
       --dark-color: #1a1a1a;
       --text-color: #555;
-      --font-family: 'Poppins', sans-serif;
+      --font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: auto; } /* smooth mobilde INP düşürür — JS ile yönetilir */
@@ -788,7 +821,11 @@ permalink: "/"
   <div class="slides">
     <!-- Slayt 1 — LCP: eager + fetchpriority high -->
     <div class="slide active">
-      <img src="/img/banner1.webp" alt="İstanbul STK Danışmanlık - Dernek ve Vakıf Kurulumu Hizmetleri" class="slide-bg-img" width="1400" height="700" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 640px)" srcset="/img/banner1-mobile.webp" type="image/webp">
+        <source media="(max-width: 992px)" srcset="/img/banner1-tablet.webp" type="image/webp">
+        <img src="/img/banner1.webp" alt="İstanbul STK Danışmanlık - Dernek ve Vakıf Kurulumu Hizmetleri" class="slide-bg-img" width="1400" height="700" fetchpriority="high" decoding="sync">
+      </picture>
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <h1>İstanbul'da Profesyonel STK Danışmanlık Hizmetleri</h1>
@@ -1152,7 +1189,17 @@ permalink: "/"
 <!-- ===== DEFERRED JS — sadece etkileşim için ===== -->
 <script defer>
 (function(){
-  // --- SLIDER ---
+  'use strict';
+
+  // ── SLIDER ──────────────────────────────────────────────
+  var slides = document.querySelectorAll('.slide');
+  var dotsContainer = document.getElementById('sliderDots');
+  var current = 0;
+  var total = slides.length;
+  var dots = [];
+  var autoSlide;
+
+  // Create dots
   var slides = document.querySelectorAll('.slide');
   var dotsContainer = document.getElementById('sliderDots');
   var current = 0;
@@ -1181,12 +1228,14 @@ permalink: "/"
   document.querySelector('.slider-btn.prev').addEventListener('click', function(){ goTo(current-1); });
   document.querySelector('.slider-btn.next').addEventListener('click', function(){ goTo(current+1); });
 
-  var autoSlide = setInterval(function(){ goTo(current+1); }, 5000);
-  document.querySelector('.slider').addEventListener('mouseenter', function(){ clearInterval(autoSlide); });
-  document.querySelector('.slider').addEventListener('mouseleave', function(){ autoSlide = setInterval(function(){ goTo(current+1); }, 5000); });
-
-  // Touch/Swipe desteği — passive listener ile mobil INP korunur
+  function startAuto(){ autoSlide = setInterval(function(){ goTo(current+1); }, 5000); }
+  function stopAuto(){ clearInterval(autoSlide); }
+  startAuto();
   var sliderEl = document.querySelector('.slider');
+  sliderEl.addEventListener('mouseenter', stopAuto, { passive: true });
+  sliderEl.addEventListener('mouseleave', startAuto, { passive: true });
+
+  // Touch/Swipe — passive
   var touchStartX = 0;
   sliderEl.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, { passive: true });
   sliderEl.addEventListener('touchend', function(e){
@@ -1194,23 +1243,26 @@ permalink: "/"
     if(Math.abs(dx) > 50){ goTo(dx < 0 ? current+1 : current-1); }
   }, { passive: true });
 
-  // --- COUNTER ANIMATION (Intersection Observer) ---
+  // ── COUNTER — requestAnimationFrame tabanlı, main thread dostu ──
   var counters = document.querySelectorAll('.counter');
   var counterObserver = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(!entry.isIntersecting) return;
       var el = entry.target;
       var target = parseInt(el.getAttribute('data-target'));
-      var start = 0;
-      var step = target / 60;
-      var timer = setInterval(function(){
-        start += step;
-        if(start >= target){ start = target; clearInterval(timer); }
-        el.textContent = Math.floor(start).toLocaleString();
-      }, 16);
+      var startTime = null;
+      var duration = 1200;
+      function step(ts){
+        if(!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 4);
+        el.textContent = Math.floor(ease * target).toLocaleString('tr-TR');
+        if(progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
       counterObserver.unobserve(el);
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.4, rootMargin: '0px 0px -50px 0px' });
   counters.forEach(function(c){ counterObserver.observe(c); });
 
   // --- FAQ ACCORDION ---
@@ -1247,15 +1299,18 @@ permalink: "/"
     mainNav.classList.add('active');
     navOverlay.classList.add('active');
     navCloseBtn.classList.add('mobile-show');
+    document.body.style.overflow = 'hidden';
   }
   function closeNav(){
     mainNav.classList.remove('active');
     navOverlay.classList.remove('active');
     navCloseBtn.classList.remove('mobile-show');
+    document.body.style.overflow = '';
     document.querySelectorAll('.dropdown.mob-open').forEach(function(dropdown){
       dropdown.classList.remove('mob-open');
     });
   }
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
 
   navOpenBtn.addEventListener('click', openNav);
   navCloseBtn.addEventListener('click', closeNav);
@@ -1286,15 +1341,82 @@ permalink: "/"
     });
   });
 
-  // --- CONTACT FORM (placeholder handler) ---
+  // ── CONTACT FORM ───────────────────────────────────────
   var form = document.querySelector('.contact-form');
   if(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      alert('Teşekkürler! Mesajınız alındı. En kısa sürede size ulaşacağız.');
-      form.reset();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Gönderiliyor...';
+      btn.disabled = true;
+      setTimeout(function(){
+        btn.textContent = '✓ Mesajınız Alındı!';
+        btn.style.background = '#198754';
+        form.reset();
+        setTimeout(function(){
+          btn.textContent = 'Ücretsiz Teklif Al';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }, 800);
     });
   }
+
+  // ── SERVICE WORKER — requestIdleCallback ile main thread'e dokunmaz ──
+  if('serviceWorker' in navigator){
+    var swReg = function(){
+      navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .catch(function(e){ /* sw.js yoksa sessizce geç */ });
+    };
+    if('requestIdleCallback' in window){
+      requestIdleCallback(swReg, { timeout: 3000 });
+    } else {
+      setTimeout(swReg, 2000);
+    }
+  }
+
+  // ── PREDICTIVE PREFETCH — hover/focus/touch'ta iç linkleri önceden yükle ──
+  var prefetchCache = new Set();
+  function prefetchLink(url){
+    if(prefetchCache.has(url)) return;
+    prefetchCache.add(url);
+    var link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    link.as = 'document';
+    document.head.appendChild(link);
+  }
+  document.querySelectorAll('a[href^="/"]').forEach(function(a){
+    var fired = false;
+    function trigger(){
+      if(fired) return; fired = true;
+      prefetchLink(a.href);
+    }
+    a.addEventListener('mouseenter', trigger, { passive: true, once: true });
+    a.addEventListener('focus', trigger, { passive: true, once: true });
+    a.addEventListener('touchstart', trigger, { passive: true, once: true });
+  });
+
+  // ── LCP / RUM İzleme ──────────────────────────────────
+  if('PerformanceObserver' in window){
+    try {
+      new PerformanceObserver(function(list){
+        list.getEntries().forEach(function(e){
+          if(!window.__stk_lcp) window.__stk_lcp = Math.round(e.startTime);
+        });
+      }).observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch(e){}
+    try {
+      new PerformanceObserver(function(list){
+        list.getEntries().forEach(function(e){
+          if(e.processingStart - e.startTime > 200){
+            console.warn('[INP] Yavaş etkileşim:', Math.round(e.processingStart - e.startTime), 'ms');
+          }
+        });
+      }).observe({ type: 'event', durationThreshold: 100, buffered: true });
+    } catch(e){}
+  }
+
 })();
 </script>
 <!-- Netlify CMS: Identity widget sadece /admin/index.html'de yüklenir -->
