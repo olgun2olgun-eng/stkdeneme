@@ -52,14 +52,12 @@ permalink: "/"
     <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
     <!-- Logo Preload — kritik above-the-fold görsel -->
     <link rel="preload" as="image" href="/logo.webp" type="image/webp">
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <!-- Poppins Font — sadece kullanılan ağırlıklar (300 kaldırıldı) -->
+    <!-- DNS Prefetch kaldırıldı — preconnect zaten DNS'i de çözüyor, duplicate gereksiz -->
+    <!-- Poppins: sadece 2 weight, display=optional (LCP'yi bloke etmez) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- FontAwesome kaldırıldı: chevron ikonları inline SVG ile değiştirildi -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=optional" rel="stylesheet"></noscript>
 
     <!-- SPECULATION RULES — Prerender + Prefetch -->
     <script type="speculationrules">
@@ -69,27 +67,23 @@ permalink: "/"
           "source": "list",
           "urls": [
             "/hakkimizda.html",
-            "/sss.html",
-            "/hizmet-dernek-kurulusu.html",
-            "/iletisim.html"
-          ],
-          "eagerness": "moderate"
+            "/iletisim.html",
+            "/hizmet-dernek-kurulusu.html"
+          ]
         }
       ],
       "prefetch": [
         {
           "source": "list",
           "urls": [
+            "/sss.html",
             "/hizmet-vakif-kurulusu.html",
             "/hizmet-derbis.html",
             "/hizmet-genel-kurul.html",
             "/hizmet-mali-danismanlik.html",
-            "/hizmet-proje-yazma.html",
-            "/hizmet-yasal-danismanlik.html",
             "/referanslar.html",
             "/blog.html"
-          ],
-          "eagerness": "conservative"
+          ]
         }
       ]
     }
@@ -106,6 +100,9 @@ permalink: "/"
       --dark-color: #1a1a1a;
       --text-color: #555;
       --font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --fw-normal: 400;
+      --fw-semi: 700;   /* 600 kaldırıldı — Google Fonts'tan yüklenmiyor */
+      --fw-bold: 700;
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: auto; } /* smooth mobilde INP düşürür — JS ile yönetilir */
@@ -146,8 +143,9 @@ permalink: "/"
     padding: 0 15px;
 }
 .logo-img { 
-    height: 100px;  /* ← Sabit boyut */
+    height: 100px;
     width: auto;
+    aspect-ratio: 3 / 1;          /* CLS önleme — yüklenene kadar yer tutar */
     object-fit: contain;
     transition: transform 0.3s ease;
     margin-right: 40px;
@@ -211,6 +209,8 @@ permalink: "/"
       height: 100%;
       object-fit: cover;
       z-index: 1;
+      aspect-ratio: 2 / 1;        /* CLS önleme */
+      image-rendering: auto;
     }
     .slide-overlay {
       position: absolute;
@@ -317,7 +317,7 @@ permalink: "/"
     .about-section { padding: 80px 0; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
     .about-image { border-radius: 12px; overflow: hidden; height: 380px; }
-    .about-image img { width: 100%; height: 100%; object-fit: cover; }
+    .about-image img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3 / 2; }
     .section-title-left { font-size: 1.8rem; color: var(--dark-color); margin-bottom: 8px; }
     .about-content h3 { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 16px; }
     .about-content p { margin-bottom: 24px; color: var(--text-color); }
@@ -349,7 +349,7 @@ permalink: "/"
     .post-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.07); background: #fff; transition: transform 0.3s; }
     .post-card:hover { transform: translateY(-3px); }
     .post-card-image { display: block; overflow: hidden; }
-    .post-card-image img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s; }
+    .post-card-image img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s; aspect-ratio: 2 / 1; }
     .post-card:hover .post-card-image img { transform: scale(1.05); }
     .post-card-content { padding: 24px; }
     .post-card-category { font-size: 0.7rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; }
@@ -593,7 +593,8 @@ permalink: "/"
     }
     </style>
 
-    <!-- Stylesheet (non-blocking) -->
+    <!-- style.css: Önce preload et, sonra uygula — FOUC/CLS engellenir -->
+    <link rel="preload" as="style" href="/css/style.css">
     <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
