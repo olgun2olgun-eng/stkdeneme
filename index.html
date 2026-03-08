@@ -32,13 +32,14 @@ permalink: "/"
     <meta name="geo.region" content="TR-34">
     <meta name="geo.placename" content="Ümraniye, İstanbul">
 
-    <!-- LCP Preload -->
-    <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-    <!-- Poppins — sadece kullanılan ağırlıklar, non-blocking -->
+    <!-- Preconnect önce — kritik 3rd party -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- LCP Preload — banner1 en önce indirilsin -->
+    <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
+    <!-- Poppins — non-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=optional" rel="stylesheet"></noscript>
 
     <!-- SPECULATION RULES -->
     <script type="speculationrules">
@@ -188,8 +189,8 @@ permalink: "/"
     .main-nav.active .dropdown-menu li a{border-bottom:none;padding:8px 0;font-size:0.9rem}
     .main-nav.active .dropdown.mob-open>a .chev{transform:rotate(180deg)}
     .nav-close-btn.mobile-show{display:flex;align-items:center;justify-content:flex-end;padding:0 20px 16px;font-size:1.5rem;color:var(--dark-color)}
-    @media(max-width:992px){.main-nav{display:none}.nav-open-btn{display:block}.slider{height:70vh;min-height:360px}.logo-img{height:50px}.services-grid{grid-template-columns:repeat(2,1fr)}.posts-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:36px}.about-image{height:280px}.testimonials-grid-main{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr);gap:32px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){.slider{height:60vh;min-height:300px}.slide-content{padding:0 24px}.services-grid{grid-template-columns:1fr}.posts-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}.stat-item .counter{font-size:1.8rem}.testimonials-grid-main{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:28px}.wa-label{display:none}.section-title{font-size:1.6rem}.slider-btn{width:36px;height:36px;font-size:15px}.slider-btn.prev{left:8px}.slider-btn.next{right:8px}}
+    @media(max-width:992px){.main-nav{display:none}.nav-open-btn{display:block}.slider{height:60vh;min-height:320px}.logo-img{height:50px}.services-grid{grid-template-columns:repeat(2,1fr)}.posts-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:36px}.about-image{height:280px}.testimonials-grid-main{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr);gap:32px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.slider{height:55vh;min-height:280px}.slide-content{padding:0 24px}.services-grid{grid-template-columns:1fr}.posts-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}.stat-item .counter{font-size:1.8rem}.testimonials-grid-main{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:28px}.wa-label{display:none}.section-title{font-size:1.6rem}.slider-btn{width:36px;height:36px;font-size:15px}.slider-btn.prev{left:8px}.slider-btn.next{right:8px}}
     </style>
 
     <!-- style.css: önce preload, sonra non-blocking uygula -->
