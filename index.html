@@ -41,13 +41,9 @@ permalink: "/"
     <meta name="twitter:image" content="https://stkdanismanlik.com/img/banner1.webp">
     <!-- ========== /EKLENEN META ETİKETLERİ ========== -->
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
     <!-- LCP Preload -->
     <link rel="preload" fetchpriority="high" as="image" href="img/banner1.webp" type="image/webp">
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
 
     <!-- SPECULATION RULES -->
     <script type="speculationrules">
@@ -116,6 +112,7 @@ permalink: "/"
     .logo-img { height: 100px; width: auto; object-fit: contain; margin-right: 40px; }
 
     /* ========== NAVIGATION ========== */
+    .main-nav { flex: 1; display: flex; justify-content: center; align-items: center; }
     .main-nav ul { display: flex; align-items: center; gap: 20px; margin: 0; padding: 0; }
     .main-nav ul li { position: relative; }
     .main-nav ul li a {
@@ -445,8 +442,7 @@ permalink: "/"
     /* ========== INLINE SVG ICON STYLES ========== */
     .icon-svg { display: inline-block; vertical-align: middle; width: 1em; height: 1em; fill: currentColor; }
     /* chevron rotate – desktop hover */
-    .main-nav .dropdown > a i { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s ease; }
-    .main-nav .dropdown:hover > a i { transform: rotate(180deg); }
+    .main-nav .dropdown:hover > a svg { transform: rotate(180deg); }
 
     /* ========== MOBILE NAV OVERLAY ========== */
     .mobile-nav-overlay {
@@ -485,9 +481,9 @@ permalink: "/"
     }
     .main-nav.active .dropdown.mob-open > .dropdown-menu { max-height: 500px; }
     .main-nav.active .dropdown-menu li a { border-bottom: none; padding: 8px 0; font-size: 0.9rem; }
-    .main-nav.active .dropdown > a i { font-size: 0.9rem; transition: transform 0.3s ease; }
-    .main-nav.active .dropdown:hover > a i { transform: none !important; }
-    .main-nav.active .dropdown.mob-open > a i { transform: rotate(180deg) !important; }
+    .main-nav.active .dropdown > a svg { transition: transform 0.3s ease; }
+    .main-nav.active .dropdown:hover > a svg { transform: none !important; }
+    .main-nav.active .dropdown.mob-open > a svg { transform: rotate(180deg) !important; }
     .nav-close-btn.mobile-show {
       display: flex;
       align-items: center;
@@ -529,7 +525,7 @@ permalink: "/"
     </style>
 
     <!-- Stylesheet (non-blocking for any extra styles) -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- ========== EKLENEN: JSON-LD SCHEMA (GENİŞLETİLMİŞ) ========== -->
     <script type="application/ld+json">
@@ -682,14 +678,14 @@ permalink: "/"
       <ul>
         <li><a href="index.html">Ana Sayfa</a></li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Kurumsal <i class="fas fa-chevron-down"></i></a>
+          <a href="#" aria-haspopup="true">Kurumsal <svg style="width:0.7em;height:0.7em;margin-left:5px;vertical-align:middle;transition:transform 0.3s ease" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="hakkimizda.html">Hakkımızda</a></li>
             <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
+          <a href="#" aria-haspopup="true">Hizmetlerimiz <svg style="width:0.7em;height:0.7em;margin-left:5px;vertical-align:middle;transition:transform 0.3s ease" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
             <li><a href="hizmet-derbis.html">DERBİS İşlemleri</a></li>
@@ -701,7 +697,7 @@ permalink: "/"
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Bilgi Bankası <i class="fas fa-chevron-down"></i></a>
+          <a href="#" aria-haspopup="true">Bilgi Bankası <svg style="width:0.7em;height:0.7em;margin-left:5px;vertical-align:middle;transition:transform 0.3s ease" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="mevzuat.html">Mevzuatlar</a></li>
             <li><a href="blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
