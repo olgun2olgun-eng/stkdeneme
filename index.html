@@ -41,20 +41,28 @@ permalink: "/"
     <meta name="twitter:image" content="https://stkdanismanlik.com/img/banner1.webp">
     <!-- ========== /EKLENEN META ETİKETLERİ ========== -->
 
-   <!-- Önce preconnect -->
+<!-- LCP image preload - EN ÜSTE -->
+<link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
+
+<!-- Preconnect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- LCP image preload - hepsinden ÖNCE -->
-<link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-
-<!-- CSS preload -->
-<link rel="preload" href="/css/style.css" as="style">
-<link rel="stylesheet" href="/css/style.css">
-
-<!-- Font async yükleme -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+<!-- Poppins Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
+
+<!-- FontAwesome - Tüm paket yerine SUBSET (sadece solid + brands) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" media="print" onload="this.media='all'">
+
+<!-- Noscript fallback -->
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+</noscript>
     
 
     <!-- SPECULATION RULES -->
@@ -1227,6 +1235,7 @@ permalink: "/"
 </script>
 </body>
 </html>
+
 
 
 
