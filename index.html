@@ -1,3 +1,6 @@
+---
+permalink: "/"
+---
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -6,20 +9,41 @@
     <title>STK Danışmanlık | Ümraniye & İstanbul Dernek, Vakıf Kurulumu ve Danışmanlık</title>
     <meta name="description" content="Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık. 10+ yıl tecrübe ile profesyonel STK danışmanlık hizmetleri.">
     <link rel="canonical" href="https://stkdanismanlik.com/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://stkdanismanlik.com/">
-    <meta property="og:title" content="STK Danışmanlık | Ümraniye & İstanbul Dernek, Vakıf Kurulumu">
-    <meta property="og:description" content="Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri ve mali danışmanlık. 10+ yıl tecrübe.">
-    <meta property="og:image" content="https://stkdanismanlik.com/img/banner1.webp">
-    <meta property="og:locale" content="tr_TR">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <!-- ========== EKLENEN: SEO META ETİKETLERİ ========== -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="STK Danışmanlık">
+    <meta name="keywords" content="STK danışmanlık, Ümraniye dernek kurulumu, İstanbul dernek kurma, vakıf kuruluşu İstanbul, DERBİS işlemleri, genel kurul yönetimi, sivil toplum danışmanlık Ümraniye">
+
+    <!-- Geo / Yerel SEO -->
     <meta name="geo.region" content="TR-34">
     <meta name="geo.placename" content="Ümraniye, İstanbul">
+    <meta name="geo.position" content="41.0166;29.1165">
+    <meta name="ICBM" content="41.0166, 29.1165">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="STK Danışmanlık">
+    <meta property="og:title" content="STK Danışmanlık | Ümraniye & İstanbul Dernek, Vakıf Kurulumu ve Danışmanlık">
+    <meta property="og:description" content="Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık. 10+ yıl tecrübe ile profesyonel STK danışmanlık hizmetleri.">
+    <meta property="og:url" content="https://stkdanismanlik.com/">
+    <meta property="og:image" content="https://stkdanismanlik.com/img/banner1.webp">
+    <meta property="og:image:width" content="1400">
+    <meta property="og:image:height" content="700">
+    <meta property="og:image:alt" content="STK Danışmanlık - Ümraniye İstanbul Dernek ve Vakıf Danışmanlık">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STK Danışmanlık | Ümraniye & İstanbul Dernek, Vakıf Kurulumu">
+    <meta name="twitter:description" content="Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri ve mali danışmanlık. 10+ yıl tecrübe.">
+    <meta name="twitter:image" content="https://stkdanismanlik.com/img/banner1.webp">
+    <!-- ========== /EKLENEN META ETİKETLERİ ========== -->
 
     <!-- LCP Preload -->
     <link rel="preload" fetchpriority="high" as="image" href="img/banner1.webp" type="image/webp">
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
 
     <!-- SPECULATION RULES -->
     <script type="speculationrules">
@@ -65,7 +89,9 @@
     /* ========== HEADER ========== */
     .main-header {
       background: rgba(255,255,255,0.98);
-      height: 80px;
+      height: auto;
+      min-height: 105px;
+      overflow: visible;
       position: sticky;
       top: 0;
       z-index: 10000;
@@ -80,13 +106,15 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      padding: 0 15px;
     }
     .logo-container { display: flex; align-items: center; flex-shrink: 0; }
-    .main-nav { flex: 1; display: flex; justify-content: center; align-items: center; }
-    .logo-img { height: 60px; width: auto; object-fit: contain; }
+    .logo-img { height: 110px; width: auto; object-fit: contain; margin-right: 40px; }
 
     /* ========== NAVIGATION ========== */
-    .main-nav ul { display: flex; align-items: center; gap: 20px; }
+    .main-nav { flex: 1; display: flex; justify-content: center; align-items: center; }
+    .main-nav ul { display: flex; align-items: center; gap: 5px; margin: 0; padding: 0; }
+    .main-nav > ul > li { margin-left: 15px; }
     .main-nav ul li { position: relative; }
     .main-nav ul li a {
       color: var(--dark-color);
@@ -114,13 +142,15 @@
     .nav-close-btn { display: none; }
 
     /* ========== HAMBURGER (mobil) ========== */
-    .nav-open-btn { visibility: hidden; font-size: 24px; color: var(--dark-color); padding: 8px; }
+    .nav-open-btn { display: none; font-size: 24px; color: var(--dark-color); padding: 8px; }
 
     /* ========== SLIDER ========== */
     .slider {
       position: relative;
       width: 100%;
-      height: 600px;
+      height: 85vh;
+      min-height: 480px;
+      max-height: 700px;
       overflow: hidden;
       background: #1a1a1a;
     }
@@ -134,7 +164,6 @@
       transition: opacity 0.8s ease;
     }
     .slide.active { opacity: 1; }
-    .slide:first-child { opacity: 1; }
     .slide-bg-img {
       position: absolute;
       inset: 0;
@@ -282,7 +311,7 @@
     .post-card-image img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s; }
     .post-card:hover .post-card-image img { transform: scale(1.05); }
     .post-card-content { padding: 24px; }
-    .post-card-category { display: block; font-size: 0.7rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .post-card-category { font-size: 0.7rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; }
     .post-card-title { margin: 8px 0; }
     .post-card-title a { color: var(--dark-color); font-size: 1.05rem; font-weight: 600; }
     .post-card-title a:hover { color: var(--primary-color); }
@@ -381,12 +410,14 @@
     /* ========== WHATSAPP FLOAT ========== */
     .wa-floating-btn {
       position: fixed;
-      bottom: 28px;
-      left: 28px;
+      bottom: 25px;
+      right: 25px;
+      left: auto;
       z-index: 9999;
       display: flex;
       align-items: center;
       text-decoration: none;
+      flex-direction: row-reverse;
     }
     .wa-icon {
       background: #25d366;
@@ -404,7 +435,8 @@
       color: #333;
       padding: 8px 16px;
       border-radius: 24px;
-      margin-left: 12px;
+      margin-left: 0;
+      margin-right: 12px;
       font-weight: 600;
       font-size: 0.85rem;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -413,7 +445,8 @@
 
     /* ========== INLINE SVG ICON STYLES ========== */
     .icon-svg { display: inline-block; vertical-align: middle; width: 1em; height: 1em; fill: currentColor; }
-    .nav-chevron { width: 0.7em; height: 0.7em; margin-left: 4px; vertical-align: middle; }
+    /* chevron rotate – desktop hover */
+    .main-nav .dropdown:hover > a svg { transform: rotate(180deg); }
 
     /* ========== MOBILE NAV OVERLAY ========== */
     .mobile-nav-overlay {
@@ -424,7 +457,7 @@
       z-index: 9998;
     }
     .mobile-nav-overlay.active { display: block; }
-    .main-nav.mobile-open {
+    .main-nav.active {
       display: flex !important;
       flex-direction: column;
       position: fixed;
@@ -437,17 +470,24 @@
       padding: 24px 0;
       overflow-y: auto;
     }
-    .main-nav.mobile-open ul { flex-direction: column; gap: 0; padding: 0 20px; }
-    .main-nav.mobile-open ul li a { display: block; padding: 12px 0; border-bottom: 1px solid #eee; font-size: 1rem; }
-    .main-nav.mobile-open .dropdown-menu {
+    .main-nav.active ul { flex-direction: column; gap: 0; padding: 0 20px; }
+    .main-nav.active ul li a { display: block; padding: 12px 0; border-bottom: 1px solid #eee; font-size: 1rem; }
+    .main-nav.active .dropdown-menu {
       position: static;
       box-shadow: none;
       border-radius: 0;
       padding: 0 0 0 16px;
       min-width: unset;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      display: block !important;
     }
-    .main-nav.mobile-open .dropdown:hover .dropdown-menu,
-    .main-nav.mobile-open .dropdown.open .dropdown-menu { display: block; }
+    .main-nav.active .dropdown.mob-open > .dropdown-menu { max-height: 500px; }
+    .main-nav.active .dropdown-menu li a { border-bottom: none; padding: 8px 0; font-size: 0.9rem; }
+    .main-nav.active .dropdown > a svg { transition: transform 0.3s ease; }
+    .main-nav.active .dropdown:hover > a svg { transform: none !important; }
+    .main-nav.active .dropdown.mob-open > a svg { transform: rotate(180deg) !important; }
     .nav-close-btn.mobile-show {
       display: flex;
       align-items: center;
@@ -460,8 +500,8 @@
     /* ========== RESPONSIVE ========== */
     @media (max-width: 992px) {
       .main-nav { display: none; }
-      .nav-open-btn { visibility: visible; display: block; }
-      .slider { height: 400px; }
+      .nav-open-btn { display: block; }
+      .slider { height: 70vh; min-height: 360px; }
       .logo-img { height: 50px; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .posts-grid { grid-template-columns: repeat(2, 1fr); }
@@ -472,7 +512,7 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 640px) {
-      .slider { height: 340px; }
+      .slider { height: 60vh; min-height: 300px; }
       .slide-content { padding: 0 24px; }
       .services-grid { grid-template-columns: 1fr; }
       .posts-grid { grid-template-columns: 1fr; }
@@ -489,26 +529,140 @@
     </style>
 
     <!-- Stylesheet (non-blocking for any extra styles) -->
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <link rel="stylesheet" href="/css/style.css">
 
-    <!-- JSON-LD SEO -->
+    <!-- ========== EKLENEN: JSON-LD SCHEMA (GENİŞLETİLMİŞ) ========== -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "STK Danışmanlık",
-      "url": "https://stkdanismanlik.com",
-      "logo": "https://stkdanismanlik.com/logo.webp",
-      "image": "https://stkdanismanlik.com/img/banner1.webp",
-      "telephone": "+905347054234",
-      "address": { "@type": "PostalAddress", "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5", "addressLocality": "Ümraniye", "addressRegion": "İstanbul", "postalCode": "34760", "addressCountry": "TR" },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150" }
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "STK Danışmanlık",
+        "url": "https://stkdanismanlik.com",
+        "logo": "https://stkdanismanlik.com/logo.webp",
+        "image": "https://stkdanismanlik.com/img/banner1.webp",
+        "telephone": "+905347054234",
+        "email": "info@shdanismanlik.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "41.0166",
+          "longitude": "29.1165"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Ümraniye", "sameAs": "https://www.wikidata.org/wiki/Q746511"},
+          {"@type": "City", "name": "İstanbul", "sameAs": "https://www.wikidata.org/wiki/Q406"}
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "150",
+          "bestRating": "5"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/stkdanismanlik",
+          "https://www.instagram.com/stkdanismanlik"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "STK Danışmanlık",
+        "url": "https://stkdanismanlik.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://stkdanismanlik.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Dernek kurmak için kaç kişi gereklidir ve süreç ne kadar sürer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bir dernek kurmak için en az 7 (yedi) gerçek veya tüzel kişinin bir araya gelmesi gerekmektedir. Gerekli tüm evraklar eksiksiz ve doğru bir şekilde hazırlandığında, STK Danışmanlık olarak tüm süreci ortalama 7-15 iş günü içinde tamamlayarak derneğinizin resmi olarak tescil edilmesini sağlıyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Danışmanlık ücretleriniz hakkında nasıl bilgi alabilirim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Her STK nın ihtiyacı ve yapısı farklıdır. Bu yüzden standart bir fiyat listesi yerine, ihtiyaçlarınızı analiz etmek için sizinle ücretsiz bir ön görüşme yapıyoruz. Bu görüşmenin ardından size özel, şeffaf ve kapsamlı bir hizmet teklifi sunuyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dernek ve Vakıf arasındaki en temel fark nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En temel fark şudur: Dernekler kişi topluluğu, vakıflar ise mal topluluğudur. Dernekler, ortak bir amaç için bir araya gelen insanlardan oluşurken; vakıflar, belirli bir amaca hizmet etmesi için tahsis edilmiş bir mal varlığı üzerine kurulur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dernek yöneticilerinin yasal sorumlulukları nelerdir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dernek yönetim kurulu üyeleri, dernek tüzüğüne ve Dernekler Kanunu na uygun hareket etmekle yükümlüdür. Defterlerin usulüne uygun tutulmaması, beyannamelerin zamanında verilmemesi gibi durumlarda, kanun önünde şahsen sorumlu olabilirler."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "STK lar için İktisadi İşletme kurmak ne gibi avantajlar sağlar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "İktisadi işletme, derneğinizin veya vakfınızın amaçlarını gerçekleştirmek için ticari faaliyetlerde bulunarak düzenli gelir elde etmesini sağlar. Bu, kurumunuzun sadece bağışlara bağımlı kalmasını önler ve mali sürdürülebilirliğini artırır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mevcut derneğimizin denetimini sizin yapmanız mümkün mü?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, kesinlikle. Hem kurumunuzun iç denetim mekanizmalarını kurarak gelecekteki riskleri önlemenize yardımcı oluruz, hem de resmi denetimlere hazırlık sürecinde tüm defter ve kayıtlarınızı inceleyerek denetime hazır hale gelmenizi sağlarız."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://stkdanismanlik.com/"
+          }
+        ]
+      }
+    ]
     </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Dernek kurmak için kaç kişi gereklidir?","acceptedAnswer":{"@type":"Answer","text":"En az 7 kişi gereklidir. STK Danışmanlık olarak süreci 7-15 iş günü içinde tamamlıyoruz."}},{"@type":"Question","name":"Dernek ve Vakıf farkı nedir?","acceptedAnswer":{"@type":"Answer","text":"Dernekler kişi topluluğu, vakıflar mal topluluğudur."}},{"@type":"Question","name":"Ümraniye'de dernek danışmanlığı alabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Evet, STK Danışmanlık İstanbul Ümraniye merkezli olarak tüm STK danışmanlık hizmetlerini sunmaktadır."}}]}
-    </script>
+    <!-- ========== /JSON-LD SCHEMA ========== -->
 </head>
 <body>
 
@@ -521,21 +675,21 @@
     <a href="index.html" class="logo-container">
       <img src="logo.webp" alt="STK Danışmanlık - Ümraniye Dernek ve Vakıf Danışmanlık" class="logo-img" width="180" height="60" fetchpriority="high">
     </a>
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Ana Navigasyon">
       <button class="nav-close-btn" id="navCloseBtn" aria-label="Menüyü kapat">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <ul>
         <li><a href="index.html">Ana Sayfa</a></li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Kurumsal <svg class="nav-chevron" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg></a>
+          <a href="#" aria-haspopup="true">Kurumsal <svg style="width:0.7em;height:0.7em;margin-left:5px;vertical-align:middle;transition:transform 0.3s ease" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="hakkimizda.html">Hakkımızda</a></li>
             <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Hizmetlerimiz <svg class="nav-chevron" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg></a>
+          <a href="#" aria-haspopup="true">Hizmetlerimiz <svg style="width:0.7em;height:0.7em;margin-left:5px;vertical-align:middle;transition:transform 0.3s ease" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
             <li><a href="hizmet-derbis.html">DERBİS İşlemleri</a></li>
@@ -547,7 +701,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" aria-haspopup="true">Bilgi Bankası <svg class="nav-chevron" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg></a>
+          <a href="#" aria-haspopup="true">Bilgi Bankası <svg style="width:0.7em;height:0.7em;margin-left:5px;vertical-align:middle;transition:transform 0.3s ease" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="mevzuat.html">Mevzuatlar</a></li>
             <li><a href="blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li>
@@ -571,11 +725,11 @@
   <div class="slides">
     <!-- Slayt 1 — LCP: eager + fetchpriority high -->
     <div class="slide active">
-      <img src="img/banner1.webp" alt="Ümraniye STK Danışmanlık - Dernek ve Vakıf Kurulumu" class="slide-bg-img" width="1400" height="700" fetchpriority="high" decoding="sync">
+      <img src="img/banner1.webp" alt="Bürokrasiyi Sizin İçin Aşıyoruz" class="slide-bg-img" width="1400" height="700" fetchpriority="high">
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <h1>Ümraniye'de Profesyonel STK Danışmanlık Hizmetleri</h1>
-        <p>İstanbul Ümraniye merkezli uzman ekibimizle dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri ve mali danışmanlık alanlarında yanınızdayız.</p>
+        <p>İstanbul Ümraniye merkezli uzman ekibimizle dernek ve vakıf kurulumu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında yanınızdayız.</p>
         <a href="#services" class="btn btn-primary">Hizmetlerimizi Keşfedin</a>
       </div>
     </div>
@@ -610,7 +764,7 @@
 </section>
 
 <!-- ===== İSTATİSTİKLER ===== -->
-<section class="stats-section">
+<section class="stats-section" aria-label="İstatistikler">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
@@ -650,12 +804,12 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-image">
-        <img src="img/hakkimizda-bg.webp" alt="STK Danışmanlık Ümraniye ofisi - Dernek ve Vakıf Danışmanlık" width="580" height="380" loading="lazy">
+        <img src="img/hakkimizda-bg.webp" alt="STK Danışmanlık Ümraniye ofisi - Dernek ve Vakıf Danışmanlık İstanbul" width="580" height="380" loading="lazy">
       </div>
       <div class="about-content">
         <h2 class="section-title-left">Ümraniye'de STK Danışmanlık</h2>
         <h3>Sivil Toplum Vizyonunuzun Mimarı</h3>
-        <p>STK Danışmanlık, İstanbul Ümraniye merkezli olarak dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında 10 yılı aşkın tecrübeli kadromuzla yanınızdayız.</p>
+        <p>STK Danışmanlık, <strong>İstanbul Ümraniye</strong> merkezli olarak <strong>dernek kurulumu</strong>, <strong>vakıf kuruluşu</strong>, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında 10 yılı aşkın tecrübeli kadromuzla yanınızdayız. Ümraniye ve İstanbul'un tüm ilçelerinde hizmet vermekteyiz.</p>
         <a href="hakkimizda.html" class="btn btn-secondary">Daha Fazlasını Oku</a>
       </div>
     </div>
@@ -670,32 +824,32 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-        <h3>Dernek Kuruluşu</h3>
-        <p>Tüzük hazırlığı, yasal başvuru ve tescil sürecinin eksiksiz yönetimi.</p>
+        <h3><a href="hizmet-dernek-kurulusu.html" style="color:inherit;">Dernek Kuruluşu</a></h3>
+        <p>Ümraniye ve İstanbul'da tüzük hazırlığı, yasal başvuru ve tescil sürecinin eksiksiz yönetimi.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V9l7-6 7 6v12"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h3>Vakıf Kuruluşu</h3>
-        <p>Resmi senet hazırlama, mahkeme süreci ve tescil işlemlerinde uzman destek.</p>
+        <h3><a href="hizmet-vakif-kurulusu.html" style="color:inherit;">Vakıf Kuruluşu</a></h3>
+        <p>İstanbul'da resmi senet hazırlama, mahkeme süreci ve tescil işlemlerinde uzman destek.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Genel Kurul Yönetimi</h3>
+        <h3><a href="hizmet-genel-kurul.html" style="color:inherit;">Genel Kurul Yönetimi</a></h3>
         <p>Olağan ve olağanüstü genel kurulların mevzuata uygun organizasyonu.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Yasal Sorumluluklar</h3>
+        <h3><a href="hizmet-yasal-danismanlik.html" style="color:inherit;">Yasal Sorumluluklar</a></h3>
         <p>Yöneticilerin hukuki ve mali sorumlulukları hakkında danışmanlık.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-        <h3>Mali Danışmanlık</h3>
+        <h3><a href="hizmet-mali-danismanlik.html" style="color:inherit;">Mali Danışmanlık</a></h3>
         <p>STK'lara özel muhasebe, beyanname hazırlama ve finansal raporlama.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <h3>Proje ve Fon Geliştirme</h3>
+        <h3><a href="hizmet-proje-yazma.html" style="color:inherit;">Proje ve Fon Geliştirme</a></h3>
         <p>Ulusal ve uluslararası hibe programlarına yönelik profesyonel destek.</p>
       </div>
     </div>
@@ -712,7 +866,7 @@
     <div class="posts-grid">
       <div class="post-card">
         <a href="blog-dernek-yonetici-sorumluluklari.html" class="post-card-image">
-          <img src="img/blog-mevzuat.webp" alt="Mevzuat" loading="lazy" width="400" height="200">
+          <img src="img/blog-mevzuat.webp" alt="Ümraniye dernek yöneticileri yasal sorumluluklar mevzuat" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">MEVZUAT</span>
@@ -723,7 +877,7 @@
       </div>
       <div class="post-card">
         <a href="blog-yazi-detay.html" class="post-card-image">
-          <img src="img/blog-hibe.webp" alt="Projeler" loading="lazy" width="400" height="200">
+          <img src="img/blog-hibe.webp" alt="İstanbul dernek vakıf fark hibe fırsatları" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">HİBE FIRSATI</span>
@@ -734,7 +888,7 @@
       </div>
       <div class="post-card">
         <a href="blog-stk-iktisadi-isletme-avantajlari.html" class="post-card-image">
-          <img src="img/blog-finans.webp" alt="Finans" loading="lazy" width="400" height="200">
+          <img src="img/blog-finans.webp" alt="STK iktisadi işletme avantajları İstanbul Ümraniye" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">BİLGİ NOTU</span>
@@ -755,7 +909,6 @@
       <p>Birlikte Başardık</p>
     </div>
     <div class="testimonials-grid-main">
-      <!-- Avatar SVG (inline, sıfır external request) -->
       <div class="testimonial-card-main">
         <div class="testimonial-content">
           <div class="quote-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="color:#0d6efd"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
@@ -865,10 +1018,11 @@
   <div class="container">
     <h2 class="section-title">Ücretsiz STK Danışmanlık Teklifi Alın</h2>
     <p>İstanbul Ümraniye'deki ofisimizden veya uzaktan danışmanlık ihtiyaçlarınız için formu doldurun, uzman ekibimiz en kısa sürede size ulaşsın.</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Adınız Soyadınız" required autocomplete="name">
-      <input type="email" placeholder="E-posta Adresiniz" required autocomplete="email">
-      <textarea placeholder="İhtiyacınız olan hizmeti kısaca anlatın..." rows="5" required></textarea>
+    <form class="contact-form" id="contactForm" novalidate>
+      <input type="text" name="name" placeholder="Adınız Soyadınız" required autocomplete="name">
+      <input type="email" name="email" placeholder="E-posta Adresiniz" required autocomplete="email">
+      <input type="tel" name="phone" placeholder="Telefon Numaranız (İsteğe Bağlı)" autocomplete="tel">
+      <textarea name="message" placeholder="İhtiyacınız olan hizmeti kısaca anlatın..." rows="5" required></textarea>
       <button type="submit" class="btn btn-primary">Ücretsiz Teklif Al</button>
     </form>
   </div>
@@ -881,6 +1035,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <p>"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
+        <p>Ümraniye, İstanbul merkezli profesyonel STK danışmanlık hizmetleri.</p>
         <p>© 2026 STK Danışmanlık. Tüm Hakları Saklıdır.</p>
       </div>
       <div class="footer-col">
@@ -894,15 +1049,18 @@
       </div>
       <div class="footer-col">
         <p><strong>İletişim</strong></p>
-        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></span> İstanbul, Türkiye</p>
+        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></span> Ümraniye, İstanbul</p>
         <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> +90 534 705 42 34</p>
-        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span> info&#64;stkdanismanlik.com</p>
+        <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span> info&#64;shdanismanlik.com</p>
+        <address style="font-style:normal;font-size:0.82rem;color:#aaa;margin-top:6px;">
+          İstiklal Mah. Sütçüimam Cad. No:144 K:3 D:5, Ümraniye / İstanbul
+        </address>
       </div>
       <div class="footer-col">
         <p><strong>Takip Edin</strong></p>
         <div class="social-icons">
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
-          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
         </div>
       </div>
@@ -915,813 +1073,141 @@
 
 <!-- ===== WHATSAPP FLOAT ===== -->
 <a href="https://wa.me/905347054234" class="wa-floating-btn" target="_blank" rel="noopener" aria-label="WhatsApp üzerinden bizimle iletişime geçin">
-  <div class="wa-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
+  <div class="wa-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </div>
+    </svg></div>
   <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
 </a>
 
 <!-- ===== DEFERRED JS — sadece etkileşim için ===== -->
-
-<!-- ✅ MAIN JS (Inline) -->
 <script defer>
-/* ═══════════════════════════════════════════════════════════════
-   STK DANIŞMANLIK — Kuantum Elite JS v4.0
-   script.js  —  INP<100ms · CLS=0 · Passive Listeners · RAF
-   ═══════════════════════════════════════════════════════════════ */
+(function(){
+  // --- SLIDER ---
+  var slides = document.querySelectorAll('.slide');
+  var dotsContainer = document.getElementById('sliderDots');
+  var current = 0;
+  var total = slides.length;
+  var dots = [];
 
-(function () {
-  'use strict';
+  for(var i=0; i<total; i++){
+    var d = document.createElement('button');
+    d.className = 'dot' + (i===0?' active':'');
+    d.setAttribute('aria-label','Slayt '+(i+1));
+    d.setAttribute('type','button');
+    d.onclick = (function(idx){ return function(){ goTo(idx); }; })(i);
+    dotsContainer.appendChild(d);
+    dots.push(d);
+  }
 
-  /* ─── YARDIMCI: güvenli querySelector ─────────────────────── */
-  var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
-  var $$ = function (sel, ctx) { return (ctx || document).querySelectorAll(sel); };
+  function goTo(n){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
 
-  /* ─── SERVICE WORKER KAYDI ─────────────────────────────────── */
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/sw.js', { scope: '/' })
-        .catch(function () {}); /* sessiz hata — SW opsiyonel */
+  document.querySelector('.slider-btn.prev').addEventListener('click', function(){ goTo(current-1); });
+  document.querySelector('.slider-btn.next').addEventListener('click', function(){ goTo(current+1); });
+
+  var autoSlide = setInterval(function(){ goTo(current+1); }, 5000);
+  document.querySelector('.slider').addEventListener('mouseenter', function(){ clearInterval(autoSlide); });
+  document.querySelector('.slider').addEventListener('mouseleave', function(){ autoSlide = setInterval(function(){ goTo(current+1); }, 5000); });
+
+  // --- COUNTER ANIMATION ---
+  var counters = document.querySelectorAll('.counter');
+  var counterObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-target'));
+      var start = 0;
+      var step = target / 60;
+      var timer = setInterval(function(){
+        start += step;
+        if(start >= target){ start = target; clearInterval(timer); }
+        el.textContent = Math.floor(start).toLocaleString();
+      }, 16);
+      counterObserver.unobserve(el);
     });
-  }
+  }, { threshold: 0.5 });
+  counters.forEach(function(c){ counterObserver.observe(c); });
 
-  /* ─── DOMContentLoaded ─────────────────────────────────────── */
-  document.addEventListener('DOMContentLoaded', function () {
-
-    /* ════════════════════════════════════════════════════
-       1. SLIDER — RAF tabanlı, INP<100ms garantisi
-       ════════════════════════════════════════════════════ */
-    var slides = $$('.slide');
-    var nextBtn = $('.next');
-    var prevBtn = $('.prev');
-    var dotsContainer = $('.slider-dots');
-    var currentSlide = 0;
-    var autoSlideTimer = null;
-    var slideCount = slides.length;
-
-    if (slideCount > 0 && dotsContainer) {
-      /* Dot'ları oluştur — DocumentFragment ile tek reflow */
-      var frag = document.createDocumentFragment();
-      for (var i = 0; i < slideCount; i++) {
-        (function (idx) {
-          var dot = document.createElement('button');
-          dot.className = 'dot';
-          dot.setAttribute('aria-label', 'Slayt ' + (idx + 1));
-          /* INP: passive touch ile dokunma gecikme yok */
-          dot.addEventListener('click', function () { goToSlide(idx); }, { passive: true });
-          frag.appendChild(dot);
-        })(i);
-      }
-      dotsContainer.appendChild(frag);
-
-      var dots = $$('.dot', dotsContainer);
-
-      function goToSlide(index) {
-        requestAnimationFrame(function () {
-          slides[currentSlide].classList.remove('active');
-          dots[currentSlide].classList.remove('active');
-          currentSlide = (index + slideCount) % slideCount;
-          slides[currentSlide].classList.add('active');
-          dots[currentSlide].classList.add('active');
-        });
-        resetAutoSlide();
-      }
-
-      function startAutoSlide() {
-        autoSlideTimer = setInterval(function () {
-          goToSlide(currentSlide + 1);
-        }, 5000);
-      }
-
-      function resetAutoSlide() {
-        clearInterval(autoSlideTimer);
-        startAutoSlide();
-      }
-
-      /* INP: passive event listeners */
-      if (nextBtn) nextBtn.addEventListener('click', function () { goToSlide(currentSlide + 1); }, { passive: true });
-      if (prevBtn) prevBtn.addEventListener('click', function () { goToSlide(currentSlide - 1); }, { passive: true });
-
-      /* Dokunma desteği — CLS'siz swipe */
-      var touchStartX = 0;
-      var sliderEl = $('.slider');
-      if (sliderEl) {
-        sliderEl.addEventListener('touchstart', function (e) {
-          touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        sliderEl.addEventListener('touchend', function (e) {
-          var diff = touchStartX - e.changedTouches[0].screenX;
-          if (Math.abs(diff) > 40) {
-            goToSlide(diff > 0 ? currentSlide + 1 : currentSlide - 1);
-          }
-        }, { passive: true });
-      }
-
-      goToSlide(0);
-      startAutoSlide();
-    }
-
-    /* ════════════════════════════════════════════════════
-       2. FAQ AKORDEON — INP optimize, maxHeight animasyonu
-       ════════════════════════════════════════════════════ */
-    var faqItems = $$('.faq-item');
-    faqItems.forEach(function (item) {
-      var question = item.querySelector('.faq-question');
-      var answer = item.querySelector('.faq-answer');
-      if (!question || !answer) return;
-
-      question.addEventListener('click', function () {
-        var isActive = item.classList.contains('active');
-        /* Tümünü kapat — batch RAF */
-        requestAnimationFrame(function () {
-          faqItems.forEach(function (fi) {
-            fi.classList.remove('active');
-            var a = fi.querySelector('.faq-answer');
-            if (a) a.style.maxHeight = '0';
-          });
-          if (!isActive) {
-            item.classList.add('active');
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-          }
-        });
-      }, { passive: true });
+  // --- FAQ ACCORDION ---
+  var faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = this.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+      if(!wasOpen) item.classList.add('open');
     });
-
-    /* ─── FAQ "Daha Fazla" ─── */
-    var loadMoreBtn = document.getElementById('loadMoreFaq');
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener('click', function () {
-        requestAnimationFrame(function () {
-          $$('.faq-item.hidden').forEach(function (faq) {
-            faq.classList.remove('hidden');
-          });
-          loadMoreBtn.style.display = 'none';
-        });
-      }, { passive: true });
-    }
-
-    /* ════════════════════════════════════════════════════
-       3. SAYMA ANİMASYONU — IntersectionObserver
-       ════════════════════════════════════════════════════ */
-    var counters = $$('.counter');
-    if (counters.length > 0 && 'IntersectionObserver' in window) {
-      var counterObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          var el = entry.target;
-          var target = parseInt(el.getAttribute('data-target'), 10) || 0;
-          var duration = 1200;
-          var start = null;
-          function step(timestamp) {
-            if (!start) start = timestamp;
-            var progress = Math.min((timestamp - start) / duration, 1);
-            /* easeOutQuart */
-            var ease = 1 - Math.pow(1 - progress, 4);
-            el.textContent = Math.ceil(ease * target);
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              el.textContent = target;
-            }
-          }
-          requestAnimationFrame(step);
-          counterObserver.unobserve(el);
-        });
-      }, { threshold: 0.4 });
-      counters.forEach(function (c) { counterObserver.observe(c); });
-    }
-
-    /* ════════════════════════════════════════════════════
-       4. MOBİL NAVİGASYON — tam INP uyumlu
-       ════════════════════════════════════════════════════ */
-    var nav = $('.main-nav');
-    var openBtn = $('.nav-open-btn');
-    var closeBtn = $('.nav-close-btn');
-
-    /* Overlay — DOM'da yoksa oluştur */
-    var overlay = $('.mobile-nav-overlay');
-    if (!overlay) {
-      overlay = document.createElement('div');
-      overlay.className = 'mobile-nav-overlay';
-      document.body.appendChild(overlay);
-    }
-
-    function openNav() {
-      requestAnimationFrame(function () {
-        if (nav) nav.classList.add('active');
-        if (overlay) overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-    }
-
-    function closeNav() {
-      requestAnimationFrame(function () {
-        if (nav) nav.classList.remove('active');
-        if (overlay) overlay.classList.remove('active');
-        document.body.style.overflow = '';
-        $$('.dropdown.mob-open').forEach(function (d) {
-          d.classList.remove('mob-open');
-        });
-      });
-    }
-
-    if (openBtn) {
-      openBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        nav && nav.classList.contains('active') ? closeNav() : openNav();
-      }, { passive: false });
-    }
-    if (closeBtn) closeBtn.addEventListener('click', closeNav, { passive: true });
-    if (overlay) overlay.addEventListener('click', closeNav, { passive: true });
-
-    /* Mobil dropdown toggle */
-    $$('.main-nav .dropdown > a').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        if (window.innerWidth > 992) return;
-        e.preventDefault();
-        e.stopPropagation();
-        var parent = this.parentElement;
-        var wasOpen = parent.classList.contains('mob-open');
-        requestAnimationFrame(function () {
-          $$('.dropdown.mob-open').forEach(function (d) { d.classList.remove('mob-open'); });
-          if (!wasOpen) parent.classList.add('mob-open');
-        });
-      }, { passive: false });
-    });
-
-    /* Resize: masaüstüne geçince kapat */
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        if (window.innerWidth > 992) closeNav();
-      }, 150);
-    }, { passive: true });
-
-    /* ════════════════════════════════════════════════════
-       5. DESKTOP DROPDOWN overflow fix
-       ════════════════════════════════════════════════════ */
-    var mainHeader = $('.main-header');
-    $$('.main-nav .dropdown').forEach(function (dropdown) {
-      dropdown.addEventListener('mouseenter', function () {
-        if (mainHeader) mainHeader.style.overflow = 'visible';
-      });
-      dropdown.addEventListener('mouseleave', function () {
-        if (mainHeader) mainHeader.style.overflow = '';
-      });
-    });
-
-    /* ════════════════════════════════════════════════════
-       6. AI PREDİCTİVE PREFETCH (hafif versiyon)
-          Mouse hızı analizi + viewport proximity
-       ════════════════════════════════════════════════════ */
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(function () {
-
-        /* Sayfa geçiş olasılıkları (mevcut URL'e göre) */
-        var PAGE_GRAPH = {
-          '/': [
-            { url: '/hizmet-dernek-kurulusu.html', w: 35 },
-            { url: '/iletisim.html', w: 25 },
-            { url: '/hakkimizda.html', w: 20 },
-            { url: '/hizmet-vakif-kurulusu.html', w: 20 }
-          ],
-          '/hizmet-dernek-kurulusu.html': [
-            { url: '/iletisim.html', w: 45 },
-            { url: '/hizmet-derbis.html', w: 30 },
-            { url: '/hizmet-vakif-kurulusu.html', w: 25 }
-          ],
-          '/hakkimizda.html': [
-            { url: '/iletisim.html', w: 50 },
-            { url: '/referanslar.html', w: 30 },
-            { url: '/hizmet-dernek-kurulusu.html', w: 20 }
-          ]
-        };
-
-        var path = window.location.pathname;
-        var candidates = PAGE_GRAPH[path] || PAGE_GRAPH['/'];
-        var prefetched = new Set();
-
-        function prefetchURL(url) {
-          if (prefetched.has(url)) return;
-          prefetched.add(url);
-          /* Speculation Rules API varsa kullan */
-          if ('speculationrules' in HTMLScriptElement.prototype) return;
-          var link = document.createElement('link');
-          link.rel = 'prefetch';
-          link.href = url;
-          link.as = 'document';
-          document.head.appendChild(link);
-        }
-
-        /* Ağırlığa göre top 2'yi prefetch et */
-        candidates
-          .sort(function (a, b) { return b.w - a.w; })
-          .slice(0, 2)
-          .forEach(function (c) { prefetchURL(c.url); });
-
-        /* Hover intent: 80ms bekle → prefetch */
-        var hoverTimer = null;
-        var lastMX = 0, lastMY = 0, lastT = 0;
-        document.addEventListener('mousemove', function (e) {
-          lastMX = e.clientX; lastMY = e.clientY; lastT = Date.now();
-        }, { passive: true });
-
-        $$('a[href]').forEach(function (a) {
-          var href = a.getAttribute('href');
-          if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto') || href.startsWith('tel')) return;
-          a.addEventListener('mouseenter', function () {
-            var t0 = Date.now();
-            hoverTimer = setTimeout(function () {
-              /* Hız kontrolü: <0.8px/ms → yavaş yaklaşım = niyet var */
-              var dt = Date.now() - t0;
-              if (dt > 60) prefetchURL(href);
-            }, 80);
-          });
-          a.addEventListener('mouseleave', function () {
-            clearTimeout(hoverTimer);
-          });
-        });
-
-        /* IntersectionObserver: link viewport'a girerken prefetch */
-        if ('IntersectionObserver' in window) {
-          var linkObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (!entry.isIntersecting) return;
-              var href = entry.target.getAttribute('href');
-              if (href && !href.startsWith('http') && !href.startsWith('#')) {
-                prefetchURL(href);
-                linkObserver.unobserve(entry.target);
-              }
-            });
-          }, { rootMargin: '200px' });
-          $$('a[href]').forEach(function (a) { linkObserver.observe(a); });
-        }
-
-      }, { timeout: 2000 });
-    }
-
-    /* ════════════════════════════════════════════════════
-       7. RUM — Core Web Vitals (PerformanceObserver)
-       ════════════════════════════════════════════════════ */
-    if ('PerformanceObserver' in window) {
-      var rumBuffer = [];
-      var rumSent = false;
-
-      function sendRUM() {
-        if (rumBuffer.length === 0 || rumSent) return;
-        var payload = JSON.stringify({ metrics: rumBuffer, url: location.href, ts: Date.now() });
-        if (navigator.sendBeacon) {
-          navigator.sendBeacon('/api/rum', payload);
-          rumSent = true;
-        }
-      }
-
-      function observeMetric(type, cb) {
-        try {
-          var po = new PerformanceObserver(function (list) {
-            list.getEntries().forEach(cb);
-          });
-          po.observe({ type: type, buffered: true });
-        } catch (e) {}
-      }
-
-      /* LCP */
-      observeMetric('largest-contentful-paint', function (entry) {
-        rumBuffer.push({ name: 'LCP', value: Math.round(entry.startTime) });
-      });
-      /* CLS */
-      observeMetric('layout-shift', function (entry) {
-        if (!entry.hadRecentInput) {
-          rumBuffer.push({ name: 'CLS', value: entry.value });
-        }
-      });
-      /* INP / FID */
-      observeMetric('event', function (entry) {
-        if (entry.processingStart && entry.startTime) {
-          rumBuffer.push({ name: 'INP', value: Math.round(entry.processingStart - entry.startTime) });
-        }
-      });
-      /* FCP */
-      observeMetric('paint', function (entry) {
-        if (entry.name === 'first-contentful-paint') {
-          rumBuffer.push({ name: 'FCP', value: Math.round(entry.startTime) });
-        }
-      });
-
-      /* Sayfa kapanırken gönder */
-      window.addEventListener('pagehide', sendRUM, { passive: true });
-      /* Visibility değişince gönder */
-      document.addEventListener('visibilitychange', function () {
-        if (document.hidden) sendRUM();
-      }, { passive: true });
-    }
-
-    /* ════════════════════════════════════════════════════
-       8. ANCHOR SCROLL — CLS tetiklememek için
-       ════════════════════════════════════════════════════ */
-    $$('a[href^="#"]').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var id = this.getAttribute('href').slice(1);
-        var target = document.getElementById(id);
-        if (!target) return;
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, { passive: false });
-    });
-
-  }); /* DOMContentLoaded sonu */
-
-})();
-
-</script>
-
-<!-- ✅ RUM + PREFETCH (Idle - sıfır performans etkisi) -->
-<script>
-window.addEventListener('load', function(){
-  var idle = window.requestIdleCallback || function(cb){ setTimeout(cb, 2000); };
-  idle(function(){
-// %0.01 Elit Seviye – Kuantum Katman | Custom RUM (Real User Monitoring)
-// Sıfır üçüncü parti · Web Vitals · IndexedDB · Batch Send
-
-(function () {
-  "use strict";
-
-  // ── Config ─────────────────────────────────────────────────────────────────
-  const ENDPOINT = "/api/rum"; // Cloudflare Worker veya Netlify Function
-  const BATCH_SIZE = 5;
-  const FLUSH_INTERVAL = 10000; // 10sn
-  const DB_NAME = "stk-rum";
-  const DB_VERSION = 1;
-
-  let queue = [];
-  let db = null;
-
-  // ── IndexedDB başlat ───────────────────────────────────────────────────────
-  function initDB() {
-    if (!window.indexedDB) return;
-    const req = indexedDB.open(DB_NAME, DB_VERSION);
-    req.onupgradeneeded = (e) => {
-      const d = e.target.result;
-      if (!d.objectStoreNames.contains("metrics")) {
-        d.createObjectStore("metrics", { keyPath: "id", autoIncrement: true });
-      }
-    };
-    req.onsuccess = (e) => {
-      db = e.target.result;
-      // Daha önce bekleyen metrikleri flush et
-      flushFromDB();
-    };
-  }
-
-  // ── Metric kaydet ──────────────────────────────────────────────────────────
-  function record(name, value, extra) {
-    const metric = {
-      name,
-      value: Math.round(value * 10) / 10,
-      url: location.pathname,
-      ts: Date.now(),
-      conn: navigator.connection
-        ? navigator.connection.effectiveType
-        : "unknown",
-      ...extra,
-    };
-    queue.push(metric);
-    if (queue.length >= BATCH_SIZE) flush();
-  }
-
-  // ── Batch gönder ──────────────────────────────────────────────────────────
-  function flush() {
-    if (!queue.length) return;
-    const payload = queue.splice(0, BATCH_SIZE);
-
-    // navigator.sendBeacon tercih et (sayfa kapatılırken kayıp olmaz)
-    if (navigator.sendBeacon) {
-      const blob = new Blob([JSON.stringify(payload)], {
-        type: "application/json",
-      });
-      const sent = navigator.sendBeacon(ENDPOINT, blob);
-      if (!sent && db) saveToDB(payload); // Beacon başarısız → IndexedDB
-    } else {
-      // Fallback: fetch with keepalive
-      fetch(ENDPOINT, {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: { "Content-Type": "application/json" },
-        keepalive: true,
-      }).catch(() => { if (db) saveToDB(payload); });
-    }
-  }
-
-  function saveToDB(metrics) {
-    if (!db) return;
-    const tx = db.transaction("metrics", "readwrite");
-    const store = tx.objectStore("metrics");
-    metrics.forEach((m) => store.add(m));
-  }
-
-  function flushFromDB() {
-    if (!db) return;
-    const tx = db.transaction("metrics", "readwrite");
-    const store = tx.objectStore("metrics");
-    const req = store.getAll();
-    req.onsuccess = () => {
-      const all = req.result;
-      if (!all.length) return;
-      const blob = new Blob([JSON.stringify(all)], { type: "application/json" });
-      if (navigator.sendBeacon(ENDPOINT, blob)) {
-        store.clear();
-      }
-    };
-  }
-
-  // ── Core Web Vitals ────────────────────────────────────────────────────────
-
-  // LCP
-  if ("PerformanceObserver" in window) {
-    try {
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const last = entries[entries.length - 1];
-        record("LCP", last.startTime, { el: last.element ? last.element.tagName : "" });
-      }).observe({ type: "largest-contentful-paint", buffered: true });
-    } catch {}
-
-    // CLS
-    try {
-      let clsValue = 0;
-      let clsEntries = [];
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-            clsEntries.push(entry);
-          }
-        }
-      }).observe({ type: "layout-shift", buffered: true });
-      // Sayfa kapanırken CLS gönder
-      document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "hidden") {
-          record("CLS", clsValue * 1000); // binde × 1000
-          flush();
-        }
-      });
-    } catch {}
-
-    // INP (Interaction to Next Paint)
-    try {
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.interactionId) {
-            record("INP", entry.duration, { type: entry.name });
-          }
-        }
-      }).observe({ type: "event", buffered: true, durationThreshold: 16 });
-    } catch {}
-
-    // FID
-    try {
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          record("FID", entry.processingStart - entry.startTime);
-        }
-      }).observe({ type: "first-input", buffered: true });
-    } catch {}
-
-    // FCP
-    try {
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === "first-contentful-paint") {
-            record("FCP", entry.startTime);
-          }
-        }
-      }).observe({ type: "paint", buffered: true });
-    } catch {}
-
-    // TTFB
-    try {
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === "navigation") {
-            record("TTFB", entry.responseStart - entry.requestStart);
-          }
-        }
-      }).observe({ type: "navigation", buffered: true });
-    } catch {}
-  }
-
-  // ── Kullanıcı Etkileşim Bütçesi (INP için pasif dinleyiciler) ─────────────
-  ["click", "keydown", "pointerdown"].forEach((type) => {
-    document.addEventListener(type, () => {}, { passive: true, capture: true });
   });
 
-  // ── Periyodik flush ───────────────────────────────────────────────────────
-  setInterval(flush, FLUSH_INTERVAL);
-
-  // ── Sayfa kapatılırken son flush ──────────────────────────────────────────
-  window.addEventListener("pagehide", flush);
-
-  // ── Service Worker kayıt ─────────────────────────────────────────────────
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js", { scope: "/" })
-        .then((reg) => {
-          // Delta update kontrolü
-          reg.addEventListener("updatefound", () => {
-            const newWorker = reg.installing;
-            newWorker.addEventListener("statechange", () => {
-              if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-                // Kullanıcıya sessiz güncelleme
-                newWorker.postMessage("SKIP_WAITING");
-              }
-            });
-          });
-        })
-        .catch(() => {});
-    });
-  }
-
-  // Başlat
-  initDB();
-})();
-
-// %0.01 Elit Seviye – Kuantum Katman | AI Predictive Prefetch Engine
-// Mouse hız analizi · Scroll pattern · Hover intent · Speculation Rules fallback
-
-(function () {
-  "use strict";
-
-  // ── Sayfa bağlantı haritası (olasılık ağırlıklı) ─────────────────────────
-  const PAGE_GRAPH = {
-    "/": [
-      { url: "/hizmet-dernek-kurulusu.html", weight: 0.35 },
-      { url: "/iletisim.html",               weight: 0.25 },
-      { url: "/hakkimizda.html",             weight: 0.20 },
-      { url: "/hizmet-vakif-kurulusu.html",  weight: 0.20 },
-    ],
-    "/hizmet-dernek-kurulusu.html": [
-      { url: "/iletisim.html",               weight: 0.55 },
-      { url: "/hizmet-derbis.html",          weight: 0.25 },
-      { url: "/hizmet-genel-kurul.html",     weight: 0.20 },
-    ],
-    "/hizmet-vakif-kurulusu.html": [
-      { url: "/iletisim.html",               weight: 0.60 },
-      { url: "/hakkimizda.html",             weight: 0.40 },
-    ],
-    "/hakkimizda.html": [
-      { url: "/iletisim.html",               weight: 0.60 },
-      { url: "/referanslar.html",            weight: 0.40 },
-    ],
-    "/blog.html": [
-      { url: "/blog-yazi-detay.html",                     weight: 0.40 },
-      { url: "/blog-dernek-yonetici-sorumluluklari.html", weight: 0.35 },
-      { url: "/blog-stk-iktisadi-isletme-avantajlari.html", weight: 0.25 },
-    ],
-  };
-
-  const PREFETCH_THRESHOLD = 0.25; // %25 üzeri olasılıklı sayfaları prefetch et
-  const HOVER_DELAY_MS     = 80;   // 80ms hover → prefetch tetikle
-  const prefetched          = new Set();
-
-  // ── Speculation Rules API varsa kullan (en hızlı yol) ────────────────────
-  function injectSpeculationRules(urls) {
-    if (!("HTMLScriptElement" in window)) return;
-    // Tarayıcı desteği kontrolü
-    const testScript = document.createElement("script");
-    if (typeof testScript.supports !== "function") return;
-    if (!HTMLScriptElement.supports("speculationrules")) return;
-
-    const script = document.createElement("script");
-    script.type = "speculationrules";
-    script.textContent = JSON.stringify({
-      prerender: [{ source: "list", urls: urls }],
-    });
-    document.head.appendChild(script);
-  }
-
-  // ── Klasik <link rel=prefetch> fallback ───────────────────────────────────
-  function prefetchURL(url) {
-    if (prefetched.has(url)) return;
-    prefetched.add(url);
-
-    // Önce Speculation Rules dene
-    if (typeof HTMLScriptElement !== "undefined" &&
-        HTMLScriptElement.supports &&
-        HTMLScriptElement.supports("speculationrules")) {
-      injectSpeculationRules([url]);
-      return;
-    }
-
-    // Fallback: link prefetch
-    const link = document.createElement("link");
-    link.rel = "prefetch";
-    link.href = url;
-    link.as = "document";
-    document.head.appendChild(link);
-  }
-
-  // ── Mevcut sayfaya göre yüksek olasılıklı URL'leri prefetch et ───────────
-  function prefetchByPageGraph() {
-    const current = location.pathname;
-    const neighbors = PAGE_GRAPH[current] || [];
-    neighbors
-      .filter((n) => n.weight >= PREFETCH_THRESHOLD)
-      .forEach((n) => {
-        // requestIdleCallback ile düşük öncelik
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(() => prefetchURL(n.url), { timeout: 2000 });
-        } else {
-          setTimeout(() => prefetchURL(n.url), 1500);
-        }
+  var loadMoreBtn = document.getElementById('loadMoreFaq');
+  if(loadMoreBtn){
+    loadMoreBtn.addEventListener('click', function(){
+      document.querySelectorAll('.faq-item.hidden').forEach(function(item){
+        item.classList.remove('hidden');
       });
-  }
-
-  // ── Mouse hız analizi: Hızlı hareket → intent yok, yavaş yaklaşma → prefetch ─
-  let lastMouseX = 0, lastMouseY = 0, lastMouseTime = 0;
-  let mouseSpeed = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    const now = performance.now();
-    const dx = e.clientX - lastMouseX;
-    const dy = e.clientY - lastMouseY;
-    const dt = now - lastMouseTime || 1;
-    mouseSpeed = Math.sqrt(dx * dx + dy * dy) / dt;
-    lastMouseX = e.clientX;
-    lastMouseY = e.clientY;
-    lastMouseTime = now;
-  }, { passive: true });
-
-  // ── Hover Intent: Bağlantıya yavaş yaklaşma tespiti ──────────────────────
-  function attachHoverIntent(el) {
-    let timer = null;
-    el.addEventListener("mouseenter", () => {
-      // Yavaş hareket (speed < 0.8 px/ms) → gerçek intent
-      timer = setTimeout(() => {
-        if (mouseSpeed < 0.8) {
-          const href = el.getAttribute("href");
-          if (href && href.startsWith("/") && !prefetched.has(href)) {
-            prefetchURL(href);
-          }
-        }
-      }, HOVER_DELAY_MS);
-    }, { passive: true });
-
-    el.addEventListener("mouseleave", () => {
-      clearTimeout(timer);
-    }, { passive: true });
-  }
-
-  // ── Scroll Yakınlığı: Viewport'a yaklaşan linkleri prefetch et ───────────
-  function observeLinksInViewport() {
-    if (!("IntersectionObserver" in window)) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const href = entry.target.getAttribute("href");
-            if (href && href.startsWith("/") && !prefetched.has(href)) {
-              requestIdleCallback
-                ? requestIdleCallback(() => prefetchURL(href))
-                : setTimeout(() => prefetchURL(href), 500);
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "200px" } // viewport'a 200px kala tetikle
-    );
-
-    document.querySelectorAll("a[href^='/']").forEach((link) => {
-      observer.observe(link);
+      loadMoreBtn.style.display = 'none';
     });
   }
 
-  // ── Init ──────────────────────────────────────────────────────────────────
-  function init() {
-    // 1. Sayfa grafiğine göre prefetch
-    prefetchByPageGraph();
+  // --- MOBILE NAV ---
+  var navOpenBtn = document.getElementById('navOpenBtn');
+  var navCloseBtn = document.getElementById('navCloseBtn');
+  var mainNav = document.getElementById('mainNav');
+  var navOverlay = document.getElementById('navOverlay');
 
-    // 2. Tüm iç linklere hover intent ekle
-    document.querySelectorAll("a[href^='/']").forEach(attachHoverIntent);
-
-    // 3. Scroll yakınlığı observer
-    observeLinksInViewport();
+  function openNav(){
+    mainNav.classList.add('active');
+    navOverlay.classList.add('active');
+    navCloseBtn.classList.add('mobile-show');
+  }
+  function closeNav(){
+    mainNav.classList.remove('active');
+    navOverlay.classList.remove('active');
+    navCloseBtn.classList.remove('mobile-show');
+    document.querySelectorAll('.dropdown.mob-open').forEach(function(d){ d.classList.remove('mob-open'); });
   }
 
-  // DOM hazır olduğunda başlat
-  if (document.readyState === "complete") {
-    init();
-  } else {
-    window.addEventListener("load", init);
+  navOpenBtn.addEventListener('click', openNav);
+  navCloseBtn.addEventListener('click', closeNav);
+  navOverlay.addEventListener('click', closeNav);
+
+  // Mobile dropdown toggle — mob-open sistemi
+  document.querySelectorAll('.main-nav .dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        var parentDropdown = this.parentElement;
+        var wasOpen = parentDropdown.classList.contains('mob-open');
+        document.querySelectorAll('.dropdown.mob-open').forEach(function(d){ d.classList.remove('mob-open'); });
+        if(!wasOpen){ parentDropdown.classList.add('mob-open'); }
+      }
+    });
+  });
+
+  // --- CONTACT FORM ---
+  var form = document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Gönderiliyor...';
+      btn.disabled = true;
+      // Formspree veya backend entegrasyonu için:
+      // fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: new FormData(form) })
+      setTimeout(function(){
+        btn.textContent = 'Mesajınız Alındı ✓';
+        btn.style.background = '#28a745';
+        form.reset();
+        setTimeout(function(){ btn.textContent = 'Ücretsiz Teklif Al'; btn.style.background = ''; btn.disabled = false; }, 4000);
+      }, 800);
+    });
   }
 })();
-
-  }, {timeout: 3000});
-});
 </script>
 </body>
 </html>
