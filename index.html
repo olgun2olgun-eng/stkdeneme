@@ -41,16 +41,9 @@ permalink: "/"
     <meta name="twitter:image" content="https://stkdanismanlik.com/img/banner1.webp">
     <!-- ========== /EKLENEN META ETİKETLERİ ========== -->
 
-<!-- LCP image preload - EN ÜSTE -->
-<link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-
-<!-- Preconnect -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Poppins - async -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+<!-- LCP Preload -->
+    <link rel="preload" fetchpriority="high" as="image" href="img/banner1.webp" type="image/webp">
+    <link rel="preload" href="/css/style.css" as="style">
     
 
     <!-- SPECULATION RULES -->
@@ -1223,6 +1216,7 @@ permalink: "/"
 </script>
 </body>
 </html>
+
 
 
 
