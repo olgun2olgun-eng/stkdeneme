@@ -41,12 +41,20 @@ permalink: "/"
     <meta name="twitter:image" content="https://stkdanismanlik.com/img/banner1.webp">
     <!-- ========== /EKLENEN META ETİKETLERİ ========== -->
 
-    <!-- LCP Preload -->
-    <link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
-    <!-- Poppins Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+   <!-- Önce preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- LCP image preload - hepsinden ÖNCE -->
+<link rel="preload" fetchpriority="high" as="image" href="/img/banner1.webp" type="image/webp">
+
+<!-- CSS preload -->
+<link rel="preload" href="/css/style.css" as="style">
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Font async yükleme -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
     
 
     <!-- SPECULATION RULES -->
@@ -1219,6 +1227,7 @@ permalink: "/"
 </script>
 </body>
 </html>
+
 
 
 
