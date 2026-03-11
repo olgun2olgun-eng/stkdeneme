@@ -364,12 +364,13 @@ permalink: "/"
       gap: 12px;
     }
     .faq-question::after {
-      content: '+';
-      font-size: 1.4rem;
-      color: var(--primary-color);
-      transition: transform 0.3s;
-      flex-shrink: 0;
-    }
+  content: '+' !important;
+  font-family: inherit !important;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
     .faq-item.open .faq-question::after { transform: rotate(45deg); }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
     .faq-item.open .faq-answer { max-height: 300px; }
@@ -1106,7 +1107,7 @@ permalink: "/"
             WhatsApp'tan Yaz
           </a>
         </div>
-        <p style="font-size:.75rem;color:#666;margin-top:15px">Hafta içi 09:00 – 18:00</p>
+        <p style="font-size:.75rem;color:#aaa;margin-top:15px">Hafta içi 09:00 – 18:00</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1257,6 +1258,7 @@ permalink: "/"
 </script>
 </body>
 </html>
+
 
 
 
