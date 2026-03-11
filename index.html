@@ -345,7 +345,12 @@ permalink: "/"
       box-shadow: 0 4px 18px rgba(0,0,0,0.06);
     }
     .testimonial-content .quote-icon { font-size: 2rem; color: var(--primary-color); margin-bottom: 12px; }
-    .testimonial-content p { font-size: 0.92rem; color: var(--text-color); font-style: italic; line-height: 1.7; }
+    .testimonial-content p { 
+  font-size: 0.92rem; 
+  color: #333333;  /* Koyu gri — yeterli kontrast */
+  font-style: italic; 
+  line-height: 1.7; 
+}
     .testimonial-author-main { display: flex; align-items: center; gap: 14px; margin-top: 20px; }
     .testimonial-author-main .avatar {
       width: 52px; height: 52px;
@@ -356,7 +361,10 @@ permalink: "/"
     }
     .testimonial-author-main .avatar svg { width: 28px; height: 28px; }
     .person-name { font-weight: 700; color: var(--dark-color); font-size: 0.95rem; margin-bottom: 2px; }
-    .author-info span { font-size: 0.8rem; color: #888; }
+    .author-info span { 
+  font-size: 0.8rem; 
+  color: #555555;  /* Orta gri — yeterli kontrast */
+}
 
     /* ========== FAQ ========== */
     .faq-section { padding: 80px 0; }
@@ -557,9 +565,9 @@ permalink: "/"
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "SH Danışmanlık",
-      "url": "https://shdanismanlik.com",
-      "logo": "https://shdanismanlik.com/logo.webp",
-      "image": "https://shdanismanlik.com/img/banner1.webp",
+      "url": "https://stkdanismanlik.com",
+      "logo": "https://stkdanismanlik.com/logo.webp",
+      "image": "https://stkdanismanlik.com/img/banner1.webp",
       "telephone": "+905347054234",
       "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
       "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150" }
@@ -1123,3 +1131,4 @@ permalink: "/"
 </script>
 </body>
 </html>
+
