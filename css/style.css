@@ -50,7 +50,7 @@ h1, h2, h3, h4 { color: var(--dark-color); line-height: 1.3; font-weight: 600; }
 
 .main-nav ul { list-style: none; display: flex; align-items: center; gap: 20px; }
 .main-nav ul li { position: relative; }
-.main-nav ul li a { text-decoration: none; color: var(--dark-color); font-weight: 600; padding: 10px 5px; font-size: 0.95rem; }
+.main-nav ul li a { text-decoration: none; color: var(--dark-color); font-weight: 600; padding: 10px 5px; font-size: 0.95rem; }}
 .main-nav > ul > li > a:not(.btn-nav-final)::after { content: ''; position: absolute; bottom: 0px; left: 0; width: 0; height: 2px; background-color: var(--primary-color); transition: width 0.3s ease; }
 .main-nav > ul > li > a:hover::after, .main-nav > ul > li > a.active::after { width: 100%; }
 .main-nav ul li.dropdown { position: relative; }
@@ -1045,5 +1045,6 @@ p, h1, h2, h3, h4, h5, h6, a, li {
 
 
 .wa-floating-btn .wa-label { margin-left: 0 !important; margin-right: 12px !important; }
+
 
 
