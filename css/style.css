@@ -39,7 +39,7 @@ h1, h2, h3, h4 { color: var(--dark-color); line-height: 1.3; font-weight: 600; }
     padding: 0 15px;
 }
 .logo-img { 
-    height: 110px; 
+    height: 90px; 
     width: auto;
     aspect-ratio: 247 / 214;
     object-fit: contain;
@@ -1045,4 +1045,5 @@ p, h1, h2, h3, h4, h5, h6, a, li {
 
 
 .wa-floating-btn .wa-label { margin-left: 0 !important; margin-right: 12px !important; }
+
 
