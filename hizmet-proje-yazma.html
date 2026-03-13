@@ -1,94 +1,148 @@
 ---
 layout: layouts/base.html
-title: "Proje Yazma ve Hibe Danışmanlığı | PCM Uzmanlığı"
-description: "Dernek ve vakıf projeleriniz için ulusal ve uluslararası hibe fonları. PCM metodolojisiyle profesyonel proje yazma, başvuru ve raporlama desteği."
-excerpt: "Doğru Finansal Kaynak ve Profesyonel Planlama ile Hayallerinizi Kağıt Üzerinden Gerçeğe Taşıyoruz."
+title: "Proje Yazma ve Hibe Danışmanlığı | STK Fon Geliştirme — STK Danışmanlık Ümraniye"
+description: "Dernek ve vakıflar için proje yazma, hibe başvurusu ve fon geliştirme danışmanlığı. AB, Erasmus+, PRODES, kalkınma ajansı hibe programları. PCM metodolojisi. Ümraniye İstanbul. ☎ +90 534 705 42 34"
+excerpt: "Doğru finansal kaynak ve profesyonel planlama ile projelerinizi hayata geçiriyoruz."
 banner_image: "/img/banner2.webp"
 permalink: "/hizmet-proje-yazma.html"
 current_page: "proje-yazma"
-sidebar_cta_text: "Fikirlerinizi profesyonel bir hibe dosyasına dönüştürmek ve başarı şansınızı artırmak için hemen teklif alın."
+sidebar_cta_text: "Fikirlerinizi profesyonel bir hibe dosyasına dönüştürmek için hemen teklif alın."
 ---
 
 <div class="main-content">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Proje Yazma ve Fon Geliştirme Danışmanlığı",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "SH Danışmanlık"
-  },
-  "description": "Ulusal ve uluslararası hibe programlarına yönelik profesyonel proje geliştirme, PCM yönetimi ve teknik raporlama."
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://stkdanismanlik.com/hizmet-proje-yazma.html#service",
+      "serviceType": "Proje Yazma ve Fon Geliştirme Danışmanlığı",
+      "name": "Proje ve Fon Geliştirme — STK Danışmanlık Ümraniye İstanbul",
+      "description": "Ulusal ve uluslararası hibe programlarına yönelik profesyonel proje geliştirme, PCM yönetimi, başvuru dosyası hazırlığı ve teknik raporlama.",
+      "url": "https://stkdanismanlik.com/hizmet-proje-yazma.html",
+      "provider": { "@type": ["LocalBusiness", "ProfessionalService"], "@id": "https://stkdanismanlik.com/#business", "name": "STK Danışmanlık", "telephone": "+905347054234", "address": { "@type": "PostalAddress", "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5", "addressLocality": "Ümraniye", "addressRegion": "İstanbul", "postalCode": "34760", "addressCountry": "TR" } },
+      "areaServed": [{ "@type": "City", "name": "Ümraniye" }, { "@type": "City", "name": "İstanbul" }, { "@type": "Country", "name": "Türkiye" }],
+      "hasOfferCatalog": { "@type": "OfferCatalog", "name": "Proje Geliştirme Hizmetleri", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fon Araştırması ve Hibe Takibi" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proje Döngüsü Yönetimi (PCM)" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Başvuru Dosyası Hazırlığı" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proje Yürütme ve Raporlama" }}
+      ]}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "STK'lar hangi hibe programlarına başvurabilir?", "acceptedAnswer": { "@type": "Answer", "text": "Dernekler ve vakıflar; PRODES, TÜBİTAK, KOSGEB, Kalkınma Ajansları gibi ulusal fonlara ve AB, Erasmus+, Birleşmiş Milletler, elçilik fonları gibi uluslararası hibe programlarına başvurabilir." }},
+        { "@type": "Question", "name": "PCM (Proje Döngüsü Yönetimi) nedir?", "acceptedAnswer": { "@type": "Answer", "text": "PCM, Avrupa Birliği tarafından geliştirilen ve projelerin fikir aşamasından değerlendirmeye kadar tüm aşamalarını kapsayan sistematik bir yönetim metodolojisidir. Mantıksal çerçeve, faaliyet planı ve bütçe hazırlığı PCM'in temel araçlarıdır." }},
+        { "@type": "Question", "name": "Proje yazma süreci ne kadar sürer?", "acceptedAnswer": { "@type": "Answer", "text": "Projenin kapsamına ve başvurulacak hibe programının gereksinimlerine bağlı olarak 2-8 hafta arasında değişir. Karmaşık AB projelerinde süre daha uzun olabilir." }}
+      ]
+    },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetlerimiz", "item": "https://stkdanismanlik.com/" },
+      { "@type": "ListItem", "position": 3, "name": "Proje ve Fon Geliştirme", "item": "https://stkdanismanlik.com/hizmet-proje-yazma.html" }
+    ]}
+  ]
 }
 </script>
 
 <style>
-    .project-feature { display: flex; gap: 20px; background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #eee; transition: 0.3s; }
-    .project-feature:hover { border-color: #1a237e; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-    .project-feature i { font-size: 28px; color: #1a237e; margin-top: 5px; flex-shrink: 0; }
-    .project-feature h4 { margin: 0 0 10px 0; color: #1a237e; }
-    .project-feature p { margin: 0; font-size: 15px; color: #666; }
+.pj-breadcrumb { font-size: 0.84rem; margin-bottom: 28px; }
+.pj-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.pj-breadcrumb a:hover { text-decoration: underline; }
+.pj-breadcrumb span { color: #888; }
+.pj-intro-box { background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%); border-radius: 14px; padding: 32px 30px; border-left: 5px solid #1a237e; margin-bottom: 36px; }
+.pj-intro-box h2 { font-size: 1.6rem; color: #1a237e; margin-bottom: 12px; line-height: 1.3; }
+.pj-intro-box p { color: #555; line-height: 1.75; font-size: 0.93rem; margin-bottom: 10px; }
+.pj-intro-box p:last-child { margin-bottom: 0; }
+.pj-svc-card { display: flex; align-items: flex-start; gap: 18px; padding: 24px; margin-bottom: 14px; background: #fff; border-radius: 10px; border: 1px solid #eef1f6; border-left: 4px solid #1a237e; transition: transform 0.2s, box-shadow 0.2s; }
+.pj-svc-card:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.pj-svc-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #e8ecf8, #f0f4ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.pj-svc-card h4 { margin: 0 0 6px; font-size: 1.02rem; color: #1a237e; }
+.pj-svc-card p { margin: 0; font-size: 0.88rem; color: #555; line-height: 1.65; }
+.pj-svc-card a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.pj-fon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 36px 0; }
+.pj-fon-card { background: #f8f9fa; border-radius: 10px; padding: 22px; border: 1px solid #e8ecf8; }
+.pj-fon-card h4 { font-size: 1rem; color: #1a237e; margin-bottom: 8px; }
+.pj-fon-card p { font-size: 0.86rem; color: #555; line-height: 1.6; margin: 0; }
+.pj-faq { margin: 36px 0; }
+.pj-faq h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 18px; }
+.pj-faq-item { background: #fff; margin-bottom: 10px; border-radius: 8px; border: 1px solid #eef1f6; overflow: hidden; }
+.pj-faq-q { width: 100%; padding: 16px 20px; background: none; border: none; text-align: left; font-size: 0.93rem; font-weight: 600; color: #1a1a1a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: var(--font-family); transition: background 0.2s; }
+.pj-faq-q:hover { background: #f8f9ff; }
+.pj-faq-q .chv { flex-shrink: 0; width: 18px; height: 18px; transition: transform 0.3s; color: #1a237e; }
+.pj-faq-item.open .pj-faq-q .chv { transform: rotate(180deg); }
+.pj-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.pj-faq-item.open .pj-faq-a { max-height: 400px; }
+.pj-faq-a-inner { padding: 0 20px 16px; font-size: 0.88rem; color: #555; line-height: 1.7; }
+.pj-cta { background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%); padding: 40px 30px; border-radius: 12px; text-align: center; color: #fff; margin-top: 40px; }
+.pj-cta h3 { color: #fff; font-size: 1.4rem; margin-bottom: 10px; }
+.pj-cta p { color: rgba(255,255,255,0.85); margin-bottom: 22px; font-size: 0.93rem; }
+.pj-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #1a237e; padding: 12px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; }
+.pj-cta-btn:hover { background: #e8edf8; transform: translateY(-2px); }
+@media (max-width: 640px) { .pj-fon-grid { grid-template-columns: 1fr; } }
 </style>
 
-<h2>Hibe ve Fon Kaynaklarına Erişimde Profesyonel Destek</h2>
-<p>Sivil toplum kuruluşlarının en büyük hedeflerinden biri, misyonları doğrultusunda etkili ve sürdürülebilir projeler hayata geçirmektir. Ancak parlak bir fikir; doğru finansal kaynak ve profesyonel bir proje planı olmadan kağıt üzerinde kalmaya mahkumdur. Ulusal ve uluslararası hibe programları, bu noktada STK'lar için büyük bir fırsat sunar.</p>
+<nav class="pj-breadcrumb" aria-label="Breadcrumb"><a href="/">Ana Sayfa</a><span> › </span><a href="/#services">Hizmetlerimiz</a><span> › </span><span aria-current="page">Proje ve Fon Geliştirme</span></nav>
 
-<p><strong>SH Danışmanlık</strong> olarak, proje fikrinizin geliştirilmesinden, uygun hibe programının bulunmasına, başvuru dosyasının hazırlanmasından projenin yürütülmesine kadar tüm aşamalarda size uzman desteği sağlıyoruz. <strong>Proje Döngüsü Yönetimi (PCM)</strong> metodolojisine hakim ekibimizle, başvurularınızın kabul edilme şansını en üst seviyeye çıkarıyoruz.</p>
-
-<h3 style="margin-top: 40px; color: #1a237e;">Proje Geliştirme Hizmetlerimiz</h3>
-
-<div class="project-feature">
-    <i class="fas fa-search-dollar"></i>
-    <div>
-        <h4>Fon Araştırması ve Hibe Takibi</h4>
-        <p>Kurumunuzun faaliyet alanına ve hedeflerine en uygun ulusal (PRODES, TÜBİTAK, KOSGEB, Kalkınma Ajansları) ve uluslararası (Avrupa Birliği, Erasmus+, elçilikler vb.) fon kaynaklarını araştırır ve güncel hibeleri sizin için takip ederiz.</p>
-    </div>
+<div class="pj-intro-box">
+    <h2>STK Proje Yazma ve Hibe Fon Geliştirme Danışmanlığı — Ümraniye İstanbul</h2>
+    <p>Sivil toplum kuruluşlarının en büyük hedeflerinden biri, misyonları doğrultusunda etkili ve sürdürülebilir projeler hayata geçirmektir. Ancak parlak bir fikir, doğru finansal kaynak ve profesyonel bir <strong>proje planı</strong> olmadan kağıt üzerinde kalmaya mahkumdur. Ulusal ve uluslararası <strong>hibe programları</strong>, bu noktada STK'lar için büyük bir fırsat sunar.</p>
+    <p><strong>STK Danışmanlık</strong> olarak, proje fikrinizin geliştirilmesinden uygun hibe programının bulunmasına, başvuru dosyasının hazırlanmasından projenin yürütülmesine kadar tüm aşamalarda <strong>Proje Döngüsü Yönetimi (PCM)</strong> metodolojisine hakim ekibimizle destek sağlıyoruz.</p>
 </div>
 
-<div class="project-feature">
-    <i class="fas fa-tasks"></i>
-    <div>
-        <h4>Proje Döngüsü Yönetimi (PCM)</h4>
-        <p>Proje fikrinizin analiz edilmesi, mantıksal çerçevenin oluşturulması, faaliyet planı ve bütçenin hazırlanması gibi tüm PCM adımlarında size rehberlik ederiz.</p>
-    </div>
+<h3 style="font-size:1.3rem;color:#1a237e;margin-bottom:18px;">Proje Geliştirme Hizmetlerimiz</h3>
+
+<div class="pj-svc-card"><div class="pj-svc-icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><h4>Fon Araştırması ve Hibe Takibi</h4><p>Kurumunuzun faaliyet alanına en uygun ulusal (<strong>PRODES, TÜBİTAK, KOSGEB, Kalkınma Ajansları</strong>) ve uluslararası (<strong>Avrupa Birliği, Erasmus+, BM, elçilik fonları</strong>) kaynaklarını araştırıyor, güncel hibe çağrılarını sizin için takip ediyoruz.</p></div></div>
+
+<div class="pj-svc-card"><div class="pj-svc-icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div><div><h4>Proje Döngüsü Yönetimi (PCM)</h4><p>Proje fikrinizin analiz edilmesi, <strong>mantıksal çerçeve</strong>nin oluşturulması, faaliyet planı, zaman çizelgesi ve bütçenin hazırlanması. AB standartlarında PCM metodolojisiyle başarı oranınızı artırıyoruz.</p></div></div>
+
+<div class="pj-svc-card"><div class="pj-svc-icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Başvuru Dosyası Hazırlığı</h4><p>İlgili fon programının başvuru formlarını ve rehberlerini detaylıca analiz ederek, projenizi en güçlü ve ikna edici şekilde sunan <strong>eksiksiz bir başvuru dosyası</strong> hazırlıyoruz. Bütçe gerekçelendirmesi dahil.</p></div></div>
+
+<div class="pj-svc-card"><div class="pj-svc-icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><h4>Proje Yürütme ve Raporlama</h4><p>Kabul edilen projelerin faaliyetlerinin planlandığı gibi yürütülmesi, harcamaların bütçeye uygun yapılması ve fon sağlayıcıya sunulacak <strong>ara/final raporlarının</strong> hazırlanması. <a href="/hizmet-mali-danismanlik.html">Mali raporlama desteği →</a></p></div></div>
+
+<!-- FON KAYNAKLARI -->
+<h3 style="font-size:1.3rem;color:#1a237e;margin:36px 0 18px;">Başvurulabilecek Temel Fon Kaynakları</h3>
+<div class="pj-fon-grid">
+    <div class="pj-fon-card"><h4>Ulusal Fonlar</h4><p>PRODES (Dernekler Dairesi), TÜBİTAK, KOSGEB, Kalkınma Ajansları, Gençlik ve Spor Bakanlığı, İŞKUR proje destekleri, Sanayi Bakanlığı hibeleri</p></div>
+    <div class="pj-fon-card"><h4>Uluslararası Fonlar</h4><p>Avrupa Birliği IPA fonları, Erasmus+ Programı, BM Ajansları (UNDP, UNICEF), Dünya Bankası, elçilik ve konsolosluk fonları, özel vakıf hibeleri</p></div>
 </div>
 
-<div class="project-feature">
-    <i class="fas fa-file-signature"></i>
-    <div>
-        <h4>Başvuru Dosyası Hazırlığı</h4>
-        <p>İlgili fon programının başvuru formlarını ve rehberlerini detaylıca analiz ederek, projenizi en güçlü ve ikna edici şekilde sunan, eksiksiz bir başvuru dosyası hazırlarız.</p>
-    </div>
+<!-- FAQ -->
+<div class="pj-faq">
+    <h3>Proje ve Fon Geliştirme Hakkında Sık Sorulan Sorular</h3>
+    <div class="pj-faq-item"><button class="pj-faq-q">STK'lar hangi hibe programlarına başvurabilir?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="pj-faq-a"><div class="pj-faq-a-inner">Dernekler ve vakıflar; <strong>PRODES, TÜBİTAK, KOSGEB, Kalkınma Ajansları</strong> gibi ulusal fonlara ve <strong>AB, Erasmus+, BM, elçilik fonları</strong> gibi uluslararası hibe programlarına başvurabilir. STK Danışmanlık olarak kurumunuza en uygun fon kaynağını birlikte belirliyoruz.</div></div></div>
+    <div class="pj-faq-item"><button class="pj-faq-q">PCM (Proje Döngüsü Yönetimi) nedir?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="pj-faq-a"><div class="pj-faq-a-inner"><strong>PCM</strong>, Avrupa Birliği tarafından geliştirilen ve projelerin fikir aşamasından değerlendirmeye kadar tüm aşamalarını kapsayan sistematik bir yönetim metodolojisidir. Mantıksal çerçeve, faaliyet planı ve bütçe hazırlığı PCM'in temel araçlarıdır.</div></div></div>
+    <div class="pj-faq-item"><button class="pj-faq-q">Proje yazma süreci ne kadar sürer?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="pj-faq-a"><div class="pj-faq-a-inner">Projenin kapsamına ve başvurulacak hibe programının gereksinimlerine bağlı olarak <strong>2-8 hafta</strong> arasında değişir. Karmaşık AB projelerinde süre daha uzun olabilir. <a href="/iletisim.html">Detaylı bilgi için bize ulaşın →</a></div></div></div>
 </div>
 
-<div class="project-feature">
-    <i class="fas fa-chart-pie"></i>
-    <div>
-        <h4>Proje Yürütme ve Raporlama</h4>
-        <p>Kabul edilen projelerinizin faaliyetlerinin planlandığı gibi yürütülmesi, harcamaların bütçeye uygun yapılması ve fon sağlayıcıya sunulacak ara/final raporlarının hazırlanması konularında destek oluruz.</p>
-    </div>
+<div class="pj-cta">
+    <h3>Projenizi Hayata Geçirmeye Hazır mısınız?</h3>
+    <p>Ümraniye ofisimizde veya uzaktan danışmanlıkla proje fikrinizi profesyonel bir hibe dosyasına dönüştürelim.</p>
+    <a href="/iletisim.html" class="pj-cta-btn"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Ücretsiz Teklif Al</a>
 </div>
+
+<script defer>
+(function(){ document.querySelectorAll('.pj-faq-item').forEach(function(item){ item.querySelector('.pj-faq-q').addEventListener('click', function(){ var w=item.classList.contains('open'); document.querySelectorAll('.pj-faq-item.open').forEach(function(i){i.classList.remove('open')}); if(!w) item.classList.add('open'); }); }); })();
+</script>
+
 </div>
 
 <aside class="sidebar">
-    <div class="widget">
-        <h4>Hizmetlerimiz</h4>
-        <ul>
-            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html" class="current">Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
-        </ul>
+    <div class="widget"><h4>Hizmetlerimiz</h4><ul>
+        <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+        <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+        <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
+        <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+        <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+        <li><a href="/hizmet-proje-yazma.html" class="current">Proje ve Fon Geliştirme</a></li>
+        <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
+    </ul></div>
+    <div class="widget" style="background:#e8f5e9;border-left:4px solid #43a047;padding:22px;border-radius:8px;">
+        <h4 style="margin-top:0;color:#2e7d32;margin-bottom:10px;">Hibe Takvimi</h4>
+        <p style="font-size:0.86rem;color:#333;margin:0;">Güncel hibe çağrılarını takip ediyoruz. Kurumunuza uygun fırsatları kaçırmamak için <a href="/iletisim.html" style="color:#2e7d32;font-weight:700;">bize ulaşın</a>.</p>
     </div>
-
-    <div class="widget">
-        <h4>Kurumsal Teklif Alın</h4>
-        <p>Fikirlerinizi profesyonel bir hibe dosyasına dönüştürmek için hemen teklif alın.</p>
-        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Teklif İsteyin</a>
-    </div>
+    <div class="widget"><h4>Ücretsiz Ön Görüşme</h4><p style="font-size:0.88rem;">Proje fikrinizi profesyonel bir hibe dosyasına dönüştürmek için teklif alın.</p><a href="/iletisim.html" class="btn btn-secondary" style="width:100%;">Teklif İsteyin</a></div>
 </aside>
-</div>

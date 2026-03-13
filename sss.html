@@ -1,110 +1,657 @@
 ---
 layout: layouts/fullwidth.html
-title: "Sıkça Sorulan Sorular"
-description: "Dernek kurulumu, vakıf yönetimi, beyanname süreçleri ve STK mevzuatı hakkında en çok merak edilen soruların profesyonel cevapları."
-excerpt: "Aklınızdaki soruların cevapları burada."
+title: "Sıkça Sorulan Sorular | STK Danışmanlık Ümraniye İstanbul"
+description: "Dernek kurulumu, vakıf kuruluşu, DERBİS beyanname, genel kurul ve STK mali danışmanlık hakkında en çok sorulan sorular ve uzman yanıtları. Ümraniye İstanbul."
+excerpt: "Dernek ve vakıf süreçleri hakkında merak ettiğiniz her şeyin yanıtı burada."
 banner_image: "/img/banner3.webp"
 permalink: "/sss.html"
 ---
 
-<!-- Google FAQ Şeması -->
+<!-- ═══ JSON-LD SCHEMA ═══ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Dernek kurmak için kaç kişi gereklidir?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Bir dernek kurmak için en az 7 gerçek veya tüzel kişinin bir araya gelmesi şarttır."
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "url": "https://stkdanismanlik.com/sss.html",
+      "name": "Sıkça Sorulan Sorular — STK Danışmanlık",
+      "description": "Dernek kurulumu, vakıf kuruluşu, DERBİS, genel kurul ve mali danışmanlık hakkında sık sorulan sorular.",
+      "inLanguage": "tr-TR",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "STK Danışmanlık ne tür hizmetler sunuyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "STK Danışmanlık; dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi, mali danışmanlık, yasal danışmanlık ve proje/fon geliştirme alanlarında Ümraniye ve İstanbul merkezli profesyonel danışmanlık hizmeti sunmaktadır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "STK danışmanlığı neden gerekli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "STK mevzuatı karmaşık ve sürekli güncellenen bir yapıya sahiptir. Süreçleri uzman bir ekiple yürütmek, yasal cezaları, zaman kaybını ve maddi hataları önler; enerjinizi kurumunuzun asıl amacına yöneltmenizi sağlar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sadece İstanbul'da mı hizmet veriyorsunuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Merkezimiz İstanbul Ümraniye'de olmakla birlikte, Türkiye genelindeki dernek ve vakıflara dijital kanallar üzerinden ve gerekli durumlarda yerinde danışmanlık hizmeti sunmaktayız."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dernek kurmak için kaç kişi gereklidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bir dernek kurmak için en az 7 (yedi) gerçek veya tüzel kişinin bir araya gelmesi gerekmektedir. Gerekli evraklar eksiksiz hazırlandığında, tüm süreç ortalama 7–15 iş günü içinde tamamlanır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dernek kuruluş süreci nasıl işler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Süreç; tüzük hazırlama, kurucu üye belgelerinin düzenlenmesi, il sivil toplumla ilişkiler müdürlüğüne başvuru ve tescil aşamalarından oluşur. STK Danışmanlık olarak tüm bu süreci sizin adınıza yürütüyoruz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dernek beyannamesi ne zaman verilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dernekler, her yılın ilk dört ayı içerisinde (1 Ocak – 30 Nisan arası) bir önceki yıla ait faaliyetlerini DERBİS üzerinden beyan etmekle yükümlüdür. Süresinde verilmeyen beyannameler idari para cezasına neden olabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Yabancı uyruklu kişiler Türkiye'de dernek kurabilir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet, Türkiye'de yerleşme hakkına sahip olan yabancı gerçek kişiler dernek kurabilir veya mevcut derneklere üye olabilirler. Karşılıklılık ilkesi çerçevesinde bazı ek koşullar uygulanabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vakıf kurmak için ne kadar mal varlığı gerekir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanunda net bir asgari tutar belirtilmemiştir; vakfın amacını gerçekleştirmeye yetecek düzeyde bir mal varlığının (nakit, gayrimenkul vb.) tahsis edilmesi ve bu tutarın mahkeme tarafından yeterli görülmesi gerekir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dernek ile vakıf arasındaki temel fark nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En temel fark şudur: dernekler kişi topluluğu, vakıflar ise mal topluluğudur. Dernekler ortak bir amaç için bir araya gelen insanlardan oluşurken, vakıflar belirli bir amaca tahsis edilmiş mal varlığı üzerine kurulur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vakıflar nasıl denetlenir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vakıflar, Vakıflar Genel Müdürlüğü (VGM) tarafından düzenli olarak hem mali hem de idari açıdan denetlenir. Denetimler, vakfın amacına ve mevzuata uygun hareket edip etmediğini kontrol etmek amacıyla yapılır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Genel kurul toplantısı zorunlu mu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet, dernekler tüzüklerinde belirtilen sürelerde (en geç üç yılda bir) olağan genel kurul toplantısı yapmak zorundadır. Zamanında yapılmayan genel kurullar, derneğin kendiliğinden sona ermesine yol açabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Danışmanlık ücretleriniz nasıl belirleniyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Her STK'nın ihtiyacı ve yapısı farklıdır. Standart bir fiyat listesi yerine, ihtiyaçlarınızı analiz etmek için ücretsiz bir ön görüşme yapıyor ve ardından size özel, şeffaf bir hizmet teklifi sunuyoruz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mevcut derneğimizin denetimini yapabilir misiniz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. Hem iç denetim mekanizmalarını kurarak gelecekteki riskleri önlemenize yardımcı oluruz, hem de resmi denetimlere hazırlık sürecinde tüm defter ve kayıtlarınızı inceleyerek denetime hazır hale gelmenizi sağlarız."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "İktisadi işletme kurmak STK'ya ne kazandırır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "İktisadi işletme, derneğinizin veya vakfınızın ticari faaliyetlerde bulunarak düzenli gelir elde etmesini sağlar. Böylece kurumunuz yalnızca bağışlara bağımlı kalmaz ve mali sürdürülebilirliği artar."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Sıkça Sorulan Sorular", "item": "https://stkdanismanlik.com/sss.html" }
+      ]
     }
-  }, {
-    "@type": "Question",
-    "name": "Dernek beyannamesi ne zaman verilir?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Dernekler, her yılın ilk dört ayı içinde (30 Nisan son gün olmak üzere) bir önceki yılın beyannamesini DERBİS üzerinden vermekle yükümlüdür."
-    }
-  }]
+  ]
 }
 </script>
 
 <style>
-    .faq-accordion-full { margin-top: 30px; }
-    .faq-item { background: #fff; margin-bottom: 15px; border-radius: 8px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-    .faq-question { width: 100%; padding: 20px 25px; background: none; border: none; text-align: left; font-size: 17px; font-weight: 600; color: #1a237e; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
-    .faq-question:hover { background: #fcfcfc; }
-    .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.3s ease; background: #fff; border-top: 0 solid #eee; }
-    .faq-answer p { padding: 20px 0; color: #666; line-height: 1.7; margin: 0; }
-    .faq-item.active .faq-answer { max-height: 500px; border-top: 1px solid #eee; }
-    .faq-question i { transition: transform 0.3s; font-size: 14px; }
-    .faq-item.active .faq-question i { transform: rotate(180deg); }
+/* ── BREADCRUMB ── */
+.sss-breadcrumb {
+    padding: 14px 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.84rem;
+}
+.sss-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.sss-breadcrumb a:hover { text-decoration: underline; }
+.sss-breadcrumb span { color: #888; }
+
+/* ── GİRİŞ KUTUSU ── */
+.sss-intro {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    border-left: 5px solid #1a237e;
+}
+.sss-intro h2 {
+    font-size: 1.7rem;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+.sss-intro p {
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+.sss-intro p:last-child { margin-bottom: 0; }
+
+/* ── KATEGORİ SEÇİCİ ── */
+.sss-category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.sss-cat-btn {
+    padding: 10px 22px;
+    border: 2px solid #e0e4ee;
+    border-radius: 50px;
+    background: #fff;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: var(--font-family);
+}
+.sss-cat-btn:hover { border-color: #1a237e; color: #1a237e; }
+.sss-cat-btn.active {
+    background: #1a237e;
+    color: #fff;
+    border-color: #1a237e;
+}
+
+/* ── FAQ BÖLÜM BAŞLIKLARI ── */
+.sss-section-title {
+    font-size: 1.4rem;
+    color: #1a237e;
+    margin: 40px 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8ecf8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sss-section-title svg { flex-shrink: 0; }
+
+/* ── ACCORDION ── */
+.sss-accordion { margin-bottom: 10px; }
+
+.sss-faq-item {
+    background: #fff;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #eef1f6;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: box-shadow 0.3s ease;
+}
+.sss-faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+
+.sss-faq-question {
+    width: 100%;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: background 0.2s, color 0.2s;
+    font-family: var(--font-family);
+    line-height: 1.5;
+}
+.sss-faq-question:hover { background: #f8f9ff; color: #1a237e; }
+
+.sss-faq-question .chevron-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+    color: #1a237e;
+}
+.sss-faq-item.open .sss-faq-question .chevron-icon { transform: rotate(180deg); }
+.sss-faq-item.open .sss-faq-question { color: #1a237e; background: #f8f9ff; }
+
+.sss-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.sss-faq-item.open .sss-faq-answer { max-height: 600px; }
+
+.sss-faq-answer-inner {
+    padding: 0 24px 22px;
+    color: #555;
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+.sss-faq-answer-inner p { margin: 0 0 10px; }
+.sss-faq-answer-inner p:last-child { margin-bottom: 0; }
+.sss-faq-answer-inner a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.sss-faq-answer-inner a:hover { text-decoration: underline; color: #0d47a1; }
+
+/* ── SAYAÇ ROZET ── */
+.sss-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #e8ecf8;
+    color: #1a237e;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+/* ── ALT CTA ── */
+.sss-bottom-cta {
+    background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%);
+    padding: 56px 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+}
+.sss-bottom-cta h2 { color: #fff; font-size: 1.8rem; margin-bottom: 12px; }
+.sss-bottom-cta p { color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 28px; font-size: 1rem; }
+.sss-cta-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.sss-btn-white {
+    background: #fff; color: #1a237e; padding: 13px 30px;
+    border-radius: 50px; text-decoration: none; font-weight: 700;
+    display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;
+}
+.sss-btn-white:hover { background: #e8edf8; transform: translateY(-2px); }
+.sss-btn-outline {
+    background: transparent; color: #fff;
+    border: 2px solid rgba(255,255,255,0.6); padding: 13px 30px;
+    border-radius: 50px; text-decoration: none; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;
+}
+.sss-btn-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .sss-intro { padding: 28px 22px; }
+    .sss-category-nav { gap: 8px; }
+    .sss-cat-btn { padding: 8px 16px; font-size: 0.82rem; }
+    .sss-faq-question { padding: 16px 18px; font-size: 0.93rem; }
+    .sss-faq-answer-inner { padding: 0 18px 18px; }
+}
 </style>
 
-<section class="page-content">
+<!-- ═══ BREADCRUMB ═══ -->
+<nav class="sss-breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-        <div class="content-grid">
-            <div class="main-content">
-                <h2>Genel Sorular</h2>
-                <div class="faq-accordion-full">
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Biz, sivil toplum kuruluşları (dernek, vakıf vb.) için A'dan Z'ye profesyonel danışmanlık hizmeti sunan bir firmayız. Kuruluş süreçleri, yasal zorunluluklar, mali işler, proje yönetimi gibi konularda bürokrasiyle uğraşmamanız ve hedeflerinize odaklanmanız için size destek oluruz.</p></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>STK mevzuatı karmaşık ve sürekli güncellenen bir yapıya sahiptir. Süreçleri bir uzmanla yürütmek, sizi olası yasal cezalardan, zaman kaybından ve maddi hatalardan korur. Enerjinizi derneğinizin asıl amacına yöneltmenizi sağlar.</p></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Merkezimiz İstanbul'da olmakla birlikte, Türkiye'nin her yerindeki dernek ve vakıflara dijital kanallar üzerinden ve gerekli durumlarda yerinde danışmanlık hizmeti sunmaktayız.</p></div>
-                    </div>
-                </div>
+        <a href="/">Ana Sayfa</a>
+        <span> › </span>
+        <span aria-current="page">Sıkça Sorulan Sorular</span>
+    </div>
+</nav>
 
-                <h2 style="margin-top: 50px;">Derneklerle İlgili Sorular</h2>
-                <div class="faq-accordion-full">
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Bir dernek kurmak için en az 7 (yedi) gerçek veya tüzel kişinin bir araya gelmesi gerekmektedir.</p></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Dernekler, her yılın ilk dört ayı içerisinde (1 Ocak - 30 Nisan arası) bir önceki yıla ait faaliyetlerini içeren DERBİS (Dernekler Bilgi Sistemi) üzerinden beyannamelerini vermekle yükümlüdür.</p></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Evet, Türkiye'de yerleşme hakkına sahip olan yabancı gerçek kişiler, dernek kurabilir veya mevcut derneklere üye olabilirler.</p></div>
-                    </div>
-                </div>
+<!-- ═══ GİRİŞ ═══ -->
+<section class="page-content" aria-label="Sıkça sorulan sorular">
+<div class="container">
 
-                <h2 style="margin-top: 50px;">Vakıflarla İlgili Sorular</h2>
-                <div class="faq-accordion-full">
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Kanunda belirtilmiş net bir asgari tutar olmamakla birlikte, vakfın amacını gerçekleştirmeye yetecek düzeyde bir mal varlığının (nakit, gayrimenkul vb.) tahsis edilmesi ve bu durumun mahkeme tarafından yeterli görülmesi gerekir. Bu miktar, vakfın amaçlarına göre değişiklik gösterir.</p></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">SH Danışmanlık tam olarak ne yapar?</button>
-                        <div class="faq-answer"><p>Vakıflar, Vakıflar Genel Müdürlüğü (VGM) tarafından düzenli olarak denetlenir. Hem mali hem de idari faaliyetleri incelenir. Bu denetimler, vakfın amacına uygun hareket edip etmediğini kontrol etmek için yapılır.</p></div>
+    <div class="sss-intro">
+        <h2>STK Danışmanlık — Sıkça Sorulan Sorular</h2>
+        <p>Dernek kurulumu, vakıf kuruluşu, DERBİS beyanname süreçleri, genel kurul yönetimi ve mali danışmanlık konularında en çok sorulan soruları Ümraniye ofisimizdeki uzman ekibimiz yanıtlıyor. Aradığınız cevabı bulamadıysanız <a href="/iletisim.html" style="color:#1a237e;font-weight:700;">bize ulaşın</a>, 24 saat içinde dönüş yapalım.</p>
+    </div>
+
+    <!-- ═══ KATEGORİ FİLTRE ═══ -->
+    <div class="sss-category-nav" role="tablist" aria-label="Soru kategorileri">
+        <button class="sss-cat-btn active" data-cat="all" role="tab" aria-selected="true">Tümü</button>
+        <button class="sss-cat-btn" data-cat="genel" role="tab">Genel</button>
+        <button class="sss-cat-btn" data-cat="dernek" role="tab">Dernekler</button>
+        <button class="sss-cat-btn" data-cat="vakif" role="tab">Vakıflar</button>
+        <button class="sss-cat-btn" data-cat="mali" role="tab">Mali & Denetim</button>
+    </div>
+
+    <div class="sss-count-badge" aria-live="polite">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5"/></svg>
+        <span id="sssCount">14 soru</span>
+    </div>
+
+    <!-- ═══ GENEL SORULAR ═══ -->
+    <div class="sss-group" data-category="genel">
+        <h2 class="sss-section-title">
+            <svg width="22" height="22" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5"/></svg>
+            Genel Sorular
+        </h2>
+        <div class="sss-accordion">
+
+            <div class="sss-faq-item" data-cat="genel">
+                <button class="sss-faq-question" aria-expanded="false">
+                    STK Danışmanlık ne tür hizmetler sunuyor?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>STK Danışmanlık; <a href="/hizmet-dernek-kurulusu.html">dernek kurulumu</a>, <a href="/hizmet-vakif-kurulusu.html">vakıf kuruluşu</a>, <a href="/hizmet-derbis.html">DERBİS işlemleri</a>, <a href="/hizmet-genel-kurul.html">genel kurul yönetimi</a>, <a href="/hizmet-mali-danismanlik.html">mali danışmanlık</a>, <a href="/hizmet-yasal-danismanlik.html">yasal danışmanlık</a> ve <a href="/hizmet-proje-yazma.html">proje/fon geliştirme</a> alanlarında Ümraniye ve İstanbul merkezli profesyonel danışmanlık hizmeti sunmaktadır.</p>
                     </div>
                 </div>
             </div>
 
-            <aside class="sidebar">
-                <div class="widget">
-                    <h4>Kurumsal</h4>
-                    <ul>
-                        <li><a href="/hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="/sss.html" class="current">Sıkça Sorulan Sorular</a></li>
-                    </ul>
+            <div class="sss-faq-item" data-cat="genel">
+                <button class="sss-faq-question" aria-expanded="false">
+                    STK danışmanlığı neden gerekli?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>STK mevzuatı karmaşık ve sürekli güncellenen bir yapıya sahiptir. Süreçleri uzman bir ekiple yürütmek sizi olası yasal cezalardan, zaman kaybından ve maddi hatalardan korur. Böylece enerjinizi kurumunuzun asıl amacına yöneltebilirsiniz.</p>
+                    </div>
                 </div>
-                <div class="widget">
-                    <h4>Hızlı İletişim</h4>
-                    <p>Projeniz hakkında görüşmek için hemen bize ulaşın.</p>
-                    <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">İletişime Geç</a>
+            </div>
+
+            <div class="sss-faq-item" data-cat="genel">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Sadece İstanbul'da mı hizmet veriyorsunuz?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Merkezimiz İstanbul Ümraniye'de olmakla birlikte, Türkiye genelindeki dernek ve vakıflara dijital kanallar üzerinden ve gerekli durumlarda yerinde danışmanlık hizmeti sunmaktayız.</p>
+                    </div>
                 </div>
-            </aside>
+            </div>
+
+            <div class="sss-faq-item" data-cat="genel">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Danışmanlık ücretleriniz nasıl belirleniyor?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Her STK'nın ihtiyacı ve yapısı farklıdır. Standart bir fiyat listesi yerine, ihtiyaçlarınızı analiz etmek için <strong>ücretsiz bir ön görüşme</strong> yapıyor ve ardından size özel, şeffaf bir hizmet teklifi sunuyoruz. <a href="/iletisim.html">Ücretsiz görüşme talep edin →</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═══ DERNEK SORULARI ═══ -->
+    <div class="sss-group" data-category="dernek">
+        <h2 class="sss-section-title">
+            <svg width="22" height="22" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            Derneklerle İlgili Sorular
+        </h2>
+        <div class="sss-accordion">
+
+            <div class="sss-faq-item" data-cat="dernek">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Dernek kurmak için kaç kişi gereklidir?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Bir dernek kurmak için en az <strong>7 (yedi)</strong> gerçek veya tüzel kişinin bir araya gelmesi gerekmektedir. Gerekli evraklar eksiksiz hazırlandığında, STK Danışmanlık olarak tüm süreci ortalama 7–15 iş günü içinde tamamlıyoruz. <a href="/hizmet-dernek-kurulusu.html">Dernek kuruluşu hizmetimiz →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="dernek">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Dernek kuruluş süreci nasıl işler?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Süreç; tüzük hazırlama, kurucu üye belgelerinin düzenlenmesi, il sivil toplumla ilişkiler müdürlüğüne başvuru ve tescil aşamalarından oluşur. STK Danışmanlık olarak tüm bu aşamaları sizin adınıza yürütüyor, süreci en hızlı şekilde sonuçlandırıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="dernek">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Dernek beyannamesi ne zaman verilir?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Dernekler, her yılın ilk dört ayı içerisinde (1 Ocak – 30 Nisan arası) bir önceki yıla ait faaliyetlerini <strong>DERBİS</strong> üzerinden beyan etmekle yükümlüdür. Süresinde verilmeyen beyannameler idari para cezasına neden olabilir. <a href="/hizmet-derbis.html">DERBİS hizmetimiz →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="dernek">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Yabancı uyruklu kişiler Türkiye'de dernek kurabilir mi?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Evet, Türkiye'de yerleşme hakkına sahip olan yabancı gerçek kişiler dernek kurabilir veya mevcut derneklere üye olabilirler. Karşılıklılık ilkesi çerçevesinde bazı ek koşullar uygulanabilir; detaylar için <a href="/iletisim.html">bize danışın</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="dernek">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Genel kurul toplantısı zorunlu mu?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Evet, dernekler tüzüklerinde belirtilen sürelerde (en geç <strong>üç yılda bir</strong>) olağan genel kurul toplantısı yapmak zorundadır. Zamanında yapılmayan genel kurullar, derneğin kendiliğinden sona ermesine yol açabilir. <a href="/hizmet-genel-kurul.html">Genel kurul yönetimi hizmetimiz →</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═══ VAKIF SORULARI ═══ -->
+    <div class="sss-group" data-category="vakif">
+        <h2 class="sss-section-title">
+            <svg width="22" height="22" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-6 7 6v12"/><path d="M9 21v-6h6v6"/></svg>
+            Vakıflarla İlgili Sorular
+        </h2>
+        <div class="sss-accordion">
+
+            <div class="sss-faq-item" data-cat="vakif">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Vakıf kurmak için ne kadar mal varlığı gerekir?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Kanunda belirtilmiş net bir asgari tutar yoktur. Vakfın amacını gerçekleştirmeye yetecek düzeyde bir mal varlığının (nakit, gayrimenkul vb.) tahsis edilmesi ve bu tutarın mahkeme tarafından yeterli görülmesi gerekir. <a href="/hizmet-vakif-kurulusu.html">Vakıf kuruluşu hizmetimiz →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="vakif">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Dernek ile vakıf arasındaki temel fark nedir?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>En temel fark: <strong>dernekler kişi topluluğu</strong>, <strong>vakıflar ise mal topluluğu</strong>dur. Dernekler ortak bir amaç için bir araya gelen insanlardan oluşurken, vakıflar belirli bir amaca tahsis edilmiş mal varlığı üzerine kurulur. Detaylı karşılaştırma için <a href="/blog-yazi-detay.html">blog yazımıza göz atın</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="vakif">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Vakıflar nasıl denetlenir?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Vakıflar, <strong>Vakıflar Genel Müdürlüğü (VGM)</strong> tarafından düzenli olarak hem mali hem de idari açıdan denetlenir. Denetimler, vakfın amacına ve mevzuata uygun hareket edip etmediğini kontrol etmek amacıyla yapılır.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═══ MALİ & DENETİM ═══ -->
+    <div class="sss-group" data-category="mali">
+        <h2 class="sss-section-title">
+            <svg width="22" height="22" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Mali Danışmanlık & Denetim Soruları
+        </h2>
+        <div class="sss-accordion">
+
+            <div class="sss-faq-item" data-cat="mali">
+                <button class="sss-faq-question" aria-expanded="false">
+                    Mevcut derneğimizin denetimini yapabilir misiniz?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>Evet. Hem iç denetim mekanizmalarını kurarak gelecekteki riskleri önlemenize yardımcı oluruz, hem de resmi denetimlere hazırlık sürecinde tüm defter ve kayıtlarınızı inceleyerek denetime hazır hale gelmenizi sağlarız. <a href="/hizmet-mali-danismanlik.html">Mali danışmanlık hizmetimiz →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sss-faq-item" data-cat="mali">
+                <button class="sss-faq-question" aria-expanded="false">
+                    İktisadi işletme kurmak STK'ya ne kazandırır?
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sss-faq-answer" role="region">
+                    <div class="sss-faq-answer-inner">
+                        <p>İktisadi işletme, derneğinizin veya vakfınızın ticari faaliyetlerde bulunarak düzenli gelir elde etmesini sağlar. Böylece kurumunuz yalnızca bağışlara bağımlı kalmaz ve mali sürdürülebilirliği artar. <a href="/blog-stk-iktisadi-isletme-avantajlari.html">Detaylı bilgi için yazımızı okuyun →</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- ═══ ALT CTA ═══ -->
+<section class="sss-bottom-cta" aria-label="Danışmanlık çağrısı">
+    <div class="container">
+        <h2>Sorunuzun Cevabını Bulamadınız mı?</h2>
+        <p>Ümraniye'deki ofisimizde veya telefonda ücretsiz ön görüşme ile tüm sorularınızı yanıtlayalım.</p>
+        <div class="sss-cta-group">
+            <a href="tel:+905347054234" class="sss-btn-white" aria-label="Hemen ara">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Şimdi Ara
+            </a>
+            <a href="/iletisim.html" class="sss-btn-outline">
+                İletişim Formu
+            </a>
         </div>
     </div>
 </section>
+
+<!-- ═══ ACCORDION + FİLTRE JS ═══ -->
+<script defer>
+(function(){
+    // Accordion
+    var items = document.querySelectorAll('.sss-faq-item');
+    items.forEach(function(item){
+        var btn = item.querySelector('.sss-faq-question');
+        btn.addEventListener('click', function(){
+            var wasOpen = item.classList.contains('open');
+            // Close all in same group
+            var group = item.closest('.sss-accordion');
+            if(group){
+                group.querySelectorAll('.sss-faq-item.open').forEach(function(i){ 
+                    i.classList.remove('open'); 
+                    i.querySelector('.sss-faq-question').setAttribute('aria-expanded','false');
+                });
+            }
+            if(!wasOpen){
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded','true');
+            }
+        });
+    });
+
+    // Category filter
+    var catBtns = document.querySelectorAll('.sss-cat-btn');
+    var groups = document.querySelectorAll('.sss-group');
+    var countEl = document.getElementById('sssCount');
+
+    catBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            catBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected','true');
+
+            var cat = btn.getAttribute('data-cat');
+            var visibleCount = 0;
+
+            if(cat === 'all'){
+                groups.forEach(function(g){ g.style.display = ''; });
+                visibleCount = items.length;
+            } else {
+                groups.forEach(function(g){
+                    if(g.getAttribute('data-category') === cat){
+                        g.style.display = '';
+                        visibleCount += g.querySelectorAll('.sss-faq-item').length;
+                    } else {
+                        g.style.display = 'none';
+                    }
+                });
+            }
+
+            if(countEl) countEl.textContent = visibleCount + ' soru';
+
+            // Close all open
+            document.querySelectorAll('.sss-faq-item.open').forEach(function(i){
+                i.classList.remove('open');
+                i.querySelector('.sss-faq-question').setAttribute('aria-expanded','false');
+            });
+        });
+    });
+})();
+</script>

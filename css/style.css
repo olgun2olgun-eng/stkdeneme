@@ -1042,10 +1042,27 @@ p, h1, h2, h3, h4, h5, h6, a, li {
 
 /* ─── WHATSAPP SAĞ TARAFA ─── */
 .wa-floating-btn { left: auto !important; right: 25px !important; flex-direction: row-reverse !important; }
-
-
 .wa-floating-btn .wa-label { margin-left: 0 !important; margin-right: 12px !important; }
 
+/* ===== FOOTER ===== */
+.main-footer { background: #111; color: #ccc; padding: 60px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.footer-col p { margin-bottom: 8px; font-size: 0.9rem; }
+.footer-col ul li { margin-bottom: 6px; }
+.footer-col ul li a { color: #bbb; font-size: 0.88rem; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--primary-color); }
+.footer-col .footer-icon { margin-right: 8px; color: var(--primary-color); font-size: 0.85rem; }
+.social-icons { display: flex; gap: 12px; margin-top: 8px; }
+.social-icons a { width: 36px; height: 36px; border-radius: 50%; background: #222; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.9rem; transition: background 0.3s, color 0.3s; }
+.social-icons a:hover { background: var(--primary-color); color: #fff; }
+.footer-bottom { margin-top: 40px; padding-top: 24px; border-top: 1px solid #333; text-align: center; font-size: 0.82rem; color: #999; }
+.footer-bottom a { color: #00a8e8; font-weight: 600; }
+.icon-svg { display: inline-block; vertical-align: middle; width: 1em; height: 1em; fill: currentColor; }
 
-
-
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+}

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.html
-title: "Genel Kurul Yönetimi ve Danışmanlığı"
-description: "Dernek ve vakıfların olağan/olağanüstü genel kurul süreçlerini mevzuata uygun, sorunsuz ve hukuki güvenceyle yönetiyoruz. Profesyonel genel kurul danışmanlığı."
+title: "Genel Kurul Yönetimi | Dernek Genel Kurul Danışmanlığı — STK Danışmanlık Ümraniye"
+description: "Dernek ve vakıf genel kurul yönetimi: olağan/olağanüstü toplantı hazırlığı, çağrı usulü, divan tutanağı, organ seçimi ve DERBİS bildirimi. Ümraniye İstanbul. ☎ +90 534 705 42 34"
 excerpt: "Kurumunuzun en stratejik karar mekanizmasını yasal güvenceyle işletiyoruz."
 banner_image: "/img/banner3.webp"
 permalink: "/hizmet-genel-kurul.html"
@@ -10,56 +10,448 @@ sidebar_cta_text: "Genel kurul sürecinizi profesyonel bir ekiple yönetmek içi
 ---
 
 <div class="main-content">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Genel Kurul Yönetimi ve Danışmanlığı",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "SH Danışmanlık"
-  },
-  "areaServed": "TR",
-  "description": "Sivil toplum kuruluşları için toplantı öncesi hazırlık, toplantı günü yönetimi ve sonrası yasal bildirim süreçlerinin profesyonel takibi."
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://stkdanismanlik.com/hizmet-genel-kurul.html#service",
+      "serviceType": "Genel Kurul Yönetimi ve Danışmanlığı",
+      "name": "Genel Kurul Yönetimi — STK Danışmanlık Ümraniye İstanbul",
+      "description": "Dernek ve vakıfların olağan/olağanüstü genel kurul süreçlerini mevzuata tam uyumlu şekilde yönetiyoruz. Çağrı usulünden DERBİS bildirimine uçtan uca profesyonel destek.",
+      "url": "https://stkdanismanlik.com/hizmet-genel-kurul.html",
+      "provider": {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://stkdanismanlik.com/#business",
+        "name": "STK Danışmanlık",
+        "telephone": "+905347054234",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Ümraniye" },
+        { "@type": "City", "name": "İstanbul" },
+        { "@type": "Country", "name": "Türkiye" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Genel Kurul Hizmetleri",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Olağan Genel Kurul Yönetimi" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Olağanüstü Genel Kurul Yönetimi" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tüzük Değişikliği Genel Kurulu" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Genel Kurul Sonuç Bildirimi (DERBİS)" }}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Dernek genel kurulu zorunlu mu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet, dernekler tüzüklerinde belirtilen sürelerde (en geç üç yılda bir) olağan genel kurul toplantısı yapmak zorundadır. 4721 sayılı TMK'nın 74. maddesi gereği, zamanında yapılmayan genel kurullar derneğin kendiliğinden sona ermesine yol açabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Genel kurul toplantı yeter sayısı nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Genel kurul, dernek tüzüğünde aksine hüküm bulunmadıkça, katılma hakkı bulunan üyelerin salt çoğunluğunun katılımıyla toplanır. İlk toplantıda yeter sayı sağlanamazsa, ikinci toplantıda yeter sayı aranmaz; ancak ikinci toplantıya katılan üye sayısı yönetim ve denetim kurulu üye tam sayısının iki katından az olamaz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Olağanüstü genel kurul ne zaman yapılır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yönetim veya denetim kurulunun gerekli gördüğü hallerde veya dernek üyelerinin beşte birinin yazılı başvurusu üzerine olağanüstü genel kurul toplantıya çağrılır. Yönetim kurulu bu çağrıyı 30 gün içinde yapmak zorundadır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Genel kurul sonuç bildirimi ne zaman yapılır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Genel kurul sonuç bildirimi, toplantı tarihinden itibaren 30 gün içinde DERBİS üzerinden mülki idare amirliğine (valilik/kaymakamlık) yapılmalıdır. Organ değişiklikleri de aynı sürede bildirilmelidir."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Hizmetlerimiz", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 3, "name": "Genel Kurul Yönetimi", "item": "https://stkdanismanlik.com/hizmet-genel-kurul.html" }
+      ]
+    }
+  ]
 }
 </script>
 
-<h2>Hukuki ve Operasyonel Genel Kurul Danışmanlığı</h2>
-<p>Genel kurul süreçleri; çağrı usullerinden gündem oluşturmaya, hazirun cetvelinden divan tutanaklarına kadar birçok teknik detayı ve yasal zorunluluğu barındırır. SH Danışmanlık olarak, olağan ve olağanüstü genel kurullarınızın her aşamasını titizlikle planlayarak, alınan kararların hukuki geçerliliğini ve mevzuat uyumunu güvence altına alıyoruz.</p>
+<style>
+.gk-breadcrumb { font-size: 0.84rem; margin-bottom: 28px; }
+.gk-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.gk-breadcrumb a:hover { text-decoration: underline; }
+.gk-breadcrumb span { color: #888; }
 
-<h3 style="margin-top: 40px;">Uçtan Uca Genel Kurul Hizmetleri</h3>
+.gk-intro-box {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%);
+    border-radius: 14px;
+    padding: 32px 30px;
+    border-left: 5px solid #1a237e;
+    margin-bottom: 36px;
+}
+.gk-intro-box h2 { font-size: 1.6rem; color: #1a237e; margin-bottom: 12px; line-height: 1.3; }
+.gk-intro-box p { color: #555; line-height: 1.75; font-size: 0.93rem; margin-bottom: 10px; }
+.gk-intro-box p:last-child { margin-bottom: 0; }
 
-<div class="feature-box">
-    <div class="icon-wrapper"><i class="fas fa-calendar-alt"></i></div>
+.gk-warning {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: #fce4ec; border: 1px solid #ef9a9a; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 36px;
+}
+.gk-warning-icon {
+    flex-shrink: 0; width: 40px; height: 40px;
+    background: #ef5350; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.gk-warning p { margin: 0; font-size: 0.9rem; color: #b71c1c; line-height: 1.65; }
+
+/* Hizmet kartları */
+.gk-services { margin: 32px 0; }
+.gk-services > h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 20px; }
+.gk-svc-card {
+    display: flex; align-items: flex-start; gap: 18px;
+    padding: 24px; margin-bottom: 14px;
+    background: #fff; border-radius: 10px;
+    border: 1px solid #eef1f6; border-left: 4px solid #1a237e;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.gk-svc-card:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.gk-svc-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #e8ecf8, #f0f4ff);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.gk-svc-card h4 { margin: 0 0 6px; font-size: 1.02rem; color: #1a237e; }
+.gk-svc-card p { margin: 0; font-size: 0.88rem; color: #555; line-height: 1.65; }
+.gk-svc-card a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.gk-svc-card a:hover { text-decoration: underline; }
+
+/* Süreç */
+.gk-process { margin: 40px 0; }
+.gk-process > h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 20px; }
+.gk-timeline {
+    position: relative;
+    padding-left: 32px;
+}
+.gk-timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px; top: 0; bottom: 0;
+    width: 3px;
+    background: #e8ecf8;
+    border-radius: 2px;
+}
+.gk-tl-item {
+    position: relative;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+.gk-tl-item:hover { transform: translateX(4px); }
+.gk-tl-item::before {
+    content: '';
+    position: absolute;
+    left: -25px; top: 22px;
+    width: 12px; height: 12px;
+    background: #1a237e;
+    border-radius: 50%;
+    border: 3px solid #e8ecf8;
+}
+.gk-tl-item h4 { margin: 0 0 6px; font-size: 0.95rem; color: #1a1a1a; }
+.gk-tl-item p { margin: 0; font-size: 0.86rem; color: #555; line-height: 1.65; }
+
+/* Karşılaştırma tablosu */
+.gk-compare { margin: 40px 0; }
+.gk-compare > h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 14px; }
+.gk-compare-table {
+    width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px;
+}
+.gk-compare-table th {
+    background: #1a237e; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+}
+.gk-compare-table td {
+    padding: 12px 16px; border-bottom: 1px solid #e8ecf8; color: #333;
+}
+.gk-compare-table tr:hover td { background: #f8f9ff; }
+
+/* FAQ */
+.gk-faq { margin: 40px 0; }
+.gk-faq h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 18px; }
+.gk-faq-item {
+    background: #fff; margin-bottom: 10px; border-radius: 8px;
+    border: 1px solid #eef1f6; overflow: hidden;
+}
+.gk-faq-q {
+    width: 100%; padding: 16px 20px; background: none; border: none;
+    text-align: left; font-size: 0.93rem; font-weight: 600; color: #1a1a1a;
+    cursor: pointer; display: flex; justify-content: space-between;
+    align-items: center; gap: 12px; font-family: var(--font-family); transition: background 0.2s;
+}
+.gk-faq-q:hover { background: #f8f9ff; }
+.gk-faq-q .chv { flex-shrink: 0; width: 18px; height: 18px; transition: transform 0.3s; color: #1a237e; }
+.gk-faq-item.open .gk-faq-q .chv { transform: rotate(180deg); }
+.gk-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.gk-faq-item.open .gk-faq-a { max-height: 400px; }
+.gk-faq-a-inner { padding: 0 20px 16px; font-size: 0.88rem; color: #555; line-height: 1.7; }
+.gk-faq-a-inner a { color: #1a237e; font-weight: 600; }
+
+/* CTA */
+.gk-cta {
+    background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%);
+    padding: 40px 30px; border-radius: 12px;
+    text-align: center; color: #fff; margin-top: 40px;
+}
+.gk-cta h3 { color: #fff; font-size: 1.4rem; margin-bottom: 10px; }
+.gk-cta p { color: rgba(255,255,255,0.85); margin-bottom: 22px; font-size: 0.93rem; }
+.gk-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #1a237e; padding: 12px 28px;
+    border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s;
+}
+.gk-cta-btn:hover { background: #e8edf8; transform: translateY(-2px); }
+
+@media (max-width: 640px) {
+    .gk-intro-box { padding: 22px 18px; }
+    .gk-compare-table { font-size: 0.82rem; }
+    .gk-compare-table th, .gk-compare-table td { padding: 10px 12px; }
+    .gk-timeline { padding-left: 28px; }
+}
+</style>
+
+<!-- BREADCRUMB -->
+<nav class="gk-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Ana Sayfa</a>
+    <span> › </span>
+    <a href="/#services">Hizmetlerimiz</a>
+    <span> › </span>
+    <span aria-current="page">Genel Kurul Yönetimi</span>
+</nav>
+
+<!-- GİRİŞ -->
+<div class="gk-intro-box">
+    <h2>Dernek Genel Kurul Yönetimi ve Danışmanlığı — Ümraniye İstanbul</h2>
+    <p><strong>Genel kurul</strong>, derneğin en yetkili karar organıdır. Yönetim ve denetim kurulu seçimlerinden tüzük değişikliğine, bütçe onayından derneğin feshine kadar tüm stratejik kararlar genel kurulda alınır. Bu süreçte yapılan usul hataları, alınan kararların <strong>geçersiz sayılmasına</strong> ve hukuki ihtilafların doğmasına neden olabilir.</p>
+    <p><strong>STK Danışmanlık</strong> olarak Ümraniye ofisimizden İstanbul ve Türkiye genelindeki derneklerin olağan ve olağanüstü genel kurul süreçlerini <strong>5253 sayılı Dernekler Kanunu</strong> ve <strong>4721 sayılı Türk Medeni Kanunu</strong>'na tam uyumlu şekilde, çağrı usulünden <a href="/hizmet-derbis.html">DERBİS bildirimine</a> kadar uçtan uca yönetiyoruz.</p>
+</div>
+
+<!-- UYARI -->
+<div class="gk-warning" role="alert">
+    <div class="gk-warning-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="17" r=".5"/></svg>
+    </div>
     <div>
-        <h4>Toplantı Öncesi Hazırlık</h4>
-        <p>Yönetim kurulu kararının alınması, üye listelerinin güncellenmesi, resmi gündemin oluşturulması ve yasal çağrı usullerinin (ilan, mail, SMS vb.) yönetimi.</p>
+        <p><strong>Kritik Uyarı:</strong> 4721 sayılı TMK'nın 74. maddesi gereği, <strong>tüzükte belirtilen sürede genel kurul toplantısı yapılmayan dernekler kendiliğinden sona erer</strong>. Dernekler en geç üç yılda bir olağan genel kurul yapmak zorundadır.</p>
     </div>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><i class="fas fa-users"></i></div>
-    <div>
-        <h4>Toplantı Günü Operasyonu</h4>
-        <p>Hazirun listesinin kontrolü, toplantı yeter sayısının tespiti, divan başkanlığına teknik destek ve toplantı akışının yasal takibi.</p>
+<!-- HİZMETLER -->
+<div class="gk-services">
+    <h3>Uçtan Uca Genel Kurul Hizmetlerimiz</h3>
+
+    <div class="gk-svc-card">
+        <div class="gk-svc-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div>
+            <h4>Toplantı Öncesi Planlama ve Hazırlık</h4>
+            <p>Yönetim kurulu kararının alınması, üye listelerinin güncellenmesi, resmi gündemin oluşturulması ve yasal çağrı usullerinin (gazete ilanı, mektup, e-posta, SMS) eksiksiz yürütülmesi. Dernekler Kanunu'nun öngördüğü <strong>en az 15 gün önceden</strong> çağrı şartını garanti ediyoruz.</p>
+        </div>
+    </div>
+
+    <div class="gk-svc-card">
+        <div class="gk-svc-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+            <h4>Toplantı Günü Operasyonu</h4>
+            <p>Hazirun listesinin (katılımcı cetveli) kontrolü, toplantı ve karar yeter sayısının tespiti, divan başkanlığına teknik destek, oylama yönetimi ve toplantı akışının Dernekler Kanunu'na uygun takibi.</p>
+        </div>
+    </div>
+
+    <div class="gk-svc-card">
+        <div class="gk-svc-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div>
+            <h4>Divan Tutanağı ve Karar Yazımı</h4>
+            <p>Genel kurul divan tutanağı, organ seçim sonuçları, <strong>tüzük değişikliği kararları</strong>, bütçe onayı ve diğer tüm kararların mevzuata uygun şekilde yazılması ve imza sürecinin yönetimi.</p>
+        </div>
+    </div>
+
+    <div class="gk-svc-card">
+        <div class="gk-svc-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </div>
+        <div>
+            <h4>Yasal Bildirim ve DERBİS Kaydı</h4>
+            <p>Genel kurul sonuç bildirimi ve organ değişikliği bildirimlerinin <strong>30 gün</strong> içinde <a href="/hizmet-derbis.html">DERBİS</a> üzerinden mülki idare amirliğine eksiksiz beyan edilmesi. Tüzük değişikliği varsa yeni tüzüğün tescili.</p>
+        </div>
+    </div>
+
+    <div class="gk-svc-card">
+        <div class="gk-svc-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div>
+            <h4>Olağanüstü Genel Kurul Danışmanlığı</h4>
+            <p>Yönetim veya denetim kurulunun talebi ya da üyelerin beşte birinin yazılı başvurusu üzerine toplanan olağanüstü genel kurulların yasal usulüne uygun yönetimi. Acil tüzük değişikliği, fesih veya birleşme kararları dahil.</p>
+        </div>
     </div>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
-    <div>
-        <h4>Tutanak ve Karar Yazımı</h4>
-        <p>Genel kurul divan tutanağının, organ seçimlerinin ve tüzük değişikliği kararlarının mevzuata uygun şekilde kaleme alınması.</p>
+<!-- SÜREÇ TIMELINE -->
+<div class="gk-process">
+    <h3>Genel Kurul Danışmanlık Sürecimiz</h3>
+    <div class="gk-timeline">
+        <div class="gk-tl-item">
+            <h4>Ön Değerlendirme</h4>
+            <p>Derneğinizin tüzüğünü, son genel kurul tutanağını ve mevcut organ yapısını inceliyoruz. Toplantının olağan mı olağanüstü mü olacağını belirliyoruz.</p>
+        </div>
+        <div class="gk-tl-item">
+            <h4>Gündem ve Çağrı Hazırlığı</h4>
+            <p>Yönetim kurulu kararı ile gündem oluşturuluyor, üye listeleri güncelleniyor, yasal çağrı sürecini (en az 15 gün önce) başlatıyoruz.</p>
+        </div>
+        <div class="gk-tl-item">
+            <h4>Belge ve Doküman Hazırlığı</h4>
+            <p>Hazirun cetveli, oy pusulaları, faaliyet raporu, denetim raporu, bütçe taslağı ve tüzük değişikliği metni (varsa) hazırlanıyor.</p>
+        </div>
+        <div class="gk-tl-item">
+            <h4>Toplantı Günü Yönetimi</h4>
+            <p>Toplantı yerine geliyoruz, yeter sayı kontrolü yapıyor, divan oluşumuna destek veriyor, toplantı akışını takip ediyoruz.</p>
+        </div>
+        <div class="gk-tl-item">
+            <h4>Tutanak, Bildirim ve Arşivleme</h4>
+            <p>Tutanak yazılıyor, imzalanıyor, <a href="/hizmet-derbis.html">DERBİS bildirimi</a> 30 gün içinde yapılıyor ve tüm belgeler arşivleniyor.</p>
+        </div>
     </div>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><i class="fas fa-paper-plane"></i></div>
-    <div>
-        <h4>Yasal Bildirim ve Onay Süreci</h4>
-        <p>Genel kurul sonuç bildiriminin yasal süresi içinde DERBİS sistemi üzerinden mülki idare amirliğine eksiksiz beyan edilmesi.</p>
+<!-- KARŞILAŞTIRMA TABLOSU -->
+<div class="gk-compare">
+    <h3>Olağan ve Olağanüstü Genel Kurul Karşılaştırması</h3>
+    <table class="gk-compare-table">
+        <thead>
+            <tr>
+                <th>Özellik</th>
+                <th>Olağan Genel Kurul</th>
+                <th>Olağanüstü Genel Kurul</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Ne zaman?</strong></td>
+                <td>Tüzükte belirtilen sürede (en geç 3 yılda bir)</td>
+                <td>Yönetim/denetim kurulu veya üyelerin 1/5'inin talebiyle</td>
+            </tr>
+            <tr>
+                <td><strong>Çağrı süresi</strong></td>
+                <td>En az 15 gün önce</td>
+                <td>En az 15 gün önce</td>
+            </tr>
+            <tr>
+                <td><strong>Gündem</strong></td>
+                <td>Faaliyet raporu, bütçe, seçim, tüzük değişikliği</td>
+                <td>Belirli ve acil gündem (fesih, birleşme, vb.)</td>
+            </tr>
+            <tr>
+                <td><strong>Yeter sayı</strong></td>
+                <td>Salt çoğunluk (1. toplantı)</td>
+                <td>Salt çoğunluk (1. toplantı)</td>
+            </tr>
+            <tr>
+                <td><strong>DERBİS bildirimi</strong></td>
+                <td>30 gün içinde</td>
+                <td>30 gün içinde</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- FAQ -->
+<div class="gk-faq">
+    <h3>Genel Kurul Hakkında Sık Sorulan Sorular</h3>
+
+    <div class="gk-faq-item">
+        <button class="gk-faq-q">
+            Dernek genel kurulu zorunlu mu?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="gk-faq-a"><div class="gk-faq-a-inner">Evet, dernekler tüzüklerinde belirtilen sürelerde (en geç <strong>üç yılda bir</strong>) olağan genel kurul toplantısı yapmak zorundadır. 4721 sayılı TMK'nın 74. maddesi gereği, zamanında yapılmayan genel kurullar derneğin kendiliğinden sona ermesine yol açabilir.</div></div>
+    </div>
+    <div class="gk-faq-item">
+        <button class="gk-faq-q">
+            Genel kurul toplantı yeter sayısı nedir?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="gk-faq-a"><div class="gk-faq-a-inner">Genel kurul, tüzükte aksine hüküm bulunmadıkça, katılma hakkı bulunan üyelerin <strong>salt çoğunluğunun</strong> katılımıyla toplanır. İlk toplantıda yeter sayı sağlanamazsa, ikinci toplantıda yeter sayı aranmaz; ancak katılan üye sayısı yönetim ve denetim kurulu üye tam sayısının iki katından az olamaz.</div></div>
+    </div>
+    <div class="gk-faq-item">
+        <button class="gk-faq-q">
+            Olağanüstü genel kurul ne zaman yapılır?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="gk-faq-a"><div class="gk-faq-a-inner">Yönetim veya denetim kurulunun gerekli gördüğü hallerde veya dernek üyelerinin <strong>beşte birinin</strong> yazılı başvurusu üzerine olağanüstü genel kurul toplantıya çağrılır. Yönetim kurulu bu çağrıyı 30 gün içinde yapmak zorundadır. <a href="/sss.html">Diğer sorular →</a></div></div>
+    </div>
+    <div class="gk-faq-item">
+        <button class="gk-faq-q">
+            Genel kurul sonuç bildirimi ne zaman yapılır?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="gk-faq-a"><div class="gk-faq-a-inner">Genel kurul sonuç bildirimi, toplantı tarihinden itibaren <strong>30 gün</strong> içinde <a href="/hizmet-derbis.html">DERBİS</a> üzerinden mülki idare amirliğine yapılmalıdır. Organ değişiklikleri de aynı sürede bildirilmelidir.</div></div>
     </div>
 </div>
+
+<!-- CTA -->
+<div class="gk-cta">
+    <h3>Genel Kurulunuzu Profesyonel Yönetelim</h3>
+    <p>Ümraniye ofisimizde veya uzaktan danışmanlıkla genel kurul sürecinizi hatasız ve mevzuata tam uyumlu şekilde tamamlayalım.</p>
+    <a href="/iletisim.html" class="gk-cta-btn">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Ücretsiz Teklif Al
+    </a>
+</div>
+
+<script defer>
+(function(){
+    document.querySelectorAll('.gk-faq-item').forEach(function(item){
+        item.querySelector('.gk-faq-q').addEventListener('click', function(){
+            var wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.gk-faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+            if(!wasOpen) item.classList.add('open');
+        });
+    });
+})();
+</script>
+
 </div>
 
 <aside class="sidebar">
@@ -76,10 +468,39 @@ sidebar_cta_text: "Genel kurul sürecinizi profesyonel bir ekiple yönetmek içi
         </ul>
     </div>
 
+    <div class="widget" style="background:#f8f9fa;border-left:4px solid #1a237e;padding:22px;border-radius:8px;">
+        <h4 style="margin-top:0;color:#1a237e;margin-bottom:14px;">Genel Kurul Kontrol Listesi</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;font-size:0.86rem;display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                Yönetim kurulu kararı
+            </li>
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;font-size:0.86rem;display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                Üye listesi güncellemesi
+            </li>
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;font-size:0.86rem;display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                15 gün önceden çağrı
+            </li>
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;font-size:0.86rem;display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                Hazirun cetveli hazırlığı
+            </li>
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;font-size:0.86rem;display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                Divan tutanağı yazımı
+            </li>
+            <li style="padding:8px 0;font-size:0.86rem;display:flex;align-items:center;gap:8px;">
+                <svg width="14" height="14" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                DERBİS bildirimi (30 gün)
+            </li>
+        </ul>
+    </div>
+
     <div class="widget">
-        <h4>Kurumsal Teklif Alın</h4>
-        <p>Genel kurul sürecinizi profesyonel bir ekiple yönetmek için hemen teklif isteyin.</p>
-        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Teklif İsteyin</a>
+        <h4>Ücretsiz Ön Görüşme</h4>
+        <p style="font-size:0.88rem;">Genel kurul sürecinizi profesyonel bir ekiple yönetmek için hemen teklif isteyin.</p>
+        <a href="/iletisim.html" class="btn btn-secondary" style="width:100%;">Teklif İsteyin</a>
     </div>
 </aside>
-</div>

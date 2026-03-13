@@ -1,105 +1,233 @@
 ---
 layout: layouts/fullwidth.html
-title: "Referanslarımız"
-description: "SH Danışmanlık'ın güvenle hizmet verdiği dernekler, vakıflar ve STK'lar. Çesiad, Udofed, Mosef ve onlarca başarılı kurumun referanslarını inceleyin."
+title: "Referanslarımız | STK Danışmanlık — Ümraniye İstanbul Dernek ve Vakıf Danışmanlık"
+description: "STK Danışmanlık'ın güvenle hizmet verdiği 150+ dernek, vakıf ve federasyon. Çesiad, Udofed, Mosef ve onlarca başarılı STK referansı. Ümraniye İstanbul. ☎ +90 534 705 42 34"
 excerpt: "150'den fazla sivil toplum kuruluşuyla yürüttüğümüz başarı dolu yolculuğumuz."
 banner_image: "/img/banner1.webp"
 permalink: "/referanslar.html"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://stkdanismanlik.com/#business",
+      "name": "STK Danışmanlık",
+      "url": "https://stkdanismanlik.com/",
+      "telephone": "+905347054234",
+      "address": { "@type": "PostalAddress", "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5", "addressLocality": "Ümraniye", "addressRegion": "İstanbul", "postalCode": "34760", "addressCountry": "TR" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5" }
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://stkdanismanlik.com/referanslar.html",
+      "name": "Referanslarımız — STK Danışmanlık",
+      "description": "STK Danışmanlık'ın hizmet verdiği 150+ dernek, vakıf ve federasyon referansları.",
+      "inLanguage": "tr-TR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Referanslar", "item": "https://stkdanismanlik.com/referanslar.html" }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
-        /* KURUMSAL WHATSAPP WIDGET (Sıfır JavaScript - Maksimum Hız - Ako Dijital Standardı) */
-        .wa-floating-btn { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; align-items: center; text-decoration: none; transition: all 0.3s ease; }
-        .wa-icon { background-color: #25d366; color: white !important; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-        .wa-label { background: white; color: #333; padding: 10px 18px; border-radius: 25px; margin-left: 12px; font-size: 14px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1); white-space: nowrap; }
-        @media (max-width: 768px) { .wa-label { display: none; } }
-        .wa-floating-btn:hover { transform: translateY(-3px); }
+/* ── BREADCRUMB ── */
+.ref-breadcrumb { padding: 14px 0; background: #f8f9fa; border-bottom: 1px solid #e9ecef; font-size: 0.84rem; }
+.ref-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.ref-breadcrumb a:hover { text-decoration: underline; }
+.ref-breadcrumb span { color: #888; }
 
-        /* Referans Logo Grid Düzenlemesi */
-        .logo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 30px; align-items: center; justify-items: center; padding: 40px 0; }
-        .logo-item { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; width: 100%; height: 120px; transition: transform 0.3s ease; border: 1px solid #eee; }
-        .logo-item:hover { transform: scale(1.05); border-color: #1a237e; }
-        .logo-item img { max-width: 100%; max-height: 80px; object-fit: contain; filter: grayscale(100%); transition: filter 0.3s ease; }
-        .logo-item:hover img { filter: grayscale(0%); }
-    </style>
+/* ── STATS BAND ── */
+.ref-stats { background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%); padding: 40px 0; color: #fff; margin-bottom: 50px; }
+.ref-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.ref-stats-grid strong { display: block; font-size: 2.2rem; font-weight: 800; margin-bottom: 4px; }
+.ref-stats-grid span { font-size: 0.88rem; opacity: 0.85; }
 
-<section class="page-content">
-            <div class="container">
-                
-                <!-- =============================================== -->
-<!-- BAŞARI HİKAYESİ ÖZET BÖLÜMÜ
-<!-- =============================================== -->
- 
-<div style="display:flex;justify-content:center;align-items:center;height:100vh;">
-  <img src="img/sizin_motor_resminiz.jpg" alt="Toplantı" style="max-width:90%;height:auto;">
-</div>
+/* ── BAŞARI HİKAYESİ ── */
+.ref-case-study { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; margin-bottom: 60px; }
+.ref-case-img { border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.1); aspect-ratio: 16/9; }
+.ref-case-img img { width: 100%; height: 100%; object-fit: cover; }
+.ref-case-content h2 { font-size: 1.6rem; color: #1a237e; margin-bottom: 8px; }
+.ref-case-content .ref-case-tag { display: inline-block; background: #1a237e; color: #fff; padding: 4px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; margin-bottom: 14px; }
+.ref-case-content p { color: #555; line-height: 1.75; font-size: 0.93rem; margin-bottom: 12px; }
+.ref-case-content .ref-case-btn { display: inline-flex; align-items: center; gap: 8px; background: #1a237e; color: #fff; padding: 10px 24px; border-radius: 50px; font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: all 0.3s; }
+.ref-case-content .ref-case-btn:hover { background: #0d47a1; transform: translateY(-2px); }
 
+/* ── LOGO GRID ── */
+.ref-logo-section { padding: 60px 0; }
+.ref-logo-section .section-header { text-align: center; margin-bottom: 48px; }
+.ref-logo-section .section-header h2 { font-size: 2rem; font-weight: 700; color: #1a237e; margin: 0 0 10px; }
+.ref-logo-section .section-header p { font-size: 0.95rem; color: #666; max-width: 520px; margin: 0 auto; }
+.ref-badge-pill { display: inline-block; background: #e8edf8; color: #1a237e; font-size: 0.75rem; font-weight: 600; padding: 4px 14px; border-radius: 50px; margin-bottom: 14px; }
+.ref-logo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 32px; }
+.ref-logo-item { background: #fff; border: 1px solid #eef1f6; border-radius: 12px; display: flex; align-items: center; justify-content: center; min-height: 110px; padding: 20px; overflow: hidden; transition: border-color 0.25s, box-shadow 0.25s; }
+.ref-logo-item:hover { border-color: #1a237e; box-shadow: 0 4px 16px rgba(26,35,126,0.08); }
+.ref-logo-item img { max-width: 100%; max-height: 70px; width: auto; height: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: filter 0.3s, opacity 0.3s; }
+.ref-logo-item:hover img { filter: grayscale(0%); opacity: 1; }
+.ref-logo-item--placeholder { border-style: dashed; background: transparent; flex-direction: column; gap: 4px; cursor: pointer; text-decoration: none; }
+.ref-logo-item--placeholder:hover { border-color: #1a237e; background: #f5f7ff; }
+.ref-logo-item--placeholder span { font-size: 0.72rem; color: #aaa; text-align: center; line-height: 1.4; }
+.ref-count-bar { display: flex; align-items: center; justify-content: center; gap: 32px; padding: 24px; background: #f8f9fa; border-radius: 12px; border: 1px solid #eef1f6; }
+.ref-count-bar .stat { text-align: center; }
+.ref-count-bar .stat strong { display: block; font-size: 1.5rem; font-weight: 800; color: #1a237e; }
+.ref-count-bar .stat span { font-size: 0.8rem; color: #888; }
+.ref-count-bar .vdivider { width: 1px; height: 40px; background: #e0e4ef; }
+@media (max-width: 768px) { .ref-logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ref-count-bar { gap: 16px; flex-wrap: wrap; } }
+@media (max-width: 480px) { .ref-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ref-logo-item { min-height: 90px; } }
 
-<div class="case-study-summary">
+/* ── YORUMLAR ── */
+.ref-testimonials { background: #f0f4ff; padding: 60px 0; }
+.ref-testimonials h2 { text-align: center; font-size: 1.8rem; color: #1a237e; margin-bottom: 36px; }
+.ref-test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.ref-test-card { background: #fff; padding: 30px; border-radius: 12px; border-left: 5px solid #1a237e; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+.ref-test-card p { font-size: 0.93rem; font-style: italic; color: #555; line-height: 1.75; margin-bottom: 20px; }
+.ref-test-author { display: flex; align-items: center; gap: 14px; }
+.ref-test-author .ref-avatar { width: 52px; height: 52px; border-radius: 50%; background: #dde4f0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ref-test-author .ref-name { font-weight: 700; color: #1a1a1a; font-size: 0.95rem; }
+.ref-test-author .ref-role { font-size: 0.8rem; color: #888; }
+
+/* ── ALT CTA ── */
+.ref-cta { background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%); padding: 56px 20px; text-align: center; color: #fff; }
+.ref-cta h2 { color: #fff; font-size: 1.8rem; margin-bottom: 12px; }
+.ref-cta p { color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 28px; }
+.ref-cta-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.ref-btn-white { background: #fff; color: #1a237e; padding: 13px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
+.ref-btn-white:hover { background: #e8edf8; transform: translateY(-2px); }
+.ref-btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); padding: 13px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
+.ref-btn-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+@media (max-width: 992px) { .ref-case-study { grid-template-columns: 1fr; } .ref-stats-grid { grid-template-columns: repeat(2, 1fr); } .ref-logo-grid { grid-template-columns: repeat(3, 1fr); } .ref-test-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .ref-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } .ref-logo-item { height: 90px; padding: 16px; } }
+</style>
+
+<!-- BREADCRUMB -->
+<nav class="ref-breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-        <div class="section-header">
-            <h2>Öne Çıkan Başarı Hikayesi</h2>
-            <p>Motosiklet Sürücüleri Federasyonu</p>
-        </div>
-        <div class="summary-content">
-            <p>
-                2024 yılında Türkiye’de motosiklet tutkunları artık tek bir çatı altında birleşmeye karar verdiler. Bu vizyonun öncüsü Murat Tomris, hayalini gerçeğe dönüştürmek için yola çıktı. Amaç sadece sürücüleri bir araya getirmek değil, onları güvenlik, dayanışma ve eğitim odağında güçlü bir topluluk hâline getirmekti...
-            </p>
-            <p align="center">
-            <a href="basari-hikayesi.html" class="btn btn-primary">Hikayenin Tamamını Oku</a>
+        <a href="/">Ana Sayfa</a>
+        <span> › </span>
+        <span aria-current="page">Referanslar</span>
+    </div>
+</nav>
+
+<!-- STATS BAND -->
+<section class="ref-stats" aria-label="STK Danışmanlık istatistikleri">
+    <div class="container">
+        <div class="ref-stats-grid">
+            <div><strong>150+</strong><span>Başarılı Kuruluş Projesi</span></div>
+            <div><strong>75+</strong><span>Aktif STK Partneri</span></div>
+            <div><strong>10+</strong><span>Yıllık Sektör Tecrübesi</span></div>
+            <div><strong>%100</strong><span>Müşteri Memnuniyeti</span></div>
         </div>
     </div>
-</div>
+</section>
 
-            <!-- LOGO GRID -->
-            <div class="logo-wall">
-                <h2 class="section-title">Güveninizle Büyüyoruz</h2>
-                <div class="logo-grid">
-                    <div class="logo-item"><img src="img/çesiad.webp" alt="Çesiad Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/çanakkalemotosikletlikuryelerderneği.webp" alt="Çanakkale Motosikletli Kuryeler Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/dögider.webp" alt="Dögider Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/dögeder.webp" alt="Dögeder Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/dönerted.webp" alt="Dönerted Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/duder.webp" alt="Duder Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/udofed.webp" alt="Udofed Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/dübider.webp" alt="Dübider Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/ümraniyemotosikletlikuryelerderneği.webp" alt="Ümraniye Motosikletli Kuryeler Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/mosef.webp" alt="Mosef Referans" loading="lazy" width="180" height="100"></div>
-                    <div class="logo-item"><img src="img/motosikletlikuryelerderneği.webp" alt="Motosikletli Kuryeler Referans" loading="lazy" width="180" height="100"></div>    
-                    
+<!-- BAŞARI HİKAYESİ -->
+<section class="page-content" aria-label="Referanslar ve başarı hikayeleri">
+<div class="container">
+
+    <div class="ref-case-study">
+        <div class="ref-case-img">
+            <img src="/img/banner2.webp" alt="Motosiklet Sürücüleri Federasyonu — STK Danışmanlık başarı hikayesi" width="600" height="338" loading="lazy">
+        </div>
+        <div class="ref-case-content">
+            <div class="ref-case-tag">Öne Çıkan Başarı Hikayesi</div>
+            <h2>Motosiklet Sürücüleri Federasyonu — 60 Dernek Tek Çatı Altında</h2>
+            <p>2024 yılında Türkiye'de motosiklet tutkunları tek bir çatı altında birleşmeye karar verdiler. Bu vizyonun öncüsü Murat Tomris, hayalini gerçeğe dönüştürmek için yola çıktı. <strong>STK Danışmanlık</strong> olarak federasyonun yasal altyapısının kurulması, tüzüğün hazırlanması ve 60 derneğin tek çatı altında birleştirilmesi sürecinde tam destek sağladık.</p>
+            <p>Marmara'dan Doğu Anadolu'ya, her ilde şubeleri ve temsilcilikleri kuruldu. Güvenli sürüş eğitimleri, trafik farkındalık kampanyaları ve sosyal sorumluluk projeleriyle Türkiye'de örnek bir STK modeli oluşturuldu.</p>
+            <a href="/basari-hikayesi.html" class="ref-case-btn">
+                Hikayenin Tamamını Oku
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- LOGO GRID -->
+<section class="ref-logo-section" aria-label="Referans logolar">
+    <div class="container">
+        <div class="section-header">
+            <div class="ref-badge-pill">150+ Başarılı Proje</div>
+            <h2>Güveninizle Büyüyoruz</h2>
+            <p>Ümraniye ve İstanbul merkezli olarak hizmet verdiğimiz dernek, vakıf ve federasyonlardan bazıları</p>
+        </div>
+
+        <div class="ref-logo-grid">
+            <div class="ref-logo-item"><img src="/img/çesiad.webp" alt="Çesiad" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/çanakkalemotosikletlikuryelerderneği.webp" alt="Çanakkale Motosikletli Kuryeler Derneği" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/dögider.webp" alt="Dögider" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/dögeder.webp" alt="Dögeder" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/dönerted.webp" alt="Dönerted" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/duder.webp" alt="Duder" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/udofed.webp" alt="Udofed" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/dübider.webp" alt="Dübider" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/ümraniyemotosikletlikuryelerderneği.webp" alt="Ümraniye Motosikletli Kuryeler Derneği" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/mosef.webp" alt="Mosef" loading="lazy"></div>
+            <div class="ref-logo-item"><img src="/img/motosikletlikuryelerderneği.webp" alt="Motosikletli Kuryeler Derneği" loading="lazy"></div>
+            <a href="/iletisim.html" class="ref-logo-item ref-logo-item--placeholder" aria-label="Siz de eklenin">
+                <span style="font-size:1.5rem;color:#b0b8d0;">+</span>
+                <span>Siz de burada<br>olabilirsiniz</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- YORUMLAR -->
+<section class="ref-testimonials" aria-label="Müşteri yorumları">
+    <div class="container">
+        <h2>Yol Arkadaşlarımız Ne Dedi?</h2>
+        <div class="ref-test-grid">
+            <div class="ref-test-card">
+                <p>"Genel kurulumuzu ilk defa yapacaktık ve çok endişeliydik. STK Danışmanlık tüm süreci yönetti ve bize sadece kararları almak kaldı. Harika bir hizmet."</p>
+                <div class="ref-test-author">
+                    <div class="ref-avatar"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#5a6a8a" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+                    <div><div class="ref-name">Ayşe Kaya</div><div class="ref-role">Kariyer Gelişim Vakfı Yön. Kur. Üyesi</div></div>
+                </div>
+            </div>
+            <div class="ref-test-card">
+                <p>"Karmaşık tüzük değişikliği işlemimizi 3 gün gibi kısa bir sürede sorunsuzca hallettiler. Mevzuata bu kadar hakim bir ekiple çalışmak büyük bir güvence."</p>
+                <div class="ref-test-author">
+                    <div class="ref-avatar"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#5a6a8a" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+                    <div><div class="ref-name">Mehmet Öztürk</div><div class="ref-role">Teknoloji ve Bilim Derneği</div></div>
+                </div>
+            </div>
+            <div class="ref-test-card">
+                <p>"STK Danışmanlık sayesinde federasyonumuzun kuruluş sürecini rekor bir sürede ve sorunsuz tamamladık. Abdullah Bey'in mevzuat bilgisi eşsiz."</p>
+                <div class="ref-test-author">
+                    <div class="ref-avatar"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#5a6a8a" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+                    <div><div class="ref-name">Ahmet Yılmaz</div><div class="ref-role">Anadolu Dernekler Federasyonu Bşk.</div></div>
+                </div>
+            </div>
+            <div class="ref-test-card">
+                <p>"Karmaşık hibe başvuru sürecinde bize yol gösterdiler ve projemizin kabul edilmesini sağladılar. Profesyonellikleri için minnettarız."</p>
+                <div class="ref-test-author">
+                    <div class="ref-avatar"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#5a6a8a" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+                    <div><div class="ref-name">Zeynep Kaya</div><div class="ref-role">Umut Işığı Vakfı Proje Koor.</div></div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
 
-<!-- MÜŞTERİ YORUMLARI -->
-                <div class="testimonials-section-inner">
-                    <h2 class="section-title">Yol Arkadaşlarımız Ne Dedi?</h2>
-                    <div class="testimonials-grid">
-                        <div class="testimonial-card">
-                            <p>"Genel kurulumuzu ilk defa yapacaktık ve çok endişeliydik. SH Danışmanlık tüm süreci yönetti ve bize sadece kararları almak kaldı. Harika bir hizmet."</p>
-                            <div class="testimonial-author">
-                                <img src="https://i.pravatar.cc/100?img=5" alt="Müşteri 1">
-                                <div>
-                                    <h4>Ayşe Kaya</h4>
-                                    <span>Kariyer Gelişim Vakfı Yön. Kur. Üyesi</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                             <p>"Karmaşık tüzük değişikliği işlemimizi 3 gün gibi kısa bir sürede sorunsuzca hallettiler. Mevzuata bu kadar hakim bir ekiple çalışmak büyük bir güvence."</p>
-                            <div class="testimonial-author">
-                                <img src="https://i.pravatar.cc/100?img=8" alt="Müşteri 2">
-                                <div>
-                                    <h4>Mehmet Öztürk</h4>
-                                    <span>Teknoloji ve Bilim Derneği</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
+<!-- ALT CTA -->
+<section class="ref-cta" aria-label="Danışmanlık çağrısı">
+    <div class="container">
+        <h2>Sıradaki Başarı Hikayesi Sizinki Olsun</h2>
+        <p>Ümraniye ofisimizde yüz yüze veya telefonda ücretsiz ön görüşme ile dernek, vakıf veya federasyon kuruluş sürecinizi birlikte planlayalım.</p>
+        <div class="ref-cta-group">
+            <a href="tel:+905347054234" class="ref-btn-white">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Şimdi Ara
+            </a>
+            <a href="/iletisim.html" class="ref-btn-outline">Ücretsiz Görüşme Talep Et</a>
+        </div>
+    </div>
+</section>

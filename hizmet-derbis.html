@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.html
-title: "DERBİS Bildirim ve İşlem Danışmanlığı"
-description: "Dernekler Bilgi Sistemi (DERBİS) üzerinden yapılması gereken yıllık beyanname, organ değişikliği ve yerleşim yeri bildirimleri uzman ekibimizce yönetilir."
+title: "DERBİS İşlemleri | Beyanname Bildirimi & Danışmanlık — STK Danışmanlık Ümraniye"
+description: "DERBİS beyanname bildirimi, organ değişikliği, yurtdışı bağış ve yerleşim yeri bildirimi. Ümraniye İstanbul'da uzman ekiple hatasız DERBİS işlem danışmanlığı. ☎ +90 534 705 42 34"
 excerpt: "Elektronik bildirim süreçlerinizi uzman kadromuzla hata payı olmadan yönetin."
 banner_image: "/img/banner3.webp"
 permalink: "/hizmet-derbis.html"
@@ -10,62 +10,470 @@ sidebar_cta_text: "DERBİS süreniz dolmadan yasal bildirimlerinizi yapalım, ce
 ---
 
 <div class="main-content">
+
+<!-- ═══ JSON-LD SCHEMA ═══ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "DERBİS İşlem Danışmanlığı",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "SH Danışmanlık"
-  },
-  "areaServed": "TR",
-  "description": "Elektronik ortamda bildirilmesi gereken tüm dernek iş ve işlemlerinin DERBİS üzerinden profesyonel yönetimi."
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://stkdanismanlik.com/hizmet-derbis.html#service",
+      "serviceType": "DERBİS İşlem ve Beyanname Danışmanlığı",
+      "name": "DERBİS İşlemleri — STK Danışmanlık",
+      "description": "Dernekler Bilgi Sistemi (DERBİS) üzerinden yıllık beyanname, organ değişikliği, yurtdışı bağış bildirimi ve yerleşim yeri değişikliği işlemlerinin profesyonel yönetimi.",
+      "url": "https://stkdanismanlik.com/hizmet-derbis.html",
+      "provider": {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://stkdanismanlik.com/#business",
+        "name": "STK Danışmanlık",
+        "telephone": "+905347054234",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+          "addressLocality": "Ümraniye",
+          "addressRegion": "İstanbul",
+          "postalCode": "34760",
+          "addressCountry": "TR"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Ümraniye" },
+        { "@type": "City", "name": "İstanbul" },
+        { "@type": "Country", "name": "Türkiye" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "DERBİS Hizmetleri",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yıllık Beyanname Bildirimi" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Organ Değişikliği Bildirimi" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yurtdışı Bağış Bildirimi" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yerleşim Yeri Değişikliği" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "İktisadi İşletme Bildirimi" }}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "DERBİS beyannamesi ne zaman verilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dernekler, her yılın ilk dört ayı içerisinde (1 Ocak – 30 Nisan arası) bir önceki yıla ait faaliyetlerini DERBİS üzerinden beyan etmekle yükümlüdür. Süresinde verilmeyen beyannameler idari para cezasına neden olur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "DERBİS'e bildirim yapmamanın cezası nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5253 sayılı Dernekler Kanunu'nun 32. maddesi uyarınca, beyanname ve bildirim yükümlülüklerini yerine getirmeyen dernek yöneticilerine idari para cezası uygulanır. Ceza miktarları her yıl güncellenmektedir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Organ değişikliği bildirimi ne zaman yapılmalıdır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Genel kurul veya yönetim kurulunda yapılan değişiklikler, seçim tarihinden itibaren 30 gün içinde DERBİS üzerinden mülki idare amirliğine bildirilmelidir."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Hizmetlerimiz", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 3, "name": "DERBİS İşlemleri", "item": "https://stkdanismanlik.com/hizmet-derbis.html" }
+      ]
+    }
+  ]
 }
 </script>
 
 <style>
-    .derbis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-    .derbis-card { background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 10px; transition: all 0.3s ease; border-top: 4px solid #1a237e; }
-    .derbis-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .derbis-card i { font-size: 35px; color: #1a237e; margin-bottom: 15px; display: block; }
+/* ── DERBİS SAYFA STİLLERİ ── */
+.db-breadcrumb { font-size: 0.84rem; margin-bottom: 28px; }
+.db-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.db-breadcrumb a:hover { text-decoration: underline; }
+.db-breadcrumb span { color: #888; }
+
+.db-intro-box {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%);
+    border-radius: 14px;
+    padding: 32px 30px;
+    border-left: 5px solid #1a237e;
+    margin-bottom: 36px;
+}
+.db-intro-box h2 { font-size: 1.6rem; color: #1a237e; margin-bottom: 12px; line-height: 1.3; }
+.db-intro-box p { color: #555; line-height: 1.75; font-size: 0.93rem; margin-bottom: 10px; }
+.db-intro-box p:last-child { margin-bottom: 0; }
+
+/* Uyarı bandı */
+.db-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 36px;
+}
+.db-warning-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: #ffc107;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.db-warning p { margin: 0; font-size: 0.9rem; color: #664d03; line-height: 1.65; }
+.db-warning strong { color: #553800; }
+
+/* Hizmet kartları */
+.db-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 32px 0;
+}
+.db-card {
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-top: 4px solid #1a237e;
+    border-radius: 10px;
+    padding: 28px 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.db-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.db-card-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #e8ecf8, #f0f4ff);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+}
+.db-card h4 { font-size: 1.05rem; color: #1a237e; margin-bottom: 8px; }
+.db-card p { font-size: 0.88rem; color: #555; line-height: 1.65; margin: 0; }
+
+/* Süreç adımları */
+.db-process { margin: 40px 0; }
+.db-process h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 20px; }
+.db-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #1a237e;
+    transition: transform 0.2s ease;
+}
+.db-step:hover { transform: translateX(4px); }
+.db-step-num {
+    min-width: 38px; height: 38px;
+    background: #1a237e;
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; font-weight: 700;
+    flex-shrink: 0;
+}
+.db-step h4 { margin: 0 0 4px; font-size: 0.95rem; color: #1a1a1a; }
+.db-step p { margin: 0; font-size: 0.86rem; color: #555; line-height: 1.6; }
+
+/* Ceza tablosu */
+.db-penalty-section { margin: 40px 0; }
+.db-penalty-section h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 14px; }
+.db-penalty-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-top: 12px;
+}
+.db-penalty-table th {
+    background: #1a237e;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+}
+.db-penalty-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8ecf8;
+    color: #333;
+}
+.db-penalty-table tr:hover td { background: #f8f9ff; }
+.db-penalty-table .risk-high { color: #c62828; font-weight: 700; }
+.db-penalty-table .risk-med { color: #e65100; font-weight: 600; }
+
+/* FAQ mini */
+.db-faq { margin: 40px 0; }
+.db-faq h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 18px; }
+.db-faq-item {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #eef1f6;
+    overflow: hidden;
+}
+.db-faq-q {
+    width: 100%;
+    padding: 16px 20px;
+    background: none; border: none;
+    text-align: left;
+    font-size: 0.93rem; font-weight: 600;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-family);
+    transition: background 0.2s;
+}
+.db-faq-q:hover { background: #f8f9ff; }
+.db-faq-q .chv { flex-shrink: 0; width: 18px; height: 18px; transition: transform 0.3s; color: #1a237e; }
+.db-faq-item.open .db-faq-q .chv { transform: rotate(180deg); }
+.db-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.db-faq-item.open .db-faq-a { max-height: 400px; }
+.db-faq-a-inner { padding: 0 20px 16px; font-size: 0.88rem; color: #555; line-height: 1.7; }
+.db-faq-a-inner a { color: #1a237e; font-weight: 600; }
+
+/* CTA */
+.db-cta {
+    background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+}
+.db-cta h3 { color: #fff; font-size: 1.4rem; margin-bottom: 10px; }
+.db-cta p { color: rgba(255,255,255,0.85); margin-bottom: 22px; font-size: 0.93rem; }
+.db-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #1a237e;
+    padding: 12px 28px; border-radius: 50px;
+    font-weight: 700; text-decoration: none;
+    transition: all 0.3s;
+}
+.db-cta-btn:hover { background: #e8edf8; transform: translateY(-2px); }
+
+@media (max-width: 640px) {
+    .db-grid { grid-template-columns: 1fr; }
+    .db-intro-box { padding: 22px 18px; }
+    .db-penalty-table { font-size: 0.82rem; }
+    .db-penalty-table th, .db-penalty-table td { padding: 10px 12px; }
+}
 </style>
 
-<h2>DERBİS Sistemi ve Profesyonel Hizmetlerimiz</h2>
-<p>DERBİS, derneklere yönelik iş ve işlemlerin elektronik ortamda yürütüldüğü web tabanlı bir yazılımdır. Hizmet sunumunda modernizasyon sağlayan bu sistemde yapılacak hatalı bildirimler, dernekler için ciddi idari para cezalarına yol açabilir. SH Danışmanlık olarak tüm DERBİS süreçlerinizi mevzuata uygun şekilde yürütüyoruz.</p>
+<!-- BREADCRUMB -->
+<nav class="db-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Ana Sayfa</a>
+    <span> › </span>
+    <a href="/#services">Hizmetlerimiz</a>
+    <span> › </span>
+    <span aria-current="page">DERBİS İşlemleri</span>
+</nav>
 
-<div class="derbis-grid">
-    <div class="derbis-card">
-        <i class="fas fa-file-invoice"></i>
-        <h4>Yıllık Beyanname Bildirimi</h4>
-        <p>Her takvim yılının ilk dört ayı içinde verilmesi zorunlu olan Dernek Beyannamelerini eksiksiz doldurup elektronik ortamda gönderiyoruz.</p>
+<!-- GİRİŞ -->
+<div class="db-intro-box">
+    <h2>DERBİS İşlemleri ve Beyanname Danışmanlığı — Ümraniye İstanbul</h2>
+    <p><strong>Dernekler Bilgi Sistemi (DERBİS)</strong>, derneklere yönelik tüm iş ve işlemlerin elektronik ortamda yürütüldüğü İçişleri Bakanlığı'na bağlı resmi web tabanlı yazılımdır. Yıllık beyanname, organ değişikliği, yurtdışı bağış bildirimi ve yerleşim yeri değişikliği gibi kritik işlemler bu sistem üzerinden yapılmak zorundadır.</p>
+    <p><strong>STK Danışmanlık</strong> olarak Ümraniye ofisimizden İstanbul ve Türkiye genelindeki derneklerin DERBİS süreçlerini mevzuata tam uyumlu, hatasız ve zamanında yürütüyoruz. 10 yılı aşkın tecrübemizle <strong>500'den fazla beyanname</strong> başarıyla tamamladık.</p>
+</div>
+
+<!-- UYARI BANDI -->
+<div class="db-warning" role="alert">
+    <div class="db-warning-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="#664d03" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" fill="none" stroke="#664d03" stroke-width="2"/></svg>
     </div>
-    <div class="derbis-card">
-        <i class="fas fa-globe-americas"></i>
-        <h4>Yurtdışı Bağış Bildirimi</h4>
-        <p>Yurtdışından yardım alan derneklerin, Kanun gereği yapması gereken "Yurtdışından Yardım Alma Bildirimi"ni yasal süresinde tamamlıyoruz.</p>
-    </div>
-    <div class="derbis-card">
-        <i class="fas fa-chart-line"></i>
-        <h4>İktisadi İşletme Kurma</h4>
-        <p>İktisadi işletme kuran veya bir şirkete iştirak eden derneklerin zorunlu bildirimlerini sisteme hatasız işliyoruz.</p>
-    </div>
-    <div class="derbis-card">
-        <i class="fas fa-map-marker-alt"></i>
-        <h4>Yerleşim Yeri Değişikliği</h4>
-        <p>Adres değişikliklerini, tüzük değişikliği gerektirmeyen durumlarda 30 gün içinde mülki idare amirliğine bildiriyoruz.</p>
-    </div>
-    <div class="derbis-card">
-        <i class="fas fa-users-cog"></i>
-        <h4>Organ Değişikliği Bildirimi</h4>
-        <p>Yönetim organına seçilenlerin bilgilerini, seçim tarihinden itibaren 30 gün içinde resmi sisteme işleyerek yasal uyumu sağlıyoruz.</p>
-    </div>
-    <div class="derbis-card">
-        <i class="fas fa-laptop-code"></i>
-        <h4>Dijital Modernizasyon</h4>
-        <p>Tüm iş ve işlemlerin etkin, hızlı ve verimli sunulması için web tabanlı yazılım üzerinden süreç takibi yapıyoruz.</p>
+    <div>
+        <p><strong>Dikkat:</strong> 5253 sayılı Dernekler Kanunu'nun 32. maddesi uyarınca, DERBİS üzerinden yapılması gereken bildirimleri süresinde yerine getirmeyen <strong>dernek yöneticilerine idari para cezası</strong> uygulanır. Beyanname son tarihi her yıl <strong>30 Nisan</strong>'dır.</p>
     </div>
 </div>
+
+<!-- HİZMET KARTLARI -->
+<h3 style="font-size:1.3rem;color:#1a237e;margin-bottom:18px;">DERBİS Danışmanlık Hizmetlerimiz</h3>
+
+<div class="db-grid">
+    <div class="db-card">
+        <div class="db-card-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Yıllık Beyanname Bildirimi</h4>
+        <p>Her takvim yılının ilk dört ayı içinde (1 Ocak – 30 Nisan) verilmesi zorunlu olan <strong>dernek beyannamesini</strong> eksiksiz doldurup DERBİS üzerinden onaylıyoruz. Gelir-gider tablosu, üye sayısı, faaliyet raporu ve taşınmaz bilgileri dahil.</p>
+    </div>
+    <div class="db-card">
+        <div class="db-card-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>Organ Değişikliği Bildirimi</h4>
+        <p><a href="/hizmet-genel-kurul.html">Genel kurul</a> veya yönetim kurulunda yapılan değişiklikleri seçim tarihinden itibaren <strong>30 gün</strong> içinde DERBİS'e işliyor, yasal uyumu garantiliyoruz.</p>
+    </div>
+    <div class="db-card">
+        <div class="db-card-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h4>Yurtdışı Bağış Bildirimi</h4>
+        <p>Yurtdışından yardım alan derneklerin Kanun gereği yapması gereken <strong>"Yurtdışından Yardım Alma Bildirimi"</strong>ni yasal süresinde tamamlıyoruz. AB hibe fonları ve uluslararası bağışlar dahil.</p>
+    </div>
+    <div class="db-card">
+        <div class="db-card-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+        </div>
+        <h4>Yerleşim Yeri Değişikliği</h4>
+        <p>Dernek adres değişikliklerini, tüzük değişikliği gerektirmeyen durumlarda <strong>30 gün</strong> içinde mülki idare amirliğine ve DERBİS'e bildiriyoruz.</p>
+    </div>
+    <div class="db-card">
+        <div class="db-card-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h4>İktisadi İşletme Bildirimi</h4>
+        <p>İktisadi işletme kuran veya bir şirkete iştirak eden derneklerin zorunlu bildirimlerini DERBİS'e hatasız işliyoruz. <a href="/blog-stk-iktisadi-isletme-avantajlari.html">İktisadi işletme avantajları →</a></p>
+    </div>
+    <div class="db-card">
+        <div class="db-card-icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h4>Dijital Süreç Takibi</h4>
+        <p>Tüm DERBİS bildirim takvimlerinizi takip ediyor, hatırlatma yapıyor ve süreçleri sizin adınıza başından sonuna yönetiyoruz. Hiçbir son tarih kaçırılmaz.</p>
+    </div>
+</div>
+
+<!-- SÜREÇ -->
+<div class="db-process">
+    <h3>DERBİS Danışmanlık Sürecimiz Nasıl İşler?</h3>
+    <div class="db-step">
+        <div class="db-step-num">1</div>
+        <div>
+            <h4>Durum Analizi</h4>
+            <p>Derneğinizin mevcut DERBİS kayıtlarını, geçmiş beyannamelerini ve bildirim geçmişini inceliyoruz. Eksik veya hatalı bildirimleri tespit ediyoruz.</p>
+        </div>
+    </div>
+    <div class="db-step">
+        <div class="db-step-num">2</div>
+        <div>
+            <h4>Belge Toplama & Hazırlık</h4>
+            <p>Gelir-gider tablosu, üye listesi, faaliyet raporu, taşınmaz bilgileri ve diğer gerekli evrakları sizden teslim alıyor veya hazırlıyoruz.</p>
+        </div>
+    </div>
+    <div class="db-step">
+        <div class="db-step-num">3</div>
+        <div>
+            <h4>DERBİS Girişi & Kontrol</h4>
+            <p>Tüm bilgileri DERBİS sistemine hatasız giriyor, çapraz kontroller yapıyor ve tutarsızlıkları düzeltiyoruz.</p>
+        </div>
+    </div>
+    <div class="db-step">
+        <div class="db-step-num">4</div>
+        <div>
+            <h4>Onay & Arşivleme</h4>
+            <p>Bildirimi onaylıyor, alındı belgesini arşivliyor ve bir sonraki dönem için hatırlatma takvimi oluşturuyoruz.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CEZA TABLOSU -->
+<div class="db-penalty-section">
+    <h3>DERBİS Bildirim Yükümlülükleri ve Ceza Riski</h3>
+    <p style="font-size:0.9rem;color:#555;margin-bottom:14px;">5253 sayılı Dernekler Kanunu kapsamında süresinde yapılmayan bildirimler idari para cezasına tabidir. Aşağıda temel yükümlülükler ve risk seviyeleri yer almaktadır:</p>
+    <table class="db-penalty-table">
+        <thead>
+            <tr>
+                <th>Bildirim Türü</th>
+                <th>Yasal Süre</th>
+                <th>Risk</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yıllık Beyanname</td>
+                <td>1 Ocak – 30 Nisan</td>
+                <td class="risk-high">Yüksek</td>
+            </tr>
+            <tr>
+                <td>Organ Değişikliği</td>
+                <td>Seçimden itibaren 30 gün</td>
+                <td class="risk-high">Yüksek</td>
+            </tr>
+            <tr>
+                <td>Yurtdışı Bağış Bildirimi</td>
+                <td>Bağış alındıktan sonra yasal süre</td>
+                <td class="risk-high">Yüksek</td>
+            </tr>
+            <tr>
+                <td>Yerleşim Yeri Değişikliği</td>
+                <td>Değişiklikten itibaren 30 gün</td>
+                <td class="risk-med">Orta</td>
+            </tr>
+            <tr>
+                <td>İktisadi İşletme Bildirimi</td>
+                <td>Kuruluştan itibaren 30 gün</td>
+                <td class="risk-med">Orta</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- FAQ -->
+<div class="db-faq">
+    <h3>DERBİS Hakkında Sık Sorulan Sorular</h3>
+
+    <div class="db-faq-item">
+        <button class="db-faq-q">
+            DERBİS beyannamesi ne zaman verilir?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="db-faq-a"><div class="db-faq-a-inner">Dernekler, her yılın ilk dört ayı içerisinde (1 Ocak – 30 Nisan arası) bir önceki yıla ait faaliyetlerini DERBİS üzerinden beyan etmekle yükümlüdür. Süresinde verilmeyen beyannameler idari para cezasına neden olur. <a href="/sss.html">Diğer sorular →</a></div></div>
+    </div>
+
+    <div class="db-faq-item">
+        <button class="db-faq-q">
+            DERBİS'e bildirim yapmamanın cezası nedir?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="db-faq-a"><div class="db-faq-a-inner">5253 sayılı Dernekler Kanunu'nun 32. maddesi uyarınca, bildirim yükümlülüklerini yerine getirmeyen dernek yöneticilerine idari para cezası uygulanır. Ceza miktarları her yıl güncellenmektedir. <a href="/hizmet-yasal-danismanlik.html">Yasal danışmanlık hizmetimiz →</a></div></div>
+    </div>
+
+    <div class="db-faq-item">
+        <button class="db-faq-q">
+            Organ değişikliği bildirimi ne zaman yapılmalıdır?
+            <svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="db-faq-a"><div class="db-faq-a-inner">Genel kurul veya yönetim kurulunda yapılan değişiklikler, seçim tarihinden itibaren 30 gün içinde DERBİS üzerinden mülki idare amirliğine bildirilmelidir. <a href="/hizmet-genel-kurul.html">Genel kurul yönetimi hizmetimiz →</a></div></div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="db-cta">
+    <h3>DERBİS Süreniz Dolmadan Harekete Geçin</h3>
+    <p>Beyanname ve bildirim yükümlülüklerinizi zamanında tamamlayalım, idari para cezalarından korunalım. Ümraniye ofisimizden veya uzaktan hizmet veriyoruz.</p>
+    <a href="/iletisim.html" class="db-cta-btn">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Ücretsiz Teklif Al
+    </a>
+</div>
+
+<!-- ACCORDION JS -->
+<script defer>
+(function(){
+    document.querySelectorAll('.db-faq-item').forEach(function(item){
+        item.querySelector('.db-faq-q').addEventListener('click', function(){
+            var wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.db-faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+            if(!wasOpen) item.classList.add('open');
+        });
+    });
+})();
+</script>
+
 </div>
 
 <aside class="sidebar">
@@ -83,9 +491,23 @@ sidebar_cta_text: "DERBİS süreniz dolmadan yasal bildirimlerinizi yapalım, ce
     </div>
 
     <div class="widget">
-        <h4>Kurumsal Teklif Alın</h4>
-        <p>DERBİS süreniz dolmadan yasal bildirimlerinizi yapalım, cezalardan korunalım.</p>
-        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Teklif İsteyin</a>
+        <h4>DERBİS Takvimi</h4>
+        <ul style="list-style:none;padding:0;">
+            <li style="margin-bottom:12px;font-size:0.88rem;color:#333;">
+                <strong style="color:#1a237e;">30 Nisan</strong><br>Yıllık beyanname son gün
+            </li>
+            <li style="margin-bottom:12px;font-size:0.88rem;color:#333;">
+                <strong style="color:#1a237e;">30 Gün</strong><br>Organ değişikliği bildirimi
+            </li>
+            <li style="margin-bottom:12px;font-size:0.88rem;color:#333;">
+                <strong style="color:#1a237e;">30 Gün</strong><br>Adres değişikliği bildirimi
+            </li>
+        </ul>
+    </div>
+
+    <div class="widget">
+        <h4>Ücretsiz Ön Görüşme</h4>
+        <p style="font-size:0.88rem;">DERBİS süreniz dolmadan yasal bildirimlerinizi yapalım, cezalardan korunalım.</p>
+        <a href="/iletisim.html" class="btn btn-secondary" style="width:100%;">Teklif İsteyin</a>
     </div>
 </aside>
-</div>

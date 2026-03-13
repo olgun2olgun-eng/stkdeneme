@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.html
-title: "Vakıf Kuruluş Danışmanlığı | Resmi Senet ve Tescil İşlemleri"
-description: "Vakfınızı yasalara uygun ve sağlam temellerle kurun. Resmi senet hazırlama, mal varlığı tahsisi ve mahkeme tescil sürecinde profesyonel kurumsal danışmanlık."
+title: "Vakıf Kuruluşu | İstanbul Ümraniye'de Vakıf Kurma Danışmanlığı — STK Danışmanlık"
+description: "İstanbul Ümraniye'de vakıf kuruluşu: resmi senet hazırlama, mal varlığı tahsisi, noter onayı, Asliye Hukuk Mahkemesi tescili ve VGM sicil kaydı. Anahtar teslim vakıf kurma danışmanlığı. ☎ +90 534 705 42 34"
 excerpt: "Toplumsal fayda mirasınızı hukuki güvenceyle geleceğe taşıyoruz."
 banner_image: "/img/banner1.webp"
 permalink: "/hizmet-vakif-kurulusu.html"
@@ -10,84 +10,190 @@ sidebar_cta_text: "Vakıf kurma süreciniz için kurumsal hizmet teklifimizi hem
 ---
 
 <div class="main-content">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Vakıf Kuruluş Danışmanlığı",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "SH Danışmanlık"
-  },
-  "areaServed": "TR",
-  "description": "Vakıf kurulumu için resmi senet hazırlığı, mal varlığı tespiti ve mahkeme tescil süreçlerinin profesyonel yönetimi."
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://stkdanismanlik.com/hizmet-vakif-kurulusu.html#service",
+      "serviceType": "Vakıf Kuruluş Danışmanlığı",
+      "name": "Vakıf Kuruluşu — STK Danışmanlık Ümraniye İstanbul",
+      "description": "Resmi senet hazırlama, mal varlığı tahsisi, noter onayı, Asliye Hukuk Mahkemesi tescili ve Vakıflar Genel Müdürlüğü sicil kaydı dahil anahtar teslim vakıf kurma danışmanlığı.",
+      "url": "https://stkdanismanlik.com/hizmet-vakif-kurulusu.html",
+      "provider": {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://stkdanismanlik.com/#business",
+        "name": "STK Danışmanlık",
+        "telephone": "+905347054234",
+        "address": { "@type": "PostalAddress", "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5", "addressLocality": "Ümraniye", "addressRegion": "İstanbul", "postalCode": "34760", "addressCountry": "TR" }
+      },
+      "areaServed": [{ "@type": "City", "name": "Ümraniye" }, { "@type": "City", "name": "İstanbul" }, { "@type": "Country", "name": "Türkiye" }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog", "name": "Vakıf Kuruluş Hizmetleri",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Resmi Senet Hazırlama" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mal Varlığı Tahsisi Danışmanlığı" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mahkeme Tescil Takibi" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VGM Sicil Kaydı" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurumsal Yapılanma Desteği" }}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Vakıf kurmak için ne kadar mal varlığı gerekir?", "acceptedAnswer": { "@type": "Answer", "text": "Kanunda net bir asgari tutar belirtilmemiştir. Vakfın amacını gerçekleştirmeye yetecek düzeyde mal varlığının tahsis edilmesi ve mahkeme tarafından yeterli görülmesi gerekir. Uygulamada mahkemeler vakfın faaliyet alanına göre değerlendirme yapmaktadır." }},
+        { "@type": "Question", "name": "Dernek ile vakıf arasındaki temel fark nedir?", "acceptedAnswer": { "@type": "Answer", "text": "Dernekler kişi topluluğu, vakıflar ise mal topluluğudur. Dernekler ortak amaç için bir araya gelen insanlardan oluşurken, vakıflar belirli bir amaca tahsis edilmiş mal varlığı üzerine kurulur. Vakıflar mahkeme kararıyla tescil edilir." }},
+        { "@type": "Question", "name": "Vakıf kuruluş süreci ne kadar sürer?", "acceptedAnswer": { "@type": "Answer", "text": "Resmi senet hazırlığı ve noter onayı sonrasında Asliye Hukuk Mahkemesi'ne başvurulur. Mahkeme süreci ortalama 2-4 ay sürer. Tescil kararının ardından VGM sicil kaydı ve Resmi Gazete ilanı yapılır." }},
+        { "@type": "Question", "name": "Vakıflar nasıl denetlenir?", "acceptedAnswer": { "@type": "Answer", "text": "Vakıflar, Vakıflar Genel Müdürlüğü (VGM) tarafından düzenli olarak hem mali hem de idari açıdan denetlenir. Denetimler, vakfın amacına ve mevzuata uygun hareket edip etmediğini kontrol etmek amacıyla yapılır." }}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Hizmetlerimiz", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 3, "name": "Vakıf Kuruluşu", "item": "https://stkdanismanlik.com/hizmet-vakif-kurulusu.html" }
+      ]
+    }
+  ]
 }
 </script>
 
-<h2>Vakıf Kurmak: Kalıcı Bir Eser Bırakmanın Yolu</h2>
-<p>Vakıflar, bir amaca hizmet etmek üzere belirli bir mal varlığının tahsis edilmesiyle oluşturulan, toplumsal fayda sağlamanın en köklü ve saygın yoludur. SH Danışmanlık olarak, vakıf kurma niyetinizin nesiller boyu yaşayacak profesyonel bir kuruma dönüşmesi için gerekli tüm hukuki ve idari süreçlerde uzman desteği sağlıyoruz.</p>
+<style>
+.vk-breadcrumb { font-size: 0.84rem; margin-bottom: 28px; }
+.vk-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.vk-breadcrumb a:hover { text-decoration: underline; }
+.vk-breadcrumb span { color: #888; }
+.vk-intro-box { background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%); border-radius: 14px; padding: 32px 30px; border-left: 5px solid #1a237e; margin-bottom: 36px; }
+.vk-intro-box h2 { font-size: 1.6rem; color: #1a237e; margin-bottom: 12px; line-height: 1.3; }
+.vk-intro-box p { color: #555; line-height: 1.75; font-size: 0.93rem; margin-bottom: 10px; }
+.vk-intro-box p:last-child { margin-bottom: 0; }
+.vk-diff { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+.vk-diff-card { background: #fff; border: 1px solid #e8edf5; border-radius: 10px; padding: 22px; text-align: center; }
+.vk-diff-card h4 { color: #1a237e; font-size: 1rem; margin-bottom: 6px; }
+.vk-diff-card p { font-size: 0.86rem; color: #555; line-height: 1.6; margin: 0; }
+.vk-diff-card .vk-d-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #e8ecf8, #f0f4ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+.vk-steps { margin: 36px 0; }
+.vk-steps > h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 20px; }
+.vk-step { display: flex; align-items: flex-start; gap: 20px; padding: 22px 24px; margin-bottom: 12px; background: #fff; border-radius: 10px; border: 1px solid #eef1f6; border-left: 4px solid #1a237e; transition: transform 0.2s, box-shadow 0.2s; }
+.vk-step:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.vk-step-num { min-width: 44px; height: 44px; background: #1a237e; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; flex-shrink: 0; }
+.vk-step h4 { margin: 0 0 6px; font-size: 1rem; color: #1a1a1a; }
+.vk-step p { margin: 0; font-size: 0.88rem; color: #555; line-height: 1.65; }
+.vk-step a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.vk-step a:hover { text-decoration: underline; }
+.vk-reqs { background: #f8f9fa; border-radius: 12px; padding: 28px 26px; margin: 36px 0; border: 1px solid #e8ecf8; }
+.vk-reqs h3 { font-size: 1.2rem; color: #1a237e; margin-bottom: 16px; }
+.vk-req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.vk-req-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: #333; line-height: 1.5; }
+.vk-req-item svg { flex-shrink: 0; margin-top: 2px; }
+.vk-faq { margin: 36px 0; }
+.vk-faq h3 { font-size: 1.3rem; color: #1a237e; margin-bottom: 18px; }
+.vk-faq-item { background: #fff; margin-bottom: 10px; border-radius: 8px; border: 1px solid #eef1f6; overflow: hidden; }
+.vk-faq-q { width: 100%; padding: 16px 20px; background: none; border: none; text-align: left; font-size: 0.93rem; font-weight: 600; color: #1a1a1a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: var(--font-family); transition: background 0.2s; }
+.vk-faq-q:hover { background: #f8f9ff; }
+.vk-faq-q .chv { flex-shrink: 0; width: 18px; height: 18px; transition: transform 0.3s; color: #1a237e; }
+.vk-faq-item.open .vk-faq-q .chv { transform: rotate(180deg); }
+.vk-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.vk-faq-item.open .vk-faq-a { max-height: 400px; }
+.vk-faq-a-inner { padding: 0 20px 16px; font-size: 0.88rem; color: #555; line-height: 1.7; }
+.vk-faq-a-inner a { color: #1a237e; font-weight: 600; }
+.vk-cta { background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%); padding: 40px 30px; border-radius: 12px; text-align: center; color: #fff; margin-top: 40px; }
+.vk-cta h3 { color: #fff; font-size: 1.4rem; margin-bottom: 10px; }
+.vk-cta p { color: rgba(255,255,255,0.85); margin-bottom: 22px; font-size: 0.93rem; }
+.vk-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #1a237e; padding: 12px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; }
+.vk-cta-btn:hover { background: #e8edf8; transform: translateY(-2px); }
+@media (max-width: 640px) { .vk-diff { grid-template-columns: 1fr; } .vk-req-grid { grid-template-columns: 1fr; } }
+</style>
 
-<h3 style="margin-top: 40px;">Vakıf Kuruluş Süreç Yönetimi</h3>
+<nav class="vk-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Ana Sayfa</a><span> › </span><a href="/#services">Hizmetlerimiz</a><span> › </span><span aria-current="page">Vakıf Kuruluşu</span>
+</nav>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><strong>1</strong></div>
-    <div>
-        <h4>Stratejik Amaç ve Mal Varlığı Tespiti</h4>
-        <p>Vakfın kuruluş amacını netleştirir ve bu amaca hizmet edecek asgari mal varlığının (nakit, taşınmaz vb.) belirlenmesinde profesyonel danışmanlık sağlarız.</p>
+<div class="vk-intro-box">
+    <h2>İstanbul Ümraniye'de Vakıf Kuruluşu — Resmi Senet ve Tescil Danışmanlığı</h2>
+    <p>Vakıflar, bir amaca hizmet etmek üzere belirli bir <strong>mal varlığının tahsis edilmesiyle</strong> oluşturulan, toplumsal fayda sağlamanın en köklü ve saygın yoludur. Derneklerden farklı olarak vakıflar <strong>4721 sayılı Türk Medeni Kanunu</strong>'nun 101-117. maddeleri ve <strong>5737 sayılı Vakıflar Kanunu</strong> çerçevesinde <strong>Asliye Hukuk Mahkemesi kararıyla</strong> tescil edilir.</p>
+    <p><strong>STK Danışmanlık</strong> olarak Ümraniye ofisimizden İstanbul ve Türkiye genelinde vakıf kuruluş süreçlerini — resmi senet hazırlığından mahkeme tesciline, <strong>Vakıflar Genel Müdürlüğü (VGM)</strong> sicil kaydından Resmi Gazete ilanına kadar — uçtan uca yönetiyoruz.</p>
+</div>
+
+<!-- DERNEK vs VAKIF -->
+<div class="vk-diff">
+    <div class="vk-diff-card">
+        <div class="vk-d-icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+        <h4>Dernek</h4>
+        <p><strong>Kişi topluluğu</strong> — en az 7 kişi, il müdürlüğüne başvuru, bildirimle tüzel kişilik</p>
+    </div>
+    <div class="vk-diff-card">
+        <div class="vk-d-icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h4>Vakıf</h4>
+        <p><strong>Mal topluluğu</strong> — mal varlığı tahsisi, noter onayı, mahkeme kararıyla tescil</p>
     </div>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><strong>2</strong></div>
-    <div>
-        <h4>Resmi Senet (Anayasa) Hazırlığı</h4>
-        <p>Türk Medeni Kanunu'na tam uyumlu, tüm zorunlu unsurları içeren ve gelecekte hukuki risk yaratmayacak kapsamlı resmi senedi hazırlarız.</p>
+<!-- 5 ADIM -->
+<div class="vk-steps">
+    <h3>Vakıf Kuruluşu: 5 Adımda Anahtar Teslim Süreç</h3>
+    <div class="vk-step"><div class="vk-step-num">1</div><div><h4>Stratejik Amaç ve Mal Varlığı Tespiti</h4><p>Vakfın kuruluş amacını netleştiriyoruz. Bu amaca hizmet edecek <strong>asgari mal varlığının</strong> (nakit, gayrimenkul, menkul kıymet) belirlenmesinde profesyonel danışmanlık sağlıyoruz. Mahkemenin "yeterli" göreceği düzeyi birlikte planlıyoruz.</p></div></div>
+    <div class="vk-step"><div class="vk-step-num">2</div><div><h4>Resmi Senet (Vakıf Senedi) Hazırlığı</h4><p>Vakfın anayasası olan <strong>resmi senedi</strong>, TMK'nın 101-117. maddelerine ve Vakıflar Kanunu'na tam uyumlu şekilde hazırlıyoruz. Vakfın adı, amacı, mal varlığı, yönetim organları, denetim mekanizması ve faaliyetleri eksiksiz tanımlanır.</p></div></div>
+    <div class="vk-step"><div class="vk-step-num">3</div><div><h4>Noter Tasdiki ve Mahkeme Başvurusu</h4><p>Resmi senedin <strong>noter onayını</strong> alıyor, ardından vakfın yerleşim yerindeki <strong>Asliye Hukuk Mahkemesi</strong>'ne tescil başvurusunu yapıyoruz. İstanbul'daki tüm adliye birimleriyle doğrudan çalışma deneyimimiz süreci hızlandırır.</p></div></div>
+    <div class="vk-step"><div class="vk-step-num">4</div><div><h4>VGM Sicil Kaydı ve Resmi Gazete İlanı</h4><p>Mahkemenin tescil kararının ardından, <strong>Vakıflar Genel Müdürlüğü</strong> merkezi siciline kaydı ve <strong>Resmi Gazete</strong>'de ilan işlemlerini takip ediyoruz. Vakıf bu aşamada tüzel kişilik kazanır.</p></div></div>
+    <div class="vk-step"><div class="vk-step-num">5</div><div><h4>Kurumsal Yapılanma ve Sonrası Rehberlik</h4><p>Yönetim organlarının oluşturulması, banka hesabı açılması, <a href="/hizmet-mali-danismanlik.html">mali sistem kurulumu</a> ve <a href="/hizmet-derbis.html">VGM bildirim süreçleri</a>nde rehberlik ediyoruz. Vakfınız faaliyete hazır hale gelir.</p></div></div>
+</div>
+
+<!-- GEREKLİLİKLER -->
+<div class="vk-reqs">
+    <h3>Vakıf Kurmak İçin Neler Gerekir?</h3>
+    <div class="vk-req-grid">
+        <div class="vk-req-item"><svg width="16" height="16" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Vakfın amacına yetecek <strong>mal varlığı</strong> (nakit veya gayrimenkul)</span></div>
+        <div class="vk-req-item"><svg width="16" height="16" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Resmi senet</strong> (noter onaylı)</span></div>
+        <div class="vk-req-item"><svg width="16" height="16" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Kurucuların <strong>nüfus cüzdanı</strong> ve ikametgâh belgesi</span></div>
+        <div class="vk-req-item"><svg width="16" height="16" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Mal varlığına ilişkin <strong>banka dekontu</strong> veya tapu belgesi</span></div>
+        <div class="vk-req-item"><svg width="16" height="16" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Vakıf <strong>yönetim organı</strong> üye listesi</span></div>
+        <div class="vk-req-item"><svg width="16" height="16" fill="none" stroke="#1a237e" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Vakfın <strong>yerleşim yeri</strong> adresi</span></div>
     </div>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><strong>3</strong></div>
-    <div>
-        <h4>Noter Tasdiki ve Mahkeme Süreçleri</h4>
-        <p>Resmi senedin noter onayının alınması ve vakfın tescili için Asliye Hukuk Mahkemesi nezdindeki başvuru süreçlerini titizlikle yönetiriz.</p>
-    </div>
+<!-- FAQ -->
+<div class="vk-faq">
+    <h3>Vakıf Kuruluşu Hakkında Sık Sorulan Sorular</h3>
+    <div class="vk-faq-item"><button class="vk-faq-q">Vakıf kurmak için ne kadar mal varlığı gerekir?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="vk-faq-a"><div class="vk-faq-a-inner">Kanunda net bir asgari tutar belirtilmemiştir. Vakfın amacını gerçekleştirmeye yetecek düzeyde bir mal varlığının tahsis edilmesi ve <strong>mahkeme tarafından yeterli görülmesi</strong> gerekir. Uygulamada mahkemeler vakfın faaliyet alanına göre değerlendirme yapmaktadır.</div></div></div>
+    <div class="vk-faq-item"><button class="vk-faq-q">Vakıf kuruluş süreci ne kadar sürer?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="vk-faq-a"><div class="vk-faq-a-inner">Resmi senet hazırlığı ve noter onayı sonrasında Asliye Hukuk Mahkemesi'ne başvurulur. Mahkeme süreci ortalama <strong>2-4 ay</strong> sürer. Tescil kararının ardından VGM sicil kaydı ve Resmi Gazete ilanı yapılır.</div></div></div>
+    <div class="vk-faq-item"><button class="vk-faq-q">Dernek ile vakıf arasındaki temel fark nedir?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="vk-faq-a"><div class="vk-faq-a-inner">Dernekler <strong>kişi topluluğu</strong>, vakıflar <strong>mal topluluğu</strong>dur. Dernekler il müdürlüğüne bildirimle kurulurken, vakıflar mahkeme kararıyla tescil edilir. Detaylı karşılaştırma için <a href="/blog-yazi-detay.html">blog yazımıza göz atın</a>.</div></div></div>
+    <div class="vk-faq-item"><button class="vk-faq-q">Vakıflar nasıl denetlenir?<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="vk-faq-a"><div class="vk-faq-a-inner"><strong>Vakıflar Genel Müdürlüğü (VGM)</strong> tarafından düzenli olarak hem mali hem de idari açıdan denetlenir. Denetimler vakfın amacına ve mevzuata uygun hareket edip etmediğini kontrol eder. <a href="/hizmet-mali-danismanlik.html">Mali danışmanlık hizmetimiz →</a></div></div></div>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><strong>4</strong></div>
-    <div>
-        <h4>Merkezi Sicil Kaydı ve İlan</h4>
-        <p>Mahkemenin tescil kararının ardından, Vakıflar Genel Müdürlüğü sicil kaydı ve Resmi Gazete ilan işlemlerini takip ederiz.</p>
-    </div>
+<div class="vk-cta">
+    <h3>Vakfınızı Kurmaya Hazır mısınız?</h3>
+    <p>Ümraniye ofisimizde yüz yüze veya telefonda ücretsiz ön görüşme ile vakıf kuruluş sürecinizi birlikte planlayalım.</p>
+    <a href="/iletisim.html" class="vk-cta-btn"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Ücretsiz Ön Görüşme Talep Et</a>
 </div>
 
-<div class="feature-box">
-    <div class="icon-wrapper"><strong>5</strong></div>
-    <div>
-        <h4>Kurumsal Yapılanma Desteği</h4>
-        <p>Vakfınız tüzel kişilik kazandıktan sonra, yönetim organlarının oluşturulması ve idari işleyişin kurulması süreçlerinde rehberlik ederiz.</p>
-    </div>
-</div>
+<script defer>
+(function(){ document.querySelectorAll('.vk-faq-item').forEach(function(item){ item.querySelector('.vk-faq-q').addEventListener('click', function(){ var w=item.classList.contains('open'); document.querySelectorAll('.vk-faq-item.open').forEach(function(i){i.classList.remove('open')}); if(!w) item.classList.add('open'); }); }); })();
+</script>
+
 </div>
 
 <aside class="sidebar">
-    <div class="widget">
-        <h4>Hizmetlerimiz</h4>
-        <ul>
-            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
-            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
-            <li><a href="/hizmet-vakif-kurulusu.html" class="current">Vakıf Kuruluşu</a></li>
-            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
-            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
-            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
-            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
+    <div class="widget"><h4>Hizmetlerimiz</h4><ul>
+        <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
+        <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
+        <li><a href="/hizmet-vakif-kurulusu.html" class="current">Vakıf Kuruluşu</a></li>
+        <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
+        <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
+        <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
+        <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
+    </ul></div>
+    <div class="widget" style="background:#f8f9fa;border-left:4px solid #1a237e;padding:22px;border-radius:8px;">
+        <h4 style="margin-top:0;color:#1a237e;margin-bottom:14px;">Vakıf vs Dernek</h4>
+        <ul style="list-style:none;padding:0;margin:0;font-size:0.86rem;">
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;"><strong>Vakıf:</strong> Mal topluluğu, mahkeme tescili</li>
+            <li style="padding:8px 0;border-bottom:1px solid #e8ecf8;"><strong>Dernek:</strong> Kişi topluluğu, bildirimle kuruluş</li>
+            <li style="padding:8px 0;"><a href="/hizmet-dernek-kurulusu.html" style="color:#1a237e;font-weight:600;">Dernek kuruluşu hizmetimiz →</a></li>
         </ul>
     </div>
-
-    <div class="widget">
-        <h4>Kurumsal Teklif Alın</h4>
-        <p>Vakıf kurma süreciniz için kurumsal hizmet teklifimizi hemen edinin.</p>
-        <a href="/iletisim.html" class="btn btn-secondary" style="width: 100%;">Teklif İsteyin</a>
-    </div>
+    <div class="widget"><h4>Ücretsiz Ön Görüşme</h4><p style="font-size:0.88rem;">Vakıf kurma süreciniz için kurumsal hizmet teklifimizi hemen edinin.</p><a href="/iletisim.html" class="btn btn-secondary" style="width:100%;">Teklif İsteyin</a></div>
 </aside>
-</div>

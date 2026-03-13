@@ -1,127 +1,518 @@
 ---
 layout: layouts/fullwidth.html
-title: "Fikirden Gerçeğe, Bürokrasiden Harekete"
-description: "Fikirden gerçeğe, bürokrasiden harekete! SH Danışmanlık olarak dernek ve vakıf süreçlerindeki uzmanlığımız, vizyonumuz ve değerlerimizle yanınızdayız."
+title: "Hakkımızda | STK Danışmanlık — Ümraniye İstanbul Dernek ve Vakıf Danışmanlık"
+description: "STK Danışmanlık, Ümraniye İstanbul merkezli dernek kurulumu, vakıf kuruluşu, DERBİS, genel kurul yönetimi ve mali danışmanlık alanında 10+ yıl tecrübeli uzman ekip. ☎ +90 534 705 42 34"
 excerpt: "Sivil toplum vizyonunuzun en güçlü ve güvenilir yol arkadaşı."
 banner_image: "/img/hakkimizda-bg.webp"
 permalink: "/hakkimizda.html"
 ---
 
+<!-- ═══ JSON-LD SCHEMA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://stkdanismanlik.com/#business",
+      "name": "STK Danışmanlık",
+      "url": "https://stkdanismanlik.com/",
+      "logo": "https://stkdanismanlik.com/img/logo.webp",
+      "image": "https://stkdanismanlik.com/img/hakkimizda-bg.webp",
+      "description": "Ümraniye ve İstanbul'da dernek kurulumu, vakıf kuruluşu, DERBİS işlemleri, genel kurul yönetimi, mali danışmanlık ve proje geliştirme alanlarında profesyonel STK danışmanlık hizmeti.",
+      "telephone": "+905347054234",
+      "email": "info@stkdanismanlik.com",
+      "priceRange": "$$",
+      "foundingDate": "2015",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "İstiklal Mahallesi Sütçüimam Caddesi No:144 K:3 D:5",
+        "addressLocality": "Ümraniye",
+        "addressRegion": "İstanbul",
+        "postalCode": "34760",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0232,
+        "longitude": 29.1219
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Ümraniye" },
+        { "@type": "City", "name": "İstanbul" },
+        { "@type": "Country", "name": "Türkiye" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "knowsAbout": [
+        "Dernek Kurulumu",
+        "Vakıf Kuruluşu",
+        "DERBİS İşlemleri",
+        "Genel Kurul Yönetimi",
+        "STK Mali Danışmanlık",
+        "Sivil Toplum Hukuku",
+        "Proje ve Fon Geliştirme"
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "url": "https://stkdanismanlik.com/hakkimizda.html",
+      "name": "Hakkımızda — STK Danışmanlık",
+      "description": "STK Danışmanlık'ın kuruluş hikayesi, vizyonu, misyonu ve uzmanlık alanları.",
+      "inLanguage": "tr-TR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://stkdanismanlik.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Hakkımızda", "item": "https://stkdanismanlik.com/hakkimizda.html" }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
-        /* KURUMSAL WHATSAPP WIDGET (Ako Dijital Standartı - Sol Alt) */
-        .wa-floating-btn { position: fixed; bottom: 25px; left: 25px; z-index: 9999; display: flex; align-items: center; text-decoration: none; transition: all 0.3s ease; }
-        .wa-icon { background-color: #25d366; color: white !important; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-        .wa-label { background: white; color: #333; padding: 10px 18px; border-radius: 25px; margin-left: 12px; font-size: 14px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1); white-space: nowrap; }
-        @media (max-width: 768px) { .wa-label { display: none; } }
-        .wa-floating-btn:hover { transform: translateY(-3px); }
+/* ── BREADCRUMB ── */
+.hk-breadcrumb {
+    padding: 14px 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.84rem;
+}
+.hk-breadcrumb a { color: #1a237e; font-weight: 600; text-decoration: none; }
+.hk-breadcrumb a:hover { text-decoration: underline; }
+.hk-breadcrumb span { color: #888; }
 
-        /* Hakkımızda Özel Tasarım Elementleri */
-        .vision-mission-box { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 50px 0; }
-        .vm-card { background: #f8f9fa; padding: 40px; border-radius: 15px; border-top: 5px solid #1a237e; }
-        .vm-card i { font-size: 40px; color: #1a237e; margin-bottom: 20px; display: block; }
-        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
-        .value-item { text-align: center; padding: 25px; background: #fff; border: 1px solid #eee; border-radius: 10px; transition: 0.3s; }
-        .value-item:hover { border-color: #1a237e; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .value-item i { font-size: 30px; color: #25d366; margin-bottom: 15px; display: block; }
-        .services-tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
-        .service-tag { background: #1a237e; color: #fff; padding: 8px 18px; border-radius: 25px; font-size: 14px; font-weight: 500; }
-        @media (max-width: 768px) { .vision-mission-box { grid-template-columns: 1fr; } }
-    </style>
+/* ── GİRİŞ ── */
+.hk-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin: 50px 0 60px;
+}
+.hk-intro-text h2 {
+    font-size: 1.85rem;
+    color: #1a237e;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+.hk-intro-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+}
+.hk-intro-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    height: 380px;
+}
+.hk-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-<section class="page-content">
-        <div class="container">
-            <div class="content-grid">
-                
-                <div class="main-content">
-                    <h2>Biz Kimiz?</h2>
-                    <p><strong>SH Danışmanlık</strong>, sivil toplumun gücüne inanan ve bu gücü harekete geçirmek isteyenler için profesyonel bir yol arkadaşı olmak üzere kurulmuştur. Topluma fayda sağlama amacıyla yola çıkan dernek, vakıf ve sivil toplum kuruluşlarının, karmaşık yasal prosedürler ve bürokratik engellerle enerjilerini tüketmelerini önlemeyi hedefliyoruz.</p>
-                    
-                    <p>Sivil toplum kuruluşlarının sadece gönüllülük değil, aynı zamanda ciddi bir kurumsallık gerektirdiğinin bilincindeyiz. Bu nedenle, idari ve mali süreçlerinizi uzman titizliğiyle yöneterek sizi asıl misyonunuza odaklıyoruz.</p>
+/* ── İSTATİSTİK BANDI ── */
+.hk-stats-band {
+    background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%);
+    padding: 44px 0;
+    color: #fff;
+}
+.hk-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+.hk-stat-item strong {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+.hk-stat-item span {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
 
-                    <div class="vision-mission-box">
-                        <div class="vm-card">
-                            <i class="fas fa-eye"></i>
-                            <h3>Vizyonumuz</h3>
-                            <p>Sivil toplum alanında faaliyet göstermek isteyen her birey ve kurum için bürokrasiyi bir engel olmaktan çıkarıp, fikirlerini kolayca hayata geçirebilecekleri bir ekosistem yaratılmasına öncülük etmek.</p>
-                        </div>
-                        <div class="vm-card">
-                            <i class="fas fa-bullseye"></i>
-                            <h3>Misyonumuz</h3>
-                            <p>Müvekkillerimizin STK kurma, yönetme ve geliştirme süreçlerinin her aşamasında, güncel mevzuata hakim, yenilikçi ve sonuç odaklı danışmanlık hizmetleri sunarak, toplumsal fayda hedeflerine en verimli şekilde ulaşmalarını sağlamak.</p>
-                        </div>
-                    </div>
+/* ── VİZYON MİSYON ── */
+.hk-vm-section { padding: 70px 0; }
+.hk-vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.hk-vm-card {
+    background: #f8f9fa;
+    padding: 40px 36px;
+    border-radius: 15px;
+    border-top: 5px solid #1a237e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hk-vm-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+.hk-vm-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.35rem;
+    color: #1a237e;
+    margin-bottom: 14px;
+}
+.hk-vm-card p { color: #555; line-height: 1.75; font-size: 0.93rem; }
 
-                    <h2 style="text-align: center;">Temel Değerlerimiz</h2>
-<div class="values-grid">
-    <div class="value-item">
-        <i class="fas fa-handshake"></i>
-        <h4>Güvenilirlik</h4>
-        <p>Tüm süreçlerde şeffaf ve dürüst bir iletişim kurarız.</p>
+/* ── DEĞERLER ── */
+.hk-values-section {
+    background: #f0f4ff;
+    padding: 70px 0;
+}
+.hk-values-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #1a237e;
+}
+.hk-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+.hk-value-card {
+    background: #fff;
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: 12px;
+    border: 1px solid #e8ecf8;
+    transition: all 0.3s ease;
+}
+.hk-value-card:hover { border-color: #1a237e; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.07); }
+.hk-value-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #e8ecf8, #f0f4ff);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+}
+.hk-value-card h4 { font-size: 1.05rem; color: #1a237e; margin-bottom: 8px; }
+.hk-value-card p { font-size: 0.88rem; color: #666; line-height: 1.6; margin: 0; }
+
+/* ── NEDEN BİZ ── */
+.hk-why-section { padding: 70px 0; }
+.hk-why-section > .container > h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+    color: #1a237e;
+}
+.hk-why-section > .container > p.hk-why-sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hk-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+.hk-why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #1a237e;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.hk-why-item:hover { transform: translateX(4px); box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
+.hk-why-icon {
+    width: 44px; height: 44px;
+    background: #1a237e;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.hk-why-item h4 { font-size: 1rem; margin: 0 0 6px; color: #1a1a1a; }
+.hk-why-item p { font-size: 0.88rem; color: #555; line-height: 1.65; margin: 0; }
+
+/* ── UZMANLIK TAG ── */
+.hk-expertise-section { background: #f8f9fa; padding: 60px 0; }
+.hk-expertise-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 28px; color: #1a237e; }
+.hk-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.hk-tag {
+    background: #1a237e;
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+.hk-tag:hover { background: #0d47a1; transform: translateY(-2px); }
+
+/* ── ALT CTA ── */
+.hk-bottom-cta {
+    background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 100%);
+    padding: 56px 20px;
+    text-align: center;
+    color: #fff;
+}
+.hk-bottom-cta h2 { color: #fff; font-size: 1.8rem; margin-bottom: 12px; }
+.hk-bottom-cta p { color: rgba(255,255,255,0.85); max-width: 540px; margin: 0 auto 28px; font-size: 1rem; }
+.hk-cta-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.hk-btn-white {
+    background: #fff; color: #1a237e; padding: 13px 30px;
+    border-radius: 50px; text-decoration: none; font-weight: 700;
+    display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;
+}
+.hk-btn-white:hover { background: #e8edf8; transform: translateY(-2px); }
+.hk-btn-outline {
+    background: transparent; color: #fff;
+    border: 2px solid rgba(255,255,255,0.6); padding: 13px 30px;
+    border-radius: 50px; text-decoration: none; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;
+}
+.hk-btn-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 992px) {
+    .hk-intro { grid-template-columns: 1fr; gap: 30px; }
+    .hk-intro-image { height: 280px; }
+    .hk-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .hk-vm-grid { grid-template-columns: 1fr; }
+    .hk-why-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .hk-values-grid { grid-template-columns: 1fr; }
+    .hk-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .hk-stat-item strong { font-size: 1.8rem; }
+    .hk-intro-text h2 { font-size: 1.5rem; }
+}
+</style>
+
+<!-- ═══ BREADCRUMB ═══ -->
+<nav class="hk-breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <a href="/">Ana Sayfa</a>
+        <span> › </span>
+        <span aria-current="page">Hakkımızda</span>
     </div>
-    <div class="value-item">
-        <i class="fas fa-user-graduate"></i>
-        <h4>Uzmanlık</h4>
-        <p>Alanımızdaki en güncel bilgi ve tecrübeyle hareket ederiz.</p>
-    </div>
-    <div class="value-item">
-        <i class="fas fa-lightbulb"></i>
-        <h4>Çözüm Odaklılık</h4>
-        <p>Her soruna pratik ve yasal çözümler üretiriz.</p>
-    </div>
-    <div class="value-item">
-        <i class="fas fa-user-lock"></i>
-        <h4>Gizlilik</h4>
-        <p>Verilerinizi en yüksek standartlarda koruruz.</p>
-    </div>
-    <div class="value-item">
-        <i class="fas fa-headset"></i>
-        <h4>Müşteri Odaklılık</h4>
-        <p>Her danışanımızın ihtiyacını öncelikli tutar, kişiye özel çözümler sunarız.</p>
-    </div>
-    <div class="value-item">
-        <i class="fas fa-rocket"></i>
-        <h4>Hız & Verimlilik</h4>
-        <p>Süreçlerinizi en kısa sürede ve eksiksiz tamamlamak için çalışırız.</p>
+</nav>
+
+<!-- ═══ GİRİŞ: BİZ KİMİZ ═══ -->
+<section class="page-content" aria-label="STK Danışmanlık hakkında">
+<div class="container">
+    <div class="hk-intro">
+        <div class="hk-intro-text">
+            <h2>Ümraniye'de STK Danışmanlık — Biz Kimiz?</h2>
+            <p><strong>STK Danışmanlık</strong>, <strong>İstanbul Ümraniye</strong> merkezli olarak sivil toplumun gücüne inanan ve bu gücü harekete geçirmek isteyenler için profesyonel bir yol arkadaşı olmak üzere kurulmuştur. Topluma fayda sağlama amacıyla yola çıkan <strong>dernek</strong>, <strong>vakıf</strong> ve sivil toplum kuruluşlarının karmaşık yasal prosedürler ve bürokratik engellerle enerjilerini tüketmelerini önlemeyi hedefliyoruz.</p>
+            <p>Sivil toplum kuruluşlarının sadece gönüllülük değil, aynı zamanda ciddi bir kurumsallık gerektirdiğinin bilincindeyiz. <strong>Dernek kurulumu</strong>, <strong>vakıf kuruluşu</strong>, <strong>DERBİS işlemleri</strong>, <strong>genel kurul yönetimi</strong> ve <strong>mali danışmanlık</strong> alanlarındaki 10 yılı aşkın tecrübemizle idari ve mali süreçlerinizi uzman titizliğiyle yöneterek sizi asıl misyonunuza odaklıyoruz.</p>
+            <p>Ümraniye ve İstanbul'un tüm ilçelerinde yerinde hizmet sunmamızın yanı sıra, Türkiye genelinde dijital kanallar üzerinden de danışmanlık desteği sağlamaktayız.</p>
+        </div>
+        <div class="hk-intro-image">
+            <img src="/img/hakkimizda-bg.webp"
+                 alt="STK Danışmanlık Ümraniye ofisi — İstanbul dernek ve vakıf danışmanlık ekibi"
+                 width="580" height="380" loading="lazy">
+        </div>
     </div>
 </div>
+</section>
 
-                    <h2 style="margin-top: 60px;">Uzmanlık Alanlarımız</h2>
-                    <div class="services-tag-cloud">
-                        <span class="service-tag">Dernek Kuruluş</span>
-                        <span class="service-tag">Vakıf Kuruluş</span>
-                        <span class="service-tag">Dernek Muhasebesi</span>
-                        <span class="service-tag">Dernekler Hukuku</span>
-                        <span class="service-tag">Proje Yönetimi</span>
-                        <span class="service-tag">Dernek Beyannamesi</span>
-                        <span class="service-tag">Lokal Açmak</span>
-                        <span class="service-tag">İktisadi İşletme Kuruluşu</span>
-                        <span class="service-tag">Genel Kurul Toplantısı</span>
-                        <span class="service-tag">İç Denetim Raporu</span>
-                    </div>
-                </div>
-
-                <aside class="sidebar">
-                   <div class="widget">
-                            <h4>Kurumsal</h4>
-                            <ul>
-                                <li><a href="hakkimizda.html" class="current">Hakkımızda</a></li>
-                                <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-                            </ul>
-                        </div>
-                    <div class="widget">
-                        <h4>İstatistiklerimiz</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 15px;"><strong>150+</strong> Başarılı Kuruluş</li>
-                            <li style="margin-bottom: 15px;"><strong>500+</strong> Yıllık Beyanname Takibi</li>
-                            <li style="margin-bottom: 15px;"><strong>%100</strong> Müşteri Memnuniyeti</li>
-                        </ul>
-                    </div>
-                       <div class="widget">
-                        <h4>Neden Biz?</h4>
-                        <p>Bürokrasiye takılmadan, yasal risklerden uzak ve kurumsal bir STK yapısı için SH Danışmanlık tek adresinizdir.</p>
-                        <a href="iletisim.html" class="btn btn-secondary" style="width: 100%;">Bize Uğrayın</a>
-                    </div>
-                </aside>
+<!-- ═══ İSTATİSTİK BANDI ═══ -->
+<section class="hk-stats-band" aria-label="STK Danışmanlık istatistikleri">
+    <div class="container">
+        <div class="hk-stats-grid">
+            <div class="hk-stat-item">
+                <strong>10+</strong>
+                <span>Yıllık Sektör Tecrübesi</span>
+            </div>
+            <div class="hk-stat-item">
+                <strong>150+</strong>
+                <span>Başarılı Kuruluş Projesi</span>
+            </div>
+            <div class="hk-stat-item">
+                <strong>75+</strong>
+                <span>Aktif STK Partneri</span>
+            </div>
+            <div class="hk-stat-item">
+                <strong>1.000+</strong>
+                <span>Eğitim Alan Katılımcı</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- ═══ VİZYON & MİSYON ═══ -->
+<section class="hk-vm-section" aria-label="Vizyon ve misyon">
+    <div class="container">
+        <div class="hk-vm-grid">
+            <div class="hk-vm-card">
+                <h3>
+                    <svg width="28" height="28" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    Vizyonumuz
+                </h3>
+                <p>Sivil toplum alanında faaliyet göstermek isteyen her birey ve kurum için bürokrasiyi bir engel olmaktan çıkarıp, fikirlerini kolayca hayata geçirebilecekleri bir ekosistem yaratılmasına öncülük etmek. Ümraniye'den başlayarak İstanbul ve Türkiye genelinde STK'ların <strong>kurumsallaşma</strong> ve <strong>sürdürülebilirlik</strong> standartlarını yükseltmeyi amaçlıyoruz.</p>
+            </div>
+            <div class="hk-vm-card">
+                <h3>
+                    <svg width="28" height="28" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                    Misyonumuz
+                </h3>
+                <p>Müvekkillerimizin <strong>dernek kurma</strong>, <strong>vakıf kuruluşu</strong>, yönetme ve geliştirme süreçlerinin her aşamasında güncel mevzuata hakim, yenilikçi ve sonuç odaklı danışmanlık hizmetleri sunarak toplumsal fayda hedeflerine en verimli şekilde ulaşmalarını sağlamak. DERBİS beyanname takibinden genel kurul organizasyonuna, mali raporlamadan proje yazımına kadar <strong>uçtan uca profesyonel destek</strong> vermek.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ DEĞERLER ═══ -->
+<section class="hk-values-section" aria-label="Temel değerlerimiz">
+    <div class="container">
+        <h2>Temel Değerlerimiz</h2>
+        <div class="hk-values-grid">
+            <div class="hk-value-card">
+                <div class="hk-value-icon" aria-hidden="true">
+                    <svg width="26" height="26" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <h4>Güvenilirlik</h4>
+                <p>Tüm süreçlerde şeffaf ve dürüst bir iletişim kurarız. Dernek ve vakıf bilgileriniz gizlilik ilkesiyle korunur.</p>
+            </div>
+            <div class="hk-value-card">
+                <div class="hk-value-icon" aria-hidden="true">
+                    <svg width="26" height="26" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                </div>
+                <h4>Uzmanlık</h4>
+                <p>Dernekler Kanunu, Vakıflar Mevzuatı ve STK hukuku alanında en güncel bilgi ve 10+ yıl tecrübeyle hareket ederiz.</p>
+            </div>
+            <div class="hk-value-card">
+                <div class="hk-value-icon" aria-hidden="true">
+                    <svg width="26" height="26" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h4>Hız & Verimlilik</h4>
+                <p>Dernek kuruluşunu 7–15 iş gününde, DERBİS beyannamelerini zamanında tamamlarız. Süreçleriniz hiç aksatılmaz.</p>
+            </div>
+            <div class="hk-value-card">
+                <div class="hk-value-icon" aria-hidden="true">
+                    <svg width="26" height="26" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><circle cx="12" cy="17" r=".5"/></svg>
+                </div>
+                <h4>Çözüm Odaklılık</h4>
+                <p>Genel kurul organizasyonundan yasal uyuşmazlıklara her soruna pratik ve mevzuata uygun çözümler üretiriz.</p>
+            </div>
+            <div class="hk-value-card">
+                <div class="hk-value-icon" aria-hidden="true">
+                    <svg width="26" height="26" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h4>Müşteri Odaklılık</h4>
+                <p>Her danışanımızın ihtiyacını öncelikli tutar, kişiye özel danışmanlık planları oluştururuz.</p>
+            </div>
+            <div class="hk-value-card">
+                <div class="hk-value-icon" aria-hidden="true">
+                    <svg width="26" height="26" fill="none" stroke="#1a237e" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                </div>
+                <h4>Gizlilik</h4>
+                <p>STK verilerinizi, mali bilgilerinizi ve üye kayıtlarınızı en yüksek güvenlik standartlarında koruruz.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ NEDEN STK DANIŞMANLIK ═══ -->
+<section class="hk-why-section" aria-label="Neden STK Danışmanlık">
+    <div class="container">
+        <h2>Neden STK Danışmanlık?</h2>
+        <p class="hk-why-sub">Ümraniye'deki ofisimizde yüz yüze veya Türkiye genelinde uzaktan danışmanlık — fark etmez, her durumda aynı kalitede hizmet alırsınız.</p>
+        <div class="hk-why-grid">
+            <div class="hk-why-item">
+                <div class="hk-why-icon" aria-hidden="true">
+                    <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                    <h4>10+ Yıl Saha Deneyimi</h4>
+                    <p>İstanbul'da 150'den fazla dernek ve vakıf kuruluşunu başarıyla tamamladık. Sektördeki her senaryoyu yaşadık ve çözdük.</p>
+                </div>
+            </div>
+            <div class="hk-why-item">
+                <div class="hk-why-icon" aria-hidden="true">
+                    <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div>
+                    <h4>Uçtan Uca Hizmet</h4>
+                    <p>Tüzük hazırlama ve tescilden DERBİS beyanname takibine, genel kurul yönetiminden mali raporlamaya — tek elden profesyonel çözüm.</p>
+                </div>
+            </div>
+            <div class="hk-why-item">
+                <div class="hk-why-icon" aria-hidden="true">
+                    <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                    <h4>Güncel Mevzuat Bilgisi</h4>
+                    <p>Dernekler Kanunu, Vakıflar Mevzuatı ve ilgili tüm yasal düzenlemeleri sürekli takip eder, STK'nızı risklerden koruruz.</p>
+                </div>
+            </div>
+            <div class="hk-why-item">
+                <div class="hk-why-icon" aria-hidden="true">
+                    <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                    <h4>24 Saat İçinde Dönüş</h4>
+                    <p>Her iletişim talebine en geç 24 saat içinde yanıt veririz. Acil durumlarda WhatsApp hattımız 7/24 açıktır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ UZMANLIK ALANLARI ═══ -->
+<section class="hk-expertise-section" aria-label="Uzmanlık alanlarımız">
+    <div class="container">
+        <h2>Uzmanlık Alanlarımız</h2>
+        <div class="hk-tag-cloud">
+            <a href="/hizmet-dernek-kurulusu.html" class="hk-tag">Dernek Kuruluşu</a>
+            <a href="/hizmet-vakif-kurulusu.html" class="hk-tag">Vakıf Kuruluşu</a>
+            <a href="/hizmet-derbis.html" class="hk-tag">DERBİS Beyanname</a>
+            <a href="/hizmet-genel-kurul.html" class="hk-tag">Genel Kurul Toplantısı</a>
+            <a href="/hizmet-mali-danismanlik.html" class="hk-tag">Dernek Muhasebesi</a>
+            <a href="/hizmet-mali-danismanlik.html" class="hk-tag">Mali Danışmanlık</a>
+            <a href="/hizmet-yasal-danismanlik.html" class="hk-tag">Dernekler Hukuku</a>
+            <a href="/hizmet-proje-yazma.html" class="hk-tag">Proje Yönetimi</a>
+            <a href="/hizmet-proje-yazma.html" class="hk-tag">Fon Geliştirme</a>
+            <a href="/hizmet-yasal-danismanlik.html" class="hk-tag">İktisadi İşletme Kuruluşu</a>
+            <a href="/hizmet-mali-danismanlik.html" class="hk-tag">İç Denetim Raporu</a>
+            <a href="/hizmet-derbis.html" class="hk-tag">Lokal Açma İşlemleri</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ ALT CTA ═══ -->
+<section class="hk-bottom-cta" aria-label="Ücretsiz danışmanlık çağrısı">
+    <div class="container">
+        <h2>Sivil Toplum Projenizi Hayata Geçirelim</h2>
+        <p>Ümraniye ofisimizde yüz yüze veya telefonda ücretsiz ön görüşme ile dernek ya da vakıf sürecinizi birlikte planlayalım.</p>
+        <div class="hk-cta-group">
+            <a href="tel:+905347054234" class="hk-btn-white" aria-label="Hemen ara">
+                <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Şimdi Ara
+            </a>
+            <a href="/iletisim.html" class="hk-btn-outline">
+                Ücretsiz Görüşme Talep Et
+            </a>
+        </div>
+    </div>
+</section>
