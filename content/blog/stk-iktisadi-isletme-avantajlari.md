@@ -1,6 +1,7 @@
 ---
 layout: layouts/blog-post.html
-title: "STK'lar İçin İktisadi İşletme Kurmanın 5 Kritik Avantajı (2026)"
+permalink: "/blog/stk-iktisadi-isletme-avantajlari/"
+title: "STK'lar İçin İktisadi İşletme Kurmanın 5 Kritik Avantajı"
 description: "Dernek ve vakıflar için iktisadi işletme kurmanın avantajları: sürdürülebilir gelir, vergi kolaylıkları, kurumsal güvenilirlik, istihdam ve finansal bağımsızlık. Ümraniye İstanbul STK danışmanlık."
 date: 2026-01-04
 category: "Uzman Rehberi"

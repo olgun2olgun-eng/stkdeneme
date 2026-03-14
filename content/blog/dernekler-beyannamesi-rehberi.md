@@ -1,5 +1,6 @@
 ---
 layout: layouts/blog-post.html
+permalink: "/blog/dernekler-beyannamesi-rehberi/"
 title: "Dernekler Beyannamesi ve DERBİS Bildirim Rehberi — 2026 Güncel"
 description: "Dernekler beyannamesi nasıl hazırlanır? 2026 DERBİS bildirim süreçleri, mali yükümlülükler, yasal süreler ve en sık yapılan hatalar. Uzman rehberi. Ümraniye İstanbul. ☎ +90 534 705 42 34"
 date: 2026-01-15

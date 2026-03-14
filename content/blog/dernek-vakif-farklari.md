@@ -1,20 +1,18 @@
 ---
-excerpt: Dernek mi yoksa vakıf mı kurmalısınız? Kuruluş süreci, yasal dayanak,
-  üyelik, mal varlığı ve denetim açısından 5 temel farkı detaylıca inceliyoruz.
-image_alt: Dernek ve vakıf arasındaki farklar — STK Danışmanlık uzman rehberi
 layout: layouts/blog-post.html
-title: Dernek ve Vakıf Arasındaki 5 Temel Fark Nedir? (2026 Güncel Rehber)
-category: Uzman Rehberi
-date: 2026-03-14
+permalink: "/blog/dernek-vakif-farklari/"
+title: "Dernek ve Vakıf Arasındaki 5 Temel Fark Nedir?"
+description: "Dernek mi vakıf mı kurmalısınız? 5253 Dernekler Kanunu ve 4721 TMK'ya göre dernek ve vakıf arasındaki yasal, mali ve idari 5 temel farkı uzman gözüyle inceleyin. Ümraniye İstanbul."
+date: 2024-10-15
+category: "Uzman Rehberi"
+image: "/img/blog-hibe.webp"
+image_alt: "Dernek ve vakıf arasındaki farklar — STK Danışmanlık uzman rehberi"
+excerpt: "Dernek mi yoksa vakıf mı kurmalısınız? Kuruluş süreci, yasal dayanak, üyelik, mal varlığı ve denetim açısından 5 temel farkı detaylıca inceliyoruz."
 tags:
   - dernek vakıf farkı
   - dernek mi vakıf mı
   - stk kurma rehberi
   - dernekler kanunu
-image: /img/blog-hibe.webp
-description: Dernek mi vakıf mı kurmalısınız? 5253 Dernekler Kanunu ve 4721
-  TMK'ya göre dernek ve vakıf arasındaki yasal, mali ve idari 5 temel farkı
-  uzman gözüyle inceleyin. Ümraniye İstanbul.
 ---
 
 Bir sosyal sorumluluk projesine başlarken en sık karşılaşılan sorulardan biri, yapının **dernek mi yoksa vakıf mı** olması gerektiğidir. Her iki yapı da topluma hizmet amacı gütse de, **5253 sayılı Dernekler Kanunu**, **4721 sayılı Türk Medeni Kanunu** ve **5737 sayılı Vakıflar Kanunu**'na göre aralarında kritik farklar bulunur.

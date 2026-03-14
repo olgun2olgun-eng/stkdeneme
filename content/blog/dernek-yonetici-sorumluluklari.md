@@ -1,5 +1,6 @@
 ---
 layout: layouts/blog-post.html
+permalink: "/blog/dernek-yonetici-sorumluluklari/"
 title: "Dernek Yöneticilerinin Yasal ve Cezai Sorumlulukları — 2026 Kapsamlı Rehber"
 description: "Dernek başkanı ve yönetim kurulu üyelerinin 5253 sayılı Dernekler Kanunu kapsamında yasal, mali ve cezai sorumlulukları. Beyanname, defter, genel kurul yükümlülükleri. Ümraniye İstanbul."
 date: 2026-01-04
