@@ -526,8 +526,8 @@ permalink: "/"
       .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 640px) {
-      .slider { height: 60vh; min-height: 300px; }
+   @media (max-width: 640px) {
+      .slider { height: 60vh; min-height: 300px; aspect-ratio: 16/9; }
       .slide-content { padding: 0 24px; }
       .services-grid { grid-template-columns: 1fr; }
       .posts-grid { grid-template-columns: 1fr; }
@@ -741,7 +741,7 @@ permalink: "/"
   <div class="slides">
     <!-- Slayt 1 — LCP: eager + fetchpriority high -->
     <div class="slide active">
-      <img src="/img/banner1.webp" alt="Bürokrasiyi Sizin İçin Aşıyoruz" class="slide-bg-img" width="1400" height="700" fetchpriority="high">
+      <img src="/img/banner1.webp" alt="Bürokrasiyi Sizin İçin Aşıyoruz" class="slide-bg-img" width="1400" height="700" fetchpriority="high" loading="eager">
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <h1>Ümraniye'de Profesyonel STK Danışmanlık Hizmetleri</h1>
