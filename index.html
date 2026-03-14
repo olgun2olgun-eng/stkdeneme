@@ -542,7 +542,8 @@ permalink: "/"
     </style>
 
     <!-- Stylesheet (non-blocking for any extra styles) -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <!-- ========== EKLENEN: JSON-LD SCHEMA (GENİŞLETİLMİŞ) ========== -->
     <script type="application/ld+json">
@@ -686,7 +687,7 @@ permalink: "/"
 <header class="main-header">
   <div class="container header-container">
     <a href="index.html" class="logo-container">
-      <img src="logo.webp" alt="STK Danışmanlık - Ümraniye Dernek ve Vakıf Danışmanlık" class="logo-img" width="180" height="60" fetchpriority="high">
+      <img src="/logo.webp" alt="STK Danışmanlık - Ümraniye Dernek ve Vakıf Danışmanlık" class="logo-img" width="180" height="60" fetchpriority="high">
     </a>
     <nav class="main-nav" id="mainNav" aria-label="Ana Navigasyon">
       <button class="nav-close-btn" id="navCloseBtn" aria-label="Menüyü kapat">
@@ -738,7 +739,7 @@ permalink: "/"
   <div class="slides">
     <!-- Slayt 1 — LCP: eager + fetchpriority high -->
     <div class="slide active">
-      <img src="img/banner1.webp" alt="Bürokrasiyi Sizin İçin Aşıyoruz" class="slide-bg-img" width="1400" height="700" fetchpriority="high">
+      <img src="/img/banner1.webp" alt="Bürokrasiyi Sizin İçin Aşıyoruz" class="slide-bg-img" width="1400" height="700" fetchpriority="high">
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <h1>Ümraniye'de Profesyonel STK Danışmanlık Hizmetleri</h1>
@@ -748,7 +749,7 @@ permalink: "/"
     </div>
     <!-- Slayt 2 — lazy -->
     <div class="slide">
-      <img src="img/banner2.webp" alt="Ümraniye İstanbul'da STK kuruluş danışmanlığı — Dernek ve vakıf kurma" class="slide-bg-img" width="1400" height="700" loading="lazy">
+      <img src="/img/banner2.webp" alt="Ümraniye İstanbul'da STK kuruluş danışmanlığı — Dernek ve vakıf kurma" class="slide-bg-img" width="1400" height="700" loading="lazy">
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <h2>Fikirden Hayata: Kurumunuzu Oluşturun</h2>
@@ -758,7 +759,7 @@ permalink: "/"
     </div>
     <!-- Slayt 3 — lazy -->
     <div class="slide">
-      <img src="img/banner3.webp" alt="İstanbul dernek mevzuat uyum danışmanlığı — STK Danışmanlık Ümraniye" class="slide-bg-img" width="1400" height="700" loading="lazy">
+      <img src="/img/banner3.webp" alt="İstanbul dernek mevzuat uyum danışmanlığı — STK Danışmanlık Ümraniye" class="slide-bg-img" width="1400" height="700" loading="lazy">
       <div class="slide-overlay"></div>
       <div class="slide-content">
         <h2>Mevzuata Tam Uyum, Risksiz Yönetim</h2>
@@ -817,7 +818,7 @@ permalink: "/"
   <div class="container">
     <div class="about-grid">
       <div class="about-image">
-        <img src="img/hakkimizda-bg.webp" alt="STK Danışmanlık Ümraniye ofisi - Dernek ve Vakıf Danışmanlık İstanbul" width="580" height="380" loading="lazy">
+        <img src="/img/hakkimizda-bg.webp" alt="STK Danışmanlık Ümraniye ofisi - Dernek ve Vakıf Danışmanlık İstanbul" width="580" height="380" loading="lazy">
       </div>
       <div class="about-content">
         <h2 class="section-title-left">Ümraniye'de STK Danışmanlık</h2>
@@ -879,7 +880,7 @@ permalink: "/"
     <div class="posts-grid">
       <div class="post-card">
         <a href="blog-dernek-yonetici-sorumluluklari.html" class="post-card-image">
-          <img src="img/blog-mevzuat.webp" alt="Ümraniye dernek yöneticileri yasal sorumluluklar mevzuat" loading="lazy" width="400" height="200">
+          <img src="/img/blog-mevzuat.webp" alt="Ümraniye dernek yöneticileri yasal sorumluluklar mevzuat" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">MEVZUAT</span>
@@ -890,7 +891,7 @@ permalink: "/"
       </div>
       <div class="post-card">
         <a href="/content/blog/dernek-vakif-farklari/" class="post-card-image">
-          <img src="img/blog-hibe.webp" alt="İstanbul dernek vakıf fark hibe fırsatları" loading="lazy" width="400" height="200">
+          <img src="/img/blog-hibe.webp" alt="İstanbul dernek vakıf fark hibe fırsatları" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">HİBE FIRSATI</span>
@@ -901,7 +902,7 @@ permalink: "/"
       </div>
       <div class="post-card">
         <a href="blog-stk-iktisadi-isletme-avantajlari.html" class="post-card-image">
-          <img src="img/blog-finans.webp" alt="STK iktisadi işletme avantajları İstanbul Ümraniye" loading="lazy" width="400" height="200">
+          <img src="/img/blog-finans.webp" alt="STK iktisadi işletme avantajları İstanbul Ümraniye" loading="lazy" width="400" height="200">
         </a>
         <div class="post-card-content">
           <span class="post-card-category">BİLGİ NOTU</span>
@@ -1276,6 +1277,6 @@ permalink: "/"
     });
   }
 </script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </body>
 </html>
