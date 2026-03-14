@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ title }} | {{ site.site_name | default("SH Danışmanlık") }}</title>
+    <title>{{ title }} | {{ site.site_name | default("STK Danışmanlık") }}</title>
     <meta name="description" content="{{ description }}">
-    <link rel="canonical" href="https://shdanismanlik.netlify.app{{ page.url }}">
+    <link rel="canonical" href="https://stkdanismanlik.com{{ page.url }}">
+    <!-- Robots -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Geo / Yerel SEO -->
+<meta name="geo.region" content="TR-34">
+<meta name="geo.placename" content="Ümraniye, İstanbul">
+<meta name="geo.position" content="41.0166;29.1165">
+<meta name="ICBM" content="41.0166, 29.1165">
+
+<!-- Dil -->
+<link rel="alternate" hreflang="tr-TR" href="https://stkdanismanlik.com{{ page.url }}">
+<link rel="alternate" hreflang="x-default" href="https://stkdanismanlik.com{{ page.url }}">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stkdanismanlik.com{{ page.url }}">
+    <meta property="og:title" content="{{ title }} | STK Danışmanlık">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="https://stkdanismanlik.com{{ banner_image | default('/img/banner1.webp') }}">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="STK Danışmanlık">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }} | STK Danışmanlık">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="https://stkdanismanlik.com{{ banner_image | default('/img/banner1.webp') }}">
 
     <script type="application/ld+json">
     {
@@ -16,7 +41,7 @@
       "description": "{{ description }}",
       "publisher": {
         "@type": "Organization",
-        "name": "{{ site.site_name | default('SH Danışmanlık') }}"
+        "name": "{{ site.site_name | default('STK Danışmanlık') }}"
       }
     }
     </script>
@@ -44,7 +69,7 @@
 <header class="main-header">
   <div class="container header-container">
     <a href="/" class="logo-container">
-      <img src="/logo.webp" alt="{{ site.site_name | default('SH Danışmanlık') }}" class="logo-img" width="180" height="55" />
+      <img src="/logo.webp" alt="{{ site.site_name | default('STK Danışmanlık') }}" class="logo-img" width="180" height="55" />
     </a>
     <nav class="main-nav">
       <button class="nav-close-btn" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
@@ -107,7 +132,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <img src="/logo.webp" alt="STK Danışmanlık" class="footer-logo" width="120" height="104" loading="lazy" decoding="async" style="background:#fff; border-radius:6px; padding:6px;">
+        <img src="/logo.webp" alt="STK Danışmanlık — İstanbul Ümraniye" class="footer-logo" width="120" height="104" loading="lazy" decoding="async" style="background:#fff; border-radius:6px; padding:6px;">
         <p itemprop="description">"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
         <p itemprop="name" style="display:none">STK Danışmanlık</p>
         <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
@@ -124,7 +149,7 @@
         </p>
         <p style="font-size:.85rem;margin-top:4px">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="#0d6efd" style="margin-right:6px;vertical-align:middle"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <a href="mailto:info@stkdanismanlik.com" itemprop="email" style="color:#ccc">info@stkdanismanlik.com</a>
+          <a href="/cdn-cgi/l/email-protection#bfd6d1d9d0ffcccbd4dbded1d6ccd2ded1d3d6d491dcd0d2" itemprop="email" style="color:#ccc"><span class="__cf_email__" data-cfemail="cca5a2aaa38cbfb8a7a8ada2a5bfa1ada2a0a5a7e2afa3a1">info@stkdanismanlik.com</span></a>
         </p>
       </div>
 
@@ -179,7 +204,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 STK Danışmanlık. Tüm Hakları Saklıdır. |
+      <p>&copy; 2026 STK Danışmanlık — İstanbul Ümraniye. Tüm Hakları Saklıdır. |
         Design by <a href="https://akodijital.com" target="_blank" rel="noopener">AKODİJİTAL</a>
       </p>
     </div>
@@ -193,6 +218,19 @@
     </svg></div>
   <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
 </a>
-<script src="/js/script.js" defer></script>
+<script>
+const navOpenBtn = document.querySelector('.nav-open-btn');
+const navCloseBtn = document.querySelector('.nav-close-btn');
+const mainNav = document.querySelector('.main-nav');
+const overlay = document.getElementById('mobileNavOverlay');
+if(navOpenBtn) navOpenBtn.addEventListener('click', () => { mainNav.classList.add('open'); overlay.classList.add('active'); });
+if(navCloseBtn) navCloseBtn.addEventListener('click', () => { mainNav.classList.remove('open'); overlay.classList.remove('active'); });
+if(overlay) overlay.addEventListener('click', () => { mainNav.classList.remove('open'); overlay.classList.remove('active'); });
+document.querySelectorAll('.dropdown > a').forEach(a => {
+  a.addEventListener('click', e => { if(window.innerWidth < 992) { e.preventDefault(); a.parentElement.classList.toggle('open'); } });
+});
+</script>
 </body>
 </html>
+
+   
