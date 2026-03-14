@@ -1,25 +1,6 @@
 User-agent: *
 Allow: /
-
-# Yönetim panelini botlardan gizle
 Disallow: /admin/
-Disallow: /api/
-Disallow: /.netlify/
-
-# Önemli sayfalar için crawl önceliği
-Allow: /hizmet-dernek-kurulusu.html
-Allow: /hizmet-vakif-kurulusu.html
-Allow: /hizmet-derbis.html
-Allow: /hizmet-genel-kurul.html
-Allow: /hizmet-mali-danismanlik.html
-Allow: /hizmet-proje-yazma.html
-Allow: /hizmet-yasal-danismanlik.html
-Allow: /iletisim.html
-Allow: /hakkimizda.html
-Allow: /blog.html
+Disallow: /tesekkurler/
 
 Sitemap: https://stkdanismanlik.com/sitemap.xml
-
-# Crawl-delay: Google için gerek yok, Yandex için
-User-agent: Yandexbot
-Crawl-delay: 1

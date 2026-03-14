@@ -98,13 +98,16 @@
     }
     </script>
 
+    <link rel="preload" as="image" href="/logo.webp" type="image/webp">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
     <!-- ═══ CSS ══════════════════════════════════════════════════ -->
     <link rel="stylesheet" href="/css/style.css">
     
     <!-- Font ve İkonlar -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- Favicon -->
     <link rel="icon" href="/logo.webp" type="image/webp">
@@ -125,7 +128,7 @@
 <header class="main-header">
   <div class="container header-container">
     <a href="/" class="logo-container">
-      <img src="/logo.webp" alt="{{ site.site_name }}" class="logo-img" width="180" height="55" />
+      <img src="/logo.webp" alt="STK Danışmanlık — Ümraniye İstanbul Dernek Vakıf Danışmanlık" class="logo-img" width="180" height="55" />
     </a>
     <nav class="main-nav" aria-label="Ana Menü">
       <button class="nav-close-btn" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
@@ -194,7 +197,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <img src="/logo.webp" alt="STK Danışmanlık — İstanbul Ümraniye" class="footer-logo" width="120" height="104" loading="lazy" decoding="async" style="background:#fff; border-radius:6px; padding:6px;">
+        <img src="/logo.webp" alt="STK Danışmanlık Ümraniye İstanbul — Dernek Vakıf Kuruluş Danışmanlığı" class="footer-logo" width="120" height="104" loading="lazy" decoding="async" style="background:#fff; border-radius:6px; padding:6px;">
         <p itemprop="description">"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
         <p itemprop="name" style="display:none">STK Danışmanlık</p>
         <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;font-size:.85rem;line-height:1.7;margin-top:10px">
