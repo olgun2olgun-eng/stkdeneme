@@ -1,14 +1,15 @@
 ---
+excerpt: Ümraniye'de dernek veya vakıf kurmak istiyorsanız doğru yerdesiniz.
+  Yasal süreçten DERBİS kaydına, tüzük hazırlamadan resmi başvuruya kadar tüm
+  adımları uzman gözüyle anlattık.
+image_alt: Ümraniye'de dernek ve vakıf kurma danışmanlık hizmeti — STK Danışmanlık
 layout: layouts/blog-post.html
-title: "Ümraniye'de Dernek veya Vakıf Kurmak İsteyenler İçin Eksiksiz Rehber (2026)"
-description: "Ümraniye'de dernek veya vakıf kurmak mı istiyorsunuz? Yasal süreçler, gerekli belgeler, DERBİS kaydı ve uzman danışmanlık. 7–15 iş gününde tescil. STK Danışmanlık Ümraniye İstanbul. ☎ +90 534 705 42 34"
-date: "2026-02-20"
-author: "STK Danışmanlık Uzmanları"
-category: "Uzman Rehberi"
-image: "/img/banner2.webp"
-image_alt: "Ümraniye'de dernek ve vakıf kurma danışmanlık hizmeti — STK Danışmanlık"
+author: STK Danışmanlık Uzmanları
+featured: true
+category: Uzman Rehberi
+date: 2026-02-20
 read_time: 12
-excerpt: "Ümraniye'de dernek veya vakıf kurmak istiyorsanız doğru yerdesiniz. Yasal süreçten DERBİS kaydına, tüzük hazırlamadan resmi başvuruya kadar tüm adımları uzman gözüyle anlattık."
+title: Ümraniye'de Dernek veya Vakıf Kurmak İsteyenler İçin Eksiksiz Rehber
 tags:
   - ümraniye dernek kurma
   - ümraniye vakıf kurma
@@ -17,7 +18,10 @@ tags:
   - vakıf kuruluş süreci
   - dernekler kanunu 2026
   - derbis kaydı
-featured: true
+image: /img/banner2.webp
+description: Ümraniye'de dernek veya vakıf kurmak mı istiyorsunuz? Yasal
+  süreçler, gerekli belgeler, DERBİS kaydı ve uzman danışmanlık. 7–15 iş gününde
+  tescil. STK Danışmanlık Ümraniye İstanbul. ☎ +90 534 705 42 34
 ---
 
 Ümraniye, İstanbul'un en dinamik ve hızla gelişen ilçelerinden biri. Yaklaşık 700 bin kişilik nüfusuyla sosyal, kültürel ve ekonomik açıdan son derece canlı bir yapıya sahip. Bu canlılıkla birlikte, Ümraniye'de her yıl onlarca yeni sivil toplum kuruluşu hayata geçiyor: spor kulüpleri, kültür dernekleri, yardım vakıfları, meslek birlikleri, çevre platformları…
