@@ -195,26 +195,35 @@ permalink: "/"
       padding: 0 50px;
     }
     .slide-content h1 {
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    .slide-content h2 {
   font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 16px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  color: #fff;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+  color: #ffffff;
 }
-    .slide-content p {
-      font-size: clamp(0.95rem, 2.2vw, 1.1rem);
-      margin-bottom: 24px;
-      opacity: 0.92;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    }
+
+.slide-heading {
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.slide-content p {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  margin-bottom: 24px;
+  opacity: 0.92;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  max-width: 55ch;
+  line-height: 1.65;
+}
     .slider-btn {
       position: absolute;
       top: 50%;
@@ -737,46 +746,80 @@ permalink: "/"
 
 <main>
 <!-- ===== SLIDER ===== -->
-<section class="slider" aria-label="Ana sayfa karusel">
-  <div class="slides">
-    <!-- Slayt 1 — LCP: eager + fetchpriority high -->
-    <div class="slide active">
-      <img src="/img/banner1.webp" alt="Bürokrasiyi Sizin İçin Aşıyoruz" class="slide-bg-img" width="1400" height="700" fetchpriority="high" loading="eager">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1>Ümraniye'de Profesyonel STK Danışmanlık Hizmetleri</h1>
-        <p>İstanbul Ümraniye merkezli uzman ekibimizle dernek ve vakıf kurulumu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında yanınızdayız.</p>
-        <a href="#services" class="btn btn-primary">Hizmetlerimizi Keşfedin</a>
-      </div>
-    </div>
-    <!-- Slayt 2 — lazy -->
-    <div class="slide">
-      <img src="/img/banner2.webp" alt="Ümraniye İstanbul'da STK kuruluş danışmanlığı — Dernek ve vakıf kurma" class="slide-bg-img" width="1400" height="700" loading="lazy">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h2>Fikirden Hayata: Kurumunuzu Oluşturun</h2>
-        <p>Kuruluş, tüzük hazırlama ve tescil süreçlerinde A'dan Z'ye profesyonel destek sağlıyoruz.</p>
-        <a href="#contact" class="btn btn-primary">Ücretsiz Danışın</a>
-      </div>
-    </div>
-    <!-- Slayt 3 — lazy -->
-    <div class="slide">
-      <img src="/img/banner3.webp" alt="İstanbul dernek mevzuat uyum danışmanlığı — STK Danışmanlık Ümraniye" class="slide-bg-img" width="1400" height="700" loading="lazy">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h2>Mevzuata Tam Uyum, Risksiz Yönetim</h2>
-        <p>Genel kurul, beyanname ve denetim süreçlerinde yasalara tam uyumlu hareket edin.</p>
-        <a href="#contact" class="btn btn-primary">Teklif Alın</a>
-      </div>
+<section class="slider" aria-label="Ana sayfa karusel" itemscope itemtype="https://schema.org/WPHeader">
+
+  <!-- ===== SLAYT 1 — LCP optimizasyonu ===== -->
+  <div class="slide active" aria-hidden="false">
+    <img
+      src="/img/banner1.webp"
+      alt="Ümraniye STK Danışmanlık — Bürokrasiyi Sizin İçin Aşıyoruz"
+      class="slide-bg-img"
+      width="1400"
+      height="700"
+      fetchpriority="high"
+      loading="eager"
+      decoding="sync"
+    >
+    <div class="slide-overlay" aria-hidden="true"></div>
+    <div class="slide-content">
+      <h1>Ümraniye'de Profesyonel STK Danışmanlık Hizmetleri</h1>
+      <p>İstanbul Ümraniye merkezli uzman ekibimizle dernek ve vakıf kurulumu, DERBİS işlemleri, genel kurul yönetimi ve mali danışmanlık alanlarında yanınızdayız.</p>
+      <a href="#services" class="btn btn-primary" aria-label="STK danışmanlık hizmetlerimizi keşfedin">Hizmetlerimizi Keşfedin</a>
     </div>
   </div>
-  <button class="slider-btn prev" aria-label="Önceki Slayt">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <button class="slider-btn next" aria-label="Sonraki Slayt">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-  </button>
-  <div class="slider-dots" id="sliderDots"></div>
+
+  <!-- ===== SLAYT 2 — lazy ===== -->
+  <div class="slide" aria-hidden="true">
+    <img
+      src="/img/banner2.webp"
+      alt="İstanbul Ümraniye dernek ve vakıf kuruluş danışmanlığı — Tüzük ve tescil desteği"
+      class="slide-bg-img"
+      width="1400"
+      height="700"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="slide-overlay" aria-hidden="true"></div>
+    <div class="slide-content">
+      <p
+        class="slide-heading"
+        role="heading"
+        aria-level="2"
+        aria-label="Fikirden Hayata: Ümraniye'de Dernek ve Vakıf Kuruyoruz"
+      >
+        Fikirden Hayata: Kurumunuzu Ümraniye'de Oluşturun
+      </p>
+      <p>Dernek ve vakıf kuruluşu, tüzük hazırlama ve İstanbul tescil süreçlerinde A'dan Z'ye profesyonel destek sağlıyoruz.</p>
+      <a href="#contact" class="btn btn-primary" aria-label="Ücretsiz STK danışmanlık görüşmesi talep edin">Ücretsiz Danışın</a>
+    </div>
+  </div>
+
+  <!-- ===== SLAYT 3 — lazy ===== -->
+  <div class="slide" aria-hidden="true">
+    <img
+      src="/img/banner3.webp"
+      alt="Ümraniye İstanbul STK mevzuat uyum danışmanlığı — Dernek beyanname ve genel kurul"
+      class="slide-bg-img"
+      width="1400"
+      height="700"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="slide-overlay" aria-hidden="true"></div>
+    <div class="slide-content">
+      <p
+        class="slide-heading"
+        role="heading"
+        aria-level="2"
+        aria-label="Ümraniye'de Mevzuata Tam Uyum ve Risksiz STK Yönetimi"
+      >
+        Mevzuata Tam Uyum, Risksiz STK Yönetimi
+      </p>
+      <p>İstanbul'da genel kurul, beyanname ve denetim süreçlerinde yasalara tam uyumlu, güvenli bir yönetim için yanınızdayız.</p>
+      <a href="#contact" class="btn btn-primary" aria-label="STK mevzuat uyum teklifi alın">Teklif Alın</a>
+    </div>
+  </div>
+
 </section>
 
 <!-- ===== İSTATİSTİKLER ===== -->
